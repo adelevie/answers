@@ -58,10 +58,12 @@ gem 'secure_headers'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'capistrano', '~> 2.15'
   gem 'guard-rspec', require: false
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rb-fsevent'
+  gem 'rvm-capistrano'
   gem 'spring-commands-rspec'
   gem 'quiet_assets'
 end
