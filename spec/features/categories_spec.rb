@@ -16,13 +16,15 @@ describe 'Categories' do
       expect(page).to have_content(other_category.name)
       expect(page.html.include?(other_category.slug)).to be true
     end
+    
     it "displays properly formated breadcrumbs" do
     	category = FactoryGirl.create(:category, name: "parking", description: "Foo")
     	visit category_path(category)
     	expect(page.html).to have_tag('div.breadcrumbs ol li')
     end
+    
   end
-
+  
   describe 'categories listing' do
     before { 6.times { create(:category_with_articles, name: Faker::Lorem.word) } }
 
@@ -57,7 +59,6 @@ describe 'Categories' do
 	  	visit path
 	  	expect(page.html).to have_tag('div.breadcrumbs ol li')
   	end
-
   end
 
 end
