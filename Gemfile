@@ -54,7 +54,7 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'guard-rspec'
+  gem 'guard-rspec', require: false
   gem 'guard-spork'
   gem 'pry-nav'
   gem 'pry-rails'
@@ -63,7 +63,7 @@ group :development do
   gem 'spring-commands-rspec'
 end
 
-group :test, :development do
+group :development, :test do
   gem 'brakeman', require: false
   gem 'coveralls', require: false
   gem 'factory_girl_rails'

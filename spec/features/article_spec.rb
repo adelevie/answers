@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "Articles" do
+
   describe "user views a quick answer details page" do
     let(:title)                { "Parking in Oakland" }
     let(:content_main)         { "Learn about parking" }
@@ -117,5 +118,22 @@ describe "Articles" do
       page.should have_css("ul.category-articles li.article-listing h2 a", text: "all about planes")
       page.should have_content("planes preview")
     end
+  end
+
+  describe 'user views the web service details page' do
+    let(:web_service) { create(:article, category: create(:category), type: 'WebService') }
+    before do
+      web_service.publish
+      visit web_service_path(web_service)
+    end
+
+    it 'displays the web service title' do
+      expect(page).to have_content(web_service.title)
+    end
+
+    it 'displays the web service content' do
+      expect(page).to have_content(web_service.content_main)
+    end
+
   end
 end

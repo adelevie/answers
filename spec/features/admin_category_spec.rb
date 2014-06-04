@@ -27,13 +27,13 @@ describe "Categories" do
     end
 
     it "displays the category's details and related articles" do
-      page.should have_content("Parking")
-      page.should have_content("Parking Description")
-      page.should have_content("How Parking?")
-      page.should have_content("QuickAnswer")
-      page.should have_content(admin_contact_path(contact))
-      page.should have_content("pui@example.com")
-      page.should have_content("Published")
+      expect(page).to have_content("Parking")
+      expect(page).to have_content("Parking Description")
+      expect(page).to have_content("How Parking?")
+      expect(page).to have_content("QuickAnswer")
+      expect(page).to have_content("pui@example.com")
+      expect(page).to have_content("Published")
+      expect(page).to have_content(contact.name)
     end
   end
 
