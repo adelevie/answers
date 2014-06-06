@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   add_breadcrumb "Home", :root_url
   def index
     @bodyclass = "results"
-    @categories = Category.by_access_count
+    @categories = Category.joins(:articles).where(articles: {status: "Published"}).by_access_count
 
     add_breadcrumb "All Articles"
 
