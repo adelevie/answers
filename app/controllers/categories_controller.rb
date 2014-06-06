@@ -2,11 +2,11 @@ class CategoriesController < ApplicationController
   add_breadcrumb('Home', :root_url)
 
   def index
-    @bodyclass = 'results'
+  	@bodyclass = 'results'
+    @categories = Category.with_published_articles.by_access_count 
 
-    @categories = Category.by_access_count
-    add_breadcrumb('Categories')
-    
+    add_breadcrumb 'Categories'
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @categories }
