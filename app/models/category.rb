@@ -15,15 +15,6 @@ class Category < ActiveRecord::Base
     self
   end
 
-  # might want to deprecate
-  def has_a_published_article?
-    self.articles.map(&:published?).include?(true)
-  end
-
-  def has_a_published_article?
-    self.articles.map(&:published?).include?(true)
-  end
-
   private
 
   def hits

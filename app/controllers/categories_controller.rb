@@ -1,3 +1,4 @@
+
 class CategoriesController < ApplicationController
   add_breadcrumb('Home', :root_url)
 
