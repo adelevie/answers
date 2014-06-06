@@ -31,5 +31,17 @@ describe ArticlesController do
       assigns(:article).should eq(article)
     end
   end
+  
+  describe "GET article_type" do
+    let(:article) do
+       FactoryGirl.create :article, type: "QuickAnswer"
+     end
+    
+    it "renders a list of Articles of a given article_type" do
+      get :article_type, content_type: "QuickAnswer"
+      assigns(:article_type)
+      assigns(:articles)
+    end
+  end
 
 end
