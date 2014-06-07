@@ -9,7 +9,7 @@
   <div class="row">
     <div class="span9">
       <div class="main-content">
-        <h3 class="content-type"><%= @article.class.to_s.split(/(?=[A-Z])/).join(' ') %></h3>
+        <h3 class="content-type"><%= @article.type.underscore.humanize.titleize %></h3>
         <div class="header">
           <%= content_tag(:h1, @article.title ) %>
         </div>
