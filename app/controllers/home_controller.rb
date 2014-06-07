@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   add_breadcrumb "Home", :root_url
 
   def index
-    @popular_categories = Category.by_access_count.limit(4)
+    @popular_categories = Category.with_published_articles.by_access_count.limit(4)
   end
 
  def about

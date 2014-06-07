@@ -2,7 +2,7 @@
   <span class="left"><%= link_to(category.name, category) %></span>
   <p class="right">
   <ul>
-    <%= render :partial => 'home/article', :collection => category.articles.by_access_count.limit(3) %>
+    <%= render :partial => 'home/article', :collection => category.articles[1..3] %>
   </ul>
   </p>
 </div>
