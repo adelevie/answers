@@ -9,9 +9,10 @@
 <% @article = @web_service if @web_service %>
 <% @article = @guide if @guide %>
 
+
 <%= semantic_form_for [:admin, @article] do |f| %>
 
-  <%= render :partial => "shared/admin/administration", locals: { :f => f, :article => @article } %>
+  <%= render :partial => "shared/admin/administration", locals: { :f => f, :article => @article, :users => @users } %>
   <% if !current_user.is_admin? %>
     <script type="text/javascript">
       $('fieldset#edit_article_admin').hide();
