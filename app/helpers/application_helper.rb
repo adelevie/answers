@@ -3,6 +3,12 @@ module ApplicationHelper
   def format_article_type(article_type)
     article_type.underscore.humanize.titleize
   end
+  
+  def phone_number_from_article(article)
+    if article.contact.number.present? && article.contact.number.length > 0
+      return raw "Phone: #{article.contact.number}"
+    end
+  end
 
 	def official_site_title
 		ENV["OFFICIAL_SITE_TITLE"]
