@@ -9,7 +9,7 @@
   <div class="row">
     <div class="span9">
       <div class="main-content">
-        <div class="header"><h1><%= @article_type.split(/(?=[A-Z])/).join(' ') %>s</h1></div>
+        <div class="header"><h1><%= format_article_type(@article_type) %></h1></div>
         <ul>
           <% @articles.each do |article| %>
             <li class="category-listing">
