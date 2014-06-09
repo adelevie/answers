@@ -33,9 +33,7 @@ describe ArticlesController do
   end
   
   describe "GET article_type" do
-    let(:article) do
-       FactoryGirl.create :article, type: "QuickAnswer"
-     end
+    let(:article) { create :article, type: "QuickAnswer" }
     
     it "renders a list of Articles of a given article_type" do
       get :article_type, content_type: "QuickAnswer"
