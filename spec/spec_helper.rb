@@ -23,7 +23,6 @@ Spork.prefork do
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/collection_matchers'
   require 'rspec/rails'
-  require 'rspec/autorun'
   require 'webmock/rspec'
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
