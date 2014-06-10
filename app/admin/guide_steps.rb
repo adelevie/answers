@@ -1,13 +1,9 @@
 ActiveAdmin.register GuideStep do
-  controller do
-    load_and_authorize_resource :except => :index
-      def scoped_collection
-        end_of_association_chain.accessible_by(current_ability)
-      end
-   end
+
+  permit_params :title, :content, :step, :article_id
 
   menu :parent => "Articles"
-  menu false
+
   index do
     column "Title", :title do |guide_step|
       link_to guide_step.title, [:admin, guide_step]
@@ -16,7 +12,7 @@ ActiveAdmin.register GuideStep do
     column :content
     column :step
     column "Updated", :updated_at
-    default_actions
+    actions
   end
 
   form :partial => "form"

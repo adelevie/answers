@@ -17,7 +17,6 @@ describe 'Users', :type => :feature do
   describe 'admin user creates a new user' do
     before { visit new_admin_user_path }
 
-    # TODO guh, creation doesn't have a success/failure message
     it 'successfully creates a user' do
       fill_in 'Email', with: 'another@example.com'
       fill_in 'user_password', with: 'Mahalo43'
@@ -26,24 +25,25 @@ describe 'Users', :type => :feature do
       click_button 'Create User'
 
       expect(page).to have_content('User Details')
+      expect(page).to have_content('User was successfully created.')
     end
   end
 
   describe 'admin user updates an existing user' do
     before { visit edit_admin_user_path(create(:user)) }
-  
-    # TODO Blarh, same as creation
+
     it 'successfully updates an existing user' do
       fill_in 'Email', with: 'another@example.com'
       click_button 'Update User'
 
       expect(page).to have_content('User Details')
+      expect(page).to have_content('User was successfully updated')
     end
   end
 
   describe 'admin user deletes a user' do
     before { visit admin_user_path(create(:user)) }
-      
+
     it 'successfully destroys a user' do
       click_link 'Delete User'
 

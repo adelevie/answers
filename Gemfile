@@ -1,17 +1,27 @@
 source 'https://rubygems.org'
 
 gem 'nokogiri', '> 1.4.7'
-gem 'rails', '> 3.2.17'
+gem 'rails', '4.1.1'
 gem 'pg'
 gem 'thin'
 gem 'foreman'
+gem 'sass-rails', '~> 4.0.3'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 2.0'
+gem 'sdoc', '~> 0.4.0',          group: :doc
+gem 'spring',        group: :development
+gem 'actionpack-page_caching'
+
+# Use ActiveModel has_secure_password
+# gem 'bcrypt', '~> 3.1.7'
 
 gem 'newrelic_rpm', group: [:production, :staging, :development]
-gem 'annotate', '~>2.4.1.beta'
+gem 'annotate'
 gem 'progressbar'
 gem 'facets', require: false
-gem 'jquery-ui-rails'
-gem 'jquery-rails', '~> 2.3.0'
 
 gem 'meta-tags', require: 'meta_tags'
 
@@ -20,8 +30,8 @@ gem 'memcachier'
 gem 'dalli'
 gem 'kgio'
 
-gem 'activeadmin', '~> 0.5.1'
-gem 'devise', '~> 2.0'
+
+gem 'devise', '~> 3.2.4'
 gem 'cancancan', git: 'https://github.com/andypike/cancancan.git', branch: 'rspec3'
 
 gem 'tanker'
@@ -33,22 +43,15 @@ gem 'indextank'
 gem 'bluecloth'
 gem 'kramdown'
 gem 'reverse_markdown'
-gem 'friendly_id', '~> 4.0'
+gem 'friendly_id', '~> 5.0.4'
 gem 'gon'
-gem 'paperclip', '~> 3.0'
-gem 'aws-sdk', '~> 1.3.4'
+gem 'paperclip', '~> 4.1.1'
+gem 'aws-sdk', '~> 1.42.0'
 gem 'dotenv-rails'
 gem "breadcrumbs_on_rails"
-
-group :assets do
-  gem 'sass-rails', '~> 3.2.5'
-  gem 'bourbon', '~> 3.2.3'
-  gem "meta_search", '>= 1.1.0.pre'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'less-rails-bootstrap'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'therubyracer'
-end
+gem 'therubyracer'
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'secure_headers'
 
 group :development do
   gem 'better_errors'
@@ -59,6 +62,7 @@ group :development do
   gem 'pry-rescue'
   gem 'rb-fsevent'
   gem 'spring-commands-rspec'
+  gem 'quiet_assets'
 end
 
 group :development, :test do
@@ -70,6 +74,8 @@ group :development, :test do
   gem 'memcached'
   gem 'rspec-collection_matchers'
   gem 'rspec-rails'
+  # gem 'pry-nav'
+  # gem 'pry-rescue'
 end
 
 group :test do

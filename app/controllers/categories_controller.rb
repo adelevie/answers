@@ -19,7 +19,7 @@ class CategoriesController < ApplicationController
 
     @category = Category.find(params[:id])
     add_breadcrumb(@category.name)
-    @category.delay.increment!(:access_count)
+    @category.record_hit
     @content_html = BlueCloth.new(@category.name).to_html
     @bodyclass = 'results'
 

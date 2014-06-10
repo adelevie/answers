@@ -1,18 +1,25 @@
 class Category < ActiveRecord::Base
   extend FriendlyId
-  attr_accessible :access_count, :name, :description
   has_many :articles
 
   before_validation :set_access_count_if_nil
 
-  friendly_id :name, use: [:slugged, :history]
+  friendly_id :name, use: :slugged
 
-  default_scope order('name ASC')
-  scope :by_access_count, order('access_count DESC')
-  
   def self.with_published_articles
     self.joins(:articles).where(articles: {status: "Published"}).distinct
-    self
+  end
+
+  def self.by_access_count
+    order('access_count DESC')
+  end
+
+  def self.default_scope
+    order('name ASC')
+  end
+
+  def record_hit
+    update_column(:access_count, access_count.to_i + 1 )
   end
 
   private

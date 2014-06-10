@@ -11,10 +11,7 @@ class Article < ActiveRecord::Base
   require_dependency 'keyword'
 
   extend FriendlyId
-
-  # Permalinks. :slugged option means it uses the 'slug' column for the url
-  #             :history option means when you change the article title, old slugs still work
-  friendly_id :title, use: [:slugged, :history]
+  friendly_id :title, use: :slugged
 
   belongs_to :contact
   belongs_to :category
@@ -22,7 +19,6 @@ class Article < ActiveRecord::Base
   has_many :wordcounts
   has_many :keywords, :through => :wordcounts
 
-  scope :by_access_count, order('access_count DESC')
   scope :with_category, lambda { |category| where('categories.name = ?', category).joins(:category) }
 
   scope :published, lambda { where(status: "Published") }
@@ -41,14 +37,6 @@ class Article < ActiveRecord::Base
   validates_attachment_content_type :author_pic, :content_type => ['image/jpeg', 'image/png']
 
   validates_presence_of :access_count
-
-  attr_accessible :title, :content, :content_md, :content_main, :content_main_extra,
-    :content_need_to_know, :render_markdown, :preview, :contact_id, :tags,
-    :is_published, :slugs, :category_id, :updated_at, :created_at, :author_pic,
-    :author_pic_file_name, :author_pic_content_type, :author_pic_file_size,
-    :author_pic_updated_at, :author_name, :author_link, :type, :service_url, :user_id, :status,
-    :keyword_ids, :title_es, :preview_es, :content_main_es,
-    :title_cn, :preview_cn, :content_main_cn
 
   # A note on the content fields:
   # *  Originally the content for the articles was stored as HTML in Article#content.
@@ -95,6 +83,10 @@ class Article < ActiveRecord::Base
 
   def self.find_by_type( content_type )
     return Article.where(:type => content_type).order('category_id').order('access_count DESC')
+  end
+
+  def self.by_access_count
+    order('access_count DESC')
   end
 
   def to_s
@@ -145,6 +137,11 @@ class Article < ActiveRecord::Base
     self.access_count
   end
 
+  def record_hit
+    update_column(:access_count, access_count.to_i + 1 )
+    category.record_hit if category
+  end
+
   def analyse
     qm_after_create
   end
@@ -180,7 +177,7 @@ class Article < ActiveRecord::Base
         text = @analyzer.clean( text )
         wordcounts = @analyzer.freq_map( text )
         wordcounts.each do |word, frequency|
-          kw = Keyword.find_or_create_by_name( word )
+          kw = Keyword.find_or_create_by(name: word )
           Wordcount.create!(:keyword_id => kw.id, :article_id => self.id, :count => frequency)
         end
       end

@@ -1,12 +1,14 @@
 ActiveAdmin.register Contact do
-  controller.authorize_resource
+
+  permit_params :name, :number, :url, :department, :description, :address
 
   index do
     column "Name", :name
     column :department
     column :url
     column "Created", :created_at
-    default_actions
+
+    actions
   end
 
   form do |f|
