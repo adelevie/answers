@@ -15,7 +15,9 @@ describe User do
         :password => 'passwordsrsly',
         :password_confirmation => 'passwordsrsly'
       )
-    expect(user).to have(1).errors_on(:email)
+
+    expect(user.valid?).to be false
+    expect(user.errors[:email].size).to eq(1)
   end
 
   it "is invalid without a valid email" do
@@ -24,14 +26,18 @@ describe User do
         :password => 'passwordsrsly',
         :password_confirmation => 'passwordsrsly'
       )
-    expect(user).to have(1).errors_on(:email)
+
+    expect(user.valid?).to be false
+    expect(user.errors[:email].size).to eq(1)
   end
 
   it "is invalid without a password and confirmation" do
     user = User.new(
         :email => 'user@example.com'
       )
-    expect(user).to have(1).errors_on(:password)
+
+    expect(user.valid?).to be false
+    expect(user.errors[:password].size).to eq(1)
   end
 
   it "has only one role" do
