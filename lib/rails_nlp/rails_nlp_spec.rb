@@ -55,7 +55,7 @@ describe RailsNlp::TextAnalyser do
     end
 
     it "removes non-valid html" do
-      pending 'not working since the hml tokenizer in actionpack only supports valid xhtml'
+      skip 'not working since the hml tokenizer in actionpack only supports valid xhtml'
     end
 
     it "doesn't remove foreign language characters" do
@@ -120,12 +120,12 @@ describe RailsNlp::TextAnalyser do
     # end
 
     it "uses an existing keyword if one is present" do
-      pending 'not sure how to test'
+      skip 'not sure how to test'
       # we will have access to the Keyword model, i think.
     end
 
     it "creates a new keyword if one doesn't already exist" do
-      pending 'not sure how to test'
+      skip 'not sure how to test'
     end
 
     it "works with a nice example" do

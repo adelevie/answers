@@ -460,6 +460,7 @@ DEPENDENCIES
   rails (> 3.2.17)
   rb-fsevent
   reverse_markdown
+  rspec-collection_matchers
   rspec-html-matchers
   rspec-rails
   sass-rails (~> 3.2.5)

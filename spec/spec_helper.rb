@@ -21,6 +21,7 @@ Spork.prefork do
   require 'capybara-screenshot/rspec'
   require 'database_cleaner'
   require File.expand_path("../../config/environment", __FILE__)
+  require 'rspec/collection_matchers'
   require 'rspec/rails'
   require 'rspec/autorun'
   require 'webmock/rspec'

@@ -39,7 +39,7 @@ describe Article do
       it 'is published' do
         unpublished_article.publish
 
-        expect(unpublished_article.published?).to be_true
+        expect(unpublished_article.published?).to be_truthy
       end
     end
   end

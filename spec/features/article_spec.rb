@@ -20,7 +20,7 @@ describe "Articles" do
     end
 
     it "displays properly formated breadcrumbs" do
-      pending 'currently creation of generic articles is disabled.'
+      skip 'currently creation of generic articles is disabled.'
       expect(page.html).to have_tag('div#breadcrumbs ol li')
     end
 

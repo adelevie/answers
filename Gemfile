@@ -70,6 +70,7 @@ group :development, :test do
   gem 'faker'
   gem 'inch', require: false
   gem 'memcached'
+  gem 'rspec-collection_matchers'
   gem 'rspec-rails'
 end
 
