@@ -1,4 +1,5 @@
 ENV["RAILS_ENV"] ||= 'test'
+require 'simplecov'
 require 'coveralls'
 Coveralls.wear!('rails')
 
@@ -29,6 +30,7 @@ Spork.prefork do
 
   Capybara.javascript_driver = :webkit
   Capybara.asset_host = 'http://localhost:3000'
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[ SimpleCov::Formatter::HTMLFormatter, Coveralls::SimpleCov::Formatter ]
   WebMock.disable_net_connect!(allow_localhost: true)
 
   RSpec.configure do |config|
