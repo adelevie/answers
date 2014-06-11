@@ -196,7 +196,7 @@ describe Article do
     end
   end
 
-  describe '#to_s' do
+  describe '.to_s' do
     context 'when an article has a category' do
       it 'returns a string containing title, id and category' do
         article.category_id = Category.find_or_create_by_name("Drivers License").id
@@ -265,4 +265,3 @@ describe Article do
   end
 
 end
-

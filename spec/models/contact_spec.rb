@@ -12,6 +12,8 @@ describe Contact do
     contact = Contact.new(
         :department => 'Department of Better Technology'
       )
-    expect(contact).to have(0).errors_on(:name)
+
+    expect(contact.valid?).to be true
+    expect(contact.errors[:name].size).to eq(0)
   end
 end
