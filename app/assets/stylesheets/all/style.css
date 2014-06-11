@@ -896,3 +896,21 @@ ul.about-list li {
   padding-right:4px;
   float:left;
 }
+
+#skip_nav {
+  font-size: 80%;
+  font-family: inherit;
+
+}
+
+#skip_nav a {
+  color: #000000;
+  position: absolute;
+  margin-left: -9000px;
+}
+#skip_nav a:focus, #skipLinks a:active {
+  display: block;
+  width: 7.5em;
+  margin-left: 50px;
+}
+

@@ -25,6 +25,9 @@
 </head>
 <body class="<%= @bodyclass %>" onload="if($){ $('#query').focus(); }">
 <div id="wrapper">
+  <div id="skip_nav">
+    <a href="#main_content_container">Skip Navigation</a>
+  </div>
   <div class="navbar-top">
     <!-- <p class="notice alert alert-info"><%= notice %></p>
     <p class="alert alert-error"><%= alert %></p> -->
@@ -53,7 +56,7 @@
       </div><!-- /row -->
     </div>
   </div><!-- /navbar-top -->
-  <div class="container main clearfix"><!-- main content container -->
+  <div class="container main clearfix" id="main_content_container"><!-- main content container -->
 
 
 

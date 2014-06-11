@@ -142,3 +142,8 @@ div.article h1{
 #cfa_corner_ribbon {
   display:none;
 }
+#skip_nav a:focus, #skipLinks a:active {
+  display: block;
+  width: 7.5em;
+  margin-left: 20px;
+}
