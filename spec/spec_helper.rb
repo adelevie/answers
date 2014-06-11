@@ -19,6 +19,7 @@ Spork.prefork do
 
   require 'capybara/rspec'
   require 'capybara-screenshot/rspec'
+  require 'capybara/email/rspec'
   require 'database_cleaner'
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/collection_matchers'
@@ -34,6 +35,7 @@ Spork.prefork do
     #config.extend VCR::RSpec::Macros
     config.include Capybara::DSL
     config.include FactoryGirl::Syntax::Methods
+
     config.infer_spec_type_from_file_location!
 
     config.before(:suite) do
