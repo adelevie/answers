@@ -1,9 +1,10 @@
+
 class ArticlesController < ApplicationController
   # caches_page :show # TODO: make the cache expire when an article is updated.  Currently can't get the cache to clear properly.
   add_breadcrumb "Home", :root_url
   def index
     @bodyclass = "results"
-    @categories = Category.by_access_count
+    @categories = Category.with_published_articles.by_access_count 
 
     add_breadcrumb "All Articles"
 

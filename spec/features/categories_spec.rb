@@ -21,6 +21,33 @@ describe 'Categories' do
     	visit category_path(category)
     	expect(page.html).to have_tag('div.breadcrumbs ol li')
     end
+  end
+
+  describe 'categories listing' do
+    before { 6.times { create(:category_with_articles, name: Faker::Lorem.word) } }
+
+    it 'displays a list of all category names' do
+      create(:category_with_articles)
+      visit categories_path
+
+      Category.all.map(&:name).each { |name| expect(page).to have_content(name) }
+    end
+  end
+
+  describe 'category show view' do
+    let(:category) { create(:category_with_articles) }
+    let(:article) { category.articles.first }
+    before { visit category_path(category) }
+
+    it 'displays the category name and the description' do
+      expect(page).to have_content(category.name)
+      expect(page).to have_content(category.description)
+    end
+
+    it 'displays any published articles for that category and their preview' do
+      expect(page).to have_content(article.title)
+      expect(page).to have_content(article.preview)
+    end
 
   end
 

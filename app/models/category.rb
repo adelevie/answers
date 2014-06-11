@@ -9,7 +9,13 @@ class Category < ActiveRecord::Base
 
   default_scope order('name ASC')
   scope :by_access_count, order('access_count DESC')
+  
+  def self.with_published_articles
+    self.joins(:articles).where(articles: {status: "Published"}).distinct
+    self
+  end
 
+  # might want to deprecate
   def has_a_published_article?
     self.articles.map(&:published?).include?(true)
   end

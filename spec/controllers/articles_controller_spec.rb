@@ -9,11 +9,11 @@ describe ArticlesController do
     before { get :index }
 
     it 'assigns the body html class to @bodyclass' do
-      assigns(:bodyclass).should eq('results')
+      expect(assigns(:bodyclass)).to eq('results')
     end
 
     it 'assigns a list of categories organized by access count to @categories' do
-      assigns(:categories).should eq(Category.by_access_count)
+      expect(assigns(:categories)).to eq(Category.by_access_count)
     end
 
     it 'renders the :index template' do
@@ -28,7 +28,17 @@ describe ArticlesController do
     it 'assigns Article.find(article) to @article' do
       get :show, id: article.slug
 
-      assigns(:article).should eq(article)
+      expect(assigns(:article)).to eq(article)
+    end
+  end
+  
+  describe "GET article_type" do
+    let(:article) { create :article, type: "QuickAnswer" }
+    
+    it "renders a list of Articles of a given article_type" do
+      get :article_type, content_type: "QuickAnswer"
+      assigns(:article_type)
+      assigns(:articles)
     end
   end
 

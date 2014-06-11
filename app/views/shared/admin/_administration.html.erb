@@ -6,7 +6,7 @@
     <li class="select input optional" id="article_reviewer_input">
       <label class="label">Reviewer</label>
       <select id="article_reviewer">
-        <% User.all.each do |u| %>
+        <% users.each do |u| %>
           <option value="<%= u.email %>"><%=u.email%></option>
         <% end %>
       </select>

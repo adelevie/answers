@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :category do
     name Faker::Lorem.word
+    description Faker::Lorem.sentence
     access_count 1
 
     factory :category_with_articles do

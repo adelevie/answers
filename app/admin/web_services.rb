@@ -1,5 +1,11 @@
 ActiveAdmin.register WebService do
   controller do
+    def new
+      @users = User.all
+    end
+    def edit
+      @users = User.all
+    end
     load_and_authorize_resource :except => :index
       def scoped_collection
         end_of_association_chain.accessible_by(current_ability)

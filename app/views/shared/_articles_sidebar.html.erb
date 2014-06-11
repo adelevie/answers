@@ -14,12 +14,8 @@
                 <br/>
               <% end %>
               <%= raw @article.contact.address %>
-              <% if @article.contact.number.present? && @article.contact.number.length > 0 %>
-                <%= raw "Phone: #{@article.contact.number}" %>
-              <% end %>
+              <%= phone_number_from_article(@article) %>
             </div>
           </div>
         <% end %>
-        <% if @article.keywords.count > 0 %>
-        <% end -%>
       </div>
