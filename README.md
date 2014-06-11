@@ -1,8 +1,8 @@
 [![security](https://hakiri.io/github/18F/answers/dev.svg)](https://hakiri.io/github/18F/answers/dev)
-[![Build Status](https://travis-ci.org/codeforamerica/oakland_answers.svg?branch=master)](https://travis-ci.org/codeforamerica/oakland_answers)
-[![Coverage Status](https://coveralls.io/repos/18F/answers/badge.png?branch=feature%2Fadd_coveralls)](https://coveralls.io/r/18F/answers?branch=feature%2Fadd_coveralls)
-[![Code Climate](https://codeclimate.com/github/codeforamerica/oakland_answers.png)](https://codeclimate.com/github/codeforamerica/oakland_answers)
-[![Inline docs](http://inch-pages.github.io/github/codeforamerica/oakland_answers.png)](http://inch-pages.github.io/github/codeforamerica/oakland_answers)
+[![Build Status](https://travis-ci.org/18F/answers.svg?branch=dev)](https://travis-ci.org/18F/answers)
+[![Coverage Status](https://coveralls.io/repos/18F/answers/badge.png?branch=dev)](https://coveralls.io/r/18F/answers?branch=dev)
+[![Code Climate](https://codeclimate.com/github/18F/answers.png)](https://codeclimate.com/github/18F/answers)
+[![Inline docs](http://inch-pages.github.io/github/18F/answers.png)](http://inch-pages.github.io/github/18F/answers)
 [![Dependency Status](https://gemnasium.com/18F/answers.svg)](https://gemnasium.com/18F/answers)
 
 
