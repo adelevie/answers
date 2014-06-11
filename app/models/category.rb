@@ -10,6 +10,10 @@ class Category < ActiveRecord::Base
   default_scope order('name ASC')
   scope :by_access_count, order('access_count DESC')
 
+  def has_a_published_article?
+    self.articles.map(&:published?).include?(true)
+  end
+
   private
 
   def hits

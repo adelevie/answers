@@ -31,7 +31,7 @@ describe "Quick Answers" do
       page.should have_content("Preview Parking")
       page.should have_content("Published")
       page.should have_content("Pui Ling")
-      page.should have_content(admin_contact_path(contact))
+      page.should have_content(contact.name)
     end
 
     it "shows quick answer spanish content when it exists" do

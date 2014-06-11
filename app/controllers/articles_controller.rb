@@ -26,10 +26,4 @@ class ArticlesController < ApplicationController
     add_breadcrumb "All #{@article_type.split(/(?=[A-Z])/).join(' ')}s"
   end
 
-  #TODO can we just delete this now?
-  def missing
-    if :id > 15
-      render :layout => 'missing'
-    end
-  end
 end

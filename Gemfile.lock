@@ -175,7 +175,7 @@ GEM
       childprocess (>= 0.2.3)
       guard (>= 1.1)
       spork (>= 0.8.4)
-    haml (4.1.0.beta.1)
+    haml (4.0.5)
       tilt
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
@@ -460,6 +460,7 @@ DEPENDENCIES
   rails (> 3.2.17)
   rb-fsevent
   reverse_markdown
+  rspec-collection_matchers
   rspec-html-matchers
   rspec-rails
   sass-rails (~> 3.2.5)
