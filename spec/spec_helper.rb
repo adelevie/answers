@@ -30,7 +30,7 @@ Spork.prefork do
 
   Capybara.javascript_driver = :webkit
   Capybara.asset_host = 'http://localhost:3000'
-  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[ SimpleCov::Formatter::HTMLFormatter, Coveralls::SimpleCov::Formatter ]
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[ SimpleCov::Formatter::HTMLFormatter ]
   WebMock.disable_net_connect!(allow_localhost: true)
 
   RSpec.configure do |config|
@@ -39,6 +39,7 @@ Spork.prefork do
     config.include FactoryGirl::Syntax::Methods
 
     config.infer_spec_type_from_file_location!
+    config.raise_errors_for_deprecations!
 
     config.before(:suite) do
       DatabaseCleaner.strategy = :transaction
@@ -52,9 +53,6 @@ Spork.prefork do
     config.after(:each) do
       DatabaseCleaner.clean
     end
-    
-    # from: http://engineering.sharethrough.com/blog/2013/08/10/greater-test-control-with-rspecs-tag-filters/
-    config.treat_symbols_as_metadata_keys_with_true_values = true
   end
 end
 
