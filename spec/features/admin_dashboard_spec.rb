@@ -1,41 +1,37 @@
 require 'spec_helper'
+include LoginHelpers
 
 describe 'Admin Dashboard' do
   describe 'user views the admin dashboard page' do
     context 'with correct login credentials' do
+
       before do
-        FactoryGirl.create(:user, email: 'erica@example.com', password: 'Mahalo43',
-                           password_confirmation: 'Mahalo43')
-        visit new_user_session_path
-        fill_in 'Email', with: 'erica@example.com'
-        fill_in 'Password', with: 'Mahalo43'
-        click_button 'Sign in'
-
-        author = FactoryGirl.create(:user, email: 'pui@example.com')
-        FactoryGirl.create(:article, type: 'Guide',
-                           title: 'How Parking?', user: author)
-        FactoryGirl.create(:article, type: 'QuickAnswer',
-                           title: 'How Camping?', content_main: 'Yay camping!')
-
+        @article = create(:article_random, title: 'example title')
+        @another_article = create(:article_random)
+        login_user
         visit admin_dashboard_path
       end
 
       it 'displays a list of recent articles' do
-        page.should have_content('Recent Articles')
+        expect(page).to have_content('Recent Articles')
+        expect(page).to have_content(@article.title)
+        expect(page).to have_content(@another_article.title)
       end
 
       it 'displays details about the first article' do
-        page.should have_content('How Parking?')
-        page.should have_content('pui@example.com')
+        expect(page).to have_content(@article.type)
+        expect(page).to have_content(@article.user.email)
       end
 
       it 'displays details about the second article' do
-        page.should have_content('How Camping?')
+        expect(page).to have_content(@another_article.type)
+        expect(page).to have_content(@another_article.user.email)
       end
 
       it 'displays the article details page when the article title is clicked' do
-        click_link 'How Camping?'
-        page.should have_content('Yay camping!')
+        click_link @article.title
+        expect(page).to have_content(@article.preview)
+        expect(page).to have_content(@article.content)
       end
     end
 

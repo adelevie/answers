@@ -54,7 +54,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'guard-rspec', require: false
-  gem 'guard-spork'
   gem 'pry-nav'
   gem 'pry-rails'
   gem 'pry-rescue'
@@ -74,7 +73,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '~> 2.3.0'
   gem 'capybara-screenshot'
   gem 'capybara-webkit'
   gem 'capybara-email'
@@ -82,7 +81,6 @@ group :test do
   gem 'launchy'
   gem 'rspec-html-matchers'
   gem 'shoulda'
-  gem 'spork-rails'
   gem 'webmock'
   gem 'vcr'
 end
