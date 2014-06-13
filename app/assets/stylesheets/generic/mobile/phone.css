@@ -1,0 +1,141 @@
+/* phone */
+
+@media only screen and (max-width: 600px), only screen and (max-device-width: 600px)  {
+  html, body{
+    height:auto;
+  }
+  ul {
+
+    margin:0;
+  }
+  .modal-container{
+    padding-top: 15px !important;
+  }
+  .ribbon-front{
+    padding-top: 5px !important;
+    padding-bottom: 20px !important;
+  }
+  /* remove feedback side-tab */
+  .gsfn-widget-tab{
+    display: none !important; 
+  }
+  /* center Honolulu Answers title */
+  .navbar-top .container{
+    text-align: center;
+  }
+  /* make the nav work */
+  .nav-top{
+    background-color: #000;
+    margin-bottom: -10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* show the search */
+  .header-search{
+    display: block;
+    background-color: #000;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+  #query{
+    width: 70% !important;
+  }
+  #search{
+    text-align: left !important;
+    width: 100% !important;
+  }
+  .btn-search{
+    vertical-align: bottom !important;
+  }
+  /* homepage: remove lines, welcome text. fix search bar */
+  #welcome-line-l{
+    display: none !important; 
+  }
+  #welcome-line-r{
+    display: none !important;
+  }
+  .welcome{
+    display: none !important;
+  }
+  .home-modal{
+    display: none !important;
+  }
+  .ribbon-wrapper{
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .ribbon-front input#query{
+    width: 95% !important;
+  }
+  .ribbon-front .btn-search{
+    display: none;
+  }
+  /* move the main part down a bit */
+  
+  /* adjust sidebar margins when they're one column */
+  .sidebar{
+    margin-left: 20px !important;
+    margin-right: 0px !important;
+  }
+  /* fix the footer */
+  .footer{
+    height: 100% !important;
+  }
+  .footer .container{
+    text-align: center;
+  }
+  .cfa-logos{
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 15px !important;
+  }
+  /* don't break links on homepage 
+  Nick-not sure why this is in here. Im changing it to wrap. 
+  */
+  .category a{
+    white-space: wrap;
+  }
+  a.hnl-logo{
+    border-bottom: none !important;
+  }
+  .modal-container{
+    max-width: 100%;
+  }
+  .navbar-top .container .row{
+    width: 100%;
+    background-color: #000;
+    padding-bottom: 10px;
+  }
+  #pageContent{
+    max-width:100%;
+    margin-top:0;
+  }
+  div.article{
+    padding:0;
+  }
+  div.article-main-content{
+    float: 0;
+    width:100%;
+  }
+  div.side-bar{
+    float:0;
+    width:100%;
+    margin-left: 0;
+  }
+  div.page-container{
+    padding: 0;
+    margin:0;
+    width:100%;
+  }
+  div.home{
+    padding-top:0px;
+  }
+  div.breadcrumbs{
+    width:100%;
+  }
+  div.popular{
+  margin: 0;
+  }
+
+}

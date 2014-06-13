@@ -39,6 +39,7 @@ gem 'paperclip', '~> 3.0'
 gem 'aws-sdk', '~> 1.3.4'
 gem 'dotenv-rails'
 gem "breadcrumbs_on_rails"
+gem 'slim'
 
 group :assets do
   gem 'sass-rails', '~> 3.2.5'

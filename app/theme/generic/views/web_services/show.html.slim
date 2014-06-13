@@ -1,0 +1,39 @@
+- set_meta_tags :description => @article.preview, :canonical => official_government_long_url(request.fullpath), :title => [@article.category.name, @article.title]
+div class="page-container article"
+  div.breadcrumbs
+    | #{link_to( "Home", root_url)}  
+      > 
+        #{link_to(@article.category.name, @article.category)}
+          >
+            #{@article.title}
+  
+  div.article-main-content
+    
+    h3.content-type
+      = @article.class.to_s.split(/(?=[A-Z])/).join(' ')
+    div.header
+      = content_tag(:h1, @article.title )
+    div.content-text
+      - unless @article.service_url.blank?
+        div.onlineservice
+          div.servicebox
+            a href="#{@article.service_url}" target="_blank"><img src="/assets/getting_started_btn.png" /></a>
+          h3.service
+            | #{official_government_short_url} lets you do this online!
+          p 
+            | This will take you directly to the online service on the #{official_government_short_url} website.
+      /End of conditional
+
+      - unless @content_main.strip.blank?
+        div.quick_top
+          = @content_main.html_safe
+      /End of conditional  
+      - unless @content_need_to_know.blank?
+        div.quick_bottom
+          h3 What You Need to Know
+          = @content_need_to_know.html_safe
+      /End of conditional
+ 
+
+  div.side-bar
+    = render :partial => 'shared/articles_sidebar'

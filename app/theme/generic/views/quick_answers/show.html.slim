@@ -1,0 +1,28 @@
+- set_meta_tags :description => @article.preview, :canonical => official_government_long_url(request.fullpath), :title => [@article.category.try(:name), @article.title]
+div class="page-container article"
+  div.breadcrumbs
+    ol 
+      == render_breadcrumbs :tag=> :li, :separator =>" > "
+  div.article-main-content
+    h3.content-type
+      = @article.class.to_s.split(/(?=[A-Z])/).join(' ')
+    div.header
+      = content_tag(:h1, @article.title )
+    div.content-text
+      - if @content_main.present?
+        div.quick_top
+          = @content_main.html_safe
+    div.header
+      = content_tag(:h1, @article.title_es )
+    div.content-text
+      - if @content_main_es.present?
+        div.quick_top
+          = @content_main_es.html_safe
+    div.header
+      = content_tag(:h1, @article.title_cn )
+    div.content-text
+      - if @content_main_cn.present?
+        div.quick_top
+          = @content_main_cn.html_safe
+  div.side-bar
+      = render :partial => 'shared/articles_sidebar'

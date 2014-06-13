@@ -1,0 +1,8 @@
+div.sidebar
+  div.sidebar-unit
+    h4.side-head ALL CATEGORIES
+    div.sidebar-content
+       ul
+        - Category.order(:name).each do |c|
+          = content_tag( :li, link_to(c.name, c))
+        

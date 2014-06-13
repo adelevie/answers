@@ -1,0 +1,5 @@
+section.header
+  h1
+  	a href="/" Answers
+  - if !current_page?('/')
+      == render :partial => 'shared/search_form'

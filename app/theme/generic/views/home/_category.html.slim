@@ -1,0 +1,4 @@
+div.category
+	span.left = link_to(category.name, category_path(category.id))
+	p.right
+	ul = render :partial => 'home/article', :collection => category.articles.by_access_count.limit(3)

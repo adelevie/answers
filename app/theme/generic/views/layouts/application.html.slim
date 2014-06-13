@@ -1,0 +1,35 @@
+doctype 5
+html
+  head 
+    = display_meta_tags :site => "Answers"
+    meta name="robots" content="index,nofollow" /
+    meta http-equiv="content-type" content="text/html;charset=UTF-8" /
+    meta name="viewport" content="width=device-width,initial-scale =1,maximum-scale=1,user-scalable=no" /
+    meta name="apple-mobile-web-app-capable" content="yes" /
+    = stylesheet_link_tag "generic-application-all", :media => "all"
+    = stylesheet_link_tag "generic-application-mobile", :media => "all and (max-width: 969px)"
+    = stylesheet_link_tag "generic-application-print", :media => "print"
+
+    /[if lte IE 8]
+      = stylesheet_link_tag    "application-ie", :media=> "all"
+    
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  body
+    div#wrapper
+      div#skip_nav
+        a href="#main_content_container" Skip Navigation
+      == render :partial => 'shared/header'
+      == yield
+    == render :partial => 'shared/footer'
+
+  javascript:
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '<%=ENV['GOOGLE_ANALYTICS_KEY']%>']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();

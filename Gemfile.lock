@@ -465,6 +465,8 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.2.5)
   shoulda
+  slim
+  spork-rails
   spring-commands-rspec
   tanker
   text

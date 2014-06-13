@@ -1,0 +1,17 @@
+- set_meta_tags description: "Find answers to your questions about #{official_city_name} City Services."
+div class="page-container home"
+	div.home-main-content
+		h2.welcome Welcome To #{official_site_title}
+		p.call = "Find answers to your questions about City of #{official_city_name} services."
+		div.ribbon-front
+			div.triangle-l
+			div.triangle-r
+			div.ribbon-wrapper
+				form#search action="search" name="search" method="get"
+					label for="query" Search:
+					input#query type="text" name="q" title="query" placeholder="Try parking, jobs, or permits..." 
+					input#home-search class="btn-search" type="submit" value="SEARCH" title="Search"
+		div.popular
+			div.pop-heading
+				h2 Most Popular Categories:
+			div.pop-categories = render partial: 'home/category', collection: @popular_categories
