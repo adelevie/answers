@@ -1,0 +1,11 @@
+uscis:
+  id: 1
+  name: USCIS
+  url: http://www.uscis.gov
+  description: United States Citizenship and Immigration Services
+
+nchs:
+  id: 2
+  name: NCHS
+  url: http://www.cdc.gov/nchs
+  description: National Center for Health Statistics

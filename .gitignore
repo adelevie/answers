@@ -8,6 +8,7 @@
 *.sassc
 **.orig
 .bundle
+.coveralls.yml
 .env
 .idea
 .powrc
