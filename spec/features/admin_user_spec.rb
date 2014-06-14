@@ -1,7 +1,7 @@
 require 'spec_helper'
 include LoginHelpers
 
-describe 'Users' do
+describe 'Users', :type => :feature do
   before { login_user(create(:user, is_admin: true)) }
 
   describe 'admin user views user details page' do

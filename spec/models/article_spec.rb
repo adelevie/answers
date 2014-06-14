@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Article do
+describe Article, :type => :model do
   let(:article) { FactoryGirl.create(:article) }
-  before        { Article.stub(:search_tank).and_return([article]) }
+  before        { allow(Article).to receive(:search_tank).and_return([article]) }
   subject       { article }
 
 
@@ -12,7 +12,7 @@ describe Article do
 
   it 'allows mass assignment of common attributes' do
     Article.new.attributes.keys.each do |attrib|
-      article { should allow_mass_assignment_of attrib.to_sym }
+      article { is_expected.to allow_mass_assignment_of attrib.to_sym }
     end
   end
 
@@ -79,11 +79,11 @@ describe Article do
     subject  { article.related }
     context 'has no related articles' do
 
-      it { should be_nil }
+      it { is_expected.to be_nil }
     end
 
     context 'has related articles' do
-      it { should be_nil }
+      it { is_expected.to be_nil }
 
     end
   end
@@ -113,35 +113,35 @@ describe Article do
   describe ".search" do
 
     it "matches articles in the database" do
-      Article.search(article.title).should include(article)
+      expect(Article.search(article.title)).to include(article)
     end
 
     context "query does not match anything in the database" do
       it "returns an empty array" do
-        Article.stub(:search_tank).and_return([])
-        Article.search(SecureRandom.hex(16)).should be_empty
+        allow(Article).to receive(:search_tank).and_return([])
+        expect(Article.search(SecureRandom.hex(16))).to be_empty
       end
     end
 
     context "query is an empty string" do
       subject { Article.search ''}
-      it { should == Article.all }
+      it { is_expected.to eq(Article.all) }
     end
 
     context "query is a single space" do
       subject { Article.search ' ' }
-      it { should == Article.all }
+      it { is_expected.to eq(Article.all) }
     end
 
     describe ".search titles" do
       it "returns an empty array when the search term is present in an article but not the title" do
-        Article.stub(:search_tank).and_return([])
-        Article.search_titles(article.preview).should be_empty
+        allow(Article).to receive(:search_tank).and_return([])
+        expect(Article.search_titles(article.preview)).to be_empty
       end
 
       context "query is present in the title" do
         subject { Article.search_titles article.title }
-        it { should include(article) }
+        it { is_expected.to include(article) }
       end
     end
   end
@@ -167,7 +167,7 @@ describe Article do
 
   describe "#remove_stop_words" do
     it "removes common english words from the string" do
-      Article.remove_stop_words('why am I a banana').should eq('banana')
+      expect(Article.remove_stop_words('why am I a banana')).to eq('banana')
     end
   end
 
@@ -199,10 +199,11 @@ describe Article do
   describe '.to_s' do
     context 'when an article has a category' do
       it 'returns a string containing title, id and category' do
-        article.category_id = Category.find_or_create_by_name("Drivers License").id
+        category = create(:category)
+        article.category = category
         article.save
 
-        article.to_s.should eq("How do I get a driver license for the first time? (#{article.id}) [Drivers License]")
+        expect(article.to_s).to eq("#{article.title} (#{article.id}) [#{category.name}]")
       end
     end
   end

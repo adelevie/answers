@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Searches' do
+describe 'Searches', :type => :feature do
 
   describe 'search results' do
     let(:article) { create :article, status: 'Published' }
@@ -16,9 +16,9 @@ describe 'Searches' do
 
       subject { page }
 
-      it { should have_content "Search results for: \"#{query}\"" }
-      it { should have_content article.title }
-      it { should have_content article.preview }
+      it { is_expected.to have_content "Search results for: \"#{query}\"" }
+      it { is_expected.to have_content article.title }
+      it { is_expected.to have_content article.preview }
     end
 
     context 'no results found' do
@@ -33,9 +33,9 @@ describe 'Searches' do
 
       subject { page }
 
-      it { should have_content "Search results for: \"#{reverse_query}\"" }
-      it { should have_content "Sorry, no results found for \"#{reverse_query}\".  Please try rephrasing your search terms." }
-      it { should_not have_content article.title }
+      it { is_expected.to have_content "Search results for: \"#{reverse_query}\"" }
+      it { is_expected.to have_content "Sorry, no results found for \"#{reverse_query}\".  Please try rephrasing your search terms." }
+      it { is_expected.not_to have_content article.title }
     end
 
     context 'several results found' do

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SearchController do
+describe SearchController, :type => :controller do
   describe "#reindex_articles" do
     it "reindexes articles via tanker" do
       expect(Article).to receive(:tanker_reindex)

@@ -1,7 +1,7 @@
 require 'spec_helper'
 include LoginHelpers
 
-describe 'Contacts' do
+describe 'Contacts', :type => :feature do
   before { login_user }
 
   describe 'user views contact details page' do

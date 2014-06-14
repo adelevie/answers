@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ContactsController do
+describe ContactsController, :type => :controller do
 
   describe 'GET index' do
     let(:contact) { create(:contact) }

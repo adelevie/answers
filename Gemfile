@@ -22,7 +22,7 @@ gem 'kgio'
 
 gem 'activeadmin', '~> 0.5.1'
 gem 'devise', '~> 2.0'
-gem 'cancan'
+gem 'cancancan', git: 'https://github.com/andypike/cancancan.git', branch: 'rspec3'
 
 gem 'tanker'
 gem 'text'

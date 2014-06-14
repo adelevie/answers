@@ -1,7 +1,7 @@
 require 'spec_helper'
 include LoginHelpers
 
-describe 'Categories' do
+describe 'Categories', :type => :feature do
   before { login_user }
 
   describe 'user views category details page' do

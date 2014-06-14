@@ -2,7 +2,7 @@ require 'spec_helper'
 
 include ArticlesHelper
 
-describe ArticlesHelper do
+describe ArticlesHelper, :type => :helper do
   
   it 'returns an article list tag' do
     tag = article_list_tag(1, 'description')

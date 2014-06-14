@@ -2,7 +2,7 @@ require 'spec_helper'
 include LoginHelpers
 
 # TODO the future of guides is uncertain. These tests may become irrelevant
-describe 'Guide Steps' do
+describe 'Guide Steps', :type => :feature do
   before { login_user }
 
   describe 'user views a guide step details page' do

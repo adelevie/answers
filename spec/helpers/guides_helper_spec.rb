@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe GuidesHelper do
+describe GuidesHelper, :type => :helper do
   describe '#meta_tag_hash' do
     let (:article) { create(:article) }
     let (:request) { double('request', :fullpath => '/path/to/resource') }

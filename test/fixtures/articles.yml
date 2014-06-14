@@ -1,0 +1,428 @@
+one:
+  title: How do I become a U.S. citizen?
+  slug: how-do-i-become-a-us-citizen
+  preview: >
+    In most cases, you must first be a permanent resident.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    U.S. citizen, naturalization, Armed Forces, Army, Navy, Air Force
+  content_main: >
+    In most cases, you must first be a permanent resident. The process to apply to become a U.S. citizen is known as naturalization.
+  content_need_to_know: |
+    To be eligible for naturalization, you must first show that you:
+
+      * are age 18 or older; and
+      * have been a permanent resident for a certain amount of time; and
+      * are a person of good moral character; and
+      * Have basic knowledge of U.S. government
+      * have a period of continuous residence and physical presence in the United States; and
+      * are able to read, write and speak basic English.
+  user_id: 1
+
+
+two:
+  title: What types of citizenship are there?
+  slug: what-types-of-citizenship-are-there
+  preview: >
+    There are two types of citizenship: Natural born and Naturalized
+  category_id: 2
+  type: QuickAnswer
+  tags: >
+    acquired, derivative, derived, jus solis, jus sanguinis, birth, naturalized
+  content_main: |
+    There are two types of citizenship:
+
+     1.  Natural born
+     2.  Naturalized
+  content_need_to_know: |
+    **Natural born citizenship** is the acquirement of citizenship at the moment of birth.
+
+    There are only two types of natural born citizen:
+
+     1. Native-born is being born within the territory of the state or commonwealth under the principle of jus soli,
+
+     2. Attaining citizenship through the parents’ citizenship status under the principle of jus sanguinis.
+  user_id: 1
+
+
+three:
+  title: What is naturalization?
+  slug: what-is-naturalization
+  preview: Naturalization is the process of becoming a U.S. citizen.
+  category_id: 1
+  type: QuickAnswer
+  content_main: Naturalization is the process of becoming a U.S. citizen.
+  content_need_to_know: Normally you would be a green card holder and not born as a U.S. citizen nor would you have U.S. parents.
+  user_id: 1
+
+
+four:
+  title: How do I know if I'm eligible for naturalization?
+  slug: how-do-i-know-if-im-eligible-for-naturalization
+  preview: You must first meet certain requirements required by U.S. immigration law in order to be eligible for naturalization.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization, Eligibility
+  content_main: >
+    You must first meet certain requirements required by U.S. immigration law in order to be eligible for naturalization.
+  content_need_to_know: |
+    Generally, to be eligible for naturalization you must:
+
+     * Be age 18 or older; and
+     * Be a permanent resident for a certain amount of time (usually 5 years or 3 years, depending on how you obtained status); and
+     * Be a person of good moral character; and
+     * Have a basic knowledge of U.S. government (this, too, can be excepted due to permanent physical or mental impairment); and
+     * Have a period of continuous residence and physical presence in the United States; and
+     * Be able to read, write, and speak basic English.
+
+    Please visit [www.uscis.gov/howdoi](http://www.uscis.gov/howdoi) to find out "How Do I..."
+  user_id: 1
+
+
+five:
+  title: How do I apply for naturalization?
+  slug: how-do-i-apply-for-naturalization
+  preview: >
+    You must complete and submit the Form N-400, Application for Naturalization.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization, Eligibility, Apply
+  content_main: >
+    You must complete and submit the Form N-400, Application for Naturalization.
+  content_need_to_know: >
+   For more information on the naturalization process, please see our manual, M-476, A Guide to Naturalization.
+  user_id: 1
+
+
+six:
+  title: How do I become a U.S. citizen if I'm in the army?
+  slug: how-do-i-become-a-us-citizen-if-im-in-the-army
+  preview: >
+    You can apply for naturalization at a U.S. Consulate or Embassy abroad  - or in the usual way in the U.S. - if you enlisted in the U.S. Army after October 1, 2004.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization, Eligibility, Apply, U.S. Armed Forces, Army
+  content_main: >
+    You can apply for naturalization at a U.S. Consulate or Embassy abroad  - or in the usual way in the U.S. - if you enlisted in the U.S. Army after October 1, 2004.
+  content_need_to_know: |
+    You will need the Forms N-400 and N-426 with your DD Form 214 or NGB Form 22 to apply.  USCIS will make every effort to expedite the naturalization process for active members of the U.S. military.
+
+    You can call our Military Helpline at 1-877-CIS-4MIL (1-877-247-4645) and listen to the menu of services available to assist U.S. Armed Forces members and their families. If you are a military member deployed overseas, access your Defense Switched Network (DSN) Domestic Base Operator for assistance. N-400 live assistance is available between 8 a.m. and 4:30 p.m. CST.
+  user_id: 1
+
+
+seven:
+  title: How do I know if I'm a U.S. citizen?
+  slug: how-do-i-know-if-im-a-us-citizen
+  preview: >
+    If you were born in the United States, you do not need to apply to USCIS for any evidence of citizenship. If you were born outside the United States, but one or both of your parents were U.S. citizens when you were born, you may still be a U.S. citizen.
+  category_id: 2
+  type: QuickAnswer
+  content_main: |
+    If you were born in the United States, you do not need to apply to USCIS for any evidence of citizenship.  Your birth certificate issued where you were born is proof of your citizenship.
+
+    If you were born outside the United States, but one or both of your parents were U.S. citizens when you were born, you may still be a U.S. citizen. This is called citizenship through derivation.
+  content_need_to_know: |
+    Please visit [www.uscis.gov/howdoi](http://www.uscis.gov/howdoi) to find out "How Do I..."
+
+    You can also visit www.uscis.gov to download forms, e-file some applications, check the status of an application, and more.
+    It’s a great place to start!
+  user_id: 1
+
+
+eight:
+  title: Where can I get a copy of my United States birth certificate?
+  slug: where-can-i-get-a-copy-of-my-us-birth-certificate
+  preview: Check with the Department of Health (Vital Records) in the U.S. State in which you were born.
+  category_id: 2
+  contact_id: 2
+  type: QuickAnswer
+  tags:
+  content_main: Check with the Department of Health (Vital Records) in the U.S. State in which you were born.
+  content_need_to_know: >
+    For more information, visit the National Center for Health Statistics web page at [www.cdc.gov/nchs/births.htm](http://www.cdc.gov/nchs/births.htm).
+  user_id: 1
+
+
+nine:
+  title: What documents can I show as proof of U.S. citizenship?
+  slug: what-documents-can-i-provide-as-proof-of-us-citizenship
+  preview: >
+    The most common documents that prove you are a U.S. citizen are: Birth Certificate, Passport, Certificate of Citizenship, or Naturalization Certificate
+  category_id: 2
+  type: QuickAnswer
+  content_main: |
+    The most common documents that prove you are a U.S. citizen are:
+
+     * Birth Certificate
+     * Passport
+     * Certificate of Citizenship
+     * Naturalization Certificate, issued to a person who became a U.S. citizen after 18 years of age through the naturalization process.
+  user_id: 1
+
+
+ten:
+  title: Do I need to be in the United States when I file an N-400 application?
+  slug: do-i-need-to-be-in-the-us-when-i-file-an-n400-application
+  preview: You do not necessarily need to be in the U.S. when filing Form N-400 and you may be able to file overseas.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization, Eligibility, Apply
+  content_main: >
+    You do not necessarily need to be in the U.S. when filing Form N-400 and you may be able to file overseas.  The Guide to Naturalization (M-476) provides for more information about filing from overseas.
+  content_need_to_know: |
+    USCIS has educational materials and resources to help you prepare for the citizenship test (English and Civics portions). Visit the Citizenship and Resource Center at [www.USCIS.gov/citizenship](http://www.USCIS.gov/citizenship), to find information on how to find English and citizenship preparation classes in your area, learn about free citizenship information sessions offered by USCIS in your area, and download study materials for the English and Civics portions of the citizenship test. You can also visit [www.uscis.gov](http://www.uscis.gov) to download forms, e-file some applications, check the status of an application, and more.
+    It’s a great place to start!
+  user_id: 1
+
+
+eleven:
+  title: How do I get a replacement naturalization certificate?
+  slug: how-do-i-get-a-replacement-naturalization-certificate
+  preview: You must file the Form N-565 to apply for a replacement naturalization certificate.
+  category_id: 1
+  contact_id: 1
+  type: QuickAnswer
+  tags: >
+    naturalization, certificate
+  content_main: You must file the Form N-565 to apply for a replacement naturalization certificate.
+  content_need_to_know: |
+    Please visit [www.uscis.gov/howdoi](http://www.uscis.gov/howdoi) to find out "How Do I..."
+
+    You can also visit [www.uscis.gov](http://www.uscis.gov) to download forms, e-file some applications, check the status of an application, and more.
+    It’s a great place to start!
+  user_id: 1
+
+
+twelve:
+  title: Do I have to take a test?
+  slug: do-i-have-to-take-a-test
+  preview: >
+    Most naturalization applicants are required to take a test on: English and Civics (U.S. history and government)
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization Exam, Test, Questions
+  content_main: >
+    Most naturalization applicants are required to take a test on:
+
+    * English
+    * Civics (U.S. history and government)
+  content_need_to_know: >
+    We provide resources to help you prepare.  For more information, visit our Naturalization Test page.  You can also get study materials from the Citizenship Resource Center.
+  user_id: 1
+
+
+thirteen:
+  title: What type of questions are asked on the test?
+  slug: what-type-of-questions-are-asked-on-the-test
+  preview: >
+    There is a speaking test, reading test, writing test and civics test.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization Exam, Test, Questions
+  content_main: >
+    There is a speaking test, reading test, writing test and civics test.
+  content_need_to_know: >
+     You have two opportunities to take the English and civics tests per application. If you fail any portion of the test during your first interview, you will be retested on the portion of the test that you failed between 60 and 90 days from the date of your initial interview.
+  user_id: 1
+
+
+fourteen:
+  title: Is there a speaking test?
+  slug: is-there-a-speaking-test
+  preview: Yes.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization Exam, Test
+  content_main: Yes.
+  content_need_to_know: >
+    Your ability to speak English will be determined by a USCIS Officer during your eligibility interview on Form N-400, Application for Naturalization.
+  user_id: 1
+
+
+fifteen:
+  title: Is there a reading test?
+  slug: is-there-a-reading-test
+  preview: Yes.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization Exam, Test, Reading
+  content_main: Yes.
+  content_need_to_know: >
+    You must write one out of three sentences correctly to demonstrate an ability to write in English. The Writing Test Vocabulary List will help you study for the English writing portion of the naturalization test. The content focuses on civics and history topics.
+  user_id: 1
+
+
+sixteen:
+  title: Is there a writing test?
+  slug: is-there-a-writing-test
+  preview: Yes.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization Exam, Test, Writing
+  content_main: Yes.
+  content_need_to_know: >
+    You must write one out of three sentences correctly to demonstrate an ability to write in English. The Writing Test Vocabulary List will help you study for the English writing portion of the naturalization test. The content focuses on civics and history topics.
+  user_id: 1
+
+
+seventeen:
+  title: Is there a civics test?
+  slug: is-there-a-civics-test
+  preview: Yes.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization Exam, Test
+  content_main: Yes.
+  content_need_to_know: >
+     There are 100 civics questions on the naturalization test. During your naturalization interview, you will be asked up to 10 questions from the list of 100 questions. You must answer correctly six (6) of the 10 questions to pass the civics test.
+  user_id: 1
+
+
+eighteen:
+  title: How do I study for the test?
+  slug: how-do-i-study-for-the-test
+  preview: There are many study materials available.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization Exam, Test, Questions
+  content_main: >
+    There are many study materials available.  You can get materials from the website or you can visit the U.S. Government Bookstore to purchase USCIS products and publications.
+  content_need_to_know: <http://www.uscis.gov/citizenship/learners/study-test/study-materials-civics-test>
+  user_id: 1
+
+
+nineteen:
+  title: Why should I become a citizen?
+  slug: why-should-i-become-a-citizen
+  preview: >
+    Citizenship offers new rights and privileges.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    U.S. citizen, jury, passport, family, sponsor, jobs, benefits
+  content_main: >
+    As a permanent resident, you have most of the rights of U.S. citizens. However, there are many important reasons to consider U.S. citizenship. Citizenship offers new rights and privileges, but comes with equally important responsibilities.
+  content_need_to_know: |
+    Only citizens can:
+
+     * vote in federal elections;
+     * serve on a federal jury;
+     * travel with a U.S. passport;
+     * sponsor family members to come to the U.S.;
+     * obtain citizenship for children born abroad automatically when the child is under 18 years of age;
+     * apply for federal jobs;
+     * become an elected official;
+     * keep your residency;
+     * become eligible for federal grants and scholarships;  and
+     * obtain government benefits.
+  user_id: 1
+
+
+twenty:
+  title: What are the benefits of citizenship?
+  slug: what-are-the-benefits-of-citizenship
+  preview: Citizenship offers new rights and privileges; such as...
+  category_id: 3
+  type: QuickAnswer
+  tags: >
+    U.S. citizen, jury, passport, family, sponsor, jobs, benefits
+  content_main: |
+    Citizenship offers new rights and privileges, such as:
+
+     * Voting
+     * Bringing family members to the US
+     * Obtaining citizenship for children born abroad
+     * Traveling with a U.S. passport
+     * Becoming eligible for Federal jobs
+     * Becoming an elected official
+     * Showing your patriotism
+  user_id: 1
+
+
+twenty_one:
+  title: What is good moral character?
+  slug: what-is-good-moral-character
+  preview: >
+    You must show that you have been, and continue to be, a person of good moral character in order to be eligible for naturalization.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Policy, Good Moral Character, Naturalization, INA 101(f)
+  content_main: >
+    You must show that you have been, and continue to be, a person of good moral character in order to be eligible for naturalization.
+  content_need_to_know: |
+    In general, an applicant must show that he or she has been and continues to be a person of GMC during the statutory period prior to filing and up to the time of the Oath of Allegiance.
+
+    The applicable naturalization provision under which the applicant files determines the period during which the applicant must demonstrate GMC.  The applicant’s conduct outside the GMC period may also impact whether he or she meets the GMC requirement.
+
+    While USCIS determines whether an applicant has met the GMC requirement on a case-by-case basis, certain types of criminal conduct automatically preclude applicants from establishing GMC and may make the applicant subject to removal proceedings.[5] An applicant may also be found to lack GMC for other types of criminal conduct (or unlawful acts).
+  user_id: 1
+
+
+twenty_two:
+  title: What is physical presence?
+  slug: what-is-physical-presence
+  preview: >
+    Physical presence is the amount of time you have been physically present in the U.S. before applying for naturalization.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization, Citizen, Naturalizing, Physical Presence, Reside
+  content_main: >
+    Physical presence is the amount of time you have been physically present in the U.S. before applying for naturalization.
+  content_need_to_know: |
+    You must show that you were:
+
+     * Physically present in the U.S. for 30 months within the five year period before applying, or
+     * Physically present in the U.S. for 18 months within the three year period before applying in the case of qualified spouses of U.S. citizens
+  user_id: 1
+
+
+twenty_three:
+  title: What is continuous residence?
+  slug: what-is-continuous-residence
+  preview: >
+    "Continuous residence" means that the applicant has maintained residence within the United States for a required period of time.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization, Citizen, Naturalizing, Continuous Presence, Reside
+  content_main: >
+    “Continuous residence” means that the applicant has maintained residence within the United States for a required period of time.
+  content_need_to_know: |
+    Applicants are required to show that they have:
+
+     * Resided continuously in the U.S. for five years before applying, or
+     * Resided continuously in the U.S. for three years in the case of qualified spouses of U.S. citizens
+  user_id: 1
+
+
+twenty_four:
+  title: How do I preserve my continuous residence?
+  slug: how-do-i-preserve-my-continuous-residence
+  preview: >
+    You can seek to preserve your continuous residence for naturalization purposes while working overseas.
+  category_id: 1
+  type: QuickAnswer
+  tags: >
+    Naturalization, Citizen, Naturalizing, Continuous Presence, Reside
+  content_main: >
+    You can seek to preserve your continuous residence for naturalization purposes while working overseas.
+  content_need_to_know: |
+    If you want to preserve your continuous residence while working overseas for a recognized institution, you must file Form N-470, Application to Preserve Residence for Naturalization Purposes with USCIS.
+
+    An organization may obtain USCIS recognition as an American institution of research for the purpose of preserving the continuous residence status of its employees who are, or will be, naturalization applicants assigned abroad for an extended period of time. The requesting organization should follow the instructions found on the Requesting Recognition as an American Institution of Research page.
+  user_id: 1

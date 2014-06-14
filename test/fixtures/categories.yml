@@ -1,0 +1,17 @@
+naturalization:
+  id: 1
+  name: Naturalization
+  description: Articles related to naturalization
+  slug: naturalization
+
+citizenship:
+  id: 2
+  name: Citizenship
+  description: Articles related to Citizenship
+  slug: citizenship
+
+citizenship_benefits:
+  id: 3
+  name: Citizenship Benefits & Services
+  description: Articles related to citizenship benefits & services
+  slug: citizenship-benefits-and-services

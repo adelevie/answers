@@ -4,6 +4,8 @@ require 'coveralls'
 Coveralls.wear!('rails')
 SimpleCov.start('rails')
   
+require File.expand_path("../../config/environment", __FILE__)
+
 require 'capybara/rspec'
 require 'capybara-screenshot/rspec'
 require 'capybara/email/rspec'
@@ -12,7 +14,6 @@ require 'rspec/collection_matchers'
 require 'rspec/rails'
 require 'vcr'
 require 'webmock/rspec'
-require File.expand_path("../../config/environment", __FILE__)
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 Capybara.asset_host = 'http://localhost:3000'

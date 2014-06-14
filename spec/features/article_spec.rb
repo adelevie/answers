@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Articles' do
+describe 'Articles', :type => :feature do
 
   describe 'user views a quick answer details page' do
     let(:title)                { 'Parking in Oakland' }

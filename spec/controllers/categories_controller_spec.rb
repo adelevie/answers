@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe CategoriesController do
+describe CategoriesController, :type => :controller do
   render_views
 
   describe 'GET show' do

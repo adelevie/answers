@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Categories' do
+describe 'Categories', :type => :feature do
   describe 'user views a category page' do
   	let(:category) { create(:category, name: 'parking', description: 'Foo') }
 

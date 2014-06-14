@@ -1,7 +1,7 @@
 require 'spec_helper'
 include LoginHelpers
 
-describe 'Admin Dashboard' do
+describe 'Admin Dashboard', :type => :feature do
   describe 'user views the admin dashboard page' do
     context 'with correct login credentials' do
 

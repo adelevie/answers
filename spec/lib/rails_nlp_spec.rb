@@ -1,4 +1,4 @@
-# encoding: UTF-8
+# encoding: utf-8
 require 'spec_helper'
 
 vcr_options = { 
@@ -10,13 +10,13 @@ describe RailsNlp::TextAnalyser, vcr: vcr_options do
     @analyser = RailsNlp::TextAnalyser.new
   end
 
-  describe "Combining all the strings and texts of a model into one long string" do
+  describe 'Combining all the strings and texts of a model into one long string' do
     
-    it "works with a fantasy example" do
+    it 'works with a fantasy example' do
       class AssocModel
         attr_accessor :name
         def name
-          @name || "INCEPTION"
+          @name || 'INCEPTION'
         end
       end
       class FakeModel
@@ -39,7 +39,7 @@ describe RailsNlp::TextAnalyser, vcr: vcr_options do
         end
 
         def description
-          @description || "<a href='about:blank'>Dan</a> wields his mighty sword with a <strong>tight fisted grip</strong>.\n\nLunging at his enemies' bodies he yells \"AAAARRRGGH!!\", before flailing wildly all that rests in his path."  
+          @description || "<a href='about:blank'>Dan</a> wields his mighty sword with a <strong>tight fisted grip</strong>.\n\nLunging at his enemies' bodies he yells 'AAARRRGGH!!', before flailing wildly all that rests in his path."  
         end
 
         def private
@@ -48,71 +48,71 @@ describe RailsNlp::TextAnalyser, vcr: vcr_options do
       end
       model = FakeModel.new
       text = @analyser.collect_text( :model => model, :fields => ['name', 'player_class', 'description', 'assoc_model.name'])
-      text.should eq(model.name + ' ' + model.player_class + ' ' + model.description + ' ' + model.assoc_model.name + ' ')
+      expect(text).to eq(model.name + ' ' + model.player_class + ' ' + model.description + ' ' + model.assoc_model.name + ' ')
     end
   end
 
-  describe "Clean the text of non-word characters" do
+  describe 'Clean the text of non-word characters' do
 
-    it "removes html tags" do
+    it 'removes html tags' do
       dirty = "<div id='content', class='class'>one two <br /><ul><li>three </li><br /><strong>four</strong></ul></div>"
-      @analyser.clean(dirty).should eq "one two three four"
+      expect(@analyser.clean(dirty)).to eq 'one two three four'
     end
 
-    it "removes non-valid html" do
+    it 'removes non-valid html' do
       skip 'not working since the hml tokenizer in actionpack only supports valid xhtml'
     end
 
     it "doesn't remove foreign language characters" do
-      @analyser.clean("トマノシク").should eq("トマノシク")
+      expect(@analyser.clean('トマノシク')).to eq('トマノシク')
     end
 
-    it "removes punctuation" do
-      @analyser.clean("s.w.a.t. fever!").should eq("swat fever")
+    it 'removes punctuation' do
+      expect(@analyser.clean('s.w.a.t. fever!')).to eq('swat fever')
     end
 
-    it "removes single characters and digits" do
-      @analyser.clean(" a 2 bird").should eq(" bird")
+    it 'removes single characters and digits' do
+      expect(@analyser.clean(' a 2 bird')).to eq(' bird')
     end
 
-    it "removes numbers" do
-      @analyser.clean("sherman 42 wallaby way sydney").should eq("sherman wallaby way sydney")
+    it 'removes numbers' do
+      expect(@analyser.clean('sherman 42 wallaby way sydney')).to eq('sherman wallaby way sydney')
     end
 
-    it "removes capitalisation" do
-      @analyser.clean("Hello").should eq("hello")
+    it 'removes capitalisation' do
+      expect(@analyser.clean('Hello')).to eq('hello')
     end
 
-    it "removes control characters" do
-      @analyser.clean("new\n\nline").should eq("new line")
+    it 'removes control characters' do
+      expect(@analyser.clean("new\n\nline")).to eq('new line')
     end
 
-    it "works with actual examples" do
-      dirty = "<div class=\"quick_bottom\"><h3>what you need to know</h3>\r\n<p>\tTo renew online, you'll need your license plate number, the VIN number for your trailer, and a Visa or Mastercard.</p>\r\n"
+    it 'works with actual examples' do
+      dirty = "<div class='quick_bottom'><h3>what you need to know</h3>\r\n<p>\tTo renew online, you'll need your license plate number, the VIN number for your trailer, and a Visa or Mastercard.</p>\r\n"
       clean = @analyser.clean( dirty )
-      clean.should eq("what you need to know to renew online you need your license plate number the vin number for your trailer and visa or mastercard ")
+      expect(clean).to eq('what you need to know to renew online you need your license plate number the vin number for your trailer and visa or mastercard ')
     end
   end
 
-  describe "creating a frequency map of useful words" do
+  describe 'creating a frequency map of useful words' do
     
-    it "ignores stop words" do
-      string = "when is i a the then to but how where"
-      @analyser.freq_map(string).should == {}
+    it 'ignores stop words' do
+      string = 'when is i a the then to but how where'
+      expect(@analyser.freq_map(string)).to eq({})
     end
 
-    it "returns a hash" do
-      string = ""
-      @analyser.freq_map(string).class.should eq( {}.class )
+    it 'returns a hash' do
+      string = ''
+      expect(@analyser.freq_map(string).class).to eq( {}.class )
     end
 
-    it "maps each word to its ocurrence in the string" do
-      string = "when nonstopword1 is nonstopword2  i a the then to nonstopword2 nonstopword2 but how where"
-      @analyser.freq_map(string).should == { 'nonstopword1' => 1, 'nonstopword2' => 3 }
+    it 'maps each word to its ocurrence in the string' do
+      string = 'when nonstopword1 is nonstopword2  i a the then to nonstopword2 nonstopword2 but how where'
+      expect(@analyser.freq_map(string)).to eq({ 'nonstopword1' => 1, 'nonstopword2' => 3 })
     end
   end
 
-  describe "Given an array of words, return an array of Keywords" do
+  describe 'Given an array of words, return an array of Keywords' do
     
     class PretendKeyword 
       attr_accessor :name, :metaphones, :stem, :synonyms
@@ -120,38 +120,40 @@ describe RailsNlp::TextAnalyser, vcr: vcr_options do
 
     # before(:all) do
     #   @kw = PretendKeyword.new
-    #   @kw.name = "jobs"
-    #   @kw.metaphones = ["JPS", "APS"]
+    #   @kw.name = 'jobs'
+    #   @kw.metaphones = ['JPS', 'APS']
     #   @kw.stem = 'job'
     #   @kw.synonyms = ['occupation', 'business', 'line of work']
     # end
 
    
-    it "uses an existing keyword if one is present" do
+    it 'uses an existing keyword if one is present' do
       skip 'not sure how to test'
       # we will have access to the Keyword model, i think.
     end
 
-    it "creates a new keyword if one doesn't already exist" do
+    it 'creates a new keyword if one doesn\'t already exist' do
       skip 'not sure how to test'
     end
 
-    it "works with a nice example" do
+    it 'works with a nice example' do
       words = %w{one two three four five}
       keywords = @analyser.words_to_keywords( words )
-      keywords.map(&:name).should eq( words )
+      expect(keywords.map(&:name)).to eq( words )
     end
 
-    it "keywords should have computed stem" do
+    it 'keywords should have computed stem' do
       words = ['driving']
       keywords = @analyser.words_to_keywords( words )
-      keywords.first.stem.should eq( 'drive' )
+      expect(keywords.first.stem).to eq( 'drive' )
     end
 
-    xit "keywords should have computed metaphones" do
+    it 'keywords should have computed metaphones' do
+      skip 'no test written for this yet.'
     end
 
-    xit "keywords should have computed synonyms" do
+    it 'keywords should have computed synonyms' do
+      skip 'no test written for this yet.'
     end
 
   end

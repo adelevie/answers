@@ -1,7 +1,8 @@
+# encoding: utf-8
 require 'spec_helper'
 include LoginHelpers
 
-describe 'Quick Answers' do
+describe 'Quick Answers', :type => :feature do
   before { login_user }
 
   describe 'user views the admin article details page' do
