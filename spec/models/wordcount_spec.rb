@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-describe Wordcount do
+describe Wordcount, :type => :model do
 end

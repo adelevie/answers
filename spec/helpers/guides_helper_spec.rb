@@ -1,13 +1,11 @@
 require 'spec_helper'
 
-describe GuidesHelper do
+describe GuidesHelper, :type => :helper do
   describe '#meta_tag_hash' do
     let (:article) { create(:article) }
     let (:request) { double('request', :fullpath => '/path/to/resource') }
 
-    before :each do
-      controller.stub(:request).and_return request
-    end
+    before { allow(controller).to receive(:request) { request } }
 
     it 'returns a hash using data from the article object' do
       expect(helper.meta_tag_hash(article)[:description]).to eq article.preview

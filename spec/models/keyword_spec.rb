@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Keyword do
+describe Keyword, :type => :model do
   describe "after create with a keyword with the name 'example'" do
     let(:keyword)           { FactoryGirl.create(:keyword, name: 'example') }
     let(:returned_synonyms) { ["illustration", "instance", "representative",
@@ -12,15 +12,15 @@ describe Keyword do
               "word of advice"] }
 
     before do
-      BigHugeThesaurus.stub(:synonyms).and_return(returned_synonyms)
+      allow(BigHugeThesaurus).to receive(:synonyms).and_return(returned_synonyms)
     end
 
     it "sets a metaphone of 'equal'" do
-      keyword.metaphone.should eq(["AKSM", nil])
+      expect(keyword.metaphone).to eq(["AKSM", nil])
     end
 
     it "set an array synonyms of 'example'" do
-      keyword.synonyms.should eq(returned_synonyms)
+      expect(keyword.synonyms).to eq(returned_synonyms)
     end
   end
 end

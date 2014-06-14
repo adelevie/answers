@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ContactsController do
+describe ContactsController, :type => :controller do
 
   describe 'GET index' do
     let(:contact) { create(:contact) }
@@ -9,7 +9,7 @@ describe ContactsController do
     it 'assigns Contact.all to @categories' do
       get :index
 
-      assigns(:contacts).should eq(Contact.all)
+      expect(assigns(:contacts)).to eq(Contact.all)
     end
 
     it 'renders the :index template' do
@@ -26,7 +26,7 @@ describe ContactsController do
     it 'assigns Contact.find(contact) to @contact' do
       get :show, id: contact
 
-      assigns(:contact).should eq(contact)
+      expect(assigns(:contact)).to eq(contact)
     end
   end
 

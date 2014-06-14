@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :article do
-    title         "How do I get a driver license for the first time?"
+    title         "How do I get a driver license for the first time"
     content_main  "Step 1: Get the appropriate form. Step 2: Fill out said form. Step 3: Profit."
     content_main_extra "Try googling your state and driver license"
     content_need_to_know "what a computer is, maybe a smart phone?"
@@ -15,7 +15,16 @@ FactoryGirl.define do
     end
 
     factory :article_random do
-      title SecureRandom.hex(16)
+      title Faker::Lorem.sentence
+      content_main Faker::Lorem.sentences(4).join('. ')
+      content_main_extra Faker::Lorem.sentences(3).join('. ')
+      content_need_to_know Faker::Lorem.sentences(1).join('. ')
+      content Faker::Lorem.sentences(4).join('. ')
+      preview Faker::Lorem.sentences(2).join('. ')
+
+      after(:build) do |article|
+        article.user = FactoryGirl.create(:user)
+      end
     end
   end
 end
