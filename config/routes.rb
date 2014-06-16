@@ -1,4 +1,4 @@
-Oaklandanswers::Application.routes.draw do
+Answers::Application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users, :controllers => { :sessions => "sessions" }
 

@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Oaklandanswers::Application.load_tasks
+Answers::Application.load_tasks
