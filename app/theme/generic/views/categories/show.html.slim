@@ -1,19 +1,32 @@
-- set_meta_tags :description => "Questions related to #{@category.name}.", :canonical => official_government_long_url(request.fullpath)
+- set_meta_tags description: "Questions related to #{@category.name}.", canonical: ENV['OFFICIAL_GOVERNMENT_URL'] + request.fullpath
 div class="page-container article"
   div.breadcrumbs
-    ol 
+    ol
       == render_breadcrumbs :tag=> :li, :separator =>" > "
   div.article-main-content
-        div.header
-          h1 = @category.name
-        = content_tag_for :p,  @category.description unless @category.description.blank?
-        ul
-          - @category.articles.by_access_count.each do |article|
-            - next unless article.published?
-            li.article-listing
-              = content_tag( :h2, link_to( article.title, article) )
-              p.preview
-                = article.preview
+    div.header
+      h1 = @category.name
+      - if @category.description.present?
+        p
+          == @category.description
+    ul
+      -@category.articles.by_access_count.each do |article|
+        - next unless article.published?
+        li.article-listing
+          = content_tag( :h2, link_to( article.title, article) )
+          p.preview
+            = article.preview
+            div.other-langs
+              -if article.title_es.present?
+                div.preview-es
+                  img src="/assets/es.gif" title="This content is also in Spanish" /
+                  = content_tag(:h3, link_to(article.title_es,article))
+                  p.preview = article.preview_es
+              -if article.title_cn.present?
+                div.preview-cn
+                  img src="/assets/cn.gif" title="This content is also in Chinese" /
+                  = content_tag(:h3, link_to(article.title_cn,article))
+                  p.preview = article.preview_cn
+              
   div.side-bar
-      == render :partial => 'shared/categories_sidebar'
-      
+    == render :partial => 'shared/categories_sidebar'
