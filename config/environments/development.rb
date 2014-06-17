@@ -2,7 +2,7 @@ Answers::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
 
-  config.assets.compile = false
+  config.assets.compile = true
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -39,7 +39,7 @@ Answers::Application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = true
+  config.serve_static_assets = false
 
   #devise mailer
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
