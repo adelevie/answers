@@ -26,6 +26,35 @@ module ArticlesHelper
   def missing_article_list_tag(article_id, description)
     content_tag(:li, description, :class => "missing-article")
   end
+
+  def group_articles_by_category(articles)
+
+
+
+
+
+    # categories = Array.new
+    # articles.each_with_index do |article, index|
+    #   next unless article.category.name != @articles[index-1].category.name
+    #   categories.push({name: article.category.name, articles: Array.new })
+      
+    #   articles.each do |article2|
+    #     next unless categories.last.name == article2.category.name
+    #     categories.last.articles.push(article2)
+    #   end
+
+    # end
+    # return categories
+    articles.map {|a| a.category.name}.uniq.map do |c|
+      {
+        category: c,
+        articles: articles.select {|a| a.category.name == c}
+
+      }
+    end
+
+  end
+
   
   private
   
