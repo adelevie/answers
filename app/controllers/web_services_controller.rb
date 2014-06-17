@@ -2,12 +2,11 @@ class WebServicesController < ApplicationController
   add_breadcrumb('Home', :root_url)
 
   def show
-    @article = WebService.find(params[:id])
+    @article = WebService.friendly.find(params[:id])
     return render(template: 'articles/missing') unless @article && @article.published?
 
-    @article.delay.increment!(:access_count)
-    @article.delay.category.increment!(:access_count) if @article.category
-    
+    @article.delay.record_hit
+
     add_breadcrumb(@article.category.name, @article.category) if @article.category.present?
     add_breadcrumb(@article.title)
 

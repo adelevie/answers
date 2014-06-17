@@ -1,6 +1,18 @@
 ActiveAdmin.register Article do
 
-  controller.authorize_resource
+  controller do
+    def find_resource
+      scoped_collection.where(slug: params[:id]).first!
+    end
+  end
+
+  permit_params :title, :content, :content_md, :content_main, :content_main_extra,
+    :content_need_to_know, :render_markdown, :preview, :contact_id, :tags,
+    :is_published, :slugs, :category_id, :updated_at, :created_at, :author_pic,
+    :author_pic_file_name, :author_pic_content_type, :author_pic_file_size,
+    :author_pic_updated_at, :author_name, :author_link, :type, :service_url, :user_id, :status,
+    :keyword_ids, :title_es, :preview_es, :content_main_es,
+    :title_cn, :preview_cn, :content_main_cn
 
   filter :title
   filter :tags
@@ -25,7 +37,7 @@ ActiveAdmin.register Article do
     column "Created", :created_at
     column "Author name", :author_name
     column "Status", :status
-    default_actions
+    actions
   end
 
   form do |f|

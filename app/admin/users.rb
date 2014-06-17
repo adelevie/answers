@@ -1,8 +1,29 @@
 ActiveAdmin.register User do
 
-  menu :if => proc{ current_user.is_admin? || current_user.is_editor? }, :label => 'Users'
+  controller do
+    before_filter :check_access, :only => [:show, :edit, :update, :destroy]
 
-  controller.authorize_resource
+    private
+
+    def update_resource(object, attributes)
+      if current_admin_user
+
+      end
+      attributes.delete_if do |k,v|
+        [:is_admin, :is_editor, :is_writer].include?(k) and !current_admin_user?
+      end
+      update_method = attributes.first[:password].present? ? :update_attributes : :update_without_password
+      object.send(update_method, *attributes)
+    end
+
+    def check_access
+      correct_user? unless current_admin_user
+    end
+  end
+
+  permit_params :is_admin, :is_editor, :is_writer, :department, :email, :password, :password_confirmation
+
+  menu :if => proc{ current_user.is_admin? || current_user.is_editor? }, :label => 'Users'
 
   index do
     column :email
@@ -10,7 +31,7 @@ ActiveAdmin.register User do
     column :is_editor
     column :is_writer
     column :department
-    default_actions
+    actions
   end
 
   form do |f|
@@ -20,10 +41,12 @@ ActiveAdmin.register User do
       f.input :password_confirmation
       f.input :department
     end
-    f.inputs "Type of User" do
-      f.input :is_admin,   :label => "Administrator"
-      f.input :is_editor,  :label => "Editor"
-      f.input :is_writer,  :label => "Writer"
+    if current_admin_user
+      f.inputs "Type of User" do
+        f.input :is_admin,   :label => "Administrator"
+        f.input :is_editor,  :label => "Editor"
+        f.input :is_writer,  :label => "Writer"
+      end
     end
     f.actions
   end
@@ -39,19 +62,4 @@ ActiveAdmin.register User do
     end
   end
 
-  create_or_edit = Proc.new {
-    @user            = User.find_or_create_by_id(params[:id])
-    @user.is_admin = params[:user][:is_admin]
-    @user.attributes = params[:user].delete_if do |k, v|
-      (k == "is_admin") ||
-      (["password", "password_confirmation"].include?(k) && v.empty? && !@user.new_record?)
-    end
-    if @user.save
-      redirect_to :action => :show, :id => @user.id
-    else
-      render active_admin_template((@user.new_record? ? 'new' : 'edit') + '.html.arb')
-    end
-  }
-  member_action :create, :method => :post, &create_or_edit
-  member_action :update, :method => :put, &create_or_edit
 end

@@ -1,0 +1,722 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/meow/one/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 03 Jun 2014 15:02:12 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=k6570p5funbmgk9ejs2d7vgmm1; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Tue, 03 Jun 2014 15:03:17 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/meow/two/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 03 Jun 2014 15:02:12 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=hud42tcol6b9t4lh5tu2n5cno3; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Tue, 03 Jun 2014 15:03:17 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/meow/three/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 03 Jun 2014 15:02:12 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=cgd71cfd9bi3uop28cb0vevet6; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Tue, 03 Jun 2014 15:03:17 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/meow/four/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 03 Jun 2014 15:02:12 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=s08b22c8olod8tnh1puu0h9mh1; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Tue, 03 Jun 2014 15:03:17 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/meow/five/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 03 Jun 2014 15:02:13 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=2iphlgit9ngmc2frna4oimt3u7; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Tue, 03 Jun 2014 15:03:17 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/meow/driving/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 03 Jun 2014 15:02:13 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=4evifedc4ghl2ffr0f521dlgk0; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Tue, 03 Jun 2014 15:03:18 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/meow/fish/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 03 Jun 2014 15:11:35 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=5ucc1luijrs5h2nhvuk90hno74; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Tue, 03 Jun 2014 15:12:40 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/bht_api_key/one/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 11 Jun 2014 23:12:40 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=3blnh4kjekr2c0v2frs19ld1v7; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 11 Jun 2014 23:12:40 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/bht_api_key/two/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 11 Jun 2014 23:12:40 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=kolq9h6jg0h929vlc6023lchq3; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 11 Jun 2014 23:12:40 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/bht_api_key/three/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 11 Jun 2014 23:12:40 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=mi591elhgh5avdurqojak1r841; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 11 Jun 2014 23:12:40 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/bht_api_key/four/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 11 Jun 2014 23:12:40 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=kpevvs99fhsn9c3lgj70ejtf53; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 11 Jun 2014 23:12:40 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/bht_api_key/five/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 11 Jun 2014 23:12:40 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=36000hm320kpkupg9ebgtcuqc5; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 11 Jun 2014 23:12:40 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/bht_api_key/driving/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Wed, 11 Jun 2014 23:12:40 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=eu0pn70jmt7jcf4p0mub64k4k3; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 11 Jun 2014 23:12:41 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/5a091164bca89fa4195209a40eba1676/one/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Thu, 12 Jun 2014 20:01:47 GMT
+      Content-Type:
+      - text/javascript
+      Content-Length:
+      - '325'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=cddtogoiecijj4a9vsup40shp2; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"adjective":{"syn":["1","i","ane","unitary","matchless","nonpareil","peerless","unmatched","unmatchable","unrivaled","unrivalled","one
+        and only"],"sim":["cardinal","combined","extraordinary","incomparable","indefinite","same","uncomparable","united"]},"noun":{"syn":["1","I","ace","single","unity","digit","figure","unit"]}}'
+    http_version: 
+  recorded_at: Thu, 12 Jun 2014 20:01:48 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/5a091164bca89fa4195209a40eba1676/two/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Thu, 12 Jun 2014 20:01:48 GMT
+      Content-Type:
+      - text/javascript
+      Content-Length:
+      - '102'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=hmhkhjahgapq5cvc03safds0m0; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"adjective":{"syn":["2","ii"],"sim":["cardinal"]},"noun":{"syn":["2","II","deuce","digit","figure"]}}'
+    http_version: 
+  recorded_at: Thu, 12 Jun 2014 20:01:48 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/5a091164bca89fa4195209a40eba1676/three/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Thu, 12 Jun 2014 20:01:48 GMT
+      Content-Type:
+      - text/javascript
+      Content-Length:
+      - '236'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=hn44nhfrui3umij61tdkscd681; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"adjective":{"syn":["3","iii"],"sim":["cardinal"]},"noun":{"syn":["3","III","trio","threesome","tierce","leash","troika","triad","trine","trinity","ternary","ternion","triplet","tercet","terzetto","trey","deuce-ace","digit","figure"]}}'
+    http_version: 
+  recorded_at: Thu, 12 Jun 2014 20:01:48 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/5a091164bca89fa4195209a40eba1676/four/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Thu, 12 Jun 2014 20:01:48 GMT
+      Content-Type:
+      - text/javascript
+      Content-Length:
+      - '199'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=vh6i8bp3trlfj10gaah282qu06; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"adjective":{"syn":["4","iv"],"sim":["cardinal"]},"noun":{"syn":["4","IV","tetrad","quatern","quaternion","quaternary","quaternity","quartet","quadruplet","foursome","Little
+        Joe","digit","figure"]}}'
+    http_version: 
+  recorded_at: Thu, 12 Jun 2014 20:01:48 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/5a091164bca89fa4195209a40eba1676/five/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Thu, 12 Jun 2014 20:01:48 GMT
+      Content-Type:
+      - text/javascript
+      Content-Length:
+      - '216'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=oq8domklljumtf10sle35ecg05; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"adjective":{"syn":["5","v"],"sim":["cardinal"]},"noun":{"syn":["5","V","cinque","quint","quintet","fivesome","quintuplet","pentad","fin","Phoebe","Little
+        Phoebe","basketball team","digit","figure","squad","team"]}}'
+    http_version: 
+  recorded_at: Thu, 12 Jun 2014 20:01:48 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/5a091164bca89fa4195209a40eba1676/driving/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Thu, 12 Jun 2014 20:01:48 GMT
+      Content-Type:
+      - text/javascript
+      Content-Length:
+      - '204'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4
+      Set-Cookie:
+      - PHPSESSID=m9rpm2fqpeshgkj660ed1s14e7; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: '{"adjective":{"syn":["impulsive"],"sim":["dynamic","dynamical","energetic"]},"noun":{"syn":["drive","direction","golf
+        shot","golf stroke","guidance","steering","swing","travel","traveling","travelling"]}}'
+    http_version: 
+  recorded_at: Thu, 12 Jun 2014 20:01:49 GMT
+recorded_with: VCR 2.9.2

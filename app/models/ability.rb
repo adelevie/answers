@@ -6,6 +6,7 @@ class Ability
     @articles = [QuickAnswer, WebService, Guide]
 
     can :read, :all
+    can :manage, user
 
     if user.is_admin
       can :manage, :all

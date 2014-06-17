@@ -1,19 +1,25 @@
 ActiveAdmin.register Guide do
   controller do
-    def new
-      @users = User.all
+    before_filter :set_users
+    before_filter :set_article
+
+    def find_resource
+      scoped_collection.where(slug: params[:id]).first!
     end
-    def edit
-      @users = User.all
+
+    def set_users
+      @users ||= User.all
     end
-    load_and_authorize_resource :except => :index
-      def scoped_collection
-        end_of_association_chain.accessible_by(current_ability)
-      end
-   end
+
+    def set_article
+      @article = @guide || Guide.new
+    end
+  end
+
+  permit_params :title, :status, :user_id, :category_id, :preview,  :tags, :author_name
 
   menu :parent => "Articles"
-  menu false
+
   filter :title
   filter :tags
   filter :contact_id
@@ -35,7 +41,7 @@ ActiveAdmin.register Guide do
     end
     column :slug
     column "Status", :status
-    default_actions
+    actions
   end
   
   form partial: "shared/admin/article_form"

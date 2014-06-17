@@ -1,4 +1,13 @@
 ActiveAdmin.register WebService do
+
+  controller do
+    def find_resource
+      scoped_collection.where(slug: params[:id]).first!
+    end
+  end
+
+  permit_params :title, :contact_id, :status
+
   controller do
     def new
       @users = User.all
@@ -6,14 +15,9 @@ ActiveAdmin.register WebService do
     def edit
       @users = User.all
     end
-    load_and_authorize_resource :except => :index
-      def scoped_collection
-        end_of_association_chain.accessible_by(current_ability)
-      end
    end
 
   menu :parent => "Articles"
-  menu false
   filter :title
   filter :tags
   filter :contact_id
@@ -35,7 +39,7 @@ ActiveAdmin.register WebService do
     end
     column :slug
     column "Status", :status
-    default_actions
+    actions
   end
 
   form :partial => "shared/admin/article_form"

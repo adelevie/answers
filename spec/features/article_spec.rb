@@ -150,6 +150,7 @@ describe 'Articles', :type => :feature do
     
     before do
       web_service.publish
+      
       visit web_service_path(web_service)
     end
 

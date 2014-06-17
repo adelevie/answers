@@ -10,12 +10,6 @@ describe Article, :type => :model do
     expect(article).to be_valid
   end
 
-  it 'allows mass assignment of common attributes' do
-    Article.new.attributes.keys.each do |attrib|
-      article { is_expected.to allow_mass_assignment_of attrib.to_sym }
-    end
-  end
-
   it "has a friendly url" do
     article = Article.new(
         :title => "How to build an answer engine",
@@ -39,7 +33,7 @@ describe Article, :type => :model do
       it 'is published' do
         unpublished_article.publish
 
-        expect(unpublished_article.published?).to be_truthy
+        expect(unpublished_article.published?).to be true
       end
     end
   end
@@ -110,6 +104,17 @@ describe Article, :type => :model do
     end
   end
 
+  describe '.record_hit' do
+    context 'viewing an article' do
+      it 'increases hit by one' do
+        count = article.hits
+        article.record_hit
+
+        expect(article.hits).to eq(count+1)
+      end
+    end
+  end
+
   describe ".search" do
 
     it "matches articles in the database" do
@@ -153,7 +158,7 @@ describe Article, :type => :model do
       VCR.use_cassette('dragon_keyword_cassette', :record => :new_episodes, :allow_playback_repeats => true) do
         article = Article.create(
             :title => "How to train a dragon",
-            :category_id => Category.find_or_create_by_name("Dragon Training").id
+            :category_id => Category.find_or_create_by(name: "Dragon Training").id
           )
 
         article.publish
@@ -174,9 +179,9 @@ describe Article, :type => :model do
   describe ".find_by_type" do
     it 'returns articles matching type' do
       new_article = Article.create(
-          :title => "Every answer you've ever been searching for and a bag of cats",
-          :type => 'QuickAnswer'
+          :title => "Every answer you've ever been searching for and a bag of cats"
         )
+      new_article.update_attribute(:type, "QuickAnswer")
 
       result = Article.find_by_type( "QuickAnswer" )
 
@@ -186,9 +191,9 @@ describe Article, :type => :model do
 
     it 'excludes articles not matching specified type' do
       new_article = Article.create(
-          :title => "Just a bag of cats",
-          :type => "Bag"
+          :title => "Just a bag of cats"
         )
+      new_article.update_attribute(:type, "Bag")
 
       result = Article.find_by_type( "QuickAnswer" )
 

@@ -2,20 +2,17 @@ class QuickAnswersController < ApplicationController
   add_breadcrumb('Home', :root_url)
   
   def show
-    unless QuickAnswer.exists? params[:id]
+    unless @article = QuickAnswer.friendly.find(params[:id])
       add_breadcrumb "(404) Page not found"
       return render(:template => 'articles/missing') 
     end
 
-    @article = QuickAnswer.find(params[:id])
-    
     unless @article.published?
       add_breadcrumb "(404) Page not found"
       return render(template: 'articles/missing') 
     end
 
-    @article.delay.increment!(:access_count)
-    @article.delay.category.increment!(:access_count) if @article.category
+    @article.delay.record_hit
 
     unless @article.render_markdown
       @content_html = @article.content

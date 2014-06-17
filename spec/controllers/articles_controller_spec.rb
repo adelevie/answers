@@ -13,7 +13,7 @@ describe ArticlesController, :type => :controller do
     end
 
     it 'assigns a list of categories organized by access count to @categories' do
-      expect(assigns(:categories)).to eq(Category.by_access_count)
+      expect(assigns(:categories)).to eq(Category.with_published_articles.by_access_count)
     end
 
     it 'renders the :index template' do
