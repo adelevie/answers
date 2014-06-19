@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_ability
   helper_method :current_admin_user
   helper_method :correct_user?
+  helper_method :bodyclass
 
   ensure_security_headers(
     :hsts => {:max_age => 631138519, :include_subdomains => false},
@@ -24,6 +25,10 @@ class ApplicationController < ActionController::Base
   end
 
   private
+  
+  def bodyclass
+    "body"
+  end
 
   def current_ability
     @current_ability ||= Ability.new(current_user)

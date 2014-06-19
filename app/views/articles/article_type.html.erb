@@ -1,4 +1,4 @@
-<% set_meta_tags  description: "All #{@article_type.split(/(?=[A-Z])/).join(' ')} questions.", 
+<% set_meta_tags  description: "All #{article_type.split(/(?=[A-Z])/).join(' ')} questions.", 
                   canonical: ENV['OFFICIAL_GOVERNMENT_URL'] + request.fullpath
                   %>
 <div class="page-container">
@@ -8,9 +8,9 @@
   <div class="row">
     <div class="span9">
       <div class="main-content">
-        <div class="header"><h1><%= format_article_type(@article_type) %></h1></div>
+        <div class="header"><h1><%= format_article_type(article_type) %></h1></div>
         <ul>
-          <% group_articles_by_category(@articles).each do |category| %>
+          <% articles.each do |article| %>
             <li class="category-listing">
               <%= category_listing_title_tag(category[:articles].first) %>
               <ul class="category-articles">
@@ -37,3 +37,4 @@
     </div><!-- /span3 -->
   </div>
 </div>
+
