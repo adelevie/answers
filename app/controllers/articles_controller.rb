@@ -32,7 +32,7 @@ class ArticlesController < ApplicationController
         articles: articles,
         categories: Category.all
       }
-    )    
+    ) 
   end
 
 end
