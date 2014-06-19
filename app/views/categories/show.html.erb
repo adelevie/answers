@@ -1,4 +1,4 @@
-<% set_meta_tags description: "Questions related to #{@category.name}.", 
+<% set_meta_tags description: "Questions related to #{category.name}.", 
                   canonical: ENV['OFFICIAL_GOVERNMENT_URL'] + request.fullpath %>
 <div class="page-container">
   <div class="breadcrumbs">
@@ -10,13 +10,13 @@
     <div class="span9">
       <div class="main-content">
         <div class="header">
-          <h1><%= @category.name %></h1>
+          <h1><%= category.name %></h1>
         </div>
-        <% if @category.description.present? %>
-          <p><%= @category.description %></p>
+        <% if category.description.present? %>
+          <p><%= category.description %></p>
         <% end %>
         <ul>
-          <% @category.articles.by_access_count.each do |article| %>
+          <% category.articles.by_access_count.each do |article| %>
             <% next unless article.published? %>
               <li class="article-listing">
                 <%= content_tag( :h2, link_to( article.title, article) ) %>
@@ -46,7 +46,7 @@
     </div><!-- /span9 -->
 
     <div class="span3">
-      <%= render :partial => 'shared/categories_sidebar' %>
+      <%= render :partial => 'shared/categories_sidebar', locals: {categories: categories} %>
     </div><!-- /span3 -->
 
   </div><!-- /row -->
