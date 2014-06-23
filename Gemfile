@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'pry', git: "git@github.com:adelevie/pry.git"
+
 gem 'nokogiri', '> 1.4.7'
 gem 'rails', '4.1.1'
 gem 'pg'
@@ -57,7 +59,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'guard-rspec', require: false
-  gem 'pry-nav'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rb-fsevent'
@@ -74,8 +75,6 @@ group :development, :test do
   gem 'memcached'
   gem 'rspec-collection_matchers'
   gem 'rspec-rails'
-  # gem 'pry-nav'
-  # gem 'pry-rescue'
 end
 
 group :test do
