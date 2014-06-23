@@ -16,7 +16,7 @@ GIT
       sass-rails
 
 GIT
-  remote: git@github.com:adelevie/pry.git
+  remote: https://github.com/adelevie/pry.git
   revision: fcbfd650be7468a6ec696eca0f310c6370c68d7a
   specs:
     pry (0.10.0)
