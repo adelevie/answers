@@ -1,21 +1,22 @@
       <div class="sidebar">
-        <% unless @article.contact.nil? %>
+        <% unless article.contact.nil? %>
           <div class="sidebar-unit">
             <h4 class="side-head">NEED MORE INFO?</h4>
             <div class="sidebar-content">
-              <% if @article.contact.try(:url).try(:index, ',').nil? %>
-                <%= content_tag(:h4, link_to_unless(@article.contact.url.blank?, @article.contact.name, @article.contact.url, :target => "_blank")) %>
-              <% elsif !(@article.contact.url.blank?) %>
-                <%= content_tag(:h4, @article.contact.name) %>
-                <% ( @article.contact.url.split(',') ).each do |multiurl| %>
+              <% if article.contact.try(:url).try(:index, ',').nil? %>
+                <%= content_tag(:h4, link_to_unless(article.contact.url.blank?, article.contact.name, article.contact.url, :target => "_blank")) %>
+              <% elsif !(article.contact.url.blank?) %>
+                <%= content_tag(:h4, article.contact.name) %>
+                <% ( article.contact.url.split(',') ).each do |multiurl| %>
                   <%= link_to(multiurl.strip, multiurl.strip) %>
                   <br/>
                 <% end %>
                 <br/>
               <% end %>
-              <%= raw @article.contact.address %>
-              <%= phone_number_from_article(@article) %>
+              <%= raw article.contact.address %>
+              <%= phone_number_from_article(article) %>
             </div>
           </div>
         <% end %>
       </div>
+

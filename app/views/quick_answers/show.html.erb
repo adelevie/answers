@@ -1,6 +1,6 @@
-<% set_meta_tags description: @article.preview,
+<% set_meta_tags description: article.preview,
                  canonical: ENV['OFFICIAL_GOVERNMENT_URL'] + request.fullpath,
-                 title: [@article.category.try(:name), @article.title] %>
+                 title: [article.category.try(:name), article.title] %>
 
 <div class="page-container article">
   <div class="breadcrumbs">
@@ -9,34 +9,34 @@
   <div class="row">
     <div class="span9">
       <div class="main-content">
-        <h3 class="content-type"><%= format_article_type(@article.type) %></h3>
+        <h3 class="content-type"><%= format_article_type(article.type) %></h3>
         <div class="header">
-          <%= content_tag(:h1, @article.title ) %>
+          <%= content_tag(:h1, article.title ) %>
         </div>
         <div class="content-text">
-          <% if @content_main.present? %>
+          <% if content_main.present? %>
             <div class="quick_top">
-              <%= @content_main.html_safe %>
+              <%= content_main.html_safe %>
             </div>
           <% end %>
         </div>
-        <% if @content_main_es.present? %>
+        <% if content_main_es.present? %>
           <div class="header">
-            <%= content_tag(:h1, @article.title_es ) %>
+            <%= content_tag(:h1, article.title_es ) %>
           </div>
           <div class="content-text">
             <div class="quick_top">
-              <%= @content_main_es.html_safe %>
+              <%= content_main_es.html_safe %>
             </div>
           </div>
         <% end %>
-        <% if @content_main_cn.present? %>
+        <% if content_main_cn.present? %>
           <div class="header">
-            <%= content_tag(:h1, @article.title_cn ) %>
+            <%= content_tag(:h1, article.title_cn ) %>
           </div>
           <div class="content-text">
             <div class="quick_top">
-              <%= @content_main_cn.html_safe %>
+              <%= content_main_cn.html_safe %>
             </div>
           </div>
         <% end %>
@@ -44,7 +44,7 @@
     </div><!-- /span9 -->
 
     <div class="span3">
-      <%= render :partial => 'shared/articles_sidebar' %>
+      <%= render partial: 'shared/articles_sidebar', locals: {article: article} %>
     </div><!-- /span3 -->
   </div>
 </div>
