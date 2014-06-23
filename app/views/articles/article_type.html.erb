@@ -1,7 +1,6 @@
 <% set_meta_tags  description: "All #{@article_type.split(/(?=[A-Z])/).join(' ')} questions.", 
                   canonical: ENV['OFFICIAL_GOVERNMENT_URL'] + request.fullpath
                   %>
-
 <div class="page-container">
   <div class="breadcrumbs">
     <ol><%= render_breadcrumbs :tag=> :li, :separator =>" > " %></ol>
@@ -11,18 +10,22 @@
       <div class="main-content">
         <div class="header"><h1><%= format_article_type(@article_type) %></h1></div>
         <ul>
-          <% @articles.each do |article| %>
+          <% group_articles_by_category(@articles).each do |category| %>
             <li class="category-listing">
-              <%= category_listing_title_tag(article) %>
+              <%= category_listing_title_tag(category[:articles].first) %>
               <ul class="category-articles">
-                <li class="article-listing">
-                  <%= content_tag(:h2, link_to(article.title, article)) %>
-                  <p class="preview"><%=  article.preview %></p>
-                  <div class="other-langs">
-                    <%= language_preview(article, :es) %>
-                    <%= language_preview(article, :es) %>
-                  </div>
-                </li>
+                <% category[:articles].each do |article| %>
+                  <li class="article-listing">
+                    <%= content_tag(:h2, link_to(article.title, article)) %>
+                    <p class="preview">
+                      <%=  article.preview %>
+                    </p>
+                    <div class="other-langs">
+                      <%= language_preview(article, :es) %>
+                      <%= language_preview(article, :es) %>
+                    </div>
+                  </li>
+                <% end %>
               </ul>
             </li>
           <% end %>
