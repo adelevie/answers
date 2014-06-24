@@ -1,16 +1,13 @@
-<%
-  set_meta_tags({
-    description: "Search results for #{query}.",
-    canonical: ENV['OFFICIAL_GOVERNMENT_URL'] + request.fullpath,
-    title: "Search results for #{query}." 
-  })
-%>
+<% set_meta_tags  description: "Search results for #{query}.",
+                  canonical: ENV['OFFICIAL_GOVERNMENT_URL'] + request.fullpath,
+                  title: "Search results for #{query}." %>
+
 <div class="page-container search">
   <div class="row">
     <div class="span9">
       <div class="main-content">
         <div class="header">
-          <h1>Search results for: "<strong><%= query %></strong>"</h1>
+          <h1>Search results for: "<strong><%= query%></strong>"</h1>
           <br/>
 
           <% if results.empty? %>
@@ -46,7 +43,7 @@
       </div>
     </div>
     <div class="span3">
-      <%= render :partial => 'shared/categories_sidebar', locals: {categories: categories} %>
+      <%= render partial: 'shared/categories_sidebar', locals: {categories: categories} %>
     </div><!-- /span3 -->
   </div>
 </div>

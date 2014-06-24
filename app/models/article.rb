@@ -3,8 +3,8 @@ include ActionView::Helpers::SanitizeHelper
 require 'facets/enumerable'
 
 class Article < ActiveRecord::Base
-  include TankerArticleDefaults
-  include Tanker
+  searchkick
+  
   include RailsNlp
   include Markdownifier
 
@@ -43,12 +43,6 @@ class Article < ActiveRecord::Base
   # *  We then moved to Markdown for content storage, resulting in Article#content_md.
   # *  Most recently, the QuickAnswers were split into three distinct sections: content_main, content_main_extra and content_need_to_know. All these use Markdown.
 
-  after_save :update_tank_indexes
-  after_destroy :delete_tank_indexes
-
-  handle_asynchronously :update_tank_indexes
-  handle_asynchronously :delete_tank_indexes
-
   # query_magic callbacks to update keywords and wordcounts tables (The gem will be called query_magic --hale)
   after_create :qm_after_create
   after_update :qm_after_update
@@ -71,14 +65,9 @@ class Article < ActiveRecord::Base
     end
   end
 
-  def self.search( query )
-    return Article.all if query.blank?
-    self.search_tank query
-  end
-
   def self.search_titles( query )
     return Article.all if query.blank?
-    self.search_tank( '__type:Article', :conditions => {:title => query })
+    self.search(where: {title: query})
   end
 
   def self.find_by_type( content_type )
@@ -123,10 +112,7 @@ class Article < ActiveRecord::Base
   end
 
   def related
-    # Rails.cache.fetch("#{self.id}-related") {
-    #   return [] if wordcounts.empty?
-    #   (Article.search_tank(self.wordcounts.all(:order => 'count DESC', :limit => 10).map(&:keyword).map(&:name).join(" OR ")) - [self]).first(4)
-    # }
+    # TODO: implement with searchkick
   end
 
   def indexable?
