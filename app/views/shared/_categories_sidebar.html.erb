@@ -3,7 +3,7 @@
     <h4 class="side-head">ALL CATEGORIES</h4>
     <div class="sidebar-content">
        <ul>
-        <% categories.sort_by {|c| c.name}.each do |c| %>
+        <% categories.to_a.sort_by {|c| c.name}.each do |c| %>
           <%= content_tag( :li, link_to(c.name, c)) %>
         <% end -%>
        </ul>
