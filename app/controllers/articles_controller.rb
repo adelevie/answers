@@ -29,10 +29,10 @@ class ArticlesController < ApplicationController
     render(
       locals: { 
         article_type: article_type, 
-        articles: articles 
+        articles: articles,
+        categories: Category.all
       }
-    ) 
-    
+    )    
   end
 
 end
