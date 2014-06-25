@@ -3,8 +3,9 @@ require 'spec_helper'
 describe 'Searches', :type => :feature do
 
   describe 'search results' do
-    let(:article) { create :article, status: 'Published' }
-    let(:query) { article.title.downcase.gsub!(/[^\w ]*/, '') }
+    let(:article) { create :article, status: 'Published', title: "hello" }
+    let(:query) { "hello" }
+    let(:category) { create :category }
 
     context '1 result found' do
       before do
@@ -22,7 +23,7 @@ describe 'Searches', :type => :feature do
     end
 
     context 'no results found' do
-      let(:reverse_query) { query.reverse*3 }
+      let(:reverse_query) { "foo" }
 
       before do
         allow(Article).to receive(:search_tank) { [] }
