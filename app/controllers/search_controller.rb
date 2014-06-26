@@ -24,17 +24,15 @@ class SearchController < ApplicationController
       categories = []
     end
     
-    #binding.pry
+    locals = {
+      results: results,
+      query: query,
+      categories: categories
+    }
     
     respond_to do |format|
-      format.json { render results }
-      format.html do 
-        render locals: {
-          results: results,
-          query: query,
-          categories: categories
-        }
-      end
+      format.json { render json: locals }
+      format.html { render locals: locals }
     end
   end
 
