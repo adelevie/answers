@@ -28,13 +28,17 @@ class ArticlesController < ApplicationController
     article_type = article_type.gsub(/-/, ' ').titlecase.gsub(/ /, '')
     articles = Article.find_by_type(article_type)
     add_breadcrumb "All #{article_type.split(/(?=[A-Z])/).join(' ')}s"
-    render(
-      locals: { 
-        article_type: article_type, 
-        articles: articles,
-        categories: Category.all
-      }
-    ) 
+
+    locals = { 
+      article_type: article_type, 
+      articles: articles,
+      categories: Category.all
+    }
+    
+    respond_to do |format|
+      format.html { render locals: locals }
+      format.json { render json: locals }
+    end
   end
 
 end
