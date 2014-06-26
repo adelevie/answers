@@ -13,7 +13,9 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       format.html { render locals: locals }
-      format.json { render json: locals }
+      format.json do
+        render json: locals.as_json(include: :articles)
+      end 
     end
   end
 
@@ -29,15 +31,15 @@ class ArticlesController < ApplicationController
     articles = Article.find_by_type(article_type)
     add_breadcrumb "All #{article_type.split(/(?=[A-Z])/).join(' ')}s"
 
-    locals = { 
-      article_type: article_type, 
+    locals = {
+      article_type: article_type,
       articles: articles,
       categories: Category.all
     }
     
     respond_to do |format|
       format.html { render locals: locals }
-      format.json { render json: locals }
+      format.json { render json: locals.except(:categories) }
     end
   end
 
