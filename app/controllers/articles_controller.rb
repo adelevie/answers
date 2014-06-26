@@ -9,9 +9,11 @@ class ArticlesController < ApplicationController
 
     add_breadcrumb "All Articles"
 
+    locals = { categories: categories }
+
     respond_to do |format|
-      format.html { render locals: { categories: categories } }
-      format.json { render json: categories }
+      format.html { render locals: locals }
+      format.json { render json: locals }
     end
   end
 
