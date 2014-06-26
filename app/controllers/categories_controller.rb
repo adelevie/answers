@@ -7,10 +7,11 @@ class CategoriesController < ApplicationController
     categories = Category.with_published_articles.by_access_count 
 
     add_breadcrumb 'Categories'
-
+    locals = { categories: categories }
+    
     respond_to do |format|
-      format.html { render locals: { categories: categories } }
-      format.json { render json: categories }
+      format.html { render locals: locals }
+      format.json { render json: locals }
     end
   end
 
@@ -20,25 +21,34 @@ class CategoriesController < ApplicationController
     category = categories.select {|c| c.slug == params[:id]}.first
     
     if category.nil?
-    	return render(
-        template: 'categories/missing', 
-        locals: { categories: categories }
-      )
+      locals = { categories: categories }
+      respond_to do |format|
+        format.html do
+          return render(
+            template: 'categories/missing', locals: locals
+          )
+        end
+        format.json { render json: locals }
+      end
     end
 
     add_breadcrumb(category.name)
     category.record_hit
     content_html = BlueCloth.new(category.name).to_html
 
+    locals = { 
+      category: category,
+      content_html: content_html, 
+      categories: categories 
+    } 
+
     respond_to do |format|
-      format.html { 
-        render locals: { 
-          category: category, 
-          content_html: content_html, 
-          categories: categories 
-        } 
-      }
-      format.json { render json: category }
+      format.html do 
+        render locals: locals
+      end
+      format.json do
+        render json: locals.except(:categories) 
+      end
     end
   end
 end
