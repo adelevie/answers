@@ -27,7 +27,7 @@ class GuidesController < ApplicationController
           content_html: content_html
         }
       end
-      format.json { render json: article }
+      format.json { render json: locals }
     end
   end
 end
