@@ -25,7 +25,7 @@ class QuickAnswersController < ApplicationController
           content_html: content_html
         }
         format.html { return render locals: locals }
-        format.json { return render json: json }
+        format.json { return render json: locals }
       end
     end
 
