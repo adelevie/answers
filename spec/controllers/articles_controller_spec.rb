@@ -6,7 +6,8 @@ describe ArticlesController, :type => :controller do
   describe 'GET index' do
     it 'renders the :index template' do
       get :index
-			expect(response).to render_template :index
+      expect(response).to render_template :index
+      expect(response.body).to(have_tag("body", with: {class: "results"}))
     end
   end
 
