@@ -10,7 +10,7 @@
       <div class="main-content">
         <div class="header"><h1><%= format_article_type(article_type) %></h1></div>
         <ul>
-          <% articles.each do |article| %>
+          <% group_articles_by_category(articles).each do |category| %>
             <li class="category-listing">
               <%= category_listing_title_tag(category[:articles].first) %>
               <ul class="category-articles">
