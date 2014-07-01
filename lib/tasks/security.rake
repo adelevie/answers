@@ -1,5 +1,7 @@
-require 'brakeman'
-require 'pry'
+unless ENV["RAILS_ENV"] == 'production'
+  require 'brakeman'
+  require 'pry'
+end
 
 DEFAULT_MIN_CONFIDENCE = 2 # 0 is highest
 

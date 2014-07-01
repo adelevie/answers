@@ -7,15 +7,14 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
-// GO AFTER THE REQUIRES BELOW.
+// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
+// about supported directives.
 //
 // loaclhost:3000/?debug_assets=1 > View Page Source -- to view all assets client side loads
 //
 //= require jquery
 //= require jquery_ujs
-//# = require jquery.ui.autocomplete
+//= require turbolinks
 //= jquery-jvert-tabs-1.1.4
 //= require mustache
 //= require_tree .
-//

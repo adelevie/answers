@@ -1,12 +1,19 @@
 ActiveAdmin.register Category do
-  controller.authorize_resource
+
+  controller do
+    def find_resource
+      scoped_collection.where(slug: params[:id]).first!
+    end
+  end
+
+  permit_params :access_count, :name, :description
 
   index do
     column :name, :sortable => :name
     column "Created", :created_at
     column "Updated", :updated_at
     column "Description", :description
-    default_actions
+    actions
   end
 
   form do |f|

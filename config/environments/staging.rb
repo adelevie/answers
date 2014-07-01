@@ -1,4 +1,4 @@
-Oaklandanswers::Application.configure do
+Answers::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # Code is not reloaded between requests
@@ -24,7 +24,7 @@ Oaklandanswers::Application.configure do
   config.assets.digest = true
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  config.assets.precompile += %w( home.js style.css mobile.css.scss tiny_mce/* active_admin.js active_admin.css.scss indextank/jquery.indextank.autocomplete.js )
+  config.assets.precompile += %w( home.js style.css mobile.css.scss tiny_mce/* active_admin.js active_admin.css.scss indextank/jquery.indextank.autocomplete.js application-ie.css)
   config.assets.precompile << '*.js'
 
   #config.static_cache_control = "public, max-age=2592000"

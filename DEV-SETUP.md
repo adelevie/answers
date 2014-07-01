@@ -22,6 +22,7 @@
 1. Check you have at least 1.2.x of bundler with bundle -v. To upgrade, first remove bundler with gem uninstall -ax bundler and then reinstall with gem install bundler -v 1.2.1
 1. Install required gems: `$ bundle`
   - (`gem install bundler` if it's not already installed). You might have to open a new terminal tab after installing.)
+1. Create a `database.yml` (`$ cp config/database.yml.example config/database.yml`)
 1. `$ rake db:prepare`
 1. `$ rake db:setup`
 1. `$ foreman run rails s` to start the server. Go to http://localhost:3000/articles.

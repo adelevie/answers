@@ -7,9 +7,8 @@
   <meta name="viewport" content="width=device-width,initial-scale =1,maximum-scale=1,user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <%= include_gon %>
-  <%= stylesheet_link_tag    "application-all", :media => "all" %>
-  <%= stylesheet_link_tag    "application-mobile", :media => "all and (max-width: 969px)" %>
-  <%= stylesheet_link_tag    "application-print", :media => "print" %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   
   <style>
     body {
@@ -17,13 +16,13 @@
     }
   </style>
   <!--[if lte IE 8]>
-    <%= stylesheet_link_tag    "application-ie", :media=> "all" %>
+    <%= stylesheet_link_tag    "application-ie" %>
   <![endif]-->
-  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= @bodyclass %>" onload="if($){ $('#query').focus(); }">
+<body class="<%= bodyclass %>">
 <div id="wrapper">
   <div id="skip_nav">
     <a href="#main_content_container">Skip Navigation</a>
@@ -71,7 +70,7 @@
     <ul class="footer-links">
       <li><%=link_to("About", about_path)%></li>
       <li><%= mail_to ENV["OFFICIAL_CONTACT_MAIL"], "Contact" %></li>
-      <li><a href="https://github.com/city-of-oakland/oakland_answers">Code</a></li>
+      <li><a href="https://github.com/18F/answers">Code</a></li>
       <% if not ENV["OFFICIAL_STYLE_GUIDE"].nil? %>
         <li><a href=<%= ENV["OFFICIAL_STYLE_GUIDE"] %> target="_blank">Style Guide</a></li>
       <% end %>

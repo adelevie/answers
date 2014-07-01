@@ -2,22 +2,28 @@ class WebServicesController < ApplicationController
   add_breadcrumb('Home', :root_url)
 
   def show
-    @article = WebService.find(params[:id])
-    return render(template: 'articles/missing') unless @article && @article.published?
+    article = WebService.friendly.find(params[:id])
+    return render(template: 'articles/missing') unless article && article.published?
 
-    @article.delay.increment!(:access_count)
-    @article.delay.category.increment!(:access_count) if @article.category
-    
-    add_breadcrumb(@article.category.name, @article.category) if @article.category.present?
-    add_breadcrumb(@article.title)
+    article.delay.record_hit
 
-    @content_main =  @article.md_to_html( :content_main )
-    @content_main_extra = @article.md_to_html( :content_main_extra )
-    @content_need_to_know =  @article.md_to_html( :content_need_to_know )
+    add_breadcrumb(article.category.name, article.category) if article.category.present?
+    add_breadcrumb(article.title)
+
+    content_main =  article.md_to_html( :content_main )
+    content_main_extra = article.md_to_html( :content_main_extra )
+    content_need_to_know =  article.md_to_html( :content_need_to_know )
 
     respond_to do |format|
-      format.html
-      format.json { render json: @article }
+      format.html do
+        render locals: {
+          article: article,
+          content_main: content_main,
+          content_main_extra: content_main_extra,
+          content_need_to_know: content_need_to_know
+        }
+      end
+      format.json { render json: article }
     end
   end
 end

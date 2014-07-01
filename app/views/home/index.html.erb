@@ -14,7 +14,7 @@
       <div class="triangle-r"></div>
       <div class="ribbon-wrapper">
         <form id="search" action="search" name="search" method="get">
-          <input type="text" name="q" id="query" title='query' placeholder="Try parking, jobs, or permits...">
+          <input type="text" name="q" id="query" title='query' placeholder="Try parking, jobs, or permits..." autofocus="autofocus">
           <input class="btn-search" id="home-search" type="submit" value="SEARCH" title="Search">
         </form>
       </div>
@@ -25,7 +25,7 @@
         <h2>Most Popular Categories:</h2>
       </div>
       <div class="pop-categories">
-        <%= render partial: 'home/category', collection: @popular_categories %>
+        <%= render partial: 'home/category', collection: popular_categories %>
       </div>
     </div><!-- /popular -->
 

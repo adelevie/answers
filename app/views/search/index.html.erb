@@ -1,20 +1,23 @@
-<% set_meta_tags  description: "Search results for #{@query}.",
-                  canonical: ENV['OFFICIAL_GOVERNMENT_URL'] + request.fullpath,
-                  title: "Search results for #{@query}." %>
-
+<%
+  set_meta_tags({
+    description: "Search results for #{query}.",
+    canonical: ENV['OFFICIAL_GOVERNMENT_URL'] + request.fullpath,
+    title: "Search results for #{query}." 
+  })
+%>
 <div class="page-container search">
   <div class="row">
     <div class="span9">
       <div class="main-content">
         <div class="header">
-          <h1>Search results for: "<strong><%=@query%></strong>"</h1>
+          <h1>Search results for: "<strong><%= query %></strong>"</h1>
           <br/>
 
-          <% if @results.empty? %>
-            <p>Sorry, no results found for "<%=@query%>".  Please try rephrasing your search terms.</p>
+          <% if results.empty? %>
+            <p>Sorry, no results found for "<%= query %>".  Please try rephrasing your search terms.</p>
           <% else %>
             <ul>
-              <% @results.each do |article| %>
+              <% results.each do |article| %>
                 <% next unless article.published? %>
                   <li class="article-listing">
                     <%= content_tag( :h2, link_to( article.title, article_path(article.id) ) ) %>
@@ -43,7 +46,8 @@
       </div>
     </div>
     <div class="span3">
-      <%= render :partial => 'shared/categories_sidebar' %>
+      <%= render :partial => 'shared/categories_sidebar', locals: {categories: categories} %>
     </div><!-- /span3 -->
   </div>
 </div>
+

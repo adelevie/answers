@@ -1,4 +1,4 @@
-<% set_meta_tags meta_tag_hash(@article) %>
+<% set_meta_tags meta_tag_hash(article) %>
 <div class="page-container article">
   <div class="breadcrumbs">
     <ol><%= render_breadcrumbs :tag=> :li, :separator =>" > " %></ol>
@@ -7,10 +7,10 @@
     <div class="span9">
       <div class="main-content">
         <div class="header">
-          <%= content_tag(:h1, @article.title ) %>
+          <%= content_tag(:h1, article.title ) %>
         </div>
         <div class="content-text">
-          <%= raw @content_html %>
+          <%= raw content_html %>
         </div>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -47,16 +47,16 @@ function nextTab(){
 <div id="vtabs">
   <div>
     <ul>
-      <% @article.guide_steps.each do |step| %>
+      <% article.guide_steps.each do |step| %>
         <li><a href="#vtabs-content"><%= "#{step.step.to_s}. #{step.title}" %></a></li>
       <% end %>
     </ul>
   </div>
   <div>
-    <% @article.guide_steps.each do |step| %>
+    <% article.guide_steps.each do |step| %>
       <div id="#vtabs-content">
         <h2 class="vtab-content-header"><%= step.title %></h2>
-        <%= raw @article.raw_md_to_html( step.content ) %>
+        <%= raw article.raw_md_to_html( step.content ) %>
       </div>
     <% end %>
     <br/>
@@ -77,7 +77,7 @@ function nextTab(){
     </div><!-- /span9 -->
 
     <div class="span3">
-      <%= render :partial => 'shared/articles_sidebar' %>
+      <%= render partial: 'shared/articles_sidebar', locals: {article: article} %>
     </div>
   </div>
 </div>

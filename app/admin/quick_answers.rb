@@ -1,18 +1,17 @@
 #encoding: utf-8
 
 ActiveAdmin.register QuickAnswer do
+
   controller do
-    def new
-      @users = User.all
+    def find_resource
+      scoped_collection.where(slug: params[:id]).first!
     end
-    def edit
-      @users = User.all
-    end
-    load_and_authorize_resource :except => :index
-      def scoped_collection
-        end_of_association_chain.accessible_by(current_ability)
-      end
-   end
+  end
+
+  permit_params :category_id, :contact_id, :keyword_ids, :author_name, 
+                :title, :status, :preview, :content_main, :title_es, 
+                :preview_es, :content_main_es, :title_cn, :preview_cn, 
+                :content_main_cn
 
   menu :parent => "Articles"
 
@@ -45,7 +44,7 @@ ActiveAdmin.register QuickAnswer do
     end
     column :slug
     column "Status", :status
-    default_actions
+    actions
   end
 
   form :partial => "shared/admin/article_form"
