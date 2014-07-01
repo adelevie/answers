@@ -24,10 +24,10 @@ namespace :deploy do
 
   desc "Symlink configs"
   task :symlink_configs, roles: :app do
-    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/.env #{current_path}/"
+    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/.env #{release_path}/"
 #    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/newrelic.yml #{current_path}/config/"
-    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/database.yml #{current_path}/config/"
-    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/settings.yml #{current_path}/config/"
+    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/"
+    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/settings.yml #{release_path}/config/"
   end
 
   desc "Create nginx configuration from template"

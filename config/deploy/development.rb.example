@@ -1,4 +1,4 @@
-set :branch, 'feature/capify'
+set :branch, :dev
 
 # New Relic Variables
 #
