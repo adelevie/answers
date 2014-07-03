@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <div class="sidebar-unit">
+    <h4 class="side-head"><%= title %></h4>
+    <div class="sidebar-content">
+       <ul>
+        <% items.each do |item| %>
+          <%= content_tag( :li, link_to(item.url, item.title)) %>
+        <% end %>
+       </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,120 @@
+<div class="page-container">
+  <div class="breadcrumbs">
+    <ol>
+      <%= render_breadcrumbs tag: :li, separator: " > " %>
+    </ol> 
+  </div>
+  <div class="row">
+    <div class="span9">
+      <div class="main-content">
+        <div class="header">
+          <h1>Developers</h1>
+        </div>
+        <div>
+          <p>The Answers Platform is just that: a platform. This means a web browser is just one of many potential clients that will access its data. Software and applications external to the Answers Rails applications can interact with its underlying data and functionality.</p>
+          <p>The Answers Platform API is in its early stages, so please <a href="<%= ENV['ISSUE_TRACKER_URL'] %>">get in touch</a> if there is something you would like to see. You can even <a href="<%= ENV['EDIT_THIS_PAGE_URL'] %>">edit this page</a> directly on GitHub.</p>
+          <p>In addition to providing data in machine-readable formats, the entire source code of the Answers Platform is <a href="<%= ENV['GITHUB_REPO_URL'] %>">open source</a>.</p>
+          <hr />
+        </div>
+        <div>
+          <h2>REST API</h2>
+          <p>Currently, the Answers Platform API offers only read-only endpoints accessible by the GET HTTP verb.</p>
+          <p>The base URL for all requests is <%= base_url %>.</p>
+          <p>All responses return JSON.</p>
+          <table>
+          <tr>
+            <th>URL</th>
+            <th>HTTP Verb</th> 
+            <th>Functionality</th>
+          </tr>
+          <tr>
+            <td>/articles.json</td>
+            <td>GET</td> 
+            <td>Viewing All Articles</td>
+          </tr>
+          </table>
+          <hr />
+        </div>
+        <div>
+          <h2>Examples</h2>
+          <p>Command line:</p>
+          <pre>
+            $ curl <%= base_url %>/articles.json
+          </pre>
+          Response:
+          <pre>
+            {
+              "categories": [
+                {
+                  "id": 6,
+                  "name": "City Jobs",
+                  "access_count": 3,
+                  "created_at": "2014-06-24T20:19:27.752Z",
+                  "updated_at": "2014-06-24T20:19:27.752Z",
+                  "article_id": null,
+                  "description": null,
+                  "slug": "city-jobs",
+                  "articles": [
+                    {
+                      "id": 13,
+                      "updated": null,
+                      "title": "How do I get a job at the City?",
+                      "content": "",
+                      "created_at": "2014-06-24T20:19:27.693Z",
+                      "updated_at": "2014-06-24T20:19:27.693Z",
+                      "content_type": null,
+                      "preview": "View available jobs and apply online.",
+                      "contact_id": 10,
+                      "tags": "city jobs, jobs, job opportunities, human resources, HR, employment, open position, positions ",
+                      "service_url": "http:\/\/agency.governmentjobs.com\/honolulu\/default.cfm?action=jobs",
+                      "slug": "how-do-i-get-a-job-at-the-city",
+                      "category_id": 6,
+                      "access_count": 0,
+                      "author_pic_file_name": null,
+                      "author_pic_content_type": null,
+                      "author_pic_file_size": null,
+                      "author_pic_updated_at": null,
+                      "author_name": null,
+                      "author_link": null,
+                      "content_md": null,
+                      "render_markdown": true,
+                      "content_main": null,
+                      "content_main_extra": null,
+                      "content_need_to_know": null,
+                      "status": "Published",
+                      "user_id": null,
+                      "title_es": null,
+                      "preview_es": null,
+                      "content_main_es": null,
+                      "title_cn": null,
+                      "preview_cn": null,
+                      "content_main_cn": null
+                    }
+                  ]
+                }
+              ]
+            }
+          </pre>
+        </div>
+      </div>
+    </div><!-- /span9 -->
+
+    <div class="span3">
+      <div class="sidebar">
+        <div class="sidebar-unit">
+          <h4 class="side-head">Useful Links</h4>
+          <div class="sidebar-content">
+             <ul>
+               <li><a href="<%= ENV['GITHUB_REPO_URL'] %>">GitHub Repository</a></li>
+               <li><a href="<%= ENV['ISSUE_TRACKER_URL'] %>">Issue Tracker</a></li>
+               <li><a href="<%= ENV['PARENT_ORGANIZATION_URL'] %>"><%= ENV['PARENT_ORGANIZATION_NAME'] %> Homepage</a></li>
+               <li><a href="<%= ENV['EDIT_THIS_PAGE_URL'] %>">Edit This Page</a></li>
+             </ul>
+          </div>
+        </div>
+      </div>
+      
+    </div><!-- /span3 -->
+
+  </div><!-- /row -->
+</div><!-- /page-container -->
