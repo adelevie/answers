@@ -5,7 +5,7 @@ class DevelopersController < ApplicationController
     add_breadcrumb('Developers')
     base_url = ''
     if ENV['RAILS_ENV'] == 'development'
-      base_url = "http://#{request.domain}:3000"
+      base_url = "http://#{request.domain}:#{request.port}"
     else
       base_url = "https://#{request.domain}"
     end
