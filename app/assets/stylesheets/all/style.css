@@ -22,7 +22,9 @@ a:focus, a:active {
   color: black;
 }
 
-
+table.docs_table {
+  width: 100%;
+}
 
 /* Sticky Footer */
 html, body, #wrapper { height:100%; }

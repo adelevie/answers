@@ -21,17 +21,52 @@
           <p>Currently, the Answers Platform API offers only read-only endpoints accessible by the GET HTTP verb.</p>
           <p>The base URL for all requests is <%= base_url %>.</p>
           <p>All responses return JSON.</p>
-          <table>
-          <tr>
-            <th>URL</th>
-            <th>HTTP Verb</th> 
-            <th>Functionality</th>
-          </tr>
-          <tr>
-            <td>/articles.json</td>
-            <td>GET</td> 
-            <td>Viewing All Articles</td>
-          </tr>
+          <table class="docs_table">
+            <tr>
+              <th>URL</th>
+              <th>HTTP Verb</th> 
+              <th>Functionality</th>
+            </tr>
+            <tr>
+              <td>/articles.json</td>
+              <td>GET</td> 
+              <td>Viewing All Articles</td>
+            </tr>
+            <tr>
+              <td>/quick_answers/{id}.json</td>
+              <td>GET</td>
+              <td>View a specific Quick Answer given an ID</td>
+            </tr>
+            <tr>
+              <td>/articles/article-type/{article_type}.json</td>
+              <td>GET</td>
+              <td>View all Articles of a given type</td>
+            </tr>
+            <tr>
+              <td>/categories.json</td>
+              <td>GET</td>
+              <td>View all Categories</td>
+            </tr>
+            <tr>
+              <td>/categories/{id}.json</td>
+              <td>GET</td>
+              <td>View a specific Category given an ID</td>
+            </tr>
+            <tr>
+              <td>/contacts.json</td>
+              <td>GET</td>
+              <td>View all Contacts</td>
+            </tr>
+            <tr>
+              <td>/contacts/{id}.json</td>
+              <td>GET</td>
+              <td>View a specific Contact given an ID</td>
+            </tr>
+            <tr>
+              <td>/search.json (coming soon)</td>
+              <td>GET</td>
+              <td>Access the Answers Platform full-text search index</td>
+            </tr>
           </table>
           <hr />
         </div>
@@ -107,6 +142,7 @@
              <ul>
                <li><a href="<%= ENV['GITHUB_REPO_URL'] %>">GitHub Repository</a></li>
                <li><a href="<%= ENV['ISSUE_TRACKER_URL'] %>">Issue Tracker</a></li>
+               <li><a href="<%= ENV['KEEP_TRACK_OF_UPDATES_URL'] %>">Subscribe to API Updates</a></li>
                <li><a href="<%= ENV['PARENT_ORGANIZATION_URL'] %>"><%= ENV['PARENT_ORGANIZATION_NAME'] %> Homepage</a></li>
                <li><a href="<%= ENV['EDIT_THIS_PAGE_URL'] %>">Edit This Page</a></li>
              </ul>
