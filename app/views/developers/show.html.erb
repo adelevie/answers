@@ -76,7 +76,7 @@
           <pre>
             $ curl <%= base_url %>/articles.json
           </pre>
-          Response:
+          <p>Response:</p>
           <pre>
             {
               "categories": [
@@ -129,6 +129,38 @@
                 }
               ]
             }
+          </pre>
+          <p>Ruby:</p>
+          <pre>
+            require 'net/http'
+            require 'uri'
+            require 'json'
+            
+            uri = URI('<%= base_url %>/articles.json')
+            raw_response = Net::HTTP.get(uri)
+            response = JSON.parse(raw_response)
+            categories = response['categories']
+            articles = categories.map {|c| c['articles']}.flatten
+           
+            articles.each do |article|
+              p "Title: #{article['title']}"
+              p "Preview: #{article['preview']}"
+            end
+          </pre>
+          <p>Python</p>
+          <pre>
+            import urllib2
+            import json
+            
+            url = "<%= base_url %>/articles.json"
+            raw_response = urllib2.urlopen(url).read()
+            response = json.JSONDecoder().decode(raw_response)
+            categories = response['categories']
+            articles = sum(map(lambda c: c['articles'], categories), [])
+            
+            for article in articles:
+                print "Title: %s" % article['title']
+                print "Preview: %s" % article['preview']
           </pre>
         </div>
       </div>
