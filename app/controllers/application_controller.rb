@@ -55,4 +55,6 @@ class ApplicationController < ActionController::Base
     flash[:error] = exception.message
     redirect_to_back admin_root_path
   end
+
+  prepend_view_path 'app/theme/uscis/views'
 end

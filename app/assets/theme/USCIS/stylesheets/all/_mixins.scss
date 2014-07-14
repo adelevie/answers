@@ -1,0 +1,27 @@
+@mixin box-shadow($horizOffset, $vertOffset, $blur, $spread, $color) {
+  /*
+      Blur is an optional parameter, but helps soften the shadow.
+      Call the mixin by applying pixel values for $horizOffset,
+      $vertOffset, and $blur, and a hex value for $color. The
+      border-collapse rule is included to render shadows properly
+      in IE9.
+  */
+  -webkit-box-shadow: $horizOffset $vertOffset $blur $spread $color;
+  -moz-box-shadow: $horizOffset $vertOffset $blur $spread $color;
+  -ms-box-shadow: $horizOffset $vertOffset $blur $spread $color;
+  -o-box-shadow: $horizOffset $vertOffset $blur $spread $color;
+  box-shadow: $horizOffset $vertOffset $blur $spread $color;
+  border-collapse: separate;
+}
+
+@mixin box-shadow-inset($horizOffset, $vertOffset, $blur, $color) {
+  /*
+      Same parameters as @mixin box-shadow, but creates an inner shadow
+      for pressed or recessed effects.
+  */
+  -webkit-box-shadow: $horizOffset $vertOffset $blur $color inset;
+  -moz-box-shadow: $horizOffset $vertOffset $blur $color inset;
+  -ms-box-shadow: $horizOffset $vertOffset $blur $color inset;
+  -o-box-shadow: $horizOffset $vertOffset $blur $color inset;
+  box-shadow: $horizOffset $vertOffset $blur $color inset;
+}

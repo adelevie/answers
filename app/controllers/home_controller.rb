@@ -4,9 +4,11 @@ class HomeController < ApplicationController
   add_breadcrumb "Home", :root_url
 
   def index
+
     render locals: { 
       tags_with_questions: Question.tags_with_questions
     }
+
   end
 
  def about
