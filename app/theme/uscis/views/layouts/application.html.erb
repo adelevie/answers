@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= display_meta_tags site: ENV["OFFICIAL_SITE_TITLE"] %>
+  <meta name="robots" content="index,nofollow" />
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale =1,maximum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <%= include_gon %>
+
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+  <!--[if lte IE 8]>
+      <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+      <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => false %>
+
+  <style>
+    body {
+     #background:transparent url('<%= ENV["BACKGROUND_IMAGE"] %>') repeat 0 100%;
+    }
+  </style>
+  <!--[if lte IE 8]>
+    <%= stylesheet_link_tag    "application-ie" %>
+  <![endif]-->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'theme', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<div class="header-bar">
+  
+  <%= render 'layouts/header' %>
+
+  <div id="page-content-container"><!-- outermost page container -->
+    <%= yield %>
+  </div><!--  /page-content-container -->
+
+  <%= render 'layouts/footer' %>
+</body>
+</html>

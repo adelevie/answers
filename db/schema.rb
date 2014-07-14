@@ -216,10 +216,8 @@ ActiveRecord::Schema.define(version: 20140818141437) do
     t.boolean  "is_admin",               default: false
     t.boolean  "is_writer",              default: false
     t.integer  "department_id"
-    t.string   "authentication_token"
   end
 
-  add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
