@@ -16,15 +16,6 @@ GIT
       sass-rails
 
 GIT
-  remote: https://github.com/adelevie/pry.git
-  revision: fcbfd650be7468a6ec696eca0f310c6370c68d7a
-  specs:
-    pry (0.10.0)
-      coderay (~> 1.1.0)
-      method_source (~> 0.8.1)
-      slop (~> 3.4)
-
-GIT
   remote: https://github.com/andypike/cancancan.git
   revision: 531c01799fc413a6e6c96745943830437034e946
   branch: rspec3
@@ -275,6 +266,10 @@ GEM
       activerecord (>= 3.0)
     polyglot (0.3.5)
     progressbar (0.21.0)
+    pry (0.10.0)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
     pry-rescue (1.4.1)
@@ -481,7 +476,7 @@ DEPENDENCIES
   paperclip (~> 4.1.1)
   pg
   progressbar
-  pry!
+  pry
   pry-rails
   pry-rescue
   quiet_assets

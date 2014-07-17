@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'pry', git: "https://github.com/adelevie/pry.git"
+gem 'pry'
+# gem 'pry', git: "https://github.com/adelevie/pry.git"
+
 
 gem 'nokogiri', '> 1.4.7'
 gem 'rails', '4.1.1'
