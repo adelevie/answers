@@ -1,5 +1,5 @@
 berkshelf_path										'kitchen'
-cookbook_path    									['~/.berkshelf/cookbooks', 'kitchen/cookbooks', 'kitchen/site-cookbooks']
+cookbook_path    									['~/.berkshelf/cookbooks', 'kitchen/site-cookbooks']
 data_bag_path    									'kitchen/data_bags'
 encrypted_data_bag_secret 				'.databag_secret'
 environment_path 									'kitchen/environments'

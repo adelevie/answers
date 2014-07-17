@@ -17,23 +17,20 @@ bash "installing #{ruby_version}" do
 end
 
 bash "make #{ruby_version} the default ruby" do
-  user "ubuntu"
-  code "/usr/local/rvm/bin/rvm --default #{ruby_version}"
-  not_if "/usr/local/rvm/bin/rvm list | grep '=> #{ruby_version}'"
+  user node[:rvm][:user] || 'ubuntu'
+  code "/usr/local/rvm/bin/rvm use --default #{ruby_version}"
+  not_if "/usr/local/rvm/bin/rvm list | grep '=* #{ruby_version}'"
   only_if { node[:rvm][:ruby][:default] }
-#  notifies :restart, "service[chef-client]"
   notifies :run, resources(:execute => "rvm-cleanup")
 end
-
-
 
 # set this for compatibilty with other people's recipes
 node.default[:languages][:ruby][:ruby_bin] = find_ruby
 
 gem_package "chef" do
-#  gem_binary "/usr/local/rvm/bin/rvm-gem.sh"
-#  only_if "test -e /usr/local/rvm/bin/rvm-gem.sh"
-  # re-install the chef gem into rvm to enable subsequent chef-client run
+  gem_binary "/usr/local/rvm/wrappers/#{ruby_version}@global/gem"
+  retries 2
+  retry_delay 2
 end
 
 # Needed so that chef doesn't freak out if the chef-client service
