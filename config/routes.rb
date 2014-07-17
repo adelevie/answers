@@ -16,6 +16,9 @@ Answers::Application.routes.draw do
   resources :guides
   resources :quick_answers
   resources :web_services
+  
+  resources :questions
+  resources :answers
 
   root :to => "home#index"
 end
