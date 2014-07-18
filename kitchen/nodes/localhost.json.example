@@ -11,7 +11,7 @@
     "cluster" : {
       "name" : "elasticsearch_test_chef"
     }
-  }
+  },
 	"java": {
     "install_flavor": "openjdk",
     "jdk_version": "7"
