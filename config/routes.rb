@@ -2,6 +2,24 @@ Answers::Application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users, :controllers => { :sessions => "sessions" }
 
+  #### API
+  namespace :api, defaults: {format: 'json'} do
+    namespace :v1 do
+      resources :questions
+      resources :answers
+    end
+  end
+  
+  
+  #namespace :api, defaults: {format: 'json'} do
+  #  namespace :v1 do
+  #    resources :questions
+  #    resources :answers
+  #  end
+  #end
+  #### /API
+
+
   get "quick_answer/show"
   get "category/index"
 
@@ -17,8 +35,8 @@ Answers::Application.routes.draw do
   resources :quick_answers
   resources :web_services
   
-  resources :questions
-  resources :answers
+  resources :questions, only: [:index, :show]
+  resources :answers, only: [:index, :show]
 
   root :to => "home#index"
 end

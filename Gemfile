@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'pry'
+#gem 'pry', git: "https://github.com/adelevie/pry.git"
+
 gem 'nokogiri', '> 1.4.7'
 gem 'rails', '4.1.4'
 gem 'pg'
@@ -16,6 +19,7 @@ gem 'spring',        group: :development
 gem 'actionpack-page_caching'
 
 gem 'searchkick', github: 'amoose/searchkick', branch: 'feature/es_syn_tokenization'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -51,6 +55,8 @@ gem "breadcrumbs_on_rails"
 gem 'therubyracer'
 gem 'activeadmin', github: 'gregbell/active_admin' 
 gem 'secure_headers'
+
+gem 'simple_token_authentication'
 
 group :development do
   gem 'better_errors'
