@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'pry'
-# gem 'pry', git: "https://github.com/adelevie/pry.git"
-
-
 gem 'nokogiri', '> 1.4.7'
 gem 'rails', '4.1.1'
 gem 'pg'
@@ -59,15 +55,20 @@ gem 'secure_headers'
 
 group :development do
   gem 'better_errors'
+  gem 'berkshelf'
   gem 'binding_of_caller'
   gem 'capistrano', '~> 2.15'
   gem 'guard-rspec', require: false
+  gem 'knife-ec2'
+  gem 'knife-solo', github: 'matschaffer/knife-solo', submodules: true
+  gem 'knife-solo_data_bag'
   gem 'pry-rails'
   gem 'pry-rescue'
+  gem 'quiet_assets'
   gem 'rb-fsevent'
   gem 'rvm-capistrano'
   gem 'spring-commands-rspec'
-  gem 'quiet_assets'
+  gem 'unf'
 end
 
 group :development, :test do
