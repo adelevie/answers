@@ -1,0 +1,2404 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9200/articles_test/_search
+    body:
+      encoding: UTF-8
+      string: '{"query":{"dis_max":{"queries":[{"multi_match":{"fields":["_all"],"query":"how
+        do i get a driver license for the first time","use_dis_max":false,"operator":"and","boost":10,"analyzer":"searchkick_search"}},{"multi_match":{"fields":["_all"],"query":"how
+        do i get a driver license for the first time","use_dis_max":false,"operator":"and","boost":10,"analyzer":"searchkick_search2"}},{"multi_match":{"fields":["_all"],"query":"how
+        do i get a driver license for the first time","use_dis_max":false,"operator":"and","boost":1,"fuzziness":1,"max_expansions":3,"analyzer":"searchkick_search"}},{"multi_match":{"fields":["_all"],"query":"how
+        do i get a driver license for the first time","use_dis_max":false,"operator":"and","boost":1,"fuzziness":1,"max_expansions":3,"analyzer":"searchkick_search2"}}]}},"size":100000,"from":0,"fields":[]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '71'
+    body:
+      encoding: UTF-8
+      string: '{"error":"IndexMissingException[[articles_test] missing]","status":404}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:27:46 GMT
+- request:
+    method: get
+    uri: http://localhost:9200/_aliases
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '82'
+    body:
+      encoding: UTF-8
+      string: '{"articles_development_20140623172712322":{"aliases":{"articles_development":{}}}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:29:49 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624102949652
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:29:49 GMT
+- request:
+    method: head
+    uri: http://localhost:9200/_alias/articles_test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:29:49 GMT
+- request:
+    method: head
+    uri: http://localhost:9200/articles_test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:29:49 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/_aliases
+    body:
+      encoding: UTF-8
+      string: '{"actions":[{"add":{"index":"articles_test_20140624102949652","alias":"articles_test"}}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:29:49 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624102949652/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:29:49 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624102950239
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:29:50 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624102950239/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:29:50 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624102950488
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:29:50 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624102950488/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:29:50 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103034680
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:30:34 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103034680/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:30:34 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103035125
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:30:35 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103035125/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:30:35 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103035331
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:30:35 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103035331/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:30:35 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103405613
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:34:05 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103405613/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:34:05 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103406115
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:34:06 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103406115/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:34:06 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103406316
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:34:06 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103406316/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:34:06 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103604745
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:36:04 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103604745/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:36:04 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103605291
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:36:05 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103605291/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:36:05 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103605515
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:36:05 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103605515/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:36:05 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103630816
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:36:30 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103630816/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:36:31 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103631365
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:36:31 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103631365/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:36:31 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103631578
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:36:31 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103631578/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:36:31 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103813739
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:38:13 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103813739/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:38:13 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103814196
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:38:14 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103814196/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:38:14 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103814377
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:38:14 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103814377/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:38:14 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103842318
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:38:42 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103842318/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:38:42 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103842743
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:38:42 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103842743/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:38:42 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624103842974
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:38:43 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624103842974/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:38:43 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624104315758
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:43:15 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624104315758/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:43:15 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624104315953
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:43:16 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624104315953/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:43:16 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624104316191
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:43:16 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624104316191/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:43:16 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624104439262
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:44:39 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624104439262/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:44:39 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624104439468
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:44:39 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624104439468/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:44:39 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624104439659
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:44:39 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624104439659/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:44:39 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624105222436
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:52:22 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624105222436/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:52:22 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624105222667
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:52:22 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624105222667/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:52:22 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624105222874
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:52:22 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624105222874/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:52:22 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624105856229
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:58:56 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624105856229/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:58:56 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624105856452
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:58:56 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624105856452/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:58:56 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624105856700
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:58:56 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624105856700/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:58:56 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624110802646
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 15:08:02 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624110802646/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 15:08:02 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624110802873
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 15:08:02 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624110802873/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 15:08:02 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140624110803084
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 15:08:03 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140624110803084/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 15:08:03 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140625101240039
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Wed, 25 Jun 2014 14:12:40 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140625101240039/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Wed, 25 Jun 2014 14:12:40 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140625101240543
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Wed, 25 Jun 2014 14:12:40 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140625101240543/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Wed, 25 Jun 2014 14:12:40 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140625101240894
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Wed, 25 Jun 2014 14:12:41 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140625101240894/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Wed, 25 Jun 2014 14:12:41 GMT
+recorded_with: VCR 2.9.2

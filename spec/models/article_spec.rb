@@ -1,8 +1,11 @@
 require 'spec_helper'
 
-describe Article, :type => :model do
+describe Article, type: :model, vcr: true do
   let(:article) { FactoryGirl.create(:article) }
-  before        { allow(Article).to receive(:search_tank).and_return([article]) }
+  before do
+    Article.reindex
+    allow(Article).to receive(:search).and_return([article]) 
+  end
   subject       { article }
 
 
@@ -123,7 +126,7 @@ describe Article, :type => :model do
 
     context "query does not match anything in the database" do
       it "returns an empty array" do
-        allow(Article).to receive(:search_tank).and_return([])
+        allow(Article).to receive(:search).and_return([])
         expect(Article.search(SecureRandom.hex(16))).to be_empty
       end
     end
@@ -140,7 +143,7 @@ describe Article, :type => :model do
 
     describe ".search titles" do
       it "returns an empty array when the search term is present in an article but not the title" do
-        allow(Article).to receive(:search_tank).and_return([])
+        allow(Article).to receive(:search).and_return([])
         expect(Article.search_titles(article.preview)).to be_empty
       end
 

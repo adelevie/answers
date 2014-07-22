@@ -159,4 +159,78 @@ http_interactions:
         creature","mythical monster","unpleasant woman"]}}'
     http_version: 
   recorded_at: Mon, 16 Jun 2014 15:10:39 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/bht_api_key/train/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 24 Jun 2014 14:10:04 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.1
+      Set-Cookie:
+      - PHPSESSID=kva0t6es9f9gq7g9b4v5skeq26; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:10:04 GMT
+- request:
+    method: get
+    uri: http://words.bighugelabs.com/api/2/bht_api_key/dragon/json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 500
+      message: Inactive key
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Tue, 24 Jun 2014 14:10:04 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '0'
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.1
+      Set-Cookie:
+      - PHPSESSID=qm7ucs9r35f0dclv6m751afil7; path=/; domain=words.bighugelabs.com
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 24 Jun 2014 14:10:04 GMT
 recorded_with: VCR 2.9.2
