@@ -1,5 +1,5 @@
 ActiveAdmin.register Answer do
-
+  permit_params :text, :in_language, :need_to_know
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
