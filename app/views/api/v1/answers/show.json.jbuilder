@@ -1,2 +1,1 @@
-json.extract! @answer, :id, :created_at, :updated_at, :text
-json.url question_url(@answer, format: :json)
+json.answers [answer], partial: 'answers/answer', as: :answer

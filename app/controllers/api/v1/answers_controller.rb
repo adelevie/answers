@@ -1,45 +1,36 @@
-#class Api::V1::AnswersController < ApplicationController
 class Api::V1::AnswersController < Api::V1::ApiController
-  before_action :set_answer, only: [:show, :edit, :update, :destroy]
   respond_to :json
 
   def index
-    @answers = Answer.all
-    respond_with(@answers)
+    answers = Answer.all
+    render locals: {answers: answers}
   end
 
   def show
-    respond_with(@answer)
-  end
-
-  def edit
+    answer = Answer.find(params[:id])
+    render locals: {answer: answer}
   end
   
   def create
-    p "HAAAAAALP CREATE WAS CALLED"
-    @answer = Answer.new(answer_params)
-    flash[:notice] = 'Answer was successfully created.' if @answer.save
-    respond_with(@answer)
+    answer = Answer.new(answer_params)
+    answer.save
+    render 'answers/show', locals: {answer: answer}
   end
 
   def update
-    flash[:notice] = 'Answer was successfully updated.' if @answer.update(answer_params)
-    respond_with(@answer)
+    answer = Answer.find(params[:id])
+    answer.update(answer_params)
+    render 'answers/show', locals: {answer: answer}
   end
 
   def destroy
-    @answer.destroy
-    respond_with(@answer)
+    answer = Answer.find(params[:id])
+    answer.destroy
+    render 'answers/show', locals: {answer: answer}
   end
 
   private
-    def set_answer
-      @answer = Answer.find(params[:id])
-    end
-
     def answer_params
-      #params[:answer]
-      #params.require(:answer).permit(:text, :in_language)
-      params[:answer]
+      params.require(:answer).permit(:text, :in_language, :need_to_know, :question_id)
     end
 end

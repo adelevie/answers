@@ -1,1 +1,1 @@
-json.questions @answers, partial: 'api/v1/answers/show', as: :answer
+json.questions answers, partial: 'answers/answer', as: :answer
