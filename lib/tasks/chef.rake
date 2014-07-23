@@ -15,6 +15,11 @@ namespace :chef do
     # system 'for i in `find . -name "*.example"`;do cp -- "$i" "${i//.example/}";done'
   end
 
+  desc "Create required files based on .example files - WARNING: This will overwrite existing config files."
+  task :remove_backups do
+    (Dir[".*.2014**"] + Dir["**/*.2014*"]).each { |f| FileUtils.rm f }
+  end
+
   desc "Generate new data bag secret"
   task :setup_secret do
     require 'securerandom'
