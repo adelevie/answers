@@ -11,6 +11,9 @@
     "cluster": {
       "name": "answers"
     },
+    "custom_config": {
+    	"script.disable_dynamic": true
+    },
     "deb_sha": "23c7e04fb2b512224585fefc49e2ba5b44ae832e",
     "deb_url": "https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.2.2.deb",
     "version": "1.2.2"
