@@ -15,7 +15,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'actionpack-page_caching'
 
-gem 'searchkick', github: 'ankane/searchkick', branch: 'elasticsearch-1.2'
+gem 'searchkick', github: 'amoose/searchkick', branch: 'feature/es_syn_tokenization'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

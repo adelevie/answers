@@ -3,8 +3,8 @@ include ActionView::Helpers::SanitizeHelper
 require 'facets/enumerable'
 
 class Article < ActiveRecord::Base
-  searchkick
-  
+  searchkick wordnet_synonyms: '/var/lib/wn_s.pl'
+
   include Markdownifier
 
   require_dependency 'keyword'
@@ -60,8 +60,7 @@ class Article < ActiveRecord::Base
   end
 
   def self.search_titles( query )
-    return Article.all if query.blank?
-    self.search(where: {title: query})
+    self.search query, fields: [ :title ]
   end
 
   def self.find_by_type( content_type )
