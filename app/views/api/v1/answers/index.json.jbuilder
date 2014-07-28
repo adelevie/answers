@@ -1,1 +1,1 @@
-json.questions answers, partial: 'answers/answer', as: :answer
+json.answers answers, partial: 'answers/answer', as: :answer
