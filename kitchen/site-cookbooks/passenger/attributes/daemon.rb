@@ -3,8 +3,8 @@ default[:passenger][:production][:rvm_path] = '/usr/local/rvm/bin/rvm'
 default[:passenger][:production][:configure_flags] = '--with-ipv6 --with-http_stub_status_module --with-http_ssl_module'
 default[:passenger][:production][:log_path] = '/var/log/passenger'
 
-default[:passenger][:production][:passenger_root] = '/usr/local/rvm/gems/ruby-2.1.2/gems/passenger-4.0.43'
-default[:passenger][:production][:passenger_ruby] = '/usr/local/rvm/wrappers/ruby-2.1.2/ruby'
+default[:passenger][:production][:passenger_root] = '/opt/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/passenger-4.0.48'
+default[:passenger][:production][:passenger_ruby] = '/opt/rbenv/versions/2.1.2/bin/ruby'
 
 # Tune these for your environment, see:
 # http://www.modrails.com/documentation/Users%20guide%20Nginx.html#_resource_control_and_optimization_options
