@@ -2,6 +2,7 @@ DEPENDENCIES
   apt
   bash-completion
   cacert
+  chef-solo-search
   cron
   elasticsearch
   fail2ban
@@ -17,7 +18,7 @@ DEPENDENCIES
   openssl
   passenger
   postgresql
-    git: https://github.com/phlipper/chef-postgresql.git
+    git: https://github.com/jgrevich/chef-postgresql.git
     revision: 8438360775ce239627878dddded9cfde72e2d3ff
   rbenv
   ruby_build
@@ -36,6 +37,7 @@ GRAPH
   bash-completion (0.1.0)
   build-essential (2.0.4)
   cacert (0.2.0)
+  chef-solo-search (0.5.1)
   chef-sugar (2.0.0)
   chef_handler (1.1.6)
   cmake (0.3.0)
@@ -61,7 +63,7 @@ GRAPH
     hostsfile (>= 0.0.0)
   hostsfile (2.4.5)
   imagemagick (0.2.3)
-  java (1.24.0)
+  java (1.25.0)
   libqt4 (0.1.0)
     cmake (>= 0.0.0)
   logwatch (1.1.0)

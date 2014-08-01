@@ -5,10 +5,21 @@ package 'ruby-dev'
 # install ruby
 include_recipe "rbenv::default"
 include_recipe "rbenv::ruby_build"
-include_recipe "rbenv::rbenv_vars"
+include_recipe "chef-solo-search"
+
+db_config = Chef::EncryptedDataBagItem.load("config", "db")
+
+puts "Adding DB Users:"
+db_config["users"].each do |db_user|
+	puts "  added user '#{db_user['username']}' from databag"
+	pg_user db_user['username'] do
+	  privileges superuser: false, createdb: false, login: true
+	  password db_user['password']
+	end
+end if db_config["users"]
+puts "\n\n"
 
 rbenv_ruby '2.1.2' do
-	force true
 	global true
 end
 
@@ -20,17 +31,7 @@ rbenv_gem "passenger" do
   ruby_version '2.1.2'
 end
 
-# bundle gems
-execute "bundle install" do
-	cwd '/home/vagrant/answers'
+# bundle gems, migrate db, reindex elasticsearch
+['bundle install', 'bundle exec rake db:migrate', 'bundle exec rake searchkick:reindex:all'].each do |cmd|
+	rbenv_execute cmd do; cwd '/home/vagrant/answers' end 
 end
-
-# bundle gems
-execute "bundle exec rake db:setup" do
-  cwd '/home/vagrant/answers'
-  environment ({ "USER" => 'answers' })
-end
-
-# add user to do db, create db
-
-# run migrate (only if flag set) and seed data (only if flag set)
