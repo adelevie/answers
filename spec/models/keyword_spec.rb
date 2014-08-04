@@ -11,16 +11,8 @@ describe Keyword, :type => :model do
               "occurrence", "occurrent", "representation", "warning",
               "word of advice"] }
 
-    before do
-      allow(BigHugeThesaurus).to receive(:synonyms).and_return(returned_synonyms)
-    end
-
     it "sets a metaphone of 'equal'" do
       expect(keyword.metaphone).to eq(["AKSM", nil])
-    end
-
-    it "set an array synonyms of 'example'" do
-      expect(keyword.synonyms).to eq(returned_synonyms)
     end
   end
 end

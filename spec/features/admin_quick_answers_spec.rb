@@ -34,8 +34,6 @@ describe 'Quick Answers', :type => :feature do
 
   describe 'user creates a quick answer' do
     before do
-      allow(BigHugeThesaurus).to receive(:synonyms) { ['transport'] }
-
       create(:category, name: 'Parking')
       create(:contact, name: 'migurski')
       create(:keyword, name: 'vehicles')

@@ -61,9 +61,7 @@ describe Article, type: :model, vcr: true do
         article = Article.create(
             :title => 'Cats have tails'
           )
-
-        article.qm_after_destroy_without_delay # trigger after_destroy
-
+        
         expect(article.keywords).to be_empty
       end
     end
@@ -150,25 +148,6 @@ describe Article, type: :model, vcr: true do
       context "query is present in the title" do
         subject { Article.search_titles article.title }
         it { is_expected.to include(article) }
-      end
-    end
-  end
-
-  describe '.qm_after_create' do
-    it 'creates keywords for any relevant terms'
-
-    it 'creates wordcounts for relevant keywords' do
-      VCR.use_cassette('dragon_keyword_cassette', :record => :new_episodes, :allow_playback_repeats => true) do
-        article = Article.create(
-            :title => "How to train a dragon",
-            :category_id => Category.find_or_create_by(name: "Dragon Training").id
-          )
-
-        article.publish
-
-        article.qm_after_create_without_delay
-
-        expect(article.wordcounts.collect { |wc| wc.keyword.name }).to include "dragon"
       end
     end
   end
