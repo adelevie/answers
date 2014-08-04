@@ -1,5 +1,15 @@
+
 {
 	"run_list":[ "role[bare_bones]", "role[postgre]", "role[answers]", "role[app_server]" ],
+	"answers": {
+		"rails": {
+			"deploy_to": "/home/vagrant/answers",
+			"env": "development"
+		},
+		"ruby": {
+			"version": "2.1.2"
+		}
+	},
 	"authorization": {
 	    "sudo": {
 	      "groups": ["adm"],
@@ -35,31 +45,15 @@
 		      "owner": "answers",
 		      "encoding": "UTF-8",
 		      "locale": "en_US.UTF-8"
+		    },
+		    {
+		      "name": "answers_test",
+		      "owner": "answers",
+		      "encoding": "UTF-8",
+		      "locale": "en_US.UTF-8"
 		    }
 		],
-		"password": {
-			"postgres": ""
-		},
-		"users": [
-			{
-				"username": "vagrant",
-				"password": "vagrant",
-				"superuser": true,
-				"createdb": true,
-				"login": true
-			},
-			{
-				"username": "answers",
-				"password": "answers",
-				"superuser": true,
-				"createdb": true,
-				"login": true
-			}
-		],
 		"version": "9.3"
-	},
-	"rbenv": {
-		"group_users": ["vagrant"]
 	},
 	"set_fqdn": "vagrant.localhost"
 }

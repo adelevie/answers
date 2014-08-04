@@ -1,6 +1,5 @@
-# install required libs for memcached
-package "libsasl2-dev"
-package 'ruby-dev'
+# install required libs for memcached and postgresql
+['libsasl2-dev', 'libpq-dev', 'ruby-dev'].each { |pkg| package pkg }
 
 # install ruby
 include_recipe "rbenv::default"
@@ -19,16 +18,13 @@ db_config["users"].each do |db_user|
 end if db_config["users"]
 puts "\n\n"
 
-rbenv_ruby '2.1.2' do
+rbenv_ruby node[:answers][:ruby][:version] do
 	global true
 end
 
-rbenv_gem "bundler" do
-  ruby_version '2.1.2'
-end
-
-rbenv_gem "passenger" do
-  ruby_version '2.1.2'
+# install bundler and passegner systemwide
+['bundler', 'passenger'].each do |cmd|
+	rbenv_gem cmd do; ruby_version node[:answers][:ruby][:version] end
 end
 
 # bundle gems, migrate db, reindex elasticsearch
