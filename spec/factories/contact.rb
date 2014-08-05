@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :contact do
     name Faker::Name.name
-    # subname
     number Faker::Number.number(10)
     url Faker::Internet.url
     address "#{Faker::Address.street_address}, #{Faker::Address.city}, #{Faker::Address.state} #{Faker::Address.zip}"
