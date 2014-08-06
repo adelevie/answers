@@ -1,9 +1,9 @@
 #
-# Author:: Seth Chisamore (<schisamo@opscode.com>)
-# Cookbook Name:: windows
-# Recipe:: default
+# Author:: Seth Vargo <sethvargo@gmail.com>
+# Cookbook:: swap
+# Resource:: file
 #
-# Copyright:: 2011, Opscode, Inc.
+# Copyright 2012-2013, Seth Vargo
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,17 +18,13 @@
 # limitations under the License.
 #
 
-# gems with precompiled binaries
-%w{ win32-api win32-service }.each do |win_gem|
-  chef_gem win_gem do
-    options '--platform=mswin32'
-    action :install
-  end
-end
+# List of all actions supported by the provider
+actions :create, :remove
 
-# the rest
-%w{ wmi-lite windows-api windows-pr win32-dir win32-event win32-mutex }.each do |win_gem|
-  chef_gem win_gem do
-    action :install
-  end
-end
+# Make create the default action
+default_action :create
+
+# Require attributes
+attribute :path,    kind_of: String, name_attribute: true
+attribute :size,    kind_of: Fixnum
+attribute :persist, kind_of: [TrueClass, FalseClass], default: false

@@ -18,12 +18,13 @@ DEPENDENCIES
   openssl
   passenger
   postgresql
-    git: https://github.com/jgrevich/chef-postgresql.git
+    git: https://github.com/phlipper/chef-postgresql.git
     revision: 8438360775ce239627878dddded9cfde72e2d3ff
   rbenv
   ruby_build
   ssl_certificate
   sudo
+  swap
   ubuntu
   users_solo
 
@@ -94,10 +95,11 @@ GRAPH
     yum-epel (>= 0.0.0)
   ssl_certificate (0.1.0)
   sudo (2.6.0)
+  swap (0.3.6)
   ubuntu (1.1.8)
     apt (>= 0.0.0)
   users_solo (1.0.2)
-  windows (1.33.1)
+  windows (1.34.0)
     chef_handler (>= 0.0.0)
   xml (1.2.6)
     build-essential (>= 0.0.0)
