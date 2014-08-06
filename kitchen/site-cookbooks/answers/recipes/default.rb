@@ -56,10 +56,20 @@ end
 puts '* generated config/database.yml'
 
 
-# bundle gems, migrate db, reindex elasticsearch
-['bundle install', 'bundle exec rake db:migrate', 'bundle exec rake searchkick:reindex:all'].each do |cmd|
+# bundle gems, migrate db
+['bundle install', 'bundle exec rake db:migrate'].each do |cmd|
 	rbenv_execute cmd do
 		cwd '/home/vagrant/answers'
 		retries 2
 	end 
 end
+puts '* bundle gems, migrate db'
+
+
+# reindex elasticsearch
+rbenv_execute 'bundle exec rake searchkick:reindex:all' do
+	cwd '/home/vagrant/answers'
+	retries 2
+	notifies :restart, "service[elasticsearch]", :immediately
+end
+puts '* reindex elasticsearch'
