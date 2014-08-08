@@ -1,12 +1,25 @@
+
 {
-	"run_list":[ "role[bare_bones]", "role[app_server]", "role[answers]", "role[postgre]" ],
+	"run_list":[ "role[bare_bones]", "role[postgre]", "role[answers]", "role[app_server]" ],
+	"answers": {
+		"rails": {
+			"deploy_to": "/home/vagrant/answers",
+			"env": "development"
+		},
+		"ruby": {
+			"version": "2.1.2"
+		}
+	},
 	"authorization": {
 	    "sudo": {
 	      "groups": ["adm"],
-	      "users": ["jgrevich", "vagrant"],
+	      "users": ["vagrant"],
 	      "passwordless": true
 	    }
 	},
+  "build-essential": {
+  	"compile_time": false
+  },
   "elasticsearch": {
     "cluster": {
       "name": "answers"
@@ -26,16 +39,21 @@
 		"apparmor_enabled": false
 	},
 	"postgresql": {
-		"password": {
-			"postgres": ""
-		},
+		 "databases": [
+		    {
+		      "name": "answers_dev",
+		      "owner": "answers",
+		      "encoding": "UTF-8",
+		      "locale": "en_US.UTF-8"
+		    },
+		    {
+		      "name": "answers_test",
+		      "owner": "answers",
+		      "encoding": "UTF-8",
+		      "locale": "en_US.UTF-8"
+		    }
+		],
 		"version": "9.3"
 	},
-	"rvm": {
-		"ruby": {
-			"default": true,
-			"version": "2.1.2"
-		}
-  },
 	"set_fqdn": "vagrant.localhost"
 }

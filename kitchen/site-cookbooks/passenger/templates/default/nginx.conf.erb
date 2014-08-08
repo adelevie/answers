@@ -39,15 +39,15 @@ http {
   server {
       listen       80;
       server_name  localhost;
+      root /home/vagrant/answers/public;
+      passenger_enabled on;
+      passenger_app_env <%= node[:answers][:rails][:env] %>;
 
       #charset koi8-r;
 
       #access_log  logs/host.access.log  main;
 
-      location / {
-          root   html;
-          index  index.html index.htm;
-      }
+
 
       #error_page  404              /404.html;
 

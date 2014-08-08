@@ -2,6 +2,44 @@ Java Cookbook CHANGELOG
 =======================
 This file is used to list changes made in each version of the Java cookbook.
 
+v1.25.0 - 8/1/2014
+-------
+### Improvement
+- **[#189](https://github.com/agileorbit-cookbooks/java/pull/189)** - Resource ark -> attribute bin_cmds default value
+- **[#168](https://github.com/agileorbit-cookbooks/java/pull/168)** - Add option to put JAVA_HOME in /etc/environment
+- **[#172](https://github.com/agileorbit-cookbooks/java/pull/172)** - Allow ark to pull from http and files ending in .gz.
+
+### Documentation
+- Recommendations for inclusion in community cookbooks
+- Production Deployment with Oracle Java
+- Update testing instructions for chefdk
+- Various Readme formatting.
+
+### Misc
+- Use Supermarket endpoint in berksfile
+- rspec cleanup
+- Adding ubuntu-14.04 to test suite
+
+v1.24.0 - 7/25/2014
+-------
+New Cookbook maintainer! **[Agile Orbit](http://agileorbit.com)**
+
+### Improvement
+- **[#192](https://github.com/agileorbit-cookbooks/java/pull/192)** - Bump JDK7 URLs to 7u65
+- **[#191](https://github.com/agileorbit-cookbooks/java/pull/192)** - Upgrade Oracle's Java 8 to u11
+- **[#188](https://github.com/agileorbit-cookbooks/java/pull/188)** - Allow for alternatives priority to be set from attribute.
+- **[#176](https://github.com/agileorbit-cookbooks/java/pull/176)** - Change ownership of extracted files
+- **[#169](https://github.com/agileorbit-cookbooks/java/pull/169)** - Add retries and retry_delay parameters to java_ark LWRP
+- **[#167](https://github.com/agileorbit-cookbooks/java/pull/167)** - default: don't fail when using java 8 on windows
+- **[#165](https://github.com/agileorbit-cookbooks/java/pull/165)** - Support for Server JRE
+- **[#158](https://github.com/agileorbit-cookbooks/java/pull/158)** - Updated README for accepting oracle terms
+- **[#157](https://github.com/agileorbit-cookbooks/java/pull/157)** -Remove VirtualBox specific box_urls
+- List AgileOrbit as the maintainer (AgileOrbit took over from Socrata in July 2014)
+
+v1.23.0 - 7/25/2014
+-------
+- Tagged but never published to community cookbooks. All changes rolled into 1.24.0
+
 v1.22.0
 -------
 ### Improvement

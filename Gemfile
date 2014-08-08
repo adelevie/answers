@@ -61,8 +61,6 @@ group :development do
   gem 'knife-ec2'
   gem 'knife-solo', github: 'matschaffer/knife-solo', submodules: true
   gem 'knife-solo_data_bag'
-  gem 'pry-rails'
-  gem 'pry-rescue'
   gem 'quiet_assets'
   gem 'rb-fsevent'
   gem 'rvm-capistrano'
