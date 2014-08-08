@@ -1,5 +1,6 @@
 # Development Instructions
  
+ 
 ## Installation
 
 1. Make sure you have Ruby 2.1.2 installed. You can check this by running `ruby -v` in your terminal. [rvm](https://rvm.io/) is a great tool for managing Ruby installations, [rbenv](https://github.com/sstephenson/rbenv) is another good alternative for managing your Rubies.
@@ -26,6 +27,7 @@
   - `bundle exec rake`
 1. `$ foreman run rails s` to start the server and visit http://localhost:3000/articles
 
+
 ## Development
 
 This codebase adheres to the [git-flow](http://nvie.com/posts/a-successful-git-branching-model/) model of branching.
@@ -39,3 +41,12 @@ This codebase adheres to the [git-flow](http://nvie.com/posts/a-successful-git-b
 - [`capybara-webkit` error after running bundler](https://github.com/18F/answers_take1/issues/11)
 - [pg error after running bundler](https://github.com/18F/answers_take1/issues/12)
 - [Install GraphViz](https://github.com/18F/answers_take1/issues/13)
+
+### Uninstall DB
+
+To completely wipe out your development database and start from scratch, open PSQL and run these commands:
+
+```
+DROP DATABASE answers_dev;
+DROP ROLE answers;
+```
