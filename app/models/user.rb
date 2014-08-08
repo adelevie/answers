@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   #acts_as_token_authenticatable
     
   belongs_to :department
-  has_many :articles
+  # has_many :articles
   devise :database_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable
 

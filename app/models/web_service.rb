@@ -1,2 +1,0 @@
-class WebService < Article
-end
