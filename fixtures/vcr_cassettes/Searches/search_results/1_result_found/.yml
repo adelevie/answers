@@ -1,0 +1,2227 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:9200/_aliases
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '3691'
+    body:
+      encoding: UTF-8
+      string: '{"articles_test_20140806115610568":{"aliases":{}},"articles_test_20140806115614643":{"aliases":{}},"articles_test_20140806115609751":{"aliases":{}},"articles_test_20140806113831711":{"aliases":{}},"articles_test_20140806115611496":{"aliases":{}},"articles_test_20140806113830249":{"aliases":{}},"articles_test_20140806115610296":{"aliases":{}},"articles_test_20140806113836708":{"aliases":{}},"articles_test_20140806113834238":{"aliases":{}},"articles_test_20140806113832721":{"aliases":{}},"articles_test_20140806113832363":{"aliases":{}},"articles_test_20140806113836546":{"aliases":{}},"articles_test_20140806113833047":{"aliases":{}},"articles_test_20140806113829905":{"aliases":{}},"articles_test_20140806115613739":{"aliases":{}},"articles_test_20140806113836103":{"aliases":{}},"articles_test_20140806115612987":{"aliases":{}},"articles_test_20140806113832199":{"aliases":{}},"articles_test_20140806115613569":{"aliases":{}},"articles_test_20140806115611826":{"aliases":{}},"articles_test_20140806113830598":{"aliases":{}},"articles_test_20140806113835574":{"aliases":{}},"articles_test_20140806113836245":{"aliases":{}},"articles_test_20140806115611002":{"aliases":{}},"articles_test_20140806113833853":{"aliases":{}},"articles_test_20140806115612602":{"aliases":{}},"articles_test_20140806115612313":{"aliases":{}},"articles_test_20140806113833230":{"aliases":{}},"articles_test_20140806115611357":{"aliases":{}},"answers_development_20140807130556870":{"aliases":{"answers_development":{}}},"articles_test_20140806113834656":{"aliases":{}},"articles_test_20140806115613904":{"aliases":{}},"articles_test_20140806113832530":{"aliases":{}},"articles_test_20140806115612863":{"aliases":{}},"articles_test_20140806115613202":{"aliases":{}},"articles_test_20140806113833669":{"aliases":{}},"articles_test_20140806113834979":{"aliases":{}},"articles_test_20140806115610716":{"aliases":{}},"articles_test_20140806115609308":{"aliases":{}},"articles_test_20140806115608062":{"aliases":{}},"articles_test_20140806115614053":{"aliases":{}},"articles_test_20140806113828118":{"aliases":{}},"articles_test_20140806115613350":{"aliases":{}},"articles_test_20140806115609085":{"aliases":{}},"articles_test_20140806113834059":{"aliases":{}},"articles_test_20140806113836408":{"aliases":{}},"articles_test_20140806113835750":{"aliases":{}},"articles_test_20140806113832037":{"aliases":{}},"articles_test_20140806115614340":{"aliases":{}},"articles_test_20140806113829550":{"aliases":{}},"articles_test_20140806115611681":{"aliases":{}},"articles_test_20140806115612163":{"aliases":{}},"articles_test_20140806113834429":{"aliases":{}},"articles_test_20140806115608566":{"aliases":{}},"articles_test_20140806115612730":{"aliases":{}},"articles_test_20140806115612008":{"aliases":{}},"articles_test_20140806113834800":{"aliases":{}},"articles_test_20140806113833455":{"aliases":{}},"articles_test_20140806115608850":{"aliases":{}},"articles_test_20140806113829136":{"aliases":{}},"articles_test_20140806115609577":{"aliases":{}},"articles_test_20140806115611186":{"aliases":{}},"articles_test_20140806113835200":{"aliases":{}},"articles_test_20140806115608318":{"aliases":{}},"articles_test_20140806113832895":{"aliases":{}},"articles_test_20140806113835945":{"aliases":{}},"questions_development_20140807130551277":{"aliases":{"questions_development":{}}},"articles_test_20140806115610855":{"aliases":{}},"articles_test_20140806115612469":{"aliases":{}},"articles_test_20140806115614508":{"aliases":{}},"articles_test_20140806115614193":{"aliases":{}},"articles_test_20140806113835397":{"aliases":{}},"articles_test_20140806113831121":{"aliases":{}},"articles_test_20140806113830902":{"aliases":{}}}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:50 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115610568
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:50 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115614643
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:50 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115609751
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:50 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113831711
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:50 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115611496
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113830249
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115610296
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113836708
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113834238
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113832721
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113832363
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113836546
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113833047
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113829905
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115613739
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113836103
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115612987
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113832199
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115613569
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115611826
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113830598
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113835574
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113836245
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115611002
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113833853
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115612602
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115612313
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113833230
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115611357
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113834656
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115613904
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113832530
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115612863
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115613202
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113833669
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113834979
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115610716
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115609308
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115608062
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115614053
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113828118
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115613350
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115609085
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113834059
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113836408
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113835750
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113832037
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115614340
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113829550
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115611681
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115612163
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113834429
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115608566
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115612730
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115612008
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113834800
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113833455
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115608850
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113829136
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115609577
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115611186
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113835200
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115608318
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113832895
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113835945
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115610855
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115612469
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115614508
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806115614193
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113835397
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113831121
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: delete
+    uri: http://localhost:9200/articles_test_20140806113830902
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140808120650892
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: head
+    uri: http://localhost:9200/_alias/articles_test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: head
+    uri: http://localhost:9200/articles_test
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/plain; charset=UTF-8
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/_aliases
+    body:
+      encoding: UTF-8
+      string: '{"actions":[{"add":{"index":"articles_test_20140808120650892","alias":"articles_test"}}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140808120650892/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:51 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140808120651951
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:52 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140808120651951/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:52 GMT
+- request:
+    method: put
+    uri: http://localhost:9200/articles_test_20140808120652291
+    body:
+      encoding: UTF-8
+      string: '{"settings":{"analysis":{"analyzer":{"searchkick_keyword":{"type":"custom","tokenizer":"keyword","filter":["lowercase","searchkick_stemmer"]},"default_index":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_index_shingle","searchkick_stemmer"]},"searchkick_search":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_search_shingle","searchkick_stemmer"]},"searchkick_search2":{"type":"custom","tokenizer":"standard","filter":["standard","lowercase","asciifolding","searchkick_stemmer"]},"searchkick_autocomplete_index":{"type":"custom","tokenizer":"searchkick_autocomplete_ngram","filter":["lowercase","asciifolding"]},"searchkick_autocomplete_search":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding"]},"searchkick_word_search":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding"]},"searchkick_suggest_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_suggest_shingle"]},"searchkick_text_start_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_text_middle_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_text_end_index":{"type":"custom","tokenizer":"keyword","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]},"searchkick_word_start_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_edge_ngram"]},"searchkick_word_middle_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","searchkick_ngram"]},"searchkick_word_end_index":{"type":"custom","tokenizer":"standard","filter":["lowercase","asciifolding","reverse","searchkick_edge_ngram","reverse"]}},"filter":{"searchkick_index_shingle":{"type":"shingle","token_separator":""},"searchkick_search_shingle":{"type":"shingle","token_separator":"","output_unigrams":false,"output_unigrams_if_no_shingles":true},"searchkick_suggest_shingle":{"type":"shingle","max_shingle_size":5},"searchkick_edge_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50},"searchkick_ngram":{"type":"nGram","min_gram":1,"max_gram":50},"searchkick_stemmer":{"type":"snowball","language":"English"}},"tokenizer":{"searchkick_autocomplete_ngram":{"type":"edgeNGram","min_gram":1,"max_gram":50}}},"number_of_shards":1,"number_of_replicas":0},"mappings":{"_default_":{"properties":{},"dynamic_templates":[{"string_template":{"match":"*","match_mapping_type":"string","mapping":{"type":"multi_field","fields":{"{name}":{"type":"string","index":"not_analyzed"},"analyzed":{"type":"string","index":"analyzed"}}}}}]}}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '21'
+    body:
+      encoding: UTF-8
+      string: '{"acknowledged":true}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:52 GMT
+- request:
+    method: post
+    uri: http://localhost:9200/articles_test_20140808120652291/_refresh
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Content-Length:
+      - '49'
+    body:
+      encoding: UTF-8
+      string: '{"_shards":{"total":1,"successful":1,"failed":0}}'
+    http_version: 
+  recorded_at: Fri, 08 Aug 2014 16:06:52 GMT
+recorded_with: VCR 2.9.2
