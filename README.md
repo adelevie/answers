@@ -10,42 +10,20 @@ Oakland Answers is based on [Honolulu Answers](http://answers.honolulu.gov): a n
 
 Honolulu Answers is designed to be very user-friendly. It declutters the govt website experience, and it solves a problem people ordinarily have. And we hope it makes people's lives easier. Inspired by Gov.uk, Honolulu Answers is a first-of-its-kind for municipal government, a partnership between Code for America and the City & County of Honolulu.
 
-## First, a big Thank You:
-
-* Search results are aided by a thesaurus service provided by [words.bighugelabs.com](http://words.bighugelabs.com/).
-* Background photo courtesy of [Royal Realty](http://royalrealtyllc.com/)
+A big thank you for the background photo courtesy of [Royal Realty](http://royalrealtyllc.com/)
 
 
 ## Installation
 
-**If you are using OS X Snow Leopard, Lion or Mountain Lion, please follow this guide which will take you through the setup procedure**
+We use [Vagrant](http://www.vagrantup.com/) for the development and test environments. To install, clone the repo, change to the directory, and run `vagrant up`.  The initial provision may take up to 30 minutes (there's a lot things to download and compile), however subsequent runs should only take a few seconds. If you're on OS X, the browser should open to [http://localhost:9080](http://localhost:9080), on linux you'll have to manually visit the [url](http://localhost:9080).
 
-Mac OS X is best supported by Honolulu Answers, since it is what most of us at Code for America use. Ubuntu (and therefore presumeably other linux distributions) are also supported.  Windows is currently unsupported and untested.  
+While our documentation efforts are a work-in-progress, we have fairly stable instructions for installing answers locally in [DEV-SETUP.md](DEV-SETUP.md). 
 
-While our documentation efforts are in-progress, we have fairly stable installation instructions in [DEV-SETUP.md](DEV-SETUP.md). Older, but still useful, docs:
-
-- [Installation Instructions for OS X 10.8 Mountain Lion](https://github.com/codeforamerica/honolulu_answers/wiki/Installation-Instructions-for-OS-X-10.8-Mountain-Lion)
-- Slightly outdated Ubuntu instructions are available [here](https://github.com/codeforamerica/honolulu_answers/wiki/Installation-Instructions-for-Ubuntu-12.04-Precise).
-
-
-## Usage
-    
-    $ foreman start
-
-## Deploying to Heroku
-    
-    $ heroku create honoluluanswers --stack cedar
-    $ git push heroku master
-    $ heroku config push
-    $ heroku config set LD_LIBRARY_PATH='lib/native'
-    $ heroku addons:add searchify:small # WARNING: paid addon!
-    $ heroku addons:add memcache
-    $ heroku addons:add newrelic:standard
-    $ heroku run rake db:setup
 
 ## Testing
 
-`foreman run bundle exec rake spec` command will run the current tests, these test need to be expanded.
+Open a terminal and change directories to the answers repo. `vagrant -c 'cd answers && rake'` will run the test suite if you're using Vagrant.  If you've installed answers locally run `bundle exec rake` (note, you may need to create and migrate the test db).
+
 
 ## Contributing
 In the spirit of [free software][free-sw], **everyone** is encouraged to help
