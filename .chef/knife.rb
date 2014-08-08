@@ -7,7 +7,7 @@ node_path        									'kitchen/nodes'
 role_path       									'kitchen/roles'
 ssl_verify_mode 									:verify_peer
 
-knife[:aws_access_key_id]	=				ENV['AWS_ACCESS_KEY']
-knife[:aws_secret_access_key] =		ENV['AWS_SECRET_KEY']
+knife[:aws_access_key_id]	=				ENV['AWS_ACCESS_KEY_ID']
+knife[:aws_secret_access_key] =		ENV['AWS_SECRET_ACCESS_KEY']
 # Optional if you're using Amazon's STS
 #knife[:aws_session_token] = 			ENV['AWS_SESSION_TOKEN']
