@@ -17,6 +17,6 @@ Answers::Application.routes.draw do
   post "search/reindex_articles", to: "search#reindex_articles"
   
   resources :questions, only: [:index, :show], :path => 'answers', :as => 'answers'
-  
+
   root :to => "home#index"
 end
