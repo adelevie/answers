@@ -3,7 +3,6 @@
 FactoryGirl.define do
   factory :question do
     text "How can I check my license application?"
-    url "MyString"
     in_language "MyString"
   end
 end
