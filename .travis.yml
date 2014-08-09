@@ -4,9 +4,8 @@ before_script:
   - psql -c 'create database "answers_test";' -U postgres
   - bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare --trace
+bundler_args: --without development
 language: ruby
-notifications:
-  webhooks: http://project-monitor.codeforamerica.org/projects/d4b6c15d-e2af-43ab-b546-0631a0a2e469/status
 rvm:
   - ruby-1.9.3
   - ruby-2.1.2
