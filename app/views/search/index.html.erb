@@ -16,7 +16,7 @@
             <ul>
               <% results.each do |question| %>
                   <li class="article-listing">
-                    <%= content_tag( :h2, link_to( question.text, question_path(question.id) ) ) %>
+                    <%= content_tag( :h2, link_to( question.text, answer_path(question) ) ) %>
                   </li>
               <% end %>
             </ul>

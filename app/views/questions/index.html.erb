@@ -1,20 +1,21 @@
-<h1>Listing questions</h1>
+<div class="page-container">
+  <div class="breadcrumbs">
+    <ol><%= render_breadcrumbs :tag=> :li, :separator =>" > " %></ol>
+  </div>
+  <div class="row">
+    <div class="span9">
+      <div class="main-content">
+        <div class="header"><h1>All Articles</h1></div>
+        <ul>
+          <% @questions.map do |q| %>
+            <li class="category-listing"><%= link_to q.text, answer_path(q) %></li>
+          <% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @questions.each do |question| %>
-      <tr>
-        <td><%= link_to 'Show', question %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+        </ul>
+      </div>
+    </div>
+    <div class="span3">
+      
+    </div><!-- /span3 -->
+  </div>
+</div> 

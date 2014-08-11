@@ -39,14 +39,8 @@
         </div>
         <ul class="nav-top span5">
           <li class="">
-            <%= link_to("Browse", "/articles/article-type/quick-answer") %>
+            <%= link_to("Browse", answers_path) %>
           </li>
-          <!--li class="">
-            <%= link_to("Guides", "/articles/article-type/guide") %>
-          </li>
-          <li class="">
-            <%= link_to("Web Services", "/articles/article-type/web-service") %>
-          </li-->
         </ul>
         <% if !current_page?('/')  %>
         <div class="header-search span3">

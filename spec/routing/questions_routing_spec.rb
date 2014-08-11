@@ -4,11 +4,11 @@ RSpec.describe QuestionsController, :type => :routing do
   describe "routing" do
 
     it "routes to #index" do
-      expect(:get => "/questions").to route_to("questions#index")
+      expect(:get => "/answers").to route_to("questions#index")
     end
     
     it "routes to #show" do
-      expect(:get => "/questions/1").to route_to("questions#show", :id => "1")
+      expect(:get => "/answers/1").to route_to("questions#show", :id => "1")
     end
 
   end
