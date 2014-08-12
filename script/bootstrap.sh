@@ -17,6 +17,6 @@ echo "Initial setup complete if the above tests passed with '0 failures'."
 
 # open answers app in default web browser if osx
 if [[ `uname` == 'Darwin' ]]; then
-	echo "opening Answers Platform using the default browswer..."
+	echo "opening Answers Platform using the default browser..."
 	/usr/bin/open http://localhost:9080
 fi
