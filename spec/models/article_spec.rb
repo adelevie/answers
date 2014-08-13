@@ -3,7 +3,6 @@ require 'spec_helper'
 describe Article, type: :model, vcr: true do
   let(:article) { FactoryGirl.create(:article) }
   before do
-    Article.reindex
     allow(Article).to receive(:search).and_return([article]) 
   end
   subject       { article }

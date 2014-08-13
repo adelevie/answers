@@ -1,12 +1,13 @@
 require 'spec_helper'
 
-describe SearchController, type: :controller do
-  describe "#reindex_articles", vcr: true do
-    it "reindexes articles via rake" do
-      expect(Article).to receive(:reindex)
-      #@request.env["HTTP_ACCEPT"] = "application/json"
-      #post :reindex_articles
-      Article.reindex
-    end
+describe SearchController, vcr: true do
+
+  describe 'GET index' do
+  	it 'redirects to the homepage if no query exists' do
+  		get :index, :q => ""
+
+  		expect(response).to redirect_to(root_url)
+  	end
+
   end
 end

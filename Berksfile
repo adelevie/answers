@@ -71,4 +71,7 @@ cookbook 'users_solo'
 # cookbook 'wifi-networking'
 # cookbook 'zfs'
 # cookbook 'zpool'
-# cookbook 'zsh'# 
+# cookbook 'zsh'
+cookbook 'wordnet', path: 'kitchen/site-cookbooks/wordnet'
+# 
+

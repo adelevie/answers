@@ -9,7 +9,6 @@ describe'Searches', type: :feature do
     
     context '1 result found' do
       before do
-        Article.reindex
         allow(Article).to receive(:search) { [article] }
         visit root_path
         fill_in 'query', :with => query
@@ -27,7 +26,6 @@ describe'Searches', type: :feature do
       let(:reverse_query) { "foo" }
 
       before do
-        Article.reindex
         allow(Article).to receive(:search) { [] }
         visit root_path
         fill_in 'query', :with => reverse_query
@@ -47,7 +45,6 @@ describe'Searches', type: :feature do
       let(:query)     { 'best nice' }
 
       before do
-        Article.reindex
         allow(Article).to receive(:search) { [article_1, article_2] }
         visit root_path
         fill_in 'query', :with => query
