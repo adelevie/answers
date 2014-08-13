@@ -1,15 +1,15 @@
 require 'spec_helper'
 
-describe 'Searches', :type => :feature do
+describe'Searches', type: :feature do
 
-  describe 'search results' do
-    let(:article) { create :article, status: 'Published', title: "hello" }
-    let(:query) { "hello" }
-    let(:category) { create :category }
-
+  describe 'search results', vcr: true do
+       
+    let(:article) { create :article, status: 'Published' }
+    let(:query) { article.title.downcase.gsub!(/[^\w ]*/, '') }
+    
     context '1 result found' do
       before do
-        allow(Article).to receive(:search_tank) { [article] }
+        allow(Article).to receive(:search) { [article] }
         visit root_path
         fill_in 'query', :with => query
         click_on 'SEARCH'
@@ -26,7 +26,7 @@ describe 'Searches', :type => :feature do
       let(:reverse_query) { "foo" }
 
       before do
-        allow(Article).to receive(:search_tank) { [] }
+        allow(Article).to receive(:search) { [] }
         visit root_path
         fill_in 'query', :with => reverse_query
         click_on 'SEARCH'
@@ -45,7 +45,7 @@ describe 'Searches', :type => :feature do
       let(:query)     { 'best nice' }
 
       before do
-        allow(Article).to receive(:search_tank) { [article_1, article_2] }
+        allow(Article).to receive(:search) { [article_1, article_2] }
         visit root_path
         fill_in 'query', :with => query
         click_on 'SEARCH'
@@ -61,6 +61,7 @@ describe 'Searches', :type => :feature do
         expect(page).to have_content article_2.title
         expect(page).to have_content article_2.preview
       end
+      
     end
   end
 end

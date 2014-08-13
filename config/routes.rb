@@ -10,8 +10,6 @@ Answers::Application.routes.draw do
   match 'autocomplete' => "search#autocomplete", :via => :get
   match '/articles/article-type/:content_type' => "articles#article_type", as: :articles_type, :via => :get
 
-  post "search/reindex_articles", to: "search#reindex_articles"
-
   resources :articles
   resources :categories
   resources :contacts

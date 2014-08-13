@@ -24,10 +24,10 @@ namespace :deploy do
 
   desc "Symlink configs"
   task :symlink_configs, roles: :app do
-    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/.env #{release_path}/"
+    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/.env #{current_path}/"
 #    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/newrelic.yml #{current_path}/config/"
-    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/"
-    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/settings.yml #{release_path}/config/"
+    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/database.yml #{current_path}/config/"
+    run "#{try_sudo} ln -nfs #{deploy_to}/shared/config/settings.yml #{current_path}/config/"
   end
 
   desc "Create nginx configuration from template"
@@ -67,7 +67,7 @@ namespace :deploy do
       set :new_relic_server_number, "%02d" % (i+1)
 
       # load file from template
-      erb = File.read(File.expand_path("../templates/#{from}", __FILE__))
+      erb = File.read(File.expand_path("../deploy/templates/#{from}", __FILE__))
 
       # upload file to host
       put_sudo ERB.new(erb).result(binding), to, current_server.host

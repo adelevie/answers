@@ -3,9 +3,8 @@ include ActionView::Helpers::SanitizeHelper
 require 'facets/enumerable'
 
 class Article < ActiveRecord::Base
-  include TankerArticleDefaults
-  include Tanker
-  include RailsNlp
+  searchkick wordnet_synonyms: '/var/lib/wn_s.pl'
+
   include Markdownifier
 
   require_dependency 'keyword'
@@ -43,17 +42,6 @@ class Article < ActiveRecord::Base
   # *  We then moved to Markdown for content storage, resulting in Article#content_md.
   # *  Most recently, the QuickAnswers were split into three distinct sections: content_main, content_main_extra and content_need_to_know. All these use Markdown.
 
-  after_save :update_tank_indexes
-  after_destroy :delete_tank_indexes
-
-  handle_asynchronously :update_tank_indexes
-  handle_asynchronously :delete_tank_indexes
-
-  # query_magic callbacks to update keywords and wordcounts tables (The gem will be called query_magic --hale)
-  after_create :qm_after_create
-  after_update :qm_after_update
-  after_destroy :qm_after_destroy
-
   before_validation :set_access_count_if_nil
 
   STOP_WORDS = ['a','able','about','across','after','all','almost','also','am','among','an','and','any','are','as','at','be','because','been','but','by','can','cannot','could','dear','did','do','does','either','else','ever','every','for','from','get','got','had','has','have','he','her','hers','him','his','how','however','i','if','in','into','is','it','its','just','least','let','like','likely','may','me','might','most','must','my','neither','no','nor','not','of','off','often','on','only','or','other','our','own','rather','said','say','says','she','should','since','so','some','than','that','the','their','them','then','there','these','they','this','tis','to','too','twas','us','wants','was','we','were','what','when','where','which','while','who','whom','why','will','with','would','yet','you','your']
@@ -71,14 +59,8 @@ class Article < ActiveRecord::Base
     end
   end
 
-  def self.search( query )
-    return Article.all if query.blank?
-    self.search_tank query
-  end
-
   def self.search_titles( query )
-    return Article.all if query.blank?
-    self.search_tank( '__type:Article', :conditions => {:title => query })
+    self.search query, fields: [ :title ]
   end
 
   def self.find_by_type( content_type )
@@ -123,10 +105,7 @@ class Article < ActiveRecord::Base
   end
 
   def related
-    # Rails.cache.fetch("#{self.id}-related") {
-    #   return [] if wordcounts.empty?
-    #   (Article.search_tank(self.wordcounts.all(:order => 'count DESC', :limit => 10).map(&:keyword).map(&:name).join(" OR ")) - [self]).first(4)
-    # }
+    # TODO: implement with searchkick
   end
 
   def indexable?
@@ -140,10 +119,6 @@ class Article < ActiveRecord::Base
   def record_hit
     update_column(:access_count, access_count.to_i + 1 )
     category.record_hit if category
-  end
-
-  def analyse
-    qm_after_create
   end
 
   def self.analyse_all
@@ -160,54 +135,4 @@ class Article < ActiveRecord::Base
     Keyword.destroy( orphan_kw_ids )
   end
 
-  ### query-magic activerecord callbacks
-
-  # When an article is created
-  #   1) Analyse all the text fields and parse them into a frequency map of words. { <word_i> => <freq_i>, [...], <word_n> => <freq_n> }
-  #   2) For each word in text, kw = Keyword.find_or_create_by_name(word).(i)
-  #   3) Create a new Wordcount row with :keyword_id => kw.id, :article_id => article.id and count as the frequency of the keyword in the article.
-  def qm_after_create
-    begin
-      if self.status == "Published"
-        @analyzer ||= RailsNlp::TextAnalyser.new
-        text = @analyzer.collect_text(
-            :model => self,
-            :fields => ['title','content_main','content_main_extra','content_need_to_know','preview','tags','category_name']
-          )
-        text = @analyzer.clean( text )
-        wordcounts = @analyzer.freq_map( text )
-        wordcounts.each do |word, frequency|
-          kw = Keyword.find_or_create_by(name: word )
-          Wordcount.create!(:keyword_id => kw.id, :article_id => self.id, :count => frequency)
-        end
-      end
-    rescue => e
-      logger.error "Could not update keywords and wordcounts after create for article: #{self.try(:id)}"
-      logger.error "Message: #{e.message} Backtrace: #{e.backtrace}"
-    end
-  end
-  handle_asynchronously :qm_after_create
-
-  def qm_after_update
-    begin
-      wordcounts.destroy_all
-      qm_after_create
-      delete_orphaned_keywords
-    rescue => e
-      logger.error "Could not update keywords and wordcounts after update for article: #{self.id unless self.id.blank?}"
-      logger.error "Message: #{e.message} Backtrace: #{e.backtrace}"
-    end
-  end
-  handle_asynchronously :qm_after_update
-
-  def qm_after_destroy
-    begin
-      wordcounts.destroy_all
-      delete_orphaned_keywords
-    rescue => e
-      logger.error "Could not update keywords and wordcounts after destroy for article: #{self.id unless self.id.blank?}"
-      logger.error "Message: #{e.message} Backtrace: #{e.backtrace}"
-    end
-  end
-  handle_asynchronously :qm_after_destroy
 end

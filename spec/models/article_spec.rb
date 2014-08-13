@@ -1,8 +1,10 @@
 require 'spec_helper'
 
-describe Article, :type => :model do
+describe Article, type: :model, vcr: true do
   let(:article) { FactoryGirl.create(:article) }
-  before        { allow(Article).to receive(:search_tank).and_return([article]) }
+  before do
+    allow(Article).to receive(:search).and_return([article]) 
+  end
   subject       { article }
 
 
@@ -58,9 +60,7 @@ describe Article, :type => :model do
         article = Article.create(
             :title => 'Cats have tails'
           )
-
-        article.qm_after_destroy_without_delay # trigger after_destroy
-
+        
         expect(article.keywords).to be_empty
       end
     end
@@ -123,7 +123,7 @@ describe Article, :type => :model do
 
     context "query does not match anything in the database" do
       it "returns an empty array" do
-        allow(Article).to receive(:search_tank).and_return([])
+        allow(Article).to receive(:search).and_return([])
         expect(Article.search(SecureRandom.hex(16))).to be_empty
       end
     end
@@ -140,32 +140,13 @@ describe Article, :type => :model do
 
     describe ".search titles" do
       it "returns an empty array when the search term is present in an article but not the title" do
-        allow(Article).to receive(:search_tank).and_return([])
+        allow(Article).to receive(:search).and_return([])
         expect(Article.search_titles(article.preview)).to be_empty
       end
 
       context "query is present in the title" do
         subject { Article.search_titles article.title }
         it { is_expected.to include(article) }
-      end
-    end
-  end
-
-  describe '.qm_after_create' do
-    it 'creates keywords for any relevant terms'
-
-    it 'creates wordcounts for relevant keywords' do
-      VCR.use_cassette('dragon_keyword_cassette', :record => :new_episodes, :allow_playback_repeats => true) do
-        article = Article.create(
-            :title => "How to train a dragon",
-            :category_id => Category.find_or_create_by(name: "Dragon Training").id
-          )
-
-        article.publish
-
-        article.qm_after_create_without_delay
-
-        expect(article.wordcounts.collect { |wc| wc.keyword.name }).to include "dragon"
       end
     end
   end

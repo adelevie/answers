@@ -15,7 +15,6 @@ class Keyword < ActiveRecord::Base
     raise "Cannot analyse keyword with no name" if self.name.blank?
     self.stem = Text::PorterStemming.stem( self.name )
     self.metaphone = Text::Metaphone.double_metaphone( self.name )
-    self.synonyms = BigHugeThesaurus.synonyms( self.name )
     self.save
   end
 

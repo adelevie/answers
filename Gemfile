@@ -1,9 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'pry', git: "https://github.com/adelevie/pry.git"
-
 gem 'nokogiri', '> 1.4.7'
-gem 'rails', '4.1.1'
+gem 'rails', '4.1.4'
 gem 'pg'
 gem 'thin'
 gem 'foreman'
@@ -16,6 +14,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'actionpack-page_caching'
+
+gem 'searchkick', github: 'amoose/searchkick', branch: 'feature/es_syn_tokenization'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -32,15 +32,12 @@ gem 'memcachier'
 gem 'dalli'
 gem 'kgio'
 
-
 gem 'devise', '~> 3.2.4'
-gem 'cancancan', git: 'https://github.com/andypike/cancancan.git', branch: 'rspec3'
+gem 'cancancan', github: 'andypike/cancancan', branch: 'rspec3'
 
-gem 'tanker'
 gem 'text'
 gem 'httparty'
 gem 'json'
-gem 'indextank'
 
 gem 'bluecloth'
 gem 'kramdown'
@@ -52,20 +49,23 @@ gem 'aws-sdk', '~> 1.42.0'
 gem 'dotenv-rails'
 gem "breadcrumbs_on_rails"
 gem 'therubyracer'
-gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin', github: 'gregbell/active_admin' 
 gem 'secure_headers'
 
 group :development do
   gem 'better_errors'
+  gem 'berkshelf'
   gem 'binding_of_caller'
   gem 'capistrano', '~> 2.15'
   gem 'guard-rspec', require: false
-  gem 'pry-rails'
-  gem 'pry-rescue'
+  gem 'knife-ec2'
+  gem 'knife-solo', github: 'matschaffer/knife-solo', submodules: true
+  gem 'knife-solo_data_bag'
+  gem 'quiet_assets'
   gem 'rb-fsevent'
   gem 'rvm-capistrano'
   gem 'spring-commands-rspec'
-  gem 'quiet_assets'
+  gem 'unf'
 end
 
 group :development, :test do
