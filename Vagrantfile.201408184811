@@ -10,12 +10,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ubuntu/trusty64"
   # unquote if you want a box that's compatible with vmware, note, you'll
   # have to use the vagrant omnibus plugin as well.
-  # config.vm.box = 'box-cutter/ubuntu1404'
-  # config.omnibus.chef_version = :latest
-  # config.omnibus.install_url = 'https://www.opscode.com/chef/install.sh'
+  config.vm.box = 'box-cutter/ubuntu1404'
+  config.omnibus.chef_version = :latest
+  config.omnibus.install_url = 'https://www.opscode.com/chef/install.sh'
 
 
   config.vm.network "forwarded_port", guest: 80, host:9080
@@ -33,8 +32,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provider :vmware_fusion do |v|
     v.gui = false
-    v.vmx["memsize"] = ENV['VAGRANT_MEMORY'] || "1024"
-    v.vmx["numvcpus"] = "2"
+    v.vmx["memsize"] = ENV['VAGRANT_MEMORY'] || "4096"
+    v.vmx["numvcpus"] = "4"
   end
 
   config.vm.provision :chef_solo do |chef|
@@ -43,8 +42,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.encrypted_data_bag_secret_key_path = '.databag_secret'
     chef.roles_path = 'kitchen/roles'
     chef.json = JSON.parse(Pathname(__FILE__).dirname.join('kitchen', 'nodes', 'localhost.json').read)
-    # chef.log_level = 'debug'
-    chef.verbose_logging = true
+    #chef.log_level = 'debug'
+    #chef.verbose_logging = true
   end
 
 end

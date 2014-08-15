@@ -1,9 +1,10 @@
-
 {
 	"run_list":[ "role[bare_bones]", "role[postgre]", "role[answers]", "role[app_server]" ],
 	"answers": {
 		"rails": {
-			"deploy_to": "/home/vagrant/answers",
+			"bundle_path": "/opt/rbenv",
+			"deploy_to": "/var/www/answers",
+			"deploy_user": "vagrant",
 			"env": "development"
 		},
 		"ruby": {
@@ -27,8 +28,6 @@
     "custom_config": {
     	"script.disable_dynamic": true
     },
-    "deb_sha": "0b136cbbe5cc835ecfb1223e50758fa4f49937c1",
-    "deb_url": "https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.3.0.deb",
     "version": "1.3.0"
   },
 	"java": {
@@ -54,6 +53,9 @@
 		    }
 		],
 		"version": "9.3"
+	},
+	"rbenv": {
+		"group_users": ["vagrant"]
 	},
 	"set_fqdn": "vagrant.localhost"
 }

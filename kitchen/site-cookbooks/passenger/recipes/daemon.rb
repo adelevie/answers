@@ -19,17 +19,7 @@ bash "install passenger/nginx" do
   code <<-EOH
   passenger-install-nginx-module --auto --auto-download --prefix="#{nginx_path}" --languages ruby --extra-configure-flags="#{node[:passenger][:production][:configure_flags]}"
   EOH
-  not_if "test -e #{nginx_path}"
-  not_if "test -e #{rvm_path}"
-end
-
-bash "install passenger/nginx from rvm" do
-  user "root"
-  code <<-EOH
-  #{rvm_path}-exec 2.1.2 passenger-install-nginx-module --auto --auto-download --languages ruby --prefix="#{nginx_path}"
-  EOH
-  not_if "test -e #{nginx_path}"
-  only_if "test -e /usr/local/rvm"
+  not_if { File.exists?("#{nginx_path}/sbin/nginx") }
 end
 
 log_path = node[:passenger][:production][:log_path]
@@ -63,23 +53,12 @@ template "#{nginx_path}/conf/nginx.conf" do
     :passenger => node[:passenger][:production],
     :pidfile => "#{nginx_path}/logs/nginx.pid"
   )
-  notifies :run, 'bash[config_patch]'
 end
 
 cookbook_file "#{nginx_path}/sbin/config_patch.sh" do
   owner "root"
   group "root"
   mode 0755
-end
-
-bash "config_patch" do
-  # The big problem is that we can't compute the gem install path
-  # because we don't know what ruby version we're being installed
-  # on if RVM is present.
-#  only_if "grep '##PASSENGER_ROOT##' #{nginx_path}/conf/nginx.conf"
-  user "root"
-  code "#{nginx_path}/sbin/config_patch.sh #{nginx_path}/conf/nginx.conf"
-  notifies :reload, 'service[passenger]'
 end
 
 template "/etc/init.d/nginx" do
