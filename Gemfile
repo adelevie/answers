@@ -21,6 +21,7 @@ gem 'actionpack-page_caching'
 gem 'searchkick', github: 'amoose/searchkick', branch: 'feature/es_syn_tokenization'
 
 
+gem 'acts-as-taggable-on'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
