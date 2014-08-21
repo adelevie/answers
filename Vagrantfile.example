@@ -11,6 +11,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "ubuntu/trusty64"
+
+  # unquote if you'd prefer to start from a prebuilt box based on our latest release.
+  # config.vm.box = 'http://answers.gsa.io/answers.box'
+
   # unquote if you want a box that's compatible with vmware, note, you'll
   # have to use the vagrant omnibus plugin as well.
   # config.vm.box = 'box-cutter/ubuntu1404'
