@@ -1,5 +1,4 @@
 default[:passenger][:production][:path] = '/opt/nginx'
-default[:passenger][:production][:rvm_path] = '/usr/local/rvm/bin/rvm'
 default[:passenger][:production][:configure_flags] = '--with-ipv6 --with-http_stub_status_module --with-http_ssl_module'
 default[:passenger][:production][:log_path] = '/var/log/passenger'
 

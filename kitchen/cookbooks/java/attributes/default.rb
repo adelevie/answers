@@ -21,6 +21,7 @@
 default['java']['jdk_version'] = '6'
 default['java']['arch'] = kernel['machine'] =~ /x86_64/ ? "x86_64" : "i586"
 default['java']['openjdk_packages'] = []
+default['java']['openjdk_version'] = nil
 default['java']['accept_license_agreement'] = false
 default['java']['set_default'] = true
 default['java']['alternatives_priority'] = 1062
@@ -54,7 +55,19 @@ when 'ibm', 'ibm_tar'
 
   default['java']['ibm']['7']['bin_cmds'] = node['java']['ibm']['6']['bin_cmds'] + [ "pack200", "unpack200" ]
 when 'oracle_rpm'
+  # type of java RPM : jdk or jre
   default['java']['oracle_rpm']['type'] = 'jdk'
+
+  # optional, can be overriden to pin to a version different
+  # from the up-to-date.
+  default['java']['oracle_rpm']['package_version'] = nil
+
+  # optional, some distros re-package the official Oracle's RPM
+  # with a different name
+  default['java']['oracle_rpm']['package_name'] = nil
+
+  # set the JAVA_HOME path, it may be overriden
+  # when a package version is provided.
   default['java']['java_home'] = "/usr/java/latest"
 end
 
@@ -90,12 +103,12 @@ default['java']['jdk']['7']['bin_cmds'] = [ "appletviewer", "apt", "ControlPanel
 # Official checksums for the latest release can be found at http://www.oracle.com/technetwork/java/javase/downloads/java-se-binaries-checksum-1956892.html
 
 # x86_64
-default['java']['jdk']['7']['x86_64']['url'] = 'http://download.oracle.com/otn-pub/java/jdk/7u65-b17/jdk-7u65-linux-x64.tar.gz'
-default['java']['jdk']['7']['x86_64']['checksum'] = 'c223bdbaf706f986f7a5061a204f641f'
+default['java']['jdk']['7']['x86_64']['url'] = 'http://download.oracle.com/otn-pub/java/jdk/7u67-b01/jdk-7u67-linux-x64.tar.gz'
+default['java']['jdk']['7']['x86_64']['checksum'] = '81e3e2df33e13781e5fac5756ed90e67'
 
 # i586
-default['java']['jdk']['7']['i586']['url'] = 'http://download.oracle.com/otn-pub/java/jdk/7u65-b17/jdk-7u65-linux-i586.tar.gz'
-default['java']['jdk']['7']['i586']['checksum'] = 'bfe1f792918aca2fbe53157061e2145c'
+default['java']['jdk']['7']['i586']['url'] = 'http://download.oracle.com/otn-pub/java/jdk/7u67-b01/jdk-7u67-linux-i586.tar.gz'
+default['java']['jdk']['7']['i586']['checksum'] = '715b0e8ba2a06bded75f6a92427e2701'
 
 # jdk8 attributes
 

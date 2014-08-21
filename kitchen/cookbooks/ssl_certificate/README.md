@@ -1,5 +1,6 @@
 Description
 ===========
+[![Cookbook Version](https://img.shields.io/cookbook/v/ssl_certificate.svg?style=flat)](https://supermarket.getchef.com/cookbooks/ssl_certificate)
 
 The main purpose of this cookbook is to make it easy for other cookbooks to support SSL. With the resource included, you will be able to manage certificates reading them from attributes, data bags or chef-vaults. Exposing its configuration through node attributes.
 
@@ -602,7 +603,7 @@ end
 
 The same example, using a namespace and node attributes:
 
-```
+```ruby
 # Setting the attributes
 node.default["mysite"]["common_name"] = "cloud.mysite.com"
 
@@ -682,6 +683,16 @@ Testing
 $ kitchen test
 $ kitchen verify
 [...]
+```
+
+## ChefSpec matchers
+
+### create_ssl_certificate(name)
+
+Assert that the Chef run creates ssl_certificate.
+
+```ruby
+expect(chef_run).to create_ssl_certificate("cloud.mysite.com")
 ```
 
 Contributing
