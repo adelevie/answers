@@ -1,0 +1,35 @@
+<%# set_meta_tags description: @question.preview,
+                 canonical: ENV['OFFICIAL_GOVERNMENT_URL'] + request.fullpath
+                 title: [@question.text] %>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Back', answers_path %>
+
+
+<div class="page-container article">
+  <div class="breadcrumbs">
+    <%= link_to( "Home", root_url) %>
+    >
+    <%= @question.text %>
+  </div>
+  <div class="row">
+    <div class="span9">
+      <div class="main-content">
+        <div class="header">
+          <%= content_tag(:h1, @question.text ) %>
+        </div>
+        <% @question.answers.each do |quest| %>
+          <div class="content-text">
+            <%= raw quest.text %>
+          </div>
+        <% end %>
+      </div>
+    </div><!-- /span9 -->
+    
+    <div class="span3">
+      <%#= render :partial => 'shared/articles_sidebar' %>
+    </div><!-- /span3 -->
+    
+  </div>
+</div>

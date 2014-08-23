@@ -14,36 +14,21 @@
             <p>Sorry, no results found for "<%= query %>".  Please try rephrasing your search terms.</p>
           <% else %>
             <ul>
-              <% results.each do |article| %>
-                <% next unless article.published? %>
+              <% results.each do |question| %>
                   <li class="article-listing">
-                    <%= content_tag( :h2, link_to( article.title, article_path(article.id) ) ) %>
-                    <p class="preview"><%= article.preview %></p>
-                      <div class="other-langs">
-                          <% if article.title_es.present? %>
-                          <div class="preview-es">
-                            <img src="/assets/es.gif" title="This content is also in Spanish" />
-                            <%= content_tag(:h3, link_to(article.title_es,article))%>
-                            <p class="preview"><%= article.preview_es %></p>
-                          </div>
-                          <% end %>
-                          <% if article.title_cn.present? %>
-                          <div class="preview-cn">
-                            <img src="/assets/cn.gif" title="This content is also in Chinese" />
-                            <%= content_tag(:h3, link_to(article.title_cn,article))%>
-                            <p class="preview"><%= article.preview_cn %></p>
-                          </div>
-                          <% end %>
-                        </div>
+                    <%= content_tag( :h2, link_to( question.text, answer_path(question) ) ) %>
                   </li>
-                <% end %>
+              <% end %>
             </ul>
           <% end -%>
         </div>
       </div>
     </div>
     <div class="span3">
-      <%= render partial: 'shared/categories_sidebar', locals: {categories: categories} %>
+      <!--
+      # TODO: replace with Tag
+      #= render partial: 'shared/categories_sidebar', locals: {categories: categories} 
+      -->
     </div><!-- /span3 -->
   </div>
 </div>

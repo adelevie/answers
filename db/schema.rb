@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140805001628) do
+ActiveRecord::Schema.define(version: 20140808153305) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,21 +22,32 @@ ActiveRecord::Schema.define(version: 20140805001628) do
     t.integer  "author_id"
     t.string   "author_type"
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "namespace"
   end
 
   add_index "active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id", using: :btree
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
-  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
+  add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_admin_notes_on_resource_type_and_resource_id", using: :btree
+
+  create_table "answers", force: true do |t|
+    t.text     "need_to_know"
+    t.text     "text"
+    t.string   "in_language"
+    t.integer  "question_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "answers", ["question_id"], name: "index_answers_on_question_id", using: :btree
 
   create_table "articles", force: true do |t|
     t.datetime "updated"
     t.string   "title"
     t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
     t.string   "content_type"
     t.text     "preview"
     t.integer  "contact_id"
@@ -73,8 +84,8 @@ ActiveRecord::Schema.define(version: 20140805001628) do
   create_table "categories", force: true do |t|
     t.string   "name"
     t.integer  "access_count"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.integer  "article_id"
     t.text     "description"
     t.string   "slug"
@@ -84,13 +95,14 @@ ActiveRecord::Schema.define(version: 20140805001628) do
 
   create_table "contacts", force: true do |t|
     t.string   "name"
+    t.string   "subname"
     t.string   "number"
     t.string   "url"
     t.string   "address"
     t.string   "department"
     t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "delayed_jobs", force: true do |t|
@@ -103,8 +115,8 @@ ActiveRecord::Schema.define(version: 20140805001628) do
     t.datetime "failed_at"
     t.string   "locked_by"
     t.string   "queue"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
@@ -112,8 +124,8 @@ ActiveRecord::Schema.define(version: 20140805001628) do
   create_table "departments", force: true do |t|
     t.string   "name"
     t.string   "acronym"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "friendly_id_slugs", force: true do |t|
@@ -135,8 +147,8 @@ ActiveRecord::Schema.define(version: 20140805001628) do
     t.text     "content"
     t.text     "preview"
     t.integer  "step"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "keywords", force: true do |t|
@@ -144,6 +156,13 @@ ActiveRecord::Schema.define(version: 20140805001628) do
     t.string   "metaphone"
     t.string   "stem"
     t.text     "synonyms"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "questions", force: true do |t|
+    t.string   "text"
+    t.string   "in_language"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -155,8 +174,8 @@ ActiveRecord::Schema.define(version: 20140805001628) do
     t.string   "table"
     t.integer  "month",      limit: 2
     t.integer  "year",       limit: 8
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], name: "index_rails_admin_histories", using: :btree
@@ -172,14 +191,16 @@ ActiveRecord::Schema.define(version: 20140805001628) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.boolean  "is_editor"
     t.boolean  "is_admin",               default: false
     t.boolean  "is_writer",              default: false
     t.integer  "department_id"
+    t.string   "authentication_token"
   end
 
+  add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
@@ -187,8 +208,8 @@ ActiveRecord::Schema.define(version: 20140805001628) do
     t.integer  "article_id"
     t.integer  "keyword_id"
     t.integer  "count"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

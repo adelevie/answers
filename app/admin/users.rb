@@ -21,7 +21,7 @@ ActiveAdmin.register User do
     end
   end
 
-  permit_params :is_admin, :is_editor, :is_writer, :department, :email, :password, :password_confirmation
+  permit_params :is_admin, :is_editor, :is_writer, :email, :password, :password_confirmation
 
   menu :if => proc{ current_user.is_admin? || current_user.is_editor? }, :label => 'Users'
 
@@ -30,7 +30,6 @@ ActiveAdmin.register User do
     column :is_admin
     column :is_editor
     column :is_writer
-    column :department
     actions
   end
 
@@ -39,7 +38,6 @@ ActiveAdmin.register User do
       f.input :email
       f.input :password
       f.input :password_confirmation
-      f.input :department
     end
     if current_admin_user
       f.inputs "Type of User" do

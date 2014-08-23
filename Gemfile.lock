@@ -1,26 +1,19 @@
 GIT
-  remote: git://github.com/amoose/searchkick.git
-  revision: 7fedba8511b1b8a6425eee1b8b37e3e4b67b0aaa
-  branch: feature/es_syn_tokenization
+  remote: git://github.com/matschaffer/knife-solo.git
+  revision: 865f09ef169e3bb136ebf120d0ddd9ca4052db85
+  submodules: true
   specs:
-    searchkick (0.8.0)
-      activemodel
-      elasticsearch (>= 1)
-      hashie
-
-GIT
-  remote: git://github.com/andypike/cancancan.git
-  revision: 531c01799fc413a6e6c96745943830437034e946
-  branch: rspec3
-  specs:
-    cancancan (1.8.2)
+    knife-solo (0.5.0)
+      chef (>= 10.12)
+      erubis (~> 2.7.0)
+      net-ssh (>= 2.2.2, < 3.0)
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 2936f3aabfe0afb377f7c5856dbf7e55000e15cb
+  revision: 35f2f8a934fe3fc3f35bac9d7e8b624d9236e04d
   specs:
     activeadmin (1.0.0.pre)
-      arbre (~> 1.0)
+      arbre (~> 1.0, >= 1.0.2)
       bourbon
       coffee-rails
       formtastic (~> 2.3.0.rc3)
@@ -33,14 +26,21 @@ GIT
       sass-rails
 
 GIT
-  remote: git://github.com/matschaffer/knife-solo.git
-  revision: 865f09ef169e3bb136ebf120d0ddd9ca4052db85
-  submodules: true
+  remote: git://github.com/andypike/cancancan.git
+  revision: 531c01799fc413a6e6c96745943830437034e946
+  branch: rspec3
   specs:
-    knife-solo (0.5.0)
-      chef (>= 10.12)
-      erubis (~> 2.7.0)
-      net-ssh (>= 2.2.2, < 3.0)
+    cancancan (1.8.2)
+
+GIT
+  remote: git://github.com/amoose/searchkick.git
+  revision: 7fedba8511b1b8a6425eee1b8b37e3e4b67b0aaa
+  branch: feature/es_syn_tokenization
+  specs:
+    searchkick (0.8.0)
+      activemodel
+      elasticsearch (>= 1)
+      hashie
 
 GEM
   remote: https://rubygems.org/
@@ -80,7 +80,7 @@ GEM
     annotate (2.6.5)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
-    arbre (1.0.1)
+    arbre (1.0.2)
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
     aws-sdk (1.42.0)
@@ -104,9 +104,10 @@ GEM
       thor (~> 0.18)
     berkshelf-api-client (1.2.0)
       faraday (~> 0.9.0)
-    better_errors (1.1.0)
+    better_errors (2.0.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+      rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bluecloth (2.2.0)
@@ -382,7 +383,7 @@ GEM
     net-ssh-multi (1.2.0)
       net-ssh (>= 2.6.5)
       net-ssh-gateway (>= 1.2.0)
-    newrelic_rpm (3.9.1.236)
+    newrelic_rpm (3.9.2.239)
     nio4r (1.0.0)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
@@ -535,6 +536,10 @@ GEM
     shoulda-context (1.2.1)
     shoulda-matchers (2.6.2)
       activesupport (>= 3.0.0)
+    simple_token_authentication (1.5.0)
+      actionmailer (>= 3.2.6, < 5)
+      activerecord (>= 3.2.6, < 5)
+      devise (~> 3.2.0)
     simplecov (0.9.0)
       docile (~> 1.1.0)
       multi_json
@@ -582,7 +587,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.2.3)
+    turbolinks (2.3.0)
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -670,6 +675,7 @@ DEPENDENCIES
   paperclip (~> 4.1.1)
   pg
   progressbar
+  pry
   quiet_assets
   rails (= 4.1.4)
   rb-fsevent
@@ -683,6 +689,7 @@ DEPENDENCIES
   searchkick!
   secure_headers
   shoulda
+  simple_token_authentication
   spring
   spring-commands-rspec
   text
