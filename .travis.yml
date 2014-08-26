@@ -1,4 +1,5 @@
 before_script:
+  - bundle config build.nokogiri --use-system-libraries
   - cp config/database.yml.example config/database.yml
   - cp .env.example .env
   - psql -c 'create database "answers_test";' -U postgres
