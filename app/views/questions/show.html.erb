@@ -4,14 +4,9 @@
 
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Back', answers_path %>
-
-
 <div class="page-container article">
   <div class="breadcrumbs">
-    <%= link_to( "Home", root_url) %>
-    >
-    <%= @question.text %>
+    <ol><%= render_breadcrumbs :tag=> :li, :separator =>" > " %></ol>
   </div>
   <div class="row">
     <div class="span9">

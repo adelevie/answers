@@ -28,8 +28,6 @@ latest.dump
 Guardfile
 rerun.txt
 Vagrantfile
-*tags
-tags
 
 # folders
 /config/*.yml
