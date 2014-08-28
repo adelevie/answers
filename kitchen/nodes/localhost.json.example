@@ -22,6 +22,7 @@
   	"compile_time": false
   },
   "elasticsearch": {
+    "allocated_memory": "1024m",
     "cluster": {
       "name": "answers"
     },

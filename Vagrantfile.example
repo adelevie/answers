@@ -30,14 +30,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder "../answers", "/var/www/answers/current"
 
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", ENV['VAGRANT_MEMORY'] || "1024"]
+    vb.customize ["modifyvm", :id, "--memory", ENV['VAGRANT_MEMORY'] || "2048"]
     vb.customize ["modifyvm", :id, "--cpus", "2"]
     vb.customize ["modifyvm", :id, "--ioapic", "on"]
   end
 
   config.vm.provider :vmware_fusion do |v|
     v.gui = false
-    v.vmx["memsize"] = ENV['VAGRANT_MEMORY'] || "1024"
+    v.vmx["memsize"] = ENV['VAGRANT_MEMORY'] || "2048"
     v.vmx["numvcpus"] = "2"
   end
 

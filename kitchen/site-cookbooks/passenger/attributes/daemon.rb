@@ -2,7 +2,7 @@ default[:passenger][:production][:path] = '/opt/nginx'
 default[:passenger][:production][:configure_flags] = '--with-ipv6 --with-http_stub_status_module --with-http_ssl_module'
 default[:passenger][:production][:log_path] = '/var/log/passenger'
 
-default[:passenger][:production][:passenger_root] = '/opt/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/passenger-4.0.48'
+default[:passenger][:production][:passenger_root] = '/opt/rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/passenger-4.0.50'
 default[:passenger][:production][:passenger_ruby] = '/opt/rbenv/versions/2.1.2/bin/ruby'
 
 # Tune these for your environment, see:

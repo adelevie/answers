@@ -8,12 +8,6 @@ include_recipe "chef-solo-search"
 ['libsasl2-dev', 'libpq-dev', 'ruby-dev'].each { |pkg| package pkg }
 
 
-# create swap space
-swap_file '/mnt/swap' do
-	size 2048
-end
-
-
 # setup db users using encrypted data bags
 db_config = Chef::EncryptedDataBagItem.load("config", "db")
 
