@@ -1,0 +1,34 @@
+<!-- <div id="navigation">
+  <%= render :partial => 'shared/search_form' %>
+</div> -->
+<div class="page-container">
+  <div class="breadcrumbs">
+    <ol>
+      <%= render_breadcrumbs tag: :li, separator: " > " %>
+    </ol>
+  </div>
+  <div class="row">
+    <div class="span9">
+      <div class="main-content">
+        <div class="header">
+          <h1>Listing of All Tags</h1>
+        </div>
+        <ul id="tags">
+          <!-- categories.each do |category| -->
+          <% tags.each do |tag| %>
+            <li class="category-listing">
+              <h2><%= link_to(tag.name.capitalize, tag_path(tag)) %></h2>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div><!-- /span9 -->
+
+    <div class="span3">
+      <%
+        #= render :partial => 'shared/categories_sidebar', locals: {categories: categories} 
+      %>
+    </div><!-- /span3 -->
+
+  </div><!-- /row -->
+</div><!-- /page-container -->

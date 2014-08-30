@@ -22,13 +22,21 @@
 
     <div class="popular">
       <div class="pop-heading">
-        <h2>Most Popular Categories:</h2>
+        <h2>Most Popular Tags:</h2>
       </div>
-      <div class="pop-categories">
-        <!-- #=
-         # TODO: replace with Tag 
-         # render partial: 'home/category', collection: popular_categories %>
-         -->
+      <div class="pop-categories" id="tags">
+        <% tags_with_questions.each do |tag| %>
+          <div class="category">
+            <span class="left"><%= link_to(tag[:tag].name.capitalize, tag_path(tag[:tag])) %></span>
+            <p class="right">
+            <ul>
+              <% tag[:questions].each do |question| %>
+                <p><%= link_to(question.text, answer_path(question)) %></p>
+              <% end %>
+            </ul>
+            </p>
+          </div>
+        <% end %>
       </div>
     </div><!-- /popular -->
 

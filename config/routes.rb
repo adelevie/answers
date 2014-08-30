@@ -1,4 +1,5 @@
 Answers::Application.routes.draw do
+  
   ActiveAdmin.routes(self)
   devise_for :users, :controllers => { :sessions => "sessions" }
 
@@ -6,6 +7,8 @@ Answers::Application.routes.draw do
     namespace :v1 do
       resources :questions
       resources :answers
+      resources :tags
+      resources :taggings
     end
   end
   
@@ -17,6 +20,7 @@ Answers::Application.routes.draw do
   post "search/reindex_articles", to: "search#reindex_articles"
   
   resources :questions, only: [:index, :show], :path => 'answers', :as => 'answers'
-  
+  resources :tags, only: [:index, :show]
+
   root :to => "home#index"
 end
