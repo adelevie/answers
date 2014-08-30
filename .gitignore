@@ -40,10 +40,12 @@ tags
 /coverage
 /db/*.sqlite3
 /doc/search_stats.csv
+/fixtures
 /kitchen/nodes/*.json
 /log/*
 /public/system
 /spec/tmp
+/test
 /tmp
 /vendor/bundle
 

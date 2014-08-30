@@ -4,8 +4,8 @@ namespace 'import' do
   desc "Imports Oakland Answers data from oakland_answers.yml"
   task :oakland => :environment do
 
-    puts "Loading Answers data from lib/tasks/oakland_answers.yml"
-    @questions = YAML::load_file('lib/tasks/oakland_answers.yml')
+    puts "Loading Answers data from spec/fixtures/oakland_answers.yml"
+    @questions = YAML::load_file('spec/fixtures/oakland_answers.yml')
 
     @questions.each do |q|
       new_q = Question.create(
