@@ -8,6 +8,8 @@
                 <form role="form" id="search" action="search" name="search" method="get" autocomplete="off">
                     <div>
                         <input type="text" name="q" id="query" class="help-search form-control help-search-icon" title="query" autofocus="autofocus" placeholder="Ask USCIS your question">
+
+                        <input type="submit" name="submit" class="sr-only" value="SEARCH" />
                     </div>
                 </form>
             </div>
@@ -18,7 +20,27 @@
             </div>
 		</div>
 	</div>
-
+<!--  -->
+  <div class="popular">
+      <div class="pop-heading">
+        <h2>Most Popular Tags:</h2>
+      </div>
+      <div class="pop-categories" id="tags">
+        <% tags_with_questions.each do |tag| %>
+          <div class="category">
+            <span class="left"><%= link_to(tag[:tag].name.capitalize, tag_path(tag[:tag])) %></span>
+            <p class="right">
+            <ul>
+              <% tag[:questions].each do |question| %>
+                <p><%= link_to(question.text, answer_path(question)) %></p>
+              <% end %>
+            </ul>
+            </p>
+          </div>
+        <% end %>
+      </div>
+    </div><!-- /popular -->
+<!--  -->
 	<div class="popular-questions pure-g">
       <div class="pure-u-1">
             <a class="ben-link" href="#explore-intro">Not sure what benefits</a><img src="<%=image_url('torch.png')%>" width="46" height="66" class="torch"/>  <a class="ben-link" href="#explore-intro">you may qualify for?</a>
