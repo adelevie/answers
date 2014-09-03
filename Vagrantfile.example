@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = ENV['VAGRANT_BOX'] || 'ubuntu/trusty64'
 
   # unquote if you'd prefer to start from a prebuilt box based on our latest release.
-  # config.vm.box = ENV['VAGRANT_BOX'] 'http://answers.gsa.io/answers.box'
+  # config.vm.box = ENV['VAGRANT_BOX'] || 'http://answers.gsa.io/answers.box'
 
   # unquote if you want a box that's compatible with vmware, note, you'll
   # have to use the vagrant omnibus plugin as well.
