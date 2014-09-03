@@ -1,12 +1,19 @@
 GIT
-  remote: git://github.com/matschaffer/knife-solo.git
-  revision: 043e61a647f61986d9cd88c347efbcd4b9f72f7d
-  submodules: true
+  remote: git://github.com/amoose/searchkick.git
+  revision: 7fedba8511b1b8a6425eee1b8b37e3e4b67b0aaa
+  branch: feature/es_syn_tokenization
   specs:
-    knife-solo (0.5.0)
-      chef (>= 10.12)
-      erubis (~> 2.7.0)
-      net-ssh (>= 2.2.2, < 3.0)
+    searchkick (0.8.0)
+      activemodel
+      elasticsearch (>= 1)
+      hashie
+
+GIT
+  remote: git://github.com/andypike/cancancan.git
+  revision: 531c01799fc413a6e6c96745943830437034e946
+  branch: rspec3
+  specs:
+    cancancan (1.8.2)
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
@@ -26,21 +33,14 @@ GIT
       sass-rails
 
 GIT
-  remote: git://github.com/andypike/cancancan.git
-  revision: 531c01799fc413a6e6c96745943830437034e946
-  branch: rspec3
+  remote: git://github.com/matschaffer/knife-solo.git
+  revision: 043e61a647f61986d9cd88c347efbcd4b9f72f7d
+  submodules: true
   specs:
-    cancancan (1.8.2)
-
-GIT
-  remote: git://github.com/amoose/searchkick.git
-  revision: 7fedba8511b1b8a6425eee1b8b37e3e4b67b0aaa
-  branch: feature/es_syn_tokenization
-  specs:
-    searchkick (0.8.0)
-      activemodel
-      elasticsearch (>= 1)
-      hashie
+    knife-solo (0.5.0)
+      chef (>= 10.12)
+      erubis (~> 2.7.0)
+      net-ssh (>= 2.2.2, < 3.0)
 
 GEM
   remote: https://rubygems.org/
@@ -703,4 +703,3 @@ DEPENDENCIES
   unf
   vcr
   webmock
-  
