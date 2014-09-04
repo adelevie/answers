@@ -59,6 +59,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'secure_headers'
 
 gem 'simple_token_authentication'
+gem 'style_guide', :git => 'git@github.com:18F/myuscis-style-guide.git'
 
 group :development do
   gem 'better_errors'

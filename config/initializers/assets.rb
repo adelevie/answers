@@ -10,3 +10,9 @@
   Dir.glob("#{Rails.root}/app/assets/images/**/").each do |path|
     Rails.application.config.assets.paths << path
   end
+
+  #added this to get style-guide to work. Not sure why we need it, but oughtn't do any harm
+  d = Dir.new("#{Rails.root}/app/assets/images/theme/USCIS/")
+  d.each do |path|
+    Rails.application.config.assets.precompile << path
+  end
