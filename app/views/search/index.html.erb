@@ -1,5 +1,5 @@
 <% set_meta_tags  description: "Search results for #{query}.",
-                  canonical: ENV['OFFICIAL_GOVERNMENT_URL'] + request.fullpath,
+                  canonical: official_government_long_url + request.fullpath,
                   title: "Search results for #{query}." %>
 
 <div class="page-container search">
@@ -7,7 +7,7 @@
     <div class="span9">
       <div class="main-content">
         <div class="header">
-          <h1>Search results for: "<strong><%= query%></strong>"</h1>
+          <h1>Search results for: "<strong><%= query %></strong>"</h1>
           <br/>
 
           <% if results.empty? %>
