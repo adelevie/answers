@@ -508,6 +508,11 @@ h2 {
   background: #1d3387;
   display: block;
   width: 100%;
+
+  font-family: ProximaNovaRegular;
+  color: white;
+  font-size: 1.1em;
+
   .footer-nav {
     margin: 10px;
     float: left;  
@@ -516,8 +521,9 @@ h2 {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    line-height: 1.7;
     li {
-      padding: 2px 8px;
+      padding: 2px 12px;
       display: inline;
     }
   }
@@ -534,7 +540,17 @@ h2 {
   .footer-seal {
     float: right;
   }
+  .homelink {
+    font-size: 1.3em;
+    font-family: ProximaNovaSemibold;
+  }
+
+  .legal-nav {
+    font-size: .8em;
+    margin-top: .8em;
+  }
 }
+
 .sr-only {
   position: absolute;
   width: 1px;
