@@ -18,8 +18,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'actionpack-page_caching'
 
-gem 'searchkick', github: 'amoose/searchkick', branch: 'feature/es_syn_tokenization'
-
+gem 'searchkick'
 
 gem 'acts-as-taggable-on'
 
