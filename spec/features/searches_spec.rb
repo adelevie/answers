@@ -8,11 +8,14 @@ describe'Searches', type: :feature do
     #let(:article) { create :article, status: 'Published' }
     let(:question) { create :question }
     let(:query) { question.text.downcase.gsub!(/[^\w ]*/, '') }
+    let(:results) { {} }
     
     context '1 result found' do
       before do
         # allow(Article).to receive(:search) { [article] }
-        allow(Question).to receive(:search) { [question] }
+        allow(results).to receive(:first) { question }
+        allow(results).to receive(:facets) { {"tag_name" => {"terms"=> []}} }
+        allow(Question).to receive(:search) { results }
         visit root_path
         fill_in 'query', :with => query
         click_on 'SEARCH'
@@ -30,7 +33,9 @@ describe'Searches', type: :feature do
 
       before do
         # allow(Article).to receive(:search) { [] }
-        allow(Question).to receive(:search) { [] }
+        allow(results).to receive(:first) { question }
+        allow(results).to receive(:facets) { {"tag_name" => {"terms"=> []}} }
+        allow(Question).to receive(:search) { results }
         visit root_path
         fill_in 'query', :with => reverse_query
         click_on 'SEARCH'
@@ -53,7 +58,10 @@ describe'Searches', type: :feature do
       before do
         # Article.reindex
         # allow(Article).to receive(:search) { [article_1, article_2] }
-        allow(Question).to receive(:search) { [question_1, question_2] }
+        allow(results).to receive(:first) { question_1 }
+        allow(results).to receive(:facets) { {"tag_name" => {"terms"=> []}} }
+        allow(Question).to receive(:search) { results }
+        # allow(Question).to receive(:search) { [question_1, question_2] }
         visit root_path
         fill_in 'query', :with => query
         click_on 'SEARCH'

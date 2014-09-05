@@ -7,7 +7,10 @@
     <div class="span9">
       <div class="main-content">
         <div class="header">
-          <h1>Search results for: "<strong><%= query%></strong>"</h1>
+          <h1>
+            Search results for: "<strong><%= query%></strong>" <br/> 
+            <%= "Filter: #{filter}" unless filter.blank? %>
+          </h1>
           <br/>
 
           <% if results.empty? %>
@@ -25,10 +28,24 @@
       </div>
     </div>
     <div class="span3">
-      <!--
-      # TODO: replace with Tag
-      #= render partial: 'shared/categories_sidebar', locals: {categories: categories} 
-      -->
+      <div class="sidebar">
+        <div class="sidebar-unit">
+          <h4 class="side-head">FILTER BY</h4>
+          <br/>
+          <div class="sidebar-content">
+            <ul>
+              <li>
+                <%= link_to "All", "/search?q=#{query}" %>
+              </li>
+              <% facets["tag_name"]["terms"].each do |filter| %>
+                <li>
+                  <%= link_to "#{filter["term"]} (#{filter["count"]})", "/search?q=#{query}&tag=#{filter["term"]}" %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div><!-- /span3 -->
   </div>
 </div>
