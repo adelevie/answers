@@ -56,5 +56,5 @@ class ApplicationController < ActionController::Base
     redirect_to_back admin_root_path
   end
 
-  prepend_view_path 'app/theme/uscis/views'
+  prepend_view_path 'app/theme/minimal/views'
 end
