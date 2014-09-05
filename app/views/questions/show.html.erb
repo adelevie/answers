@@ -19,7 +19,11 @@
             <%= raw quest.text %>
           </div>
         <% end %>
+        
+        <h3>Tags:</h3>
+        <%= render partial: "tags", locals: {tags: @question.tags} %>
       </div>
+
     </div><!-- /span9 -->
     
     <div class="span3">
