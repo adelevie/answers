@@ -1,9 +1,12 @@
 GIT
-  remote: git://github.com/andypike/cancancan.git
-  revision: 531c01799fc413a6e6c96745943830437034e946
-  branch: rspec3
+  remote: git://github.com/matschaffer/knife-solo.git
+  revision: 043e61a647f61986d9cd88c347efbcd4b9f72f7d
+  submodules: true
   specs:
-    cancancan (1.8.2)
+    knife-solo (0.5.0)
+      chef (>= 10.12)
+      erubis (~> 2.7.0)
+      net-ssh (>= 2.2.2, < 3.0)
 
 GIT
   remote: git@github.com:18F/myuscis-style-guide.git
@@ -34,14 +37,11 @@ GIT
       sass-rails
 
 GIT
-  remote: git://github.com/matschaffer/knife-solo.git
-  revision: 043e61a647f61986d9cd88c347efbcd4b9f72f7d
-  submodules: true
+  remote: git://github.com/andypike/cancancan.git
+  revision: 531c01799fc413a6e6c96745943830437034e946
+  branch: rspec3
   specs:
-    knife-solo (0.5.0)
-      chef (>= 10.12)
-      erubis (~> 2.7.0)
-      net-ssh (>= 2.2.2, < 3.0)
+    cancancan (1.8.2)
 
 GEM
   remote: https://rubygems.org/
