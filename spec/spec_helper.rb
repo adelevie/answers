@@ -19,8 +19,6 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 Capybara.asset_host = 'http://localhost:3000'
 Capybara.javascript_driver = :webkit
 
-
-
 RSpec.configure do |config|
   #config.extend VCR::RSpec::Macros
   config.include Capybara::DSL
@@ -47,7 +45,11 @@ RSpec.configure do |config|
   end
 end
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[ SimpleCov::Formatter::HTMLFormatter ]
+if ENV['CI']
+  SimpleCov.formatter = Coveralls::SimpleCov::Formatter
+else
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[ SimpleCov::Formatter::HTMLFormatter ]
+end
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures'
