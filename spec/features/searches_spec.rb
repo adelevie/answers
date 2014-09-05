@@ -72,4 +72,39 @@ describe'Searches', type: :feature do
       
     end
   end
+
+  describe 'search results for a tag', vcr: true do
+    let(:tag) {create(:tag)}
+    let(:results) {{}}
+    let(:question_1) { create(:question) }
+    let(:question_2) { create(:question) }
+
+
+    context 'Question found for tag' do
+      
+      before do
+        allow(Question).to receive(:search) { [question_1, question_2] }
+        visit tag_search_path(:tag => tag)
+      end
+
+      subject { page }
+
+       it { is_expected.to have_content "Questions related to:"}
+       it { should have_link(question_1.text) }
+       it { should have_link(question_2.text) }
+    end
+  end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+

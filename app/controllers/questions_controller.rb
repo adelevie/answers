@@ -15,8 +15,7 @@ class QuestionsController < ApplicationController
     add_breadcrumb "Answers", answers_path
     add_breadcrumb @question.text, answer_path(@question)
     
-    
-    respond_with(@question)
+    render locals: { question: @question }
   end
 
   private
