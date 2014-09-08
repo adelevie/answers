@@ -44,6 +44,8 @@ gem 'text'
 gem 'httparty'
 gem 'json'
 
+gem 'crudgen', path: 'vendor/crudgen'
+
 gem 'bluecloth'
 gem 'kramdown'
 gem 'reverse_markdown'
