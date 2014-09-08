@@ -20,19 +20,26 @@
 		</div>
 	</div>
 <!--  -->
-  <div class="popular">
-      <div class="pop-heading">
-        <h2>Most Popular Tags:</h2>
-      </div>
+  <div class="popular left-margin right-margin">
       <div class="pop-categories" id="tags">
-        <% tags_with_questions.each do |tag| %>
-          <div class="category">
-            <h3><%= link_to(tag[:tag].name.capitalize, tag_path(tag[:tag])) %></h3>
-              <% tag[:questions].each do |question| %>
-                <p><%= link_to(question.text, answer_path(question)) %></p>
+        <div class="pop-heading">
+          <h2>Most Popular Tags:</h2>
+        </div>
+        <% tcount = 0 %>
+            <div class="pure-u-1-2">
+            <% tags_with_questions.each do |tag| %>
+                  <% tcount += 1 %>
+              <% if tcount == 3 %>
+                      </div><div class="pure-u-1-2">
               <% end %>
+              <div class="category">
+                <h3><%= link_to(tag[:tag].name.capitalize, tag_path(tag[:tag])) %></h3>
+                  <% tag[:questions].each do |question| %>
+                    <p><%= link_to(question.text, answer_path(question)) %></p>
+                  <% end %>
+              </div>
+            <% end %>
           </div>
-        <% end %>
       </div>
     </div><!-- /popular -->
 <!--  -->
