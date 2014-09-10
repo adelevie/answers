@@ -2,9 +2,9 @@ $headline-color: #1a2f89;
 $text-color: #676767;
 
 /*theme colors */
-$citizen-color: #1b3089;
-$residence-color: #1ba5bd;
-$nonimmigrant-color: #e44949;
+$highlight-color-1: #1b3089;
+$highlight-color-2: #1ba5bd;
+$highlight-color-3: #e44949;
 
 
 @import 'mixins';
@@ -419,34 +419,34 @@ h2 {
 }
 
 .cit-pop {
-  border-color: $citizen-color;
+  border-color: $highlight-color-1;
   h2 {
-    color: $citizen-color;
+    color: $highlight-color-1;
   }
   h5 {
-    color: $citizen-color;
+    color: $highlight-color-1;
     font-family: ProximaNovaRegular;
   }
 }
 
 .res-pop {
-  border-color: $residence-color;
+  border-color: $highlight-color-2;
   h2 {
-    color: $residence-color;
+    color: $highlight-color-2;
   }
   h5 {
-    color: $residence-color;
+    color: $highlight-color-2;
     font-family: ProximaNovaLight;
   }
 }
 
 .nonim-pop {
-  border-color: $nonimmigrant-color;
+  border-color: $highlight-color-3;
   h2 {
-    color: $nonimmigrant-color;
+    color: $highlight-color-3;
   }
   h5 {
-    color: $nonimmigrant-color;
+    color: $highlight-color-3;
     font-family: ProximaNovaRegular;
   }
 }
