@@ -9,9 +9,12 @@
     <ol><%= render_breadcrumbs :tag=> :li, :separator =>" > " %></ol>
   </div>
 
+  <div class="pure-g">
+
   <div class="row">
-    <div >
+
       <div class="main-content">
+        <div class="pure-u-1-1">
         <div class="search-div">
           <form role="form" id="search" action="search" name="search" method="get" autocomplete="off">
             <div>
@@ -20,20 +23,22 @@
             </div>
           </form>
         </div>
+      </div>
+
+        <div class="pure-u-3-4">
         <div class="header">
           <%= content_tag(:h1, @question.text ) %>
         </div>
-        <% @question.answers.each do |quest| %>
+        <% @question.answers.each do |answer| %>
           <div class="content-text">
-            <%= raw quest.text %>
+            <%= raw answer.text %>
           </div>
         <% end %>
       </div>
-    </div><!-- /span9 -->
-    
-    <div class="span3">
+    <!-- 3/4 -->
+    <div class="pure-u-1-4">
       <%= render :partial => 'shared/articles_sidebar' %>
-    </div><!-- /span3 -->
-    
+    </div><!--pure-u-1-4-->
   </div>
-</div>
+  </div>
+</div></div>
