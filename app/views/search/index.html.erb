@@ -19,6 +19,8 @@
                     <%= content_tag( :h2, link_to( question.text, answer_path(question) ) ) %>
                   </li>
               <% end %>
+			  <%= link_to("<< Prev", params.merge({page: results.prev_page})) unless results.first_page? %>
+			  <%= link_to("Next >>", params.merge({page: results.next_page})) unless results.last_page? %>
             </ul>
           <% end -%>
         </div>
