@@ -11,24 +11,28 @@ module ApplicationHelper
   end
 
 	def official_site_title
-		ENV["OFFICIAL_SITE_TITLE"]
+		Rails.application.secrets.official_site_title
 	end
 
 	def official_style_guide
-		ENV["OFFICIAL_STYLE_GUIDE"]
+		Rails.application.secrets.official_style_guide
 	end
 
 	def official_city_name
-		ENV["OFFICIAL_CITY_NAME"]
+		Rails.application.secrets.official_city_name
 	end
 
 	def official_contact_email
-		ENV["OFFICIAL_CONTACT_MAIL"]
+		Rails.application.secrets.official_contact_mail
 	end
 
 	def official_government_long_url(params = '')
-		ENV["OFFICIAL_GOVERNMENT_URL"]
+		Rails.application.secrets.official_government_url
 	end
+	
+	def background_image
+	  Rails.application.secrets.background_image
+  end
 
 	def official_government_short_url(params = '')
 		File.basename(official_government_long_url) + params

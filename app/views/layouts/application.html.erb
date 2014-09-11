@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= display_meta_tags site: ENV["OFFICIAL_SITE_TITLE"] %>
+  <%= display_meta_tags site: official_site_title %>
   <meta name="robots" content="index,nofollow" />
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale =1,maximum-scale=1,user-scalable=no" />
@@ -12,7 +12,7 @@
   
   <style>
     body {
-     background:transparent url('<%= ENV["BACKGROUND_IMAGE"] %>') repeat 0 100%;
+     background:transparent url('<%= background_image %>') repeat 0 100%;
     }
   </style>
   <!--[if lte IE 8]>
@@ -34,7 +34,7 @@
     <div class="container">
       <div class="row">
         <div class="logo span4">
-          <a href="/" class="hnl-logo"><%= ENV["OFFICIAL_SITE_TITLE"] %></a>
+          <a href="/" class="hnl-logo"><%= official_site_title %> </a>
           <span class="bubble"><img src="/assets/beta.png" class="beta" alt="beta"></span>
         </div>
         <ul class="nav-top span5">
@@ -64,10 +64,10 @@
   <div class="container">
     <ul class="footer-links">
       <li><%=link_to("About", about_path)%></li>
-      <li><%= mail_to ENV["OFFICIAL_CONTACT_MAIL"], "Contact" %></li>
+      <li><%= mail_to official_contact_email, "Contact" %></li>
       <li><a href="https://github.com/18F/answers">Code</a></li>
-      <% if not ENV["OFFICIAL_STYLE_GUIDE"].nil? %>
-        <li><a href=<%= ENV["OFFICIAL_STYLE_GUIDE"] %> target="_blank">Style Guide</a></li>
+      <% if not official_style_guide.nil? %>
+        <li><a href=<%= official_style_guide %> target="_blank">Style Guide</a></li>
       <% end %>
 
       <li><%= link_to("Sign In", admin_dashboard_path) %></li>
