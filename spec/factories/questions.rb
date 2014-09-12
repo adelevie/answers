@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :question do
     text "How can I check my license application?"
-    in_language "MyString"
+    in_language "en"
   end
 end

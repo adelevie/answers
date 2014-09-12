@@ -3,6 +3,9 @@ class Question < ActiveRecord::Base
   has_many :answers
   searchkick wordnet: true
 
+  extend FriendlyId
+  friendly_id :slug_candidates, use: :slugged
+  
   attr_writer :tag_ids
   
   def top_answer
@@ -24,6 +27,13 @@ class Question < ActiveRecord::Base
     end
     
     tags_with_questions
+  end
+
+  def slug_candidates
+    [
+      :text,
+      [:in_language, :text]
+    ]
   end
 
 end

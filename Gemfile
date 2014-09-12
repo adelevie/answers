@@ -19,7 +19,6 @@ gem 'spring',        group: :development
 gem 'actionpack-page_caching'
 
 gem 'searchkick'
-
 gem 'acts-as-taggable-on'
 
 # Use ActiveModel has_secure_password
