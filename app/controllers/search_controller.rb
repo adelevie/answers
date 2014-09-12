@@ -21,19 +21,18 @@ class SearchController < ApplicationController
 
   def tag_search
 
-    conditions = {}
-    conditions[:tag_name] = params[:tag].strip if params[:tag].present?
+    tag = params[:tag].strip if params[:tag].present?
 
     return redirect_to root_path if params[:tag].blank?
 
-    results = Question.search(where: conditions, index_name: [Question.searchkick_index.name, Answer.searchkick_index.name])
+    results = Question.search(where: {tag_name: tag})
 
     respond_to do |format|
       format.json { render json: results }
       format.html do 
         render locals: {
           results: results, 
-          tag: conditions[:tag_name]
+          tag: tag
         } 
       end
     end

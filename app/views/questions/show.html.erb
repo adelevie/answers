@@ -23,6 +23,7 @@
     </div><!-- /span9 -->
     
     <div class="span3">
+      <%= render :partial => 'shared/similar_questions', locals: { results: similar_questions } %>
       <%= render :partial => 'shared/tags_sidebar', locals: { question: question }%>
     </div>
     
