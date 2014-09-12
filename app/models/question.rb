@@ -2,10 +2,11 @@ class Question < ActiveRecord::Base
   acts_as_taggable_on :tags
   has_many :answers
   searchkick wordnet: true
+  accepts_nested_attributes_for :answers
 
   extend FriendlyId
   friendly_id :slug_candidates, use: :slugged
-  
+
   attr_writer :tag_ids
   
   def top_answer

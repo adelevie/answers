@@ -1,6 +1,6 @@
 ActiveAdmin.register Answer do
   permit_params :question_id, :text, :in_language, :need_to_know
-  
+  belongs_to :question  
   form do |f|
     f.inputs "Details" do
       f.input :question, :as => :select, :collection => Question.all.map {|q| [q.text, q.id]}, :include_blank => false

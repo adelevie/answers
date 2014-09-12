@@ -15,8 +15,18 @@ ActiveAdmin.register Question do
       f.input :tag_list,  :as => :select,
                           :multiple => true,
                           :collection => ActsAsTaggableOn::Tag.all.map(&:name)
-      f.actions
+
+
     end
+
+    f.inputs do
+      f.has_many :answers, :allow_destroy => true, :heading => 'Answers', :new_record => true do |cf|
+        cf.input :text
+      end
+    end
+
+    f.actions
+    
   end
 
   index do
@@ -35,6 +45,7 @@ ActiveAdmin.register Question do
       row :tag_list
       row :created_at
       row :updated_at
+      row :top_answer
     end
     active_admin_comments
   end
