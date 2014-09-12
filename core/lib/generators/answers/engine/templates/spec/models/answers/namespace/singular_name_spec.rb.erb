@@ -1,0 +1,20 @@
+require 'spec_helper'
+
+module Answers
+  module <%= namespacing %>
+    describe <%= class_name %> do
+      describe "validations" do
+        subject do
+          FactoryGirl.create(:<%= singular_name %><% if (title = attributes.detect { |a| a.type.to_s == "string" }).present? -%>,
+          :<%= title.name %> => "Answers"<% end %>)
+        end
+
+        it { should be_valid }
+        its(:errors) { should be_empty }
+<% if title -%>
+        its(:<%= title.name %>) { should == "Answers" }
+<% end -%>
+      end
+    end
+  end
+end

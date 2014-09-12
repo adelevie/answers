@@ -1,9 +1,0 @@
-{
-  "id": "db",
-  "users": {
-    "encrypted_data": "P0OgreODmWJQ4HS3HYe7WnEK5QBlWBsoZ8EoaiV46iutkTyQ2UTnt2TdYHu3\nhd1nl4FEV7dCOwy582Tu2yE5iDjazmad2/ZFubomV1zhsGNSaVZR6+Zvdck1\n7mGIAvD4yzv/weS/4HQf4/joVAkJuE2+ZFW+DyqJhd4+quJ2cGkFtdyNboSU\nlcPNONpzzn/N\n",
-    "iv": "SBNEcOEtsiRV1b2e5rLvNg==\n",
-    "version": 1,
-    "cipher": "aes-256-cbc"
-  }
-}

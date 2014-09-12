@@ -1,0 +1,23 @@
+module Answers
+  module <%= namespacing %>
+    class Engine < Rails::Engine
+      extend Answers::Engine
+      isolate_namespace Answers::<%= namespacing %>
+
+      engine_name :answers_<%= extension_plural_name %>
+
+      before_inclusion do
+        Answers::Plugin.register do |plugin|
+          plugin.name = "<%= plural_name %>"
+          plugin.url = proc { Answers::Core::Engine.routes.url_helpers.<%= namespacing.underscore %>_admin_<%= plural_name %>_path }
+          plugin.pathname = root
+          <% unless namespacing.underscore == plural_name -%>plugin.menu_match = %r{answers/<%= namespacing.underscore %>/<%= plural_name %>(/.*)?$}<% end %>
+        end
+      end
+
+      config.after_initialize do
+        Answers.register_extension(Answers::<%= class_name.pluralize %>)
+      end
+    end
+  end
+end
