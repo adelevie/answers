@@ -1,5 +1,7 @@
 Answers::Application.routes.draw do
   
+  mount AnswersGem::Engine, at: "/shim"
+  
   ActiveAdmin.routes(self)
   devise_for :users, :controllers => { :sessions => "sessions" }
 

@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem "answers_gem", path: "AnswersGem"
+
 gem 'pry'
 #gem 'pry', git: "https://github.com/adelevie/pry.git"
 
