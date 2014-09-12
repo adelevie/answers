@@ -1,5 +1,3 @@
-AnswersGem::Engine.routes.draw do
-  get "/", controller: "foos", action: :index
-  
+AnswersGem::Engine.routes.draw do  
   resources :questions, only: [:index, :show], :path => 'answers', :as => 'answers'
 end
