@@ -1,0 +1,21 @@
+Answers::I18n.frontend_locales.each do |lang|
+  I18n.locale = lang
+
+  Answers::User.find_each do |user|
+    user.plugins.where(name: 'answers-<%= namespacing.underscore %>').first_or_create!(
+      position: (user.plugins.maximum(:position) || -1) +1
+    )
+  end if defined?(Answers::User)
+
+<% unless skip_frontend? -%>
+  Answers::Page.where(link_url: (url = "/<%= [(namespacing.underscore if namespacing.underscore != plural_name), plural_name].compact.join('/') %>")).first_or_create!(
+    title: '<%= class_name.pluralize.underscore.titleize %>',
+    deletable: false,
+    menu_match: "^#{url}(\/|\/.+?|)$"
+  ) do |page|
+    Answers::Pages.default_parts.each_with_index do |part, index|
+      page.parts.build title: part, body: nil, position: index
+    end
+  end if defined?(Answers::Page)
+<% end -%>
+end

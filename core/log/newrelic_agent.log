@@ -1,0 +1,1339 @@
+# Logfile created on 2014-08-15 19:13:16 +0000 by logger.rb/44203
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Starting the New Relic agent in "development" environment.
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Reading configuration from config/newrelic.yml
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : New Relic Agent Developer Mode enabled.
+[08/15/14 19:13:16 +0000 vagrant (9382)] ERROR : No application name configured.
+[08/15/14 19:13:16 +0000 vagrant (9382)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/15/14 19:13:16 +0000 vagrant (9382)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/15/14 19:13:16 +0000 vagrant (9382)] ERROR : value set for app_name in the development 
+[08/15/14 19:13:16 +0000 vagrant (9382)] ERROR : environment.
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Installing Memcached instrumentation
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Installing Dalli Memcache instrumentation
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Installing deferred Rack instrumentation
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Installing Rack::Builder middleware instrumentation
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Installing Rails 3+ middleware instrumentation
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Installing ActiveRecord 4 instrumentation
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Installing Net instrumentation
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Installing Rails 4 view instrumentation
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Installing Rails 4 Controller instrumentation
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Installing Rails 4 Error instrumentation
+[08/15/14 19:13:16 +0000 vagrant (9382)] INFO : Finished instrumentation
+[08/15/14 19:13:18 +0000 vagrant (9382)] INFO : Doing deferred dependency-detection before Rack startup
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Starting the New Relic agent in "development" environment.
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Reading configuration from config/newrelic.yml
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : New Relic Agent Developer Mode enabled.
+[08/15/14 19:47:15 +0000 vagrant (4634)] ERROR : No application name configured.
+[08/15/14 19:47:15 +0000 vagrant (4634)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/15/14 19:47:15 +0000 vagrant (4634)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/15/14 19:47:15 +0000 vagrant (4634)] ERROR : value set for app_name in the development 
+[08/15/14 19:47:15 +0000 vagrant (4634)] ERROR : environment.
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Installing Memcached instrumentation
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Installing Dalli Memcache instrumentation
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Installing deferred Rack instrumentation
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Installing Rack::Builder middleware instrumentation
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Installing Rails 3+ middleware instrumentation
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Installing ActiveRecord 4 instrumentation
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Installing Net instrumentation
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Installing Rails 4 view instrumentation
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Installing Rails 4 Controller instrumentation
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Installing Rails 4 Error instrumentation
+[08/15/14 19:47:15 +0000 vagrant (4634)] INFO : Finished instrumentation
+[08/15/14 19:47:18 +0000 vagrant (4634)] INFO : Doing deferred dependency-detection before Rack startup
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Starting the New Relic agent in "development" environment.
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Reading configuration from config/newrelic.yml
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : New Relic Agent Developer Mode enabled.
+[08/15/14 20:04:00 +0000 vagrant (4802)] ERROR : No application name configured.
+[08/15/14 20:04:00 +0000 vagrant (4802)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/15/14 20:04:00 +0000 vagrant (4802)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/15/14 20:04:00 +0000 vagrant (4802)] ERROR : value set for app_name in the development 
+[08/15/14 20:04:00 +0000 vagrant (4802)] ERROR : environment.
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Installing Memcached instrumentation
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Installing Dalli Memcache instrumentation
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Installing deferred Rack instrumentation
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Installing Rack::Builder middleware instrumentation
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Installing Rails 3+ middleware instrumentation
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Installing ActiveRecord 4 instrumentation
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Installing Net instrumentation
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Installing Rails 4 view instrumentation
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Installing Rails 4 Controller instrumentation
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Installing Rails 4 Error instrumentation
+[08/15/14 20:04:00 +0000 vagrant (4802)] INFO : Finished instrumentation
+[08/15/14 20:04:02 +0000 vagrant (4802)] INFO : Doing deferred dependency-detection before Rack startup
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Starting the New Relic agent in "development" environment.
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Reading configuration from config/newrelic.yml
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : New Relic Agent Developer Mode enabled.
+[08/15/14 20:34:07 +0000 vagrant (6233)] ERROR : No application name configured.
+[08/15/14 20:34:07 +0000 vagrant (6233)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/15/14 20:34:07 +0000 vagrant (6233)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/15/14 20:34:07 +0000 vagrant (6233)] ERROR : value set for app_name in the development 
+[08/15/14 20:34:07 +0000 vagrant (6233)] ERROR : environment.
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Installing Memcached instrumentation
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Installing Dalli Memcache instrumentation
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Installing deferred Rack instrumentation
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Installing Rack::Builder middleware instrumentation
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Installing Rails 3+ middleware instrumentation
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Installing ActiveRecord 4 instrumentation
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Installing Net instrumentation
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Installing Rails 4 view instrumentation
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Installing Rails 4 Controller instrumentation
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Installing Rails 4 Error instrumentation
+[08/15/14 20:34:07 +0000 vagrant (6233)] INFO : Finished instrumentation
+[08/15/14 20:34:41 +0000 vagrant (6308)] INFO : Starting the New Relic agent in "development" environment.
+[08/15/14 20:34:41 +0000 vagrant (6308)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/15/14 20:34:41 +0000 vagrant (6308)] INFO : Reading configuration from config/newrelic.yml
+[08/15/14 20:34:41 +0000 vagrant (6308)] INFO : New Relic Agent Developer Mode enabled.
+[08/15/14 20:34:42 +0000 vagrant (6308)] ERROR : No application name configured.
+[08/15/14 20:34:42 +0000 vagrant (6308)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/15/14 20:34:42 +0000 vagrant (6308)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/15/14 20:34:42 +0000 vagrant (6308)] ERROR : value set for app_name in the development 
+[08/15/14 20:34:42 +0000 vagrant (6308)] ERROR : environment.
+[08/15/14 20:34:42 +0000 vagrant (6308)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/15/14 20:34:42 +0000 vagrant (6308)] INFO : Installing Memcached instrumentation
+[08/15/14 20:34:42 +0000 vagrant (6308)] INFO : Installing Dalli Memcache instrumentation
+[08/15/14 20:34:42 +0000 vagrant (6308)] INFO : Installing deferred Rack instrumentation
+[08/15/14 20:34:42 +0000 vagrant (6308)] INFO : Installing Rack::Builder middleware instrumentation
+[08/15/14 20:34:42 +0000 vagrant (6308)] INFO : Installing Rails 3+ middleware instrumentation
+[08/15/14 20:34:42 +0000 vagrant (6308)] INFO : Installing ActiveRecord 4 instrumentation
+[08/15/14 20:34:42 +0000 vagrant (6308)] INFO : Installing Net instrumentation
+[08/15/14 20:34:42 +0000 vagrant (6308)] INFO : Installing Rails 4 view instrumentation
+[08/15/14 20:34:42 +0000 vagrant (6308)] INFO : Installing Rails 4 Controller instrumentation
+[08/15/14 20:34:42 +0000 vagrant (6308)] INFO : Installing Rails 4 Error instrumentation
+[08/15/14 20:34:42 +0000 vagrant (6308)] INFO : Finished instrumentation
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Starting the New Relic agent in "development" environment.
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Reading configuration from config/newrelic.yml
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : New Relic Agent Developer Mode enabled.
+[08/18/14 14:08:36 +0000 vagrant (5099)] ERROR : No application name configured.
+[08/18/14 14:08:36 +0000 vagrant (5099)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/18/14 14:08:36 +0000 vagrant (5099)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/18/14 14:08:36 +0000 vagrant (5099)] ERROR : value set for app_name in the development 
+[08/18/14 14:08:36 +0000 vagrant (5099)] ERROR : environment.
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Installing Memcached instrumentation
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Installing Dalli Memcache instrumentation
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Installing deferred Rack instrumentation
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Installing Rack::Builder middleware instrumentation
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Installing Rails 3+ middleware instrumentation
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Installing ActiveRecord 4 instrumentation
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Installing Net instrumentation
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Installing Rails 4 view instrumentation
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Installing Rails 4 Controller instrumentation
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Installing Rails 4 Error instrumentation
+[08/18/14 14:08:36 +0000 vagrant (5099)] INFO : Finished instrumentation
+[08/18/14 14:08:37 +0000 vagrant (5099)] INFO : Doing deferred dependency-detection before Rack startup
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Starting the New Relic agent in "development" environment.
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Reading configuration from config/newrelic.yml
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : New Relic Agent Developer Mode enabled.
+[08/18/14 14:23:30 +0000 vagrant (6895)] ERROR : No application name configured.
+[08/18/14 14:23:30 +0000 vagrant (6895)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/18/14 14:23:30 +0000 vagrant (6895)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/18/14 14:23:30 +0000 vagrant (6895)] ERROR : value set for app_name in the development 
+[08/18/14 14:23:30 +0000 vagrant (6895)] ERROR : environment.
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Installing Memcached instrumentation
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Installing Dalli Memcache instrumentation
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Installing deferred Rack instrumentation
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Installing Rack::Builder middleware instrumentation
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Installing Rails 3+ middleware instrumentation
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Installing ActiveRecord 4 instrumentation
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Installing Net instrumentation
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Installing Rails 4 view instrumentation
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Installing Rails 4 Controller instrumentation
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Installing Rails 4 Error instrumentation
+[08/18/14 14:23:30 +0000 vagrant (6895)] INFO : Finished instrumentation
+[08/18/14 14:23:32 +0000 vagrant (6895)] INFO : Doing deferred dependency-detection before Rack startup
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Starting the New Relic agent in "development" environment.
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Reading configuration from config/newrelic.yml
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : New Relic Agent Developer Mode enabled.
+[08/18/14 14:57:01 +0000 vagrant (9982)] ERROR : No application name configured.
+[08/18/14 14:57:01 +0000 vagrant (9982)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/18/14 14:57:01 +0000 vagrant (9982)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/18/14 14:57:01 +0000 vagrant (9982)] ERROR : value set for app_name in the development 
+[08/18/14 14:57:01 +0000 vagrant (9982)] ERROR : environment.
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Installing Memcached instrumentation
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Installing Dalli Memcache instrumentation
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Installing deferred Rack instrumentation
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Installing Rack::Builder middleware instrumentation
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Installing Rails 3+ middleware instrumentation
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Installing ActiveRecord 4 instrumentation
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Installing Net instrumentation
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Installing Rails 4 view instrumentation
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Installing Rails 4 Controller instrumentation
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Installing Rails 4 Error instrumentation
+[08/18/14 14:57:01 +0000 vagrant (9982)] INFO : Finished instrumentation
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Starting the New Relic agent in "development" environment.
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Reading configuration from config/newrelic.yml
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : New Relic Agent Developer Mode enabled.
+[08/19/14 15:38:22 +0000 vagrant (7945)] ERROR : No application name configured.
+[08/19/14 15:38:22 +0000 vagrant (7945)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/19/14 15:38:22 +0000 vagrant (7945)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/19/14 15:38:22 +0000 vagrant (7945)] ERROR : value set for app_name in the development 
+[08/19/14 15:38:22 +0000 vagrant (7945)] ERROR : environment.
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Installing Memcached instrumentation
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Installing Dalli Memcache instrumentation
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Installing deferred Rack instrumentation
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Installing Rack::Builder middleware instrumentation
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Installing Rails 3+ middleware instrumentation
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Installing ActiveRecord 4 instrumentation
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Installing Net instrumentation
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Installing Rails 4 view instrumentation
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Installing Rails 4 Controller instrumentation
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Installing Rails 4 Error instrumentation
+[08/19/14 15:38:22 +0000 vagrant (7945)] INFO : Finished instrumentation
+[08/19/14 15:38:24 +0000 vagrant (7945)] INFO : Doing deferred dependency-detection before Rack startup
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Starting the New Relic agent in "development" environment.
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Reading configuration from config/newrelic.yml
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : New Relic Agent Developer Mode enabled.
+[08/19/14 19:40:12 +0000 vagrant (16769)] ERROR : No application name configured.
+[08/19/14 19:40:12 +0000 vagrant (16769)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/19/14 19:40:12 +0000 vagrant (16769)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/19/14 19:40:12 +0000 vagrant (16769)] ERROR : value set for app_name in the development 
+[08/19/14 19:40:12 +0000 vagrant (16769)] ERROR : environment.
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Installing Memcached instrumentation
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Installing Dalli Memcache instrumentation
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Installing deferred Rack instrumentation
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Installing Rack::Builder middleware instrumentation
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Installing Rails 3+ middleware instrumentation
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Installing ActiveRecord 4 instrumentation
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Installing Net instrumentation
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Installing Rails 4 view instrumentation
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Installing Rails 4 Controller instrumentation
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Installing Rails 4 Error instrumentation
+[08/19/14 19:40:12 +0000 vagrant (16769)] INFO : Finished instrumentation
+[08/19/14 19:42:13 +0000 vagrant (16968)] INFO : Starting the New Relic agent in "development" environment.
+[08/19/14 19:42:13 +0000 vagrant (16968)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/19/14 19:42:13 +0000 vagrant (16968)] INFO : Reading configuration from config/newrelic.yml
+[08/19/14 19:42:13 +0000 vagrant (16968)] INFO : New Relic Agent Developer Mode enabled.
+[08/19/14 19:42:13 +0000 vagrant (16968)] ERROR : No application name configured.
+[08/19/14 19:42:13 +0000 vagrant (16968)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/19/14 19:42:13 +0000 vagrant (16968)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/19/14 19:42:13 +0000 vagrant (16968)] ERROR : value set for app_name in the development 
+[08/19/14 19:42:13 +0000 vagrant (16968)] ERROR : environment.
+[08/19/14 19:42:13 +0000 vagrant (16968)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/19/14 19:42:13 +0000 vagrant (16968)] INFO : Installing Memcached instrumentation
+[08/19/14 19:42:13 +0000 vagrant (16968)] INFO : Installing Dalli Memcache instrumentation
+[08/19/14 19:42:13 +0000 vagrant (16968)] INFO : Installing deferred Rack instrumentation
+[08/19/14 19:42:13 +0000 vagrant (16968)] INFO : Installing Rack::Builder middleware instrumentation
+[08/19/14 19:42:13 +0000 vagrant (16968)] INFO : Installing Rails 3+ middleware instrumentation
+[08/19/14 19:42:13 +0000 vagrant (16968)] INFO : Installing ActiveRecord 4 instrumentation
+[08/19/14 19:42:14 +0000 vagrant (16968)] INFO : Installing Net instrumentation
+[08/19/14 19:42:14 +0000 vagrant (16968)] INFO : Installing Rails 4 view instrumentation
+[08/19/14 19:42:14 +0000 vagrant (16968)] INFO : Installing Rails 4 Controller instrumentation
+[08/19/14 19:42:14 +0000 vagrant (16968)] INFO : Installing Rails 4 Error instrumentation
+[08/19/14 19:42:14 +0000 vagrant (16968)] INFO : Finished instrumentation
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Starting the New Relic agent in "development" environment.
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Reading configuration from config/newrelic.yml
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : New Relic Agent Developer Mode enabled.
+[08/20/14 15:24:17 +0000 vagrant (5426)] ERROR : No application name configured.
+[08/20/14 15:24:17 +0000 vagrant (5426)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/20/14 15:24:17 +0000 vagrant (5426)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/20/14 15:24:17 +0000 vagrant (5426)] ERROR : value set for app_name in the development 
+[08/20/14 15:24:17 +0000 vagrant (5426)] ERROR : environment.
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Installing Memcached instrumentation
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Installing Dalli Memcache instrumentation
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Installing deferred Rack instrumentation
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Installing Rack::Builder middleware instrumentation
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Installing Rails 3+ middleware instrumentation
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Installing ActiveRecord 4 instrumentation
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Installing Net instrumentation
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Installing Rails 4 view instrumentation
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Installing Rails 4 Controller instrumentation
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Installing Rails 4 Error instrumentation
+[08/20/14 15:24:17 +0000 vagrant (5426)] INFO : Finished instrumentation
+[08/20/14 15:24:18 +0000 vagrant (5426)] INFO : Doing deferred dependency-detection before Rack startup
+[08/21/14 15:24:45 +0000 vagrant (4770)] INFO : Starting the New Relic agent in "development" environment.
+[08/21/14 15:24:45 +0000 vagrant (4770)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/21/14 15:24:45 +0000 vagrant (4770)] INFO : Reading configuration from config/newrelic.yml
+[08/21/14 15:24:45 +0000 vagrant (4770)] INFO : New Relic Agent Developer Mode enabled.
+[08/21/14 15:24:45 +0000 vagrant (4770)] ERROR : No application name configured.
+[08/21/14 15:24:45 +0000 vagrant (4770)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/21/14 15:24:45 +0000 vagrant (4770)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/21/14 15:24:45 +0000 vagrant (4770)] ERROR : value set for app_name in the development 
+[08/21/14 15:24:45 +0000 vagrant (4770)] ERROR : environment.
+[08/21/14 15:24:46 +0000 vagrant (4770)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/21/14 15:24:46 +0000 vagrant (4770)] INFO : Installing Memcached instrumentation
+[08/21/14 15:24:46 +0000 vagrant (4770)] INFO : Installing Dalli Memcache instrumentation
+[08/21/14 15:24:46 +0000 vagrant (4770)] INFO : Installing deferred Rack instrumentation
+[08/21/14 15:24:46 +0000 vagrant (4770)] INFO : Installing Rack::Builder middleware instrumentation
+[08/21/14 15:24:46 +0000 vagrant (4770)] INFO : Installing Rails 3+ middleware instrumentation
+[08/21/14 15:24:46 +0000 vagrant (4770)] INFO : Installing ActiveRecord 4 instrumentation
+[08/21/14 15:24:46 +0000 vagrant (4770)] INFO : Installing Net instrumentation
+[08/21/14 15:24:46 +0000 vagrant (4770)] INFO : Installing Rails 4 view instrumentation
+[08/21/14 15:24:46 +0000 vagrant (4770)] INFO : Installing Rails 4 Controller instrumentation
+[08/21/14 15:24:46 +0000 vagrant (4770)] INFO : Installing Rails 4 Error instrumentation
+[08/21/14 15:24:46 +0000 vagrant (4770)] INFO : Finished instrumentation
+[08/21/14 15:24:47 +0000 vagrant (4770)] INFO : Doing deferred dependency-detection before Rack startup
+[08/21/14 15:32:10 +0000 vagrant (5235)] INFO : Starting the New Relic agent in "development" environment.
+[08/21/14 15:32:10 +0000 vagrant (5235)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/21/14 15:32:10 +0000 vagrant (5235)] INFO : Reading configuration from config/newrelic.yml
+[08/21/14 15:32:10 +0000 vagrant (5235)] INFO : New Relic Agent Developer Mode enabled.
+[08/21/14 15:32:10 +0000 vagrant (5235)] ERROR : No application name configured.
+[08/21/14 15:32:10 +0000 vagrant (5235)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/21/14 15:32:10 +0000 vagrant (5235)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/21/14 15:32:10 +0000 vagrant (5235)] ERROR : value set for app_name in the development 
+[08/21/14 15:32:10 +0000 vagrant (5235)] ERROR : environment.
+[08/21/14 15:32:11 +0000 vagrant (5235)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/21/14 15:32:11 +0000 vagrant (5235)] INFO : Installing Memcached instrumentation
+[08/21/14 15:32:11 +0000 vagrant (5235)] INFO : Installing Dalli Memcache instrumentation
+[08/21/14 15:32:11 +0000 vagrant (5235)] INFO : Installing deferred Rack instrumentation
+[08/21/14 15:32:11 +0000 vagrant (5235)] INFO : Installing Rack::Builder middleware instrumentation
+[08/21/14 15:32:11 +0000 vagrant (5235)] INFO : Installing Rails 3+ middleware instrumentation
+[08/21/14 15:32:11 +0000 vagrant (5235)] INFO : Installing ActiveRecord 4 instrumentation
+[08/21/14 15:32:11 +0000 vagrant (5235)] INFO : Installing Net instrumentation
+[08/21/14 15:32:11 +0000 vagrant (5235)] INFO : Installing Rails 4 view instrumentation
+[08/21/14 15:32:11 +0000 vagrant (5235)] INFO : Installing Rails 4 Controller instrumentation
+[08/21/14 15:32:11 +0000 vagrant (5235)] INFO : Installing Rails 4 Error instrumentation
+[08/21/14 15:32:11 +0000 vagrant (5235)] INFO : Finished instrumentation
+[08/21/14 15:32:12 +0000 vagrant (5235)] INFO : Doing deferred dependency-detection before Rack startup
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Starting the New Relic agent in "development" environment.
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Reading configuration from config/newrelic.yml
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : New Relic Agent Developer Mode enabled.
+[08/21/14 15:33:10 +0000 vagrant (5512)] ERROR : No application name configured.
+[08/21/14 15:33:10 +0000 vagrant (5512)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/21/14 15:33:10 +0000 vagrant (5512)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/21/14 15:33:10 +0000 vagrant (5512)] ERROR : value set for app_name in the development 
+[08/21/14 15:33:10 +0000 vagrant (5512)] ERROR : environment.
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Installing Memcached instrumentation
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Installing Dalli Memcache instrumentation
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Installing deferred Rack instrumentation
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Installing Rack::Builder middleware instrumentation
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Installing Rails 3+ middleware instrumentation
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Installing ActiveRecord 4 instrumentation
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Installing Net instrumentation
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Installing Rails 4 view instrumentation
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Installing Rails 4 Controller instrumentation
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Installing Rails 4 Error instrumentation
+[08/21/14 15:33:10 +0000 vagrant (5512)] INFO : Finished instrumentation
+[08/21/14 15:33:12 +0000 vagrant (5512)] INFO : Doing deferred dependency-detection before Rack startup
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Starting the New Relic agent in "development" environment.
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Reading configuration from config/newrelic.yml
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : New Relic Agent Developer Mode enabled.
+[08/21/14 15:40:04 +0000 vagrant (6084)] ERROR : No application name configured.
+[08/21/14 15:40:04 +0000 vagrant (6084)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/21/14 15:40:04 +0000 vagrant (6084)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/21/14 15:40:04 +0000 vagrant (6084)] ERROR : value set for app_name in the development 
+[08/21/14 15:40:04 +0000 vagrant (6084)] ERROR : environment.
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Installing Memcached instrumentation
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Installing Dalli Memcache instrumentation
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Installing deferred Rack instrumentation
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Installing Rack::Builder middleware instrumentation
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Installing Rails 3+ middleware instrumentation
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Installing ActiveRecord 4 instrumentation
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Installing Net instrumentation
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Installing Rails 4 view instrumentation
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Installing Rails 4 Controller instrumentation
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Installing Rails 4 Error instrumentation
+[08/21/14 15:40:04 +0000 vagrant (6084)] INFO : Finished instrumentation
+[08/21/14 15:40:06 +0000 vagrant (6084)] INFO : Doing deferred dependency-detection before Rack startup
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Starting the New Relic agent in "development" environment.
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Reading configuration from config/newrelic.yml
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : New Relic Agent Developer Mode enabled.
+[08/21/14 15:47:59 +0000 vagrant (6535)] ERROR : No application name configured.
+[08/21/14 15:47:59 +0000 vagrant (6535)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/21/14 15:47:59 +0000 vagrant (6535)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/21/14 15:47:59 +0000 vagrant (6535)] ERROR : value set for app_name in the development 
+[08/21/14 15:47:59 +0000 vagrant (6535)] ERROR : environment.
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Installing Memcached instrumentation
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Installing Dalli Memcache instrumentation
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Installing deferred Rack instrumentation
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Installing Rack::Builder middleware instrumentation
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Installing Rails 3+ middleware instrumentation
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Installing ActiveRecord 4 instrumentation
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Installing Net instrumentation
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Installing Rails 4 view instrumentation
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Installing Rails 4 Controller instrumentation
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Installing Rails 4 Error instrumentation
+[08/21/14 15:47:59 +0000 vagrant (6535)] INFO : Finished instrumentation
+[08/21/14 15:48:01 +0000 vagrant (6535)] INFO : Doing deferred dependency-detection before Rack startup
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Starting the New Relic agent in "development" environment.
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Reading configuration from config/newrelic.yml
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : New Relic Agent Developer Mode enabled.
+[08/21/14 16:01:13 +0000 vagrant (4571)] ERROR : No application name configured.
+[08/21/14 16:01:13 +0000 vagrant (4571)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/21/14 16:01:13 +0000 vagrant (4571)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/21/14 16:01:13 +0000 vagrant (4571)] ERROR : value set for app_name in the development 
+[08/21/14 16:01:13 +0000 vagrant (4571)] ERROR : environment.
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Installing Memcached instrumentation
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Installing Dalli Memcache instrumentation
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Installing deferred Rack instrumentation
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Installing Rack::Builder middleware instrumentation
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Installing Rails 3+ middleware instrumentation
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Installing ActiveRecord 4 instrumentation
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Installing Net instrumentation
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Installing Rails 4 view instrumentation
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Installing Rails 4 Controller instrumentation
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Installing Rails 4 Error instrumentation
+[08/21/14 16:01:13 +0000 vagrant (4571)] INFO : Finished instrumentation
+[08/21/14 16:01:15 +0000 vagrant (4571)] INFO : Doing deferred dependency-detection before Rack startup
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Starting the New Relic agent in "development" environment.
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Reading configuration from config/newrelic.yml
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : New Relic Agent Developer Mode enabled.
+[08/21/14 18:40:46 +0000 vagrant (9981)] ERROR : No application name configured.
+[08/21/14 18:40:46 +0000 vagrant (9981)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/21/14 18:40:46 +0000 vagrant (9981)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/21/14 18:40:46 +0000 vagrant (9981)] ERROR : value set for app_name in the development 
+[08/21/14 18:40:46 +0000 vagrant (9981)] ERROR : environment.
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Installing Memcached instrumentation
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Installing Dalli Memcache instrumentation
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Installing deferred Rack instrumentation
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Installing Rack::Builder middleware instrumentation
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Installing Rails 3+ middleware instrumentation
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Installing ActiveRecord 4 instrumentation
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Installing Net instrumentation
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Installing Rails 4 view instrumentation
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Installing Rails 4 Controller instrumentation
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Installing Rails 4 Error instrumentation
+[08/21/14 18:40:46 +0000 vagrant (9981)] INFO : Finished instrumentation
+[08/21/14 18:40:48 +0000 vagrant (9981)] INFO : Doing deferred dependency-detection before Rack startup
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Starting the New Relic agent in "development" environment.
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Reading configuration from config/newrelic.yml
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : New Relic Agent Developer Mode enabled.
+[08/21/14 19:07:49 +0000 vagrant (10948)] ERROR : No application name configured.
+[08/21/14 19:07:49 +0000 vagrant (10948)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/21/14 19:07:49 +0000 vagrant (10948)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/21/14 19:07:49 +0000 vagrant (10948)] ERROR : value set for app_name in the development 
+[08/21/14 19:07:49 +0000 vagrant (10948)] ERROR : environment.
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Installing Memcached instrumentation
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Installing Dalli Memcache instrumentation
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Installing deferred Rack instrumentation
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Installing Rack::Builder middleware instrumentation
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Installing Rails 3+ middleware instrumentation
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Installing ActiveRecord 4 instrumentation
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Installing Net instrumentation
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Installing Rails 4 view instrumentation
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Installing Rails 4 Controller instrumentation
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Installing Rails 4 Error instrumentation
+[08/21/14 19:07:49 +0000 vagrant (10948)] INFO : Finished instrumentation
+[08/21/14 19:07:51 +0000 vagrant (10948)] INFO : Doing deferred dependency-detection before Rack startup
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Starting the New Relic agent in "development" environment.
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Reading configuration from config/newrelic.yml
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : New Relic Agent Developer Mode enabled.
+[08/21/14 19:13:16 +0000 vagrant (11195)] ERROR : No application name configured.
+[08/21/14 19:13:16 +0000 vagrant (11195)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/21/14 19:13:16 +0000 vagrant (11195)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/21/14 19:13:16 +0000 vagrant (11195)] ERROR : value set for app_name in the development 
+[08/21/14 19:13:16 +0000 vagrant (11195)] ERROR : environment.
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Installing Memcached instrumentation
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Installing Dalli Memcache instrumentation
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Installing deferred Rack instrumentation
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Installing Rack::Builder middleware instrumentation
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Installing Rails 3+ middleware instrumentation
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Installing ActiveRecord 4 instrumentation
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Installing Net instrumentation
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Installing Rails 4 view instrumentation
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Installing Rails 4 Controller instrumentation
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Installing Rails 4 Error instrumentation
+[08/21/14 19:13:16 +0000 vagrant (11195)] INFO : Finished instrumentation
+[08/21/14 19:13:18 +0000 vagrant (11195)] INFO : Doing deferred dependency-detection before Rack startup
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Starting the New Relic agent in "development" environment.
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Reading configuration from config/newrelic.yml
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : New Relic Agent Developer Mode enabled.
+[08/22/14 15:20:18 +0000 vagrant (4535)] ERROR : No application name configured.
+[08/22/14 15:20:18 +0000 vagrant (4535)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/22/14 15:20:18 +0000 vagrant (4535)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/22/14 15:20:18 +0000 vagrant (4535)] ERROR : value set for app_name in the development 
+[08/22/14 15:20:18 +0000 vagrant (4535)] ERROR : environment.
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Installing Memcached instrumentation
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Installing Dalli Memcache instrumentation
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Installing deferred Rack instrumentation
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Installing Rack::Builder middleware instrumentation
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Installing Rails 3+ middleware instrumentation
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Installing ActiveRecord 4 instrumentation
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Installing Net instrumentation
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Installing Rails 4 view instrumentation
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Installing Rails 4 Controller instrumentation
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Installing Rails 4 Error instrumentation
+[08/22/14 15:20:18 +0000 vagrant (4535)] INFO : Finished instrumentation
+[08/22/14 15:20:21 +0000 vagrant (4535)] INFO : Doing deferred dependency-detection before Rack startup
+[08/22/14 18:29:53 +0000 vagrant (11293)] INFO : Starting the New Relic agent in "development" environment.
+[08/22/14 18:29:53 +0000 vagrant (11293)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/22/14 18:29:53 +0000 vagrant (11293)] INFO : Reading configuration from config/newrelic.yml
+[08/22/14 18:29:54 +0000 vagrant (11293)] INFO : New Relic Agent Developer Mode enabled.
+[08/22/14 18:29:54 +0000 vagrant (11293)] ERROR : No application name configured.
+[08/22/14 18:29:54 +0000 vagrant (11293)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/22/14 18:29:54 +0000 vagrant (11293)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/22/14 18:29:54 +0000 vagrant (11293)] ERROR : value set for app_name in the development 
+[08/22/14 18:29:54 +0000 vagrant (11293)] ERROR : environment.
+[08/22/14 18:29:54 +0000 vagrant (11293)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/22/14 18:29:54 +0000 vagrant (11293)] INFO : Installing Memcached instrumentation
+[08/22/14 18:29:54 +0000 vagrant (11293)] INFO : Installing Dalli Memcache instrumentation
+[08/22/14 18:29:54 +0000 vagrant (11293)] INFO : Installing deferred Rack instrumentation
+[08/22/14 18:29:54 +0000 vagrant (11293)] INFO : Installing Rack::Builder middleware instrumentation
+[08/22/14 18:29:54 +0000 vagrant (11293)] INFO : Installing Rails 3+ middleware instrumentation
+[08/22/14 18:29:54 +0000 vagrant (11293)] INFO : Installing ActiveRecord 4 instrumentation
+[08/22/14 18:29:54 +0000 vagrant (11293)] INFO : Installing Net instrumentation
+[08/22/14 18:29:54 +0000 vagrant (11293)] INFO : Installing Rails 4 view instrumentation
+[08/22/14 18:29:54 +0000 vagrant (11293)] INFO : Installing Rails 4 Controller instrumentation
+[08/22/14 18:29:54 +0000 vagrant (11293)] INFO : Installing Rails 4 Error instrumentation
+[08/22/14 18:29:54 +0000 vagrant (11293)] INFO : Finished instrumentation
+[08/22/14 18:29:56 +0000 vagrant (11293)] INFO : Doing deferred dependency-detection before Rack startup
+[08/22/14 20:47:38 +0000 vagrant (15534)] INFO : Starting the New Relic agent in "development" environment.
+[08/22/14 20:47:38 +0000 vagrant (15534)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/22/14 20:47:38 +0000 vagrant (15534)] INFO : Reading configuration from config/newrelic.yml
+[08/22/14 20:47:38 +0000 vagrant (15534)] INFO : New Relic Agent Developer Mode enabled.
+[08/22/14 20:47:38 +0000 vagrant (15534)] ERROR : No application name configured.
+[08/22/14 20:47:38 +0000 vagrant (15534)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/22/14 20:47:38 +0000 vagrant (15534)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/22/14 20:47:38 +0000 vagrant (15534)] ERROR : value set for app_name in the development 
+[08/22/14 20:47:38 +0000 vagrant (15534)] ERROR : environment.
+[08/22/14 20:47:39 +0000 vagrant (15534)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/22/14 20:47:39 +0000 vagrant (15534)] INFO : Installing Memcached instrumentation
+[08/22/14 20:47:39 +0000 vagrant (15534)] INFO : Installing Dalli Memcache instrumentation
+[08/22/14 20:47:39 +0000 vagrant (15534)] INFO : Installing deferred Rack instrumentation
+[08/22/14 20:47:39 +0000 vagrant (15534)] INFO : Installing Rack::Builder middleware instrumentation
+[08/22/14 20:47:39 +0000 vagrant (15534)] INFO : Installing Rails 3+ middleware instrumentation
+[08/22/14 20:47:39 +0000 vagrant (15534)] INFO : Installing ActiveRecord 4 instrumentation
+[08/22/14 20:47:39 +0000 vagrant (15534)] INFO : Installing Net instrumentation
+[08/22/14 20:47:39 +0000 vagrant (15534)] INFO : Installing Rails 4 view instrumentation
+[08/22/14 20:47:39 +0000 vagrant (15534)] INFO : Installing Rails 4 Controller instrumentation
+[08/22/14 20:47:39 +0000 vagrant (15534)] INFO : Installing Rails 4 Error instrumentation
+[08/22/14 20:47:39 +0000 vagrant (15534)] INFO : Finished instrumentation
+[08/22/14 20:47:41 +0000 vagrant (15534)] INFO : Doing deferred dependency-detection before Rack startup
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Starting the New Relic agent in "development" environment.
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Reading configuration from config/newrelic.yml
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : New Relic Agent Developer Mode enabled.
+[08/25/14 13:46:58 +0000 vagrant (4449)] ERROR : No application name configured.
+[08/25/14 13:46:58 +0000 vagrant (4449)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/25/14 13:46:58 +0000 vagrant (4449)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/25/14 13:46:58 +0000 vagrant (4449)] ERROR : value set for app_name in the development 
+[08/25/14 13:46:58 +0000 vagrant (4449)] ERROR : environment.
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Installing Memcached instrumentation
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Installing Dalli Memcache instrumentation
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Installing deferred Rack instrumentation
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Installing Rack::Builder middleware instrumentation
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Installing Rails 3+ middleware instrumentation
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Installing ActiveRecord 4 instrumentation
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Installing Net instrumentation
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Installing Rails 4 view instrumentation
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Installing Rails 4 Controller instrumentation
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Installing Rails 4 Error instrumentation
+[08/25/14 13:46:58 +0000 vagrant (4449)] INFO : Finished instrumentation
+[08/25/14 13:47:00 +0000 vagrant (4449)] INFO : Doing deferred dependency-detection before Rack startup
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Starting the New Relic agent in "development" environment.
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Reading configuration from config/newrelic.yml
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : New Relic Agent Developer Mode enabled.
+[08/25/14 14:04:11 +0000 vagrant (6508)] ERROR : No application name configured.
+[08/25/14 14:04:11 +0000 vagrant (6508)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/25/14 14:04:11 +0000 vagrant (6508)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/25/14 14:04:11 +0000 vagrant (6508)] ERROR : value set for app_name in the development 
+[08/25/14 14:04:11 +0000 vagrant (6508)] ERROR : environment.
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Installing Memcached instrumentation
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Installing Dalli Memcache instrumentation
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Installing deferred Rack instrumentation
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Installing Rack::Builder middleware instrumentation
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Installing Rails 3+ middleware instrumentation
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Installing ActiveRecord 4 instrumentation
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Installing Net instrumentation
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Installing Rails 4 view instrumentation
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Installing Rails 4 Controller instrumentation
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Installing Rails 4 Error instrumentation
+[08/25/14 14:04:11 +0000 vagrant (6508)] INFO : Finished instrumentation
+[08/25/14 14:04:13 +0000 vagrant (6508)] INFO : Doing deferred dependency-detection before Rack startup
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Starting the New Relic agent in "development" environment.
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Reading configuration from config/newrelic.yml
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : New Relic Agent Developer Mode enabled.
+[08/25/14 15:27:13 +0000 vagrant (10527)] ERROR : No application name configured.
+[08/25/14 15:27:13 +0000 vagrant (10527)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/25/14 15:27:13 +0000 vagrant (10527)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/25/14 15:27:13 +0000 vagrant (10527)] ERROR : value set for app_name in the development 
+[08/25/14 15:27:13 +0000 vagrant (10527)] ERROR : environment.
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Installing Memcached instrumentation
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Installing Dalli Memcache instrumentation
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Installing deferred Rack instrumentation
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Installing Rack::Builder middleware instrumentation
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Installing Rails 3+ middleware instrumentation
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Installing ActiveRecord 4 instrumentation
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Installing Net instrumentation
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Installing Rails 4 view instrumentation
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Installing Rails 4 Controller instrumentation
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Installing Rails 4 Error instrumentation
+[08/25/14 15:27:13 +0000 vagrant (10527)] INFO : Finished instrumentation
+[08/25/14 15:27:15 +0000 vagrant (10527)] INFO : Doing deferred dependency-detection before Rack startup
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Starting the New Relic agent in "development" environment.
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Reading configuration from config/newrelic.yml
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : New Relic Agent Developer Mode enabled.
+[08/26/14 14:39:14 +0000 vagrant (4445)] ERROR : No application name configured.
+[08/26/14 14:39:14 +0000 vagrant (4445)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/26/14 14:39:14 +0000 vagrant (4445)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/26/14 14:39:14 +0000 vagrant (4445)] ERROR : value set for app_name in the development 
+[08/26/14 14:39:14 +0000 vagrant (4445)] ERROR : environment.
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Installing Memcached instrumentation
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Installing Dalli Memcache instrumentation
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Installing deferred Rack instrumentation
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Installing Rack::Builder middleware instrumentation
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Installing Rails 3+ middleware instrumentation
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Installing ActiveRecord 4 instrumentation
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Installing Net instrumentation
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Installing Rails 4 view instrumentation
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Installing Rails 4 Controller instrumentation
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Installing Rails 4 Error instrumentation
+[08/26/14 14:39:14 +0000 vagrant (4445)] INFO : Finished instrumentation
+[08/26/14 14:39:16 +0000 vagrant (4445)] INFO : Doing deferred dependency-detection before Rack startup
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Starting the New Relic agent in "development" environment.
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : New Relic Agent Developer Mode enabled.
+[08/26/14 14:46:36 +0000 vagrant (5883)] ERROR : No application name configured.
+[08/26/14 14:46:36 +0000 vagrant (5883)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/26/14 14:46:36 +0000 vagrant (5883)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/26/14 14:46:36 +0000 vagrant (5883)] ERROR : value set for app_name in the development 
+[08/26/14 14:46:36 +0000 vagrant (5883)] ERROR : environment.
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Installing Memcached instrumentation
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Installing Dalli Memcache instrumentation
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Installing deferred Rack instrumentation
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Installing Rack::Builder middleware instrumentation
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Installing Rails 3+ middleware instrumentation
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Installing ActiveRecord 4 instrumentation
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Installing Net instrumentation
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Installing Rails 4 view instrumentation
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Installing Rails 4 Controller instrumentation
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Installing Rails 4 Error instrumentation
+[08/26/14 14:46:36 +0000 vagrant (5883)] INFO : Finished instrumentation
+[08/26/14 14:46:38 +0000 vagrant (5883)] INFO : Doing deferred dependency-detection before Rack startup
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Starting the New Relic agent in "development" environment.
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : New Relic Agent Developer Mode enabled.
+[08/26/14 15:00:21 +0000 vagrant (6358)] ERROR : No application name configured.
+[08/26/14 15:00:21 +0000 vagrant (6358)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/26/14 15:00:21 +0000 vagrant (6358)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/26/14 15:00:21 +0000 vagrant (6358)] ERROR : value set for app_name in the development 
+[08/26/14 15:00:21 +0000 vagrant (6358)] ERROR : environment.
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Installing Memcached instrumentation
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Installing Dalli Memcache instrumentation
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Installing deferred Rack instrumentation
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Installing Rack::Builder middleware instrumentation
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Installing Rails 3+ middleware instrumentation
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Installing ActiveRecord 4 instrumentation
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Installing Net instrumentation
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Installing Rails 4 view instrumentation
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Installing Rails 4 Controller instrumentation
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Installing Rails 4 Error instrumentation
+[08/26/14 15:00:21 +0000 vagrant (6358)] INFO : Finished instrumentation
+[08/26/14 15:00:23 +0000 vagrant (6358)] INFO : Doing deferred dependency-detection before Rack startup
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Starting the New Relic agent in "development" environment.
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : New Relic Agent Developer Mode enabled.
+[08/26/14 22:33:55 +0000 vagrant (6029)] ERROR : No application name configured.
+[08/26/14 22:33:55 +0000 vagrant (6029)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/26/14 22:33:55 +0000 vagrant (6029)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/26/14 22:33:55 +0000 vagrant (6029)] ERROR : value set for app_name in the development 
+[08/26/14 22:33:55 +0000 vagrant (6029)] ERROR : environment.
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Installing Memcached instrumentation
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Installing Dalli Memcache instrumentation
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Installing deferred Rack instrumentation
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Installing Rack::Builder middleware instrumentation
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Installing Rails 3+ middleware instrumentation
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Installing ActiveRecord 4 instrumentation
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Installing Net instrumentation
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Installing Rails 4 view instrumentation
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Installing Rails 4 Controller instrumentation
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Installing Rails 4 Error instrumentation
+[08/26/14 22:33:55 +0000 vagrant (6029)] INFO : Finished instrumentation
+[08/26/14 22:33:57 +0000 vagrant (6029)] INFO : Doing deferred dependency-detection before Rack startup
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Starting the New Relic agent in "development" environment.
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : New Relic Agent Developer Mode enabled.
+[08/27/14 16:07:53 +0000 vagrant (4554)] ERROR : No application name configured.
+[08/27/14 16:07:53 +0000 vagrant (4554)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/27/14 16:07:53 +0000 vagrant (4554)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/27/14 16:07:53 +0000 vagrant (4554)] ERROR : value set for app_name in the development 
+[08/27/14 16:07:53 +0000 vagrant (4554)] ERROR : environment.
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Installing Memcached instrumentation
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Installing Dalli Memcache instrumentation
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Installing deferred Rack instrumentation
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Installing Rack::Builder middleware instrumentation
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Installing Rails 3+ middleware instrumentation
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Installing ActiveRecord 4 instrumentation
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Installing Net instrumentation
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Installing Rails 4 view instrumentation
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Installing Rails 4 Controller instrumentation
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Installing Rails 4 Error instrumentation
+[08/27/14 16:07:53 +0000 vagrant (4554)] INFO : Finished instrumentation
+[08/27/14 16:07:57 +0000 vagrant (4554)] INFO : Doing deferred dependency-detection before Rack startup
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Starting the New Relic agent in "development" environment.
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : New Relic Agent Developer Mode enabled.
+[08/28/14 22:51:16 +0000 vagrant (4444)] ERROR : No application name configured.
+[08/28/14 22:51:16 +0000 vagrant (4444)] ERROR : The Agent cannot start without at least one. Please check your 
+[08/28/14 22:51:16 +0000 vagrant (4444)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[08/28/14 22:51:16 +0000 vagrant (4444)] ERROR : value set for app_name in the development 
+[08/28/14 22:51:16 +0000 vagrant (4444)] ERROR : environment.
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Installing Memcached instrumentation
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Installing Dalli Memcache instrumentation
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Installing deferred Rack instrumentation
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Installing Rack::Builder middleware instrumentation
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Installing Rails 3+ middleware instrumentation
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Installing ActiveRecord 4 instrumentation
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Installing Net instrumentation
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Installing Rails 4 view instrumentation
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Installing Rails 4 Controller instrumentation
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Installing Rails 4 Error instrumentation
+[08/28/14 22:51:16 +0000 vagrant (4444)] INFO : Finished instrumentation
+[08/28/14 22:51:18 +0000 vagrant (4444)] INFO : Doing deferred dependency-detection before Rack startup
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Starting the New Relic agent in "development" environment.
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : New Relic Agent Developer Mode enabled.
+[09/02/14 13:36:35 +0000 vagrant (4394)] ERROR : No application name configured.
+[09/02/14 13:36:35 +0000 vagrant (4394)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/02/14 13:36:35 +0000 vagrant (4394)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/02/14 13:36:35 +0000 vagrant (4394)] ERROR : value set for app_name in the development 
+[09/02/14 13:36:35 +0000 vagrant (4394)] ERROR : environment.
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Installing Memcached instrumentation
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Installing Dalli Memcache instrumentation
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Installing deferred Rack instrumentation
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Installing Rack::Builder middleware instrumentation
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Installing Rails 3+ middleware instrumentation
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Installing ActiveRecord 4 instrumentation
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Installing Net instrumentation
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Installing Rails 4 view instrumentation
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Installing Rails 4 Controller instrumentation
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Installing Rails 4 Error instrumentation
+[09/02/14 13:36:35 +0000 vagrant (4394)] INFO : Finished instrumentation
+[09/02/14 13:36:37 +0000 vagrant (4394)] INFO : Doing deferred dependency-detection before Rack startup
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Starting the New Relic agent in "development" environment.
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : New Relic Agent Developer Mode enabled.
+[09/02/14 13:43:30 +0000 vagrant (5117)] ERROR : No application name configured.
+[09/02/14 13:43:30 +0000 vagrant (5117)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/02/14 13:43:30 +0000 vagrant (5117)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/02/14 13:43:30 +0000 vagrant (5117)] ERROR : value set for app_name in the development 
+[09/02/14 13:43:30 +0000 vagrant (5117)] ERROR : environment.
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Installing Memcached instrumentation
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Installing Dalli Memcache instrumentation
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Installing deferred Rack instrumentation
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Installing Rack::Builder middleware instrumentation
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Installing Rails 3+ middleware instrumentation
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Installing ActiveRecord 4 instrumentation
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Installing Net instrumentation
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Installing Rails 4 view instrumentation
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Installing Rails 4 Controller instrumentation
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Installing Rails 4 Error instrumentation
+[09/02/14 13:43:30 +0000 vagrant (5117)] INFO : Finished instrumentation
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Starting the New Relic agent in "development" environment.
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : New Relic Agent Developer Mode enabled.
+[09/02/14 13:47:39 +0000 vagrant (5319)] ERROR : No application name configured.
+[09/02/14 13:47:39 +0000 vagrant (5319)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/02/14 13:47:39 +0000 vagrant (5319)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/02/14 13:47:39 +0000 vagrant (5319)] ERROR : value set for app_name in the development 
+[09/02/14 13:47:39 +0000 vagrant (5319)] ERROR : environment.
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Installing Memcached instrumentation
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Installing Dalli Memcache instrumentation
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Installing deferred Rack instrumentation
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Installing Rack::Builder middleware instrumentation
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Installing Rails 3+ middleware instrumentation
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Installing ActiveRecord 4 instrumentation
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Installing Net instrumentation
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Installing Rails 4 view instrumentation
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Installing Rails 4 Controller instrumentation
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Installing Rails 4 Error instrumentation
+[09/02/14 13:47:39 +0000 vagrant (5319)] INFO : Finished instrumentation
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Starting the New Relic agent in "development" environment.
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : New Relic Agent Developer Mode enabled.
+[09/03/14 15:26:26 +0000 vagrant (4446)] ERROR : No application name configured.
+[09/03/14 15:26:26 +0000 vagrant (4446)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/03/14 15:26:26 +0000 vagrant (4446)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/03/14 15:26:26 +0000 vagrant (4446)] ERROR : value set for app_name in the development 
+[09/03/14 15:26:26 +0000 vagrant (4446)] ERROR : environment.
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Installing Memcached instrumentation
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Installing Dalli Memcache instrumentation
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Installing deferred Rack instrumentation
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Installing Rack::Builder middleware instrumentation
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Installing Rails 3+ middleware instrumentation
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Installing ActiveRecord 4 instrumentation
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Installing Net instrumentation
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Installing Rails 4 view instrumentation
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Installing Rails 4 Controller instrumentation
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Installing Rails 4 Error instrumentation
+[09/03/14 15:26:26 +0000 vagrant (4446)] INFO : Finished instrumentation
+[09/03/14 15:26:28 +0000 vagrant (4446)] INFO : Doing deferred dependency-detection before Rack startup
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Starting the New Relic agent in "development" environment.
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : New Relic Agent Developer Mode enabled.
+[09/03/14 15:36:59 +0000 vagrant (5478)] ERROR : No application name configured.
+[09/03/14 15:36:59 +0000 vagrant (5478)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/03/14 15:36:59 +0000 vagrant (5478)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/03/14 15:36:59 +0000 vagrant (5478)] ERROR : value set for app_name in the development 
+[09/03/14 15:36:59 +0000 vagrant (5478)] ERROR : environment.
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Installing Memcached instrumentation
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Installing Dalli Memcache instrumentation
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Installing deferred Rack instrumentation
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Installing Rack::Builder middleware instrumentation
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Installing Rails 3+ middleware instrumentation
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Installing ActiveRecord 4 instrumentation
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Installing Net instrumentation
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Installing Rails 4 view instrumentation
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Installing Rails 4 Controller instrumentation
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Installing Rails 4 Error instrumentation
+[09/03/14 15:36:59 +0000 vagrant (5478)] INFO : Finished instrumentation
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Starting the New Relic agent in "development" environment.
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : New Relic Agent Developer Mode enabled.
+[09/03/14 15:50:43 +0000 vagrant (6368)] ERROR : No application name configured.
+[09/03/14 15:50:43 +0000 vagrant (6368)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/03/14 15:50:43 +0000 vagrant (6368)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/03/14 15:50:43 +0000 vagrant (6368)] ERROR : value set for app_name in the development 
+[09/03/14 15:50:43 +0000 vagrant (6368)] ERROR : environment.
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Installing Memcached instrumentation
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Installing Dalli Memcache instrumentation
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Installing deferred Rack instrumentation
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Installing Rack::Builder middleware instrumentation
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Installing Rails 3+ middleware instrumentation
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Installing ActiveRecord 4 instrumentation
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Installing Net instrumentation
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Installing Rails 4 view instrumentation
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Installing Rails 4 Controller instrumentation
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Installing Rails 4 Error instrumentation
+[09/03/14 15:50:43 +0000 vagrant (6368)] INFO : Finished instrumentation
+[09/03/14 15:50:45 +0000 vagrant (6368)] INFO : Doing deferred dependency-detection before Rack startup
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Starting the New Relic agent in "development" environment.
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : New Relic Agent Developer Mode enabled.
+[09/03/14 15:52:09 +0000 vagrant (6577)] ERROR : No application name configured.
+[09/03/14 15:52:09 +0000 vagrant (6577)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/03/14 15:52:09 +0000 vagrant (6577)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/03/14 15:52:09 +0000 vagrant (6577)] ERROR : value set for app_name in the development 
+[09/03/14 15:52:09 +0000 vagrant (6577)] ERROR : environment.
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Installing Memcached instrumentation
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Installing Dalli Memcache instrumentation
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Installing deferred Rack instrumentation
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Installing Rack::Builder middleware instrumentation
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Installing Rails 3+ middleware instrumentation
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Installing ActiveRecord 4 instrumentation
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Installing Net instrumentation
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Installing Rails 4 view instrumentation
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Installing Rails 4 Controller instrumentation
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Installing Rails 4 Error instrumentation
+[09/03/14 15:52:09 +0000 vagrant (6577)] INFO : Finished instrumentation
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Starting the New Relic agent in "development" environment.
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : New Relic Agent Developer Mode enabled.
+[09/03/14 16:11:16 +0000 vagrant (7300)] ERROR : No application name configured.
+[09/03/14 16:11:16 +0000 vagrant (7300)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/03/14 16:11:16 +0000 vagrant (7300)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/03/14 16:11:16 +0000 vagrant (7300)] ERROR : value set for app_name in the development 
+[09/03/14 16:11:16 +0000 vagrant (7300)] ERROR : environment.
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Installing Memcached instrumentation
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Installing Dalli Memcache instrumentation
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Installing deferred Rack instrumentation
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Installing Rack::Builder middleware instrumentation
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Installing Rails 3+ middleware instrumentation
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Installing ActiveRecord 4 instrumentation
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Installing Net instrumentation
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Installing Rails 4 view instrumentation
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Installing Rails 4 Controller instrumentation
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Installing Rails 4 Error instrumentation
+[09/03/14 16:11:16 +0000 vagrant (7300)] INFO : Finished instrumentation
+[09/03/14 16:11:18 +0000 vagrant (7300)] INFO : Doing deferred dependency-detection before Rack startup
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Starting the New Relic agent in "development" environment.
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : New Relic Agent Developer Mode enabled.
+[09/03/14 16:57:32 +0000 vagrant (4535)] ERROR : No application name configured.
+[09/03/14 16:57:32 +0000 vagrant (4535)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/03/14 16:57:32 +0000 vagrant (4535)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/03/14 16:57:32 +0000 vagrant (4535)] ERROR : value set for app_name in the development 
+[09/03/14 16:57:32 +0000 vagrant (4535)] ERROR : environment.
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Installing Memcached instrumentation
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Installing Dalli Memcache instrumentation
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Installing deferred Rack instrumentation
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Installing Rack::Builder middleware instrumentation
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Installing Rails 3+ middleware instrumentation
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Installing ActiveRecord 4 instrumentation
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Installing Net instrumentation
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Installing Rails 4 view instrumentation
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Installing Rails 4 Controller instrumentation
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Installing Rails 4 Error instrumentation
+[09/03/14 16:57:32 +0000 vagrant (4535)] INFO : Finished instrumentation
+[09/03/14 16:57:34 +0000 vagrant (4535)] INFO : Doing deferred dependency-detection before Rack startup
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Starting the New Relic agent in "development" environment.
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : New Relic Agent Developer Mode enabled.
+[09/03/14 18:33:14 +0000 vagrant (5540)] ERROR : No application name configured.
+[09/03/14 18:33:14 +0000 vagrant (5540)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/03/14 18:33:14 +0000 vagrant (5540)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/03/14 18:33:14 +0000 vagrant (5540)] ERROR : value set for app_name in the development 
+[09/03/14 18:33:14 +0000 vagrant (5540)] ERROR : environment.
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Installing Memcached instrumentation
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Installing Dalli Memcache instrumentation
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Installing deferred Rack instrumentation
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Installing Rack::Builder middleware instrumentation
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Installing Rails 3+ middleware instrumentation
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Installing ActiveRecord 4 instrumentation
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Installing Net instrumentation
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Installing Rails 4 view instrumentation
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Installing Rails 4 Controller instrumentation
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Installing Rails 4 Error instrumentation
+[09/03/14 18:33:14 +0000 vagrant (5540)] INFO : Finished instrumentation
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Starting the New Relic agent in "development" environment.
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : New Relic Agent Developer Mode enabled.
+[09/03/14 18:33:51 +0000 vagrant (5597)] ERROR : No application name configured.
+[09/03/14 18:33:51 +0000 vagrant (5597)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/03/14 18:33:51 +0000 vagrant (5597)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/03/14 18:33:51 +0000 vagrant (5597)] ERROR : value set for app_name in the development 
+[09/03/14 18:33:51 +0000 vagrant (5597)] ERROR : environment.
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Installing Memcached instrumentation
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Installing Dalli Memcache instrumentation
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Installing deferred Rack instrumentation
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Installing Rack::Builder middleware instrumentation
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Installing Rails 3+ middleware instrumentation
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Installing ActiveRecord 4 instrumentation
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Installing Net instrumentation
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Installing Rails 4 view instrumentation
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Installing Rails 4 Controller instrumentation
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Installing Rails 4 Error instrumentation
+[09/03/14 18:33:51 +0000 vagrant (5597)] INFO : Finished instrumentation
+[09/03/14 18:33:54 +0000 vagrant (5597)] INFO : Doing deferred dependency-detection before Rack startup
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Starting the New Relic agent in "development" environment.
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : New Relic Agent Developer Mode enabled.
+[09/05/14 14:10:14 +0000 vagrant (5078)] ERROR : No application name configured.
+[09/05/14 14:10:14 +0000 vagrant (5078)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/05/14 14:10:14 +0000 vagrant (5078)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/05/14 14:10:14 +0000 vagrant (5078)] ERROR : value set for app_name in the development 
+[09/05/14 14:10:14 +0000 vagrant (5078)] ERROR : environment.
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Installing Memcached instrumentation
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Installing Dalli Memcache instrumentation
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Installing deferred Rack instrumentation
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Installing Rack::Builder middleware instrumentation
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Installing Rails 3+ middleware instrumentation
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Installing ActiveRecord 4 instrumentation
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Installing Net instrumentation
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Installing Rails 4 view instrumentation
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Installing Rails 4 Controller instrumentation
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Installing Rails 4 Error instrumentation
+[09/05/14 14:10:14 +0000 vagrant (5078)] INFO : Finished instrumentation
+[09/05/14 14:10:16 +0000 vagrant (5078)] INFO : Doing deferred dependency-detection before Rack startup
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 14:38:43 +0000 vagrant (4447)] ERROR : No application name configured.
+[09/08/14 14:38:43 +0000 vagrant (4447)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 14:38:43 +0000 vagrant (4447)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 14:38:43 +0000 vagrant (4447)] ERROR : value set for app_name in the development 
+[09/08/14 14:38:43 +0000 vagrant (4447)] ERROR : environment.
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Installing Memcached instrumentation
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Installing deferred Rack instrumentation
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Installing Net instrumentation
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 14:38:43 +0000 vagrant (4447)] INFO : Finished instrumentation
+[09/08/14 14:38:45 +0000 vagrant (4447)] INFO : Doing deferred dependency-detection before Rack startup
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 15:38:58 +0000 vagrant (7170)] ERROR : No application name configured.
+[09/08/14 15:38:58 +0000 vagrant (7170)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 15:38:58 +0000 vagrant (7170)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 15:38:58 +0000 vagrant (7170)] ERROR : value set for app_name in the development 
+[09/08/14 15:38:58 +0000 vagrant (7170)] ERROR : environment.
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Installing Memcached instrumentation
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Installing deferred Rack instrumentation
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Installing Net instrumentation
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 15:38:58 +0000 vagrant (7170)] INFO : Finished instrumentation
+[09/08/14 15:46:36 +0000 vagrant (7696)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 15:46:36 +0000 vagrant (7696)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 15:46:36 +0000 vagrant (7696)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 15:46:37 +0000 vagrant (7696)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 15:46:37 +0000 vagrant (7696)] ERROR : No application name configured.
+[09/08/14 15:46:37 +0000 vagrant (7696)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 15:46:37 +0000 vagrant (7696)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 15:46:37 +0000 vagrant (7696)] ERROR : value set for app_name in the development 
+[09/08/14 15:46:37 +0000 vagrant (7696)] ERROR : environment.
+[09/08/14 15:46:37 +0000 vagrant (7696)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 15:46:37 +0000 vagrant (7696)] INFO : Installing Memcached instrumentation
+[09/08/14 15:46:37 +0000 vagrant (7696)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 15:46:37 +0000 vagrant (7696)] INFO : Installing deferred Rack instrumentation
+[09/08/14 15:46:37 +0000 vagrant (7696)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 15:46:37 +0000 vagrant (7696)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 15:46:37 +0000 vagrant (7696)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 15:46:37 +0000 vagrant (7696)] INFO : Installing Net instrumentation
+[09/08/14 15:46:37 +0000 vagrant (7696)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 15:46:37 +0000 vagrant (7696)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 15:46:37 +0000 vagrant (7696)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 15:46:37 +0000 vagrant (7696)] INFO : Finished instrumentation
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 15:47:25 +0000 vagrant (7752)] ERROR : No application name configured.
+[09/08/14 15:47:25 +0000 vagrant (7752)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 15:47:25 +0000 vagrant (7752)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 15:47:25 +0000 vagrant (7752)] ERROR : value set for app_name in the development 
+[09/08/14 15:47:25 +0000 vagrant (7752)] ERROR : environment.
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Installing Memcached instrumentation
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Installing deferred Rack instrumentation
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Installing Net instrumentation
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 15:47:25 +0000 vagrant (7752)] INFO : Finished instrumentation
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 15:48:11 +0000 vagrant (7836)] ERROR : No application name configured.
+[09/08/14 15:48:11 +0000 vagrant (7836)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 15:48:11 +0000 vagrant (7836)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 15:48:11 +0000 vagrant (7836)] ERROR : value set for app_name in the development 
+[09/08/14 15:48:11 +0000 vagrant (7836)] ERROR : environment.
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Installing Memcached instrumentation
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Installing deferred Rack instrumentation
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Installing Net instrumentation
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 15:48:11 +0000 vagrant (7836)] INFO : Finished instrumentation
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 15:49:55 +0000 vagrant (7920)] ERROR : No application name configured.
+[09/08/14 15:49:55 +0000 vagrant (7920)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 15:49:55 +0000 vagrant (7920)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 15:49:55 +0000 vagrant (7920)] ERROR : value set for app_name in the development 
+[09/08/14 15:49:55 +0000 vagrant (7920)] ERROR : environment.
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Installing Memcached instrumentation
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Installing deferred Rack instrumentation
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Installing Net instrumentation
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 15:49:55 +0000 vagrant (7920)] INFO : Finished instrumentation
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 15:50:11 +0000 vagrant (7959)] ERROR : No application name configured.
+[09/08/14 15:50:11 +0000 vagrant (7959)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 15:50:11 +0000 vagrant (7959)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 15:50:11 +0000 vagrant (7959)] ERROR : value set for app_name in the development 
+[09/08/14 15:50:11 +0000 vagrant (7959)] ERROR : environment.
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Installing Memcached instrumentation
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Installing deferred Rack instrumentation
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Installing Net instrumentation
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 15:50:11 +0000 vagrant (7959)] INFO : Finished instrumentation
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 15:51:09 +0000 vagrant (8020)] ERROR : No application name configured.
+[09/08/14 15:51:09 +0000 vagrant (8020)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 15:51:09 +0000 vagrant (8020)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 15:51:09 +0000 vagrant (8020)] ERROR : value set for app_name in the development 
+[09/08/14 15:51:09 +0000 vagrant (8020)] ERROR : environment.
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Installing Memcached instrumentation
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Installing deferred Rack instrumentation
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Installing Net instrumentation
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 15:51:09 +0000 vagrant (8020)] INFO : Finished instrumentation
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 15:53:44 +0000 vagrant (8124)] ERROR : No application name configured.
+[09/08/14 15:53:44 +0000 vagrant (8124)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 15:53:44 +0000 vagrant (8124)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 15:53:44 +0000 vagrant (8124)] ERROR : value set for app_name in the development 
+[09/08/14 15:53:44 +0000 vagrant (8124)] ERROR : environment.
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Installing Memcached instrumentation
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Installing deferred Rack instrumentation
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Installing Net instrumentation
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 15:53:44 +0000 vagrant (8124)] INFO : Finished instrumentation
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 15:54:05 +0000 vagrant (8167)] ERROR : No application name configured.
+[09/08/14 15:54:05 +0000 vagrant (8167)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 15:54:05 +0000 vagrant (8167)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 15:54:05 +0000 vagrant (8167)] ERROR : value set for app_name in the development 
+[09/08/14 15:54:05 +0000 vagrant (8167)] ERROR : environment.
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Installing Memcached instrumentation
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Installing deferred Rack instrumentation
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Installing Net instrumentation
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 15:54:05 +0000 vagrant (8167)] INFO : Finished instrumentation
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 15:55:00 +0000 vagrant (8227)] ERROR : No application name configured.
+[09/08/14 15:55:00 +0000 vagrant (8227)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 15:55:00 +0000 vagrant (8227)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 15:55:00 +0000 vagrant (8227)] ERROR : value set for app_name in the development 
+[09/08/14 15:55:00 +0000 vagrant (8227)] ERROR : environment.
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Installing Memcached instrumentation
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Installing deferred Rack instrumentation
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Installing Net instrumentation
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 15:55:00 +0000 vagrant (8227)] INFO : Finished instrumentation
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 15:57:38 +0000 vagrant (8364)] ERROR : No application name configured.
+[09/08/14 15:57:38 +0000 vagrant (8364)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 15:57:38 +0000 vagrant (8364)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 15:57:38 +0000 vagrant (8364)] ERROR : value set for app_name in the development 
+[09/08/14 15:57:38 +0000 vagrant (8364)] ERROR : environment.
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Installing Memcached instrumentation
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Installing deferred Rack instrumentation
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Installing Net instrumentation
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 15:57:38 +0000 vagrant (8364)] INFO : Finished instrumentation
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 15:58:05 +0000 vagrant (8408)] ERROR : No application name configured.
+[09/08/14 15:58:05 +0000 vagrant (8408)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 15:58:05 +0000 vagrant (8408)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 15:58:05 +0000 vagrant (8408)] ERROR : value set for app_name in the development 
+[09/08/14 15:58:05 +0000 vagrant (8408)] ERROR : environment.
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Installing Memcached instrumentation
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Installing deferred Rack instrumentation
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Installing Net instrumentation
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 15:58:05 +0000 vagrant (8408)] INFO : Finished instrumentation
+[09/08/14 15:58:43 +0000 vagrant (8461)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 15:58:43 +0000 vagrant (8461)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 15:58:43 +0000 vagrant (8461)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 15:58:43 +0000 vagrant (8461)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 15:58:44 +0000 vagrant (8461)] ERROR : No application name configured.
+[09/08/14 15:58:44 +0000 vagrant (8461)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 15:58:44 +0000 vagrant (8461)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 15:58:44 +0000 vagrant (8461)] ERROR : value set for app_name in the development 
+[09/08/14 15:58:44 +0000 vagrant (8461)] ERROR : environment.
+[09/08/14 15:58:44 +0000 vagrant (8461)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 15:58:44 +0000 vagrant (8461)] INFO : Installing Memcached instrumentation
+[09/08/14 15:58:44 +0000 vagrant (8461)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 15:58:44 +0000 vagrant (8461)] INFO : Installing deferred Rack instrumentation
+[09/08/14 15:58:44 +0000 vagrant (8461)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 15:58:44 +0000 vagrant (8461)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 15:58:44 +0000 vagrant (8461)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 15:58:44 +0000 vagrant (8461)] INFO : Installing Net instrumentation
+[09/08/14 15:58:44 +0000 vagrant (8461)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 15:58:44 +0000 vagrant (8461)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 15:58:44 +0000 vagrant (8461)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 15:58:44 +0000 vagrant (8461)] INFO : Finished instrumentation
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 16:00:00 +0000 vagrant (8529)] ERROR : No application name configured.
+[09/08/14 16:00:00 +0000 vagrant (8529)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 16:00:00 +0000 vagrant (8529)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 16:00:00 +0000 vagrant (8529)] ERROR : value set for app_name in the development 
+[09/08/14 16:00:00 +0000 vagrant (8529)] ERROR : environment.
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Installing Memcached instrumentation
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Installing deferred Rack instrumentation
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Installing Net instrumentation
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 16:00:00 +0000 vagrant (8529)] INFO : Finished instrumentation
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 16:21:47 +0000 vagrant (9406)] ERROR : No application name configured.
+[09/08/14 16:21:47 +0000 vagrant (9406)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 16:21:47 +0000 vagrant (9406)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 16:21:47 +0000 vagrant (9406)] ERROR : value set for app_name in the development 
+[09/08/14 16:21:47 +0000 vagrant (9406)] ERROR : environment.
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Installing Memcached instrumentation
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Installing deferred Rack instrumentation
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Installing Net instrumentation
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 16:21:47 +0000 vagrant (9406)] INFO : Finished instrumentation
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Starting the New Relic agent in "development" environment.
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Reading configuration from config/newrelic.yml (/home/vagrant/answers)
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : New Relic Agent Developer Mode enabled.
+[09/08/14 16:22:15 +0000 vagrant (9452)] ERROR : No application name configured.
+[09/08/14 16:22:15 +0000 vagrant (9452)] ERROR : The Agent cannot start without at least one. Please check your 
+[09/08/14 16:22:15 +0000 vagrant (9452)] ERROR : newrelic.yml and ensure that it is valid and has at least one 
+[09/08/14 16:22:15 +0000 vagrant (9452)] ERROR : value set for app_name in the development 
+[09/08/14 16:22:15 +0000 vagrant (9452)] ERROR : environment.
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Installing DelayedJob instrumentation [part 1/2]
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Installing Memcached instrumentation
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Installing Dalli Memcache instrumentation
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Installing deferred Rack instrumentation
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Installing Rack::Builder middleware instrumentation
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Installing Rails 3+ middleware instrumentation
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Installing ActiveRecord 4 instrumentation
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Installing Net instrumentation
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Installing Rails 4 view instrumentation
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Installing Rails 4 Controller instrumentation
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Installing Rails 4 Error instrumentation
+[09/08/14 16:22:15 +0000 vagrant (9452)] INFO : Finished instrumentation

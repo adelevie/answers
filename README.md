@@ -27,7 +27,7 @@ The initial provision may take up to 30 minutes (there's a lot things to downloa
 
 ### Development
 
-Most development can occur witout having to login to the VM.  The answers codebase on your local computer is shared with the VM so changes in one env will be instantly reflected in the other. Most development can be done using the text editor of your choice on your local computer.  If you need further access to the application environment (console, rake tasks, tests) you'll need to login to the VM via SSH or use the `vagrant sss -c "remote code to be excuted in VM"`.
+Most development can occur witout having to login to the VM.  The answers codebase on your local computer is shared with the VM so changes in one env will be instantly reflected in the other. Most development can be done using the text editor of your choice on your local computer.  If you need further access to the application environment (console, rake tasks, tests) you'll need to login to the VM via SSH or use the `vagrant ssh -c "remote code to be excuted in VM"`.
 
 
 ### Working Within The VM
