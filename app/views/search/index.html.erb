@@ -5,7 +5,7 @@
 <div class="page-container search">
   <div class="row">
     <div class="span9">
-      <div class="main-content">
+      <div class="main-content with-header">
         <div class="header">
           <h1>Search results for: "<strong><%= query%></strong>"</h1>
           <br/>
@@ -13,6 +13,7 @@
           <% if results.empty? %>
             <p>Sorry, no results found for "<%= query %>".  Please try rephrasing your search terms.</p>
           <% else %>
+
             <ul>
               <% results.each do |question| %>
                   <li class="article-listing">
@@ -25,10 +26,7 @@
       </div>
     </div>
     <div class="span3">
-      <!--
-      # TODO: replace with Tag
-      #= render partial: 'shared/categories_sidebar', locals: {categories: categories} 
-      -->
+
     </div><!-- /span3 -->
   </div>
 </div>

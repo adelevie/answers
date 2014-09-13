@@ -584,3 +584,10 @@ h2 {
 .category {
   max-width: 20em;
 }
+
+.with-header {
+  margin-top: 10em;
+  h1 {
+    margin-bottom: 0;
+  }
+}

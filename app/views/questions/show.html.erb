@@ -8,23 +8,37 @@
   <div class="breadcrumbs">
     <ol><%= render_breadcrumbs :tag=> :li, :separator =>" > " %></ol>
   </div>
+
+  <div class="pure-g">
+
   <div class="row">
-    <div class="span9">
+
       <div class="main-content">
+        <div class="pure-u-1-1">
+        <div class="search-div">
+          <form role="form" id="search" action="search" name="search" method="get" autocomplete="off">
+            <div>
+              <input type="text" name="q" id="query" class="help-search form-control help-search-icon" title="query" autofocus="autofocus" placeholder="Ask Us your question">
+              <input type="submit" name="submit" class="sr-only" value="SEARCH" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+        <div class="pure-u-3-4">
         <div class="header">
           <%= content_tag(:h1, @question.text ) %>
         </div>
-        <% @question.answers.each do |quest| %>
+        <% @question.answers.each do |answer| %>
           <div class="content-text">
-            <%= raw quest.text %>
+            <%= raw answer.text %>
           </div>
         <% end %>
       </div>
-    </div><!-- /span9 -->
-    
-    <div class="span3">
-      <%#= render :partial => 'shared/articles_sidebar' %>
-    </div><!-- /span3 -->
-    
+    <!-- 3/4 -->
+    <div class="pure-u-1-4">
+      <%= render :partial => 'shared/articles_sidebar' %>
+    </div><!--pure-u-1-4-->
   </div>
-</div>
+  </div>
+</div></div>
