@@ -1,6 +1,5 @@
 module Answers
-	class HomeController < ActionController::Base
-
+	class HomeController < Answers::ApplicationController
 	 # caches_page :index
 	  add_breadcrumb "Home", :root_url
 

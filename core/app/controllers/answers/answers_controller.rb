@@ -1,5 +1,5 @@
 module Answers
-  class AnswersController < ActionController::Base
+  class AnswersController < Answers::ApplicationController
   before_action :set_answer, only: [:show]
   respond_to :html
 
