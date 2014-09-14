@@ -259,15 +259,9 @@ gem 'pg'
       generator_args = []
       generator_args << '--quiet' if self.options[:quiet]
       generator_args << '--skip-migrations' if self.options[:skip_migrations]
-      puts 'running core gen'
       Answers::CoreGenerator.start generator_args
-      puts 'running auth gen'
       Answers::AuthenticationGenerator.start generator_args if defined?(Answers::AuthenticationGenerator)
-      Answers::ResourcesGenerator.start generator_args if defined?(Answers::ResourcesGenerator)
-      Answers::PagesGenerator.start generator_args if defined?(Answers::PagesGenerator)
-      Answers::ImagesGenerator.start generator_args if defined?(Answers::ImagesGenerator)
       Answers::I18nGenerator.start generator_args if defined?(Answers::I18nGenerator)
-      puts 'finished add gens'
     end
 
     def sanity_check_heroku_application_name!
