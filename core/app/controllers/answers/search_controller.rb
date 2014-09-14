@@ -1,5 +1,5 @@
 module Answers
-  class SearchController < ApplicationController
+  class SearchController < Answers::ApplicationController
     def index
       query =  params[:q].strip
       return redirect_to root_path if params[:q].blank?
