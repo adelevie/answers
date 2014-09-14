@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= display_meta_tags site: official_site_title %>
+  <%= display_meta_tags site: ENV['official_site_title'] %>
   <meta name="robots" content="index,nofollow" />
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale =1,maximum-scale=1,user-scalable=no" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <%= include_gon %>
-
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   
   <style>
     body {
-     background:transparent url('<%= background_image %>') repeat 0 100%;
+     background:transparent url('<%= ENV['background_image'] %>') repeat 0 100%;
     }
   </style>
   <!--[if lte IE 8]>
     <%= stylesheet_link_tag    "application-ie" %>
   <![endif]-->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= favicon_link_tag '/assets/favicon.ico' %>
+  <%= favicon_link_tag 'favicon.ico' %>
 
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= bodyclass %>">
+<body>
 <div id="wrapper">
   <div id="skip_nav">
     <a href="#main_content_container">Skip Navigation</a>
@@ -34,7 +32,7 @@
     <div class="container">
       <div class="row">
         <div class="logo span4">
-          <a href="/" class="hnl-logo"><%= official_site_title %> </a>
+          <a href="/" class="hnl-logo"><%= ENV['official_site_title'] %> </a>
           <span class="bubble"><img src="/assets/beta.png" class="beta" alt="beta"></span>
         </div>
         <ul class="nav-top span5">
@@ -44,7 +42,7 @@
         </ul>
         <% if !current_page?('/')  %>
         <div class="header-search span3">
-          <%= render :partial => 'shared/search_form' %>
+          <%= render :partial => 'answers/shared/search_form' %>
         </div>
         <% end %>
       </div><!-- /row -->
@@ -64,19 +62,19 @@
   <div class="container">
     <ul class="footer-links">
       <li><%=link_to("About", about_path)%></li>
-      <li><%= mail_to official_contact_email, "Contact" %></li>
+      <li><%= mail_to ENV['official_contact_email'], "Contact" %></li>
       <li><a href="https://github.com/18F/answers">Code</a></li>
-      <% if not official_style_guide.nil? %>
-        <li><a href=<%= official_style_guide %> target="_blank">Style Guide</a></li>
+      <% if not ENV['official_style_guide'].nil? %>
+        <li><a href=<%= ENV['official_style_guide'] %> target="_blank">Style Guide</a></li>
       <% end %>
 
-      <li><%= link_to("Sign In", admin_dashboard_path) %></li>
+      <li><%= link_to("Sign In", '') %></li>
     </ul>
     <div class="cfa-logos">
       
       <a href="http://codeforamerica.org/"><img src="/assets/cfa_logo_footer.png" class="right" alt="Code for America" /></a>
       <span class="plus">&#43;</span>
-      <a href="http://openoakland.org/"><img src="/assets/openoaklandlogo.png" class="right" alt="City of Oakland" /></a>
+      <a href="http://openoakland.org/"><%= image_tag 'openoaklandlogo.png', class: 'right', alt: 'City of Oakland' %></a>
       <span class="plus">&#43;</span>
       <a href="http://www2.oaklandnet.com"><img src="/assets/OaklandCityTree.png" class="right" alt="City of Oakland" /></a>
     </div>
