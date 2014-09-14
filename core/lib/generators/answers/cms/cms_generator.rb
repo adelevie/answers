@@ -41,12 +41,9 @@ module Answers
 
       run_additional_generators! if self.options[:fresh_installation]
 
-      puts 'migrating db yeao'
       migrate_database!
 
-      puts 'seed db yeao'
       seed_database!
-      puts 'finsih yeao'
 
       deploy_to_hosting?
     end
@@ -58,7 +55,13 @@ module Answers
       if destination_path.join(application_css).file?
         insert_into_file application_css, %q{*= require answers/formatting
  *= require answers/theme
- },      :before => "*= require_self"
+ }, before: '*= require_self'
+      end
+
+      application_js = 'app/assets/javascripts/application.js'
+      if destination_path.join(application_js).file?
+        insert_into_file application_js, %q{//= require answers
+}, before: '//= require_tree .'
       end
     end
 
@@ -100,7 +103,6 @@ gem 'pg'
     end
 
     def copy_files!
-      puts __method__
       # The extension installer only installs database templates.
       Pathname.glob(self.class.source_root.join('**', '*')).reject{|f|
         f.directory? or f.to_s =~ /\/db\//
@@ -110,7 +112,6 @@ gem 'pg'
     end
 
     def create_decorators!
-      puts __method__
       # Create decorator directories
       %w[controllers models].each do |decorator_namespace|
         src_file_path = "app/decorators/#{decorator_namespace}/answers/.keep"
@@ -119,7 +120,6 @@ gem 'pg'
     end
 
     def deploy_to_hosting?
-      puts __method__
       if heroku?
         append_heroku_gems!
 
@@ -134,8 +134,6 @@ gem 'pg'
     end
 
     def deploy_to_hosting_heroku!(message = nil)
-            puts __method__
-
       say_status "Initializing and committing to git..", nil
       run "git init && git add . && git commit -am 'Created application using Answers #{Answers.version}'"
 
