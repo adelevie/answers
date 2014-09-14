@@ -26,6 +26,11 @@ module Answers
         end
       end
 
+      require 'devise'
+      config.to_prepare do
+        Devise::SessionsController.layout "answers/application"
+      end
+
       config.autoload_paths += %W( #{config.root}/lib )
 
       # Include the answers controllers and helpers dynamically
