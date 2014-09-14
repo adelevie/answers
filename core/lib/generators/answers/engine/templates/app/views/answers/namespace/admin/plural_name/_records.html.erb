@@ -1,0 +1,16 @@
+<%%= render 'answers/admin/search_header', :url => answers.<%= namespacing.underscore %>_admin_<%= plural_name %>_path %>
+<div class='pagination_container'>
+  <%% if @<%= plural_name %>.any? %>
+    <%%= render '<%= plural_name %>' %>
+  <%% else %>
+    <p>
+      <%% if searching? %>
+        <%%= t('no_results', :scope => 'answers.admin.search') %>
+      <%% else %>
+        <strong>
+          <%%= t('.no_items_yet') %>
+        </strong>
+      <%% end %>
+    </p>
+  <%% end %>
+</div>

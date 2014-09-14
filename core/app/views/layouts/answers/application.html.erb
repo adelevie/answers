@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= display_meta_tags site: ENV['official_site_title'] %>
+  <meta name="robots" content="index,nofollow" />
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale =1,maximum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  
+  <style>
+    body {
+     background:transparent url('<%= ENV['background_image'] %>') repeat 0 100%;
+    }
+  </style>
+  <!--[if lte IE 8]>
+    <%= stylesheet_link_tag    "application-ie" %>
+  <![endif]-->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag 'favicon.ico' %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrapper">
+  <div id="skip_nav">
+    <a href="#main_content_container">Skip Navigation</a>
+  </div>
+  <div class="navbar-top">
+    <!-- <p class="notice alert alert-info"><%= notice %></p>
+    <p class="alert alert-error"><%= alert %></p> -->
+    <div class="container">
+      <div class="row">
+        <div class="logo span4">
+          <a href="/" class="hnl-logo"><%= ENV['official_site_title'] %> </a>
+          <span class="bubble"><img src="/assets/beta.png" class="beta" alt="beta"></span>
+        </div>
+        <ul class="nav-top span5">
+          <li class="">
+            <%= link_to("Browse", answers_path) %>
+          </li>
+        </ul>
+        <% if !current_page?('/')  %>
+        <div class="header-search span3">
+          <%= render :partial => 'answers/shared/search_form' %>
+        </div>
+        <% end %>
+      </div><!-- /row -->
+    </div>
+  </div><!-- /navbar-top -->
+  <div class="container main clearfix" id="main_content_container"><!-- main content container -->
+
+
+
+<%= yield %>
+
+
+
+  </div><!-- /container-fluid -->
+</div><!-- /wrapper -->
+<div class="footer">
+  <div class="container">
+    <ul class="footer-links">
+      <li><%=link_to("About", about_path)%></li>
+      <li><%= mail_to ENV['official_contact_email'], "Contact" %></li>
+      <li><a href="https://github.com/18F/answers">Code</a></li>
+      <% if not ENV['official_style_guide'].nil? %>
+        <li><a href=<%= ENV['official_style_guide'] %> target="_blank">Style Guide</a></li>
+      <% end %>
+
+      <li><%= link_to("Sign In", '') %></li>
+    </ul>
+    <div class="cfa-logos">
+      
+      <a href="http://codeforamerica.org/"><img src="/assets/cfa_logo_footer.png" class="right" alt="Code for America" /></a>
+      <span class="plus">&#43;</span>
+      <a href="http://openoakland.org/"><%= image_tag 'openoaklandlogo.png', class: 'right', alt: 'City of Oakland' %></a>
+      <span class="plus">&#43;</span>
+      <a href="http://www2.oaklandnet.com"><img src="/assets/OaklandCityTree.png" class="right" alt="City of Oakland" /></a>
+    </div>
+  </div>
+</div><!-- /footer -->
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '<%=ENV["GOOGLE_ANALYTICS_KEY"]%>']);
+  _gaq.push(['_trackPageview']);
+  
+  (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</body>
+</html>
