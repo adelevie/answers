@@ -19,5 +19,9 @@ module Answers
       end
     end
 
+    def after_sign_in_path_for(resource_or_scope)
+      path = stored_location_for(resource_or_scope) || signed_in_root_path(resource_or_scope)
+      "/#{path}" if path[0] != "/" # hackity hack
+    end
   end
 end
