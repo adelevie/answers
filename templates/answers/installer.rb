@@ -15,16 +15,17 @@ end
 
 append_file 'Gemfile', <<-GEMFILE
 
-# Answers
-gem 'answers', path: '../'
-gem 'searchkick'
+# Answers Dependencies
+gem 'activeadmin', github: 'gregbell/active_admin' 
 gem 'acts-as-taggable-on'
+gem "breadcrumbs_on_rails"
 gem 'dalli'
 gem 'devise', '~> 3.2.4'
-gem "breadcrumbs_on_rails"
-gem 'activeadmin', github: 'gregbell/active_admin' 
+gem 'meta-tags'
+gem 'searchkick'
 gem 'secure_headers'
 
+gem 'answers', path: '../'
 
 #  gem 'answers-admin', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
 #  gem 'answers-guides', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
