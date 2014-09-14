@@ -1,11 +1,12 @@
+<% set_meta_tags description: "Find answers to your questions about #{ENV['official_site_title']} City Services." %>
 <div class="modal-container span8">
   <div class="main-modal">
     <div id="welcome-line-l"></div>
     <div id="welcome-line-r"></div>
     <h3 class="welcome">Welcome To</h3>
-    <h1 class="home-modal"><%= official_site_title %> </h1>
+    <h1 class="home-modal"><%= ENV['official_site_title'] %> </h1>
     <p class="call">
-      <%= "Find answers to your questions about City of #{official_site_title} services." %>
+      <%= "Find answers to your questions about City of #{ENV['official_site_title']} services." %>
     </p>
 
     <div class="ribbon-front">
