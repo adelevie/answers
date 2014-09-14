@@ -56,16 +56,6 @@ module Answers
         end
       end
 
-      initializer "register answers_dialogs plugin" do
-        Answers::Plugin.register do |plugin|
-          plugin.pathname = root
-          plugin.name = 'answers_dialogs'
-          plugin.hide_from_menu = true
-          plugin.always_allow_access = true
-          plugin.menu_match = /answers\/(answers_)?dialogs/
-        end
-      end
-
       initializer "answers.routes", :after => :set_routes_reloader_hook do |app|
         Answers::Core::Engine.routes.append do
           get "#{Answers::Core.backend_route}/*path" => 'admin#error_404'
