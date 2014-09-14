@@ -15,6 +15,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= jquery-jvert-tabs-1.1.4
-//= require mustache
+//= require answers
 //= require_tree .
