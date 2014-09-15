@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'quiet_assets'
-
+gem 'secure_headers'
 # Database Configuration
 unless ENV['TRAVIS']
   gem 'activerecord-jdbcsqlite3-adapter', '>= 1.3.0.rc1', platform: :jruby
@@ -27,6 +27,7 @@ end
 
 group :test do
   gem 'answers-testing', path: 'testing'
+  gem 'answers-core'
   gem 'generator_spec', '~> 0.9.1'
   gem 'launchy'
   gem 'coveralls', require: false
