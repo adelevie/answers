@@ -4,6 +4,12 @@ require 'rubygems'
 
 ENGINE_RAILS_ROOT = File.join(File.dirname(__FILE__), '../') unless defined?(ENGINE_RAILS_ROOT)
 
+Dir[File.join(ENGINE_RAILS_ROOT, "spec/support/**/*.rb")].each {|f| require f }
+
+# Checks for pending migrations before tests are run.
+# If you are not using ActiveRecord, you can remove this line.
+ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
+
 # Configure Rails Environment
 ENV["RAILS_ENV"] ||= 'test'
 
@@ -15,6 +21,7 @@ end
 require File.expand_path("../dummy/config/environment", __FILE__)
 
 require 'rspec/rails'
+require 'rspec/autorun'
 require 'capybara/rspec'
 
 Rails.backtrace_cleaner.remove_silencers!
@@ -28,6 +35,7 @@ RSpec.configure do |config|
   config.filter_run :js => true if ENV['JS'] == 'true'
   config.filter_run :js => nil if ENV['JS'] == 'false'
   config.run_all_when_everything_filtered = true
+  config.order = "random"
   config.include ActionView::TestCase::Behavior, :example_group => { :file_path => %r{spec/presenters} }
 end
 

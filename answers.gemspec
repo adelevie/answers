@@ -25,6 +25,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rails", "~> 4.1.5"
   spec.add_dependency "answers-core"
   spec.add_dependency "rspec-rails", "~> 3.1.0"
-  spec.add_dependency 'devise', '~> 3.3.0'
+  spec.add_dependency 'devise', '~> 3.2.0'
   spec.add_dependency 'pry-nav'
 end
