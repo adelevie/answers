@@ -8,11 +8,15 @@ describe'Searches', type: :feature do
     #let(:article) { create :article, status: 'Published' }
     let(:question) { create :question }
     let(:query) { question.text.downcase.gsub!(/[^\w ]*/, '') }
-    
+
     context '1 result found' do
+      let(:results)  { [question] }
+
       before do
         # allow(Article).to receive(:search) { [article] }
-        allow(Question).to receive(:search) { [question] }
+        allow(Question).to receive(:search) {results}
+        allow(results).to receive(:first_page?) {true}
+        allow(results).to receive(:last_page?) {true}
         visit root_path
         fill_in 'query', :with => query
         click_on 'SEARCH'
@@ -27,10 +31,11 @@ describe'Searches', type: :feature do
 
     context 'no results found' do
       let(:reverse_query) { "foo" }
-
+      let(:results)  { [] }
+      
       before do
         # allow(Article).to receive(:search) { [] }
-        allow(Question).to receive(:search) { [] }
+        allow(Question).to receive(:search) { results }
         visit root_path
         fill_in 'query', :with => reverse_query
         click_on 'SEARCH'
@@ -43,17 +48,20 @@ describe'Searches', type: :feature do
       # it { is_expected.not_to have_content article.title }
     end
 
-    context 'several results found' do
+    context 'three results found' do
       # let(:article_1) { create(:article) }
       # let(:article_2) { create(:article) }
-      let(:question_1) { create(:question) }
-      let(:question_2) { create(:question) }
+      let(:questions) { create_list(:question, 3) }
       let(:query)     { 'best nice' }
-
+      let(:results)  { questions }
+      
       before do
         # Article.reindex
         # allow(Article).to receive(:search) { [article_1, article_2] }
-        allow(Question).to receive(:search) { [question_1, question_2] }
+        allow(Question).to receive(:search) { results }
+        allow(results).to receive(:first_page?) {true}
+        allow(results).to receive(:last_page?) {true}
+
         visit root_path
         fill_in 'query', :with => query
         click_on 'SEARCH'
@@ -61,6 +69,14 @@ describe'Searches', type: :feature do
 
       it 'show the query' do
         expect(page).to have_content "Search results for: \"#{query}\""
+      end
+      
+      subject { page }
+
+      it 'links show up on page' do
+        results.each { |result|
+          should have_link("#{result.text}", href: answer_path(result.id)) 
+        }
       end
 
       it 'should contain the title and preview of both articles' do

@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :question do
-    text "How can I check my license application?"
+    sequence(:text) { Faker::Lorem.sentence }
     in_language "MyString"
   end
 end
