@@ -15,7 +15,7 @@ A big thank you for the background photo courtesy of [Royal Realty](http://royal
 
 ## Installation
 
-We use [Vagrant](http://www.vagrantup.com/) with [VirtualBox](https://www.virtualbox.org/) for the development and test environments. To install, clone the repo, change to the directory, and run `script/bootstrap.sh`.  This will:
+We use [Vagrant](http://www.vagrantup.com/) with [VirtualBox](https://www.virtualbox.org/) for the development and test environments. To install, clone the repo, change to the directory, and run `script/bootstrap.sh` (If you have windows, run `script/bootstrap.bat` instead from a Command Prompt as ADMINISTRATOR).  This will:
 
 * create the required files based on `.example` files
 * temporarily increase the memory of the VM to 4GB to increase the speed of compiling various dependencies
