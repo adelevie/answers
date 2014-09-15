@@ -26,4 +26,9 @@ class Question < ActiveRecord::Base
     tags_with_questions
   end
 
+  # Allow facets for tags
+  def search_data
+    attributes.merge(
+      tag_name: self.tags.map(&:name))
+  end
 end

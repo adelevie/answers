@@ -14,9 +14,8 @@ class QuestionsController < ApplicationController
   def show
     add_breadcrumb "Answers", answers_path
     add_breadcrumb @question.text, answer_path(@question)
-    
-    
-    respond_with(@question)
+
+    render locals: { question: @question, similar_questions: @question.similar(limit:3) }
   end
 
   private

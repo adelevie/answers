@@ -6,6 +6,6 @@ RSpec.describe "questions/show", :type => :view do
   end
 
   it "renders attributes in <p>" do
-    render
+    render :partial => "shared/tags_sidebar.html.erb", :locals => {:question => @question}
   end
 end

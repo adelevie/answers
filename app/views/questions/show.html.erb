@@ -12,9 +12,9 @@
     <div class="span9">
       <div class="main-content">
         <div class="header">
-          <%= content_tag(:h1, @question.text ) %>
+          <%= content_tag(:h1, question.text ) %>
         </div>
-        <% @question.answers.each do |quest| %>
+        <% question.answers.each do |quest| %>
           <div class="content-text">
             <%= raw quest.text %>
           </div>
@@ -23,8 +23,9 @@
     </div><!-- /span9 -->
     
     <div class="span3">
-      <%#= render :partial => 'shared/articles_sidebar' %>
-    </div><!-- /span3 -->
+      <%= render :partial => 'shared/similar_questions', locals: { results: similar_questions } %>
+      <%= render :partial => 'shared/tags_sidebar', locals: { question: question }%>
+    </div>
     
   </div>
 </div>

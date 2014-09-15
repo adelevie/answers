@@ -72,4 +72,41 @@ describe'Searches', type: :feature do
       
     end
   end
+
+  describe 'search results for a tag' do
+    let(:tag) {create(:tag)}
+    let(:questions) { create_list(:question, 3) }
+    let(:results) { questions }
+    
+    context 'Question found for tag' do
+      
+      before do
+        allow(Question).to receive(:search) { results }
+        visit tag_search_path(:tag => tag)
+      end
+
+      subject { page }
+
+      it 'question links are on page' do
+      is_expected.to have_content "Questions related to:"
+      
+      results.each { |result|
+        should have_link("#{result.text}")
+      }
+      end
+    end
+  end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
