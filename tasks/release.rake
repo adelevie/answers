@@ -30,5 +30,5 @@ root = File.expand_path('../../', __FILE__)
 end
 
 namespace :all do
-  task :build => ENGINES.map { |e| "#{e}:build" } + ['refinerycms:build']
+  task :build => ENGINES.map { |e| "#{e}:build" } + ['answers:build']
 end

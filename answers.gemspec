@@ -22,5 +22,8 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "bundler", "~> 1.6"
   spec.add_dependency "rake"
+  spec.add_dependency "rails", "~> 4.1.5"
   spec.add_dependency "answers-core"
+  spec.add_dependency "rspec-rails", "~> 3.1.0"
+  spec.add_dependency 'devise', '~> 3.3.0'
 end
