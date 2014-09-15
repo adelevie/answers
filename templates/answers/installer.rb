@@ -14,14 +14,13 @@ if File.read("#{destination_root}/Gemfile") !~ /assets.+coffee-rails/m
 end
 
 append_file 'Gemfile', <<-GEMFILE
+gem 'activeadmin', github: 'activeadmin'
 gem 'answers', path: '../'
-
-#  gem 'answers-admin', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
-#  gem 'answers-guides', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
-#  gem 'answers-choose-your-own-adventure', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
+# gem 'answers-admin', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
+# gem 'answers-guides', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
+# gem 'answers-choose-your-own-adventure', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
 
 # Answers Dependencies
-gem 'activeadmin', github: 'activeadmin'
 gem 'acts-as-taggable-on'
 gem "breadcrumbs_on_rails"
 gem 'dalli'
@@ -31,12 +30,6 @@ gem 'searchkick'
 gem 'secure_headers'
 gem 'cancancan', github: 'andypike/cancancan', branch: 'rspec3'
 gem 'simple_token_authentication'
-
-gem 'answers', path: '../'
-
-#  gem 'answers-admin', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
-#  gem 'answers-guides', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
-#  gem 'answers-choose-your-own-adventure', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
 GEMFILE
 
 begin

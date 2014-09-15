@@ -1,4 +1,13 @@
 Answers::Core::Engine.routes.draw do
+  
+  namespace :api, defaults: {format: 'json'} do
+    namespace :v1 do
+      resources :questions
+      resources :answers
+      resources :tags
+      resources :taggings
+    end
+  end
 
   match '/about' => "home#about" , :as => :about, :via => :get
   match '/search/' => "search#index" , :as => :search, :via => [:get, :post]
