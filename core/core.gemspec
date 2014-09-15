@@ -25,6 +25,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'railties',                    rails_version
   s.add_dependency 'activerecord',                rails_version
   s.add_dependency 'actionpack',                  rails_version
-  # s.add_dependency 'activeadmin'
-  s.add_dependency 'devise'
 end

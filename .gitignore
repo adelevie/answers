@@ -43,6 +43,7 @@ Vagrantfile
 /log/*
 /MyAnswers
 /public/system
+/spec/dummy
 /spec/tmp
 /test
 /tmp
