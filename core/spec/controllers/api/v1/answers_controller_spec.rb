@@ -57,12 +57,12 @@ RSpec.describe Answers::Api::V1::AnswersController, :type => :controller do
       it "creates a new Answer" do
         expect {
           post :create, {:answer => valid_attributes}, valid_session
-        }.to change(Answer, :count).by(1)
+        }.to change(Answers::Answer, :count).by(1)
       end
 
       it "assigns a newly created answer as @answer" do
         post :create, {:answer => valid_attributes}, valid_session
-        expect(assigns(:answer)).to be_a(Answer)
+        expect(assigns(:answer)).to be_a(Answers::Answer)
         expect(assigns(:answer)).to be_persisted
       end
 
@@ -75,7 +75,7 @@ RSpec.describe Answers::Api::V1::AnswersController, :type => :controller do
     describe "with invalid params" do
       it "assigns a newly created but unsaved answer as @answer" do
         post :create, {:answer => invalid_attributes}, valid_session
-        expect(assigns(:answer)).to be_a_new(Answer)
+        expect(assigns(:answer)).to be_a_new(Answers::Answer)
       end
 
       it "re-renders the 'new' template" do
@@ -131,7 +131,7 @@ RSpec.describe Answers::Api::V1::AnswersController, :type => :controller do
       answer = Answers::Answer.create! valid_attributes
       expect {
         delete :destroy, {:id => answer.to_param}, valid_session
-      }.to change(Answer, :count).by(-1)
+      }.to change(Answers::Answer, :count).by(-1)
     end
 
     it "redirects to the answers list" do
