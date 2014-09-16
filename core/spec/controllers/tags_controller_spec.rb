@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe TagsController, type: :feature do
+RSpec.describe Answers::TagsController, type: :feature do
   context "When tags exist" do
     let(:tag_name)  { "Sampletag" }
     let(:tag)       { create(:tag, name: tag_name) }

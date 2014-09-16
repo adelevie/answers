@@ -3,8 +3,8 @@ require 'spec_helper'
 RSpec.describe "questions/index", :type => :view do
   before(:each) do
     assign(:questions, [
-      Question.create!(),
-      Question.create!()
+      Answers::Question.create!(),
+      Answers::Question.create!()
     ])
   end
 

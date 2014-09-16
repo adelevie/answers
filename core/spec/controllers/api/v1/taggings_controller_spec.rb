@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe Api::V1::TaggingsController, :type => :controller do
+RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
 
   # This should return the minimal set of attributes required to create a valid
   # ActsAsTaggableOn::Tag. As you add validations to ActsAsTaggableOn::Tag, be sure to

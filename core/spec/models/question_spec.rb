@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe Question, :type => :model do
+RSpec.describe Answers::Question, :type => :model do
   let(:question) { create(:question) }
   let(:answer) { create(:answer) }
 
@@ -43,7 +43,7 @@ RSpec.describe Question, :type => :model do
       end
       
       it "should return an empty Array" do
-        my_tags = Question.tags
+        my_tags = Answers::Question.tags
         expect(my_tags).to(be_a(Array))
         expect(my_tags.length).to(eq(tags.length))
       end
@@ -56,7 +56,7 @@ RSpec.describe Question, :type => :model do
       end
       
       it "should return an empty Array" do
-        my_tags = Question.tags
+        my_tags = Answers::Question.tags
         expect(my_tags).to(be_a(Array))
         expect(my_tags.length).to(eq(0))
       end
