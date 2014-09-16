@@ -38,7 +38,7 @@ RSpec.describe Answers::AnswersController, :type => :controller do
 
   describe "GET index" do
     it "assigns all answers as @answers" do
-      answer = Answer.create! valid_attributes
+      answer = Answers::Answer.create! valid_attributes
       get :index, {}, valid_session
       expect(assigns(:answers)).to eq([answer])
     end
@@ -46,7 +46,7 @@ RSpec.describe Answers::AnswersController, :type => :controller do
 
   describe "GET show" do
     it "assigns the requested answer as @answer" do
-      answer = Answer.create! valid_attributes
+      answer = Answers::Answer.create! valid_attributes
       get :show, {:id => answer.to_param}, valid_session
       expect(assigns(:answer)).to eq(answer)
     end
