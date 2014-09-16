@@ -6,10 +6,10 @@ version = Answers::Version.to_s
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.name              = %q{answers-testing}
-  s.version           = version
+  s.version           = '0.0.0'
   s.summary           = %q{Testing plugin for Answers}
   s.description       = %q{This plugin adds the ability to test against the Answers CMS gem while inside an Answers extension}
-  s.email             = %q{justin.grevich@gsa.gov}
+  s.email          = ["justin.grevich@gsa.gov", "amos.stone@gsa.gov", "alan.delevie@gsa.gov"]
   s.homepage          = %q{https://answers.18f.us}
   s.rubyforge_project = %q{answers}
   s.authors           = ['Nick Bristow', 'Alan deLevie', 'Justin Grevich', 'Sasha Magee', 'John Stone', 'Ben Willman', 'John P. Yuda']
