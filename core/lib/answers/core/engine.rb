@@ -56,16 +56,6 @@ module Answers
         end
       end
 
-      initializer "register answers_dialogs plugin" do
-        Answers::Plugin.register do |plugin|
-          plugin.pathname = root
-          plugin.name = 'answers_dialogs'
-          plugin.hide_from_menu = true
-          plugin.always_allow_access = true
-          plugin.menu_match = /answers\/(answers_)?dialogs/
-        end
-      end
-
       initializer "answers.routes", :after => :set_routes_reloader_hook do |app|
         Answers::Core::Engine.routes.append do
           get "#{Answers::Core.backend_route}/*path" => 'admin#error_404'
@@ -101,6 +91,14 @@ module Answers
 
       initializer "answers.memory_store" do |app|
         app.config.cache_store = :memory_store
+      end
+
+      initializer 'append_migrations' do |app|
+        unless app.root.to_s.match root.to_s
+          config.paths['db/migrate'].expanded.each do |expanded_path|
+            app.config.paths['db/migrate'] << expanded_path
+          end
+        end
       end
 
       config.after_initialize do
