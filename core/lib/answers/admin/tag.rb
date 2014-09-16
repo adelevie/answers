@@ -1,5 +1,5 @@
 module Answers
-	ActiveAdmin.register ActsAsTaggableOn::Tag do
+	ActiveAdmin.register ActsAsTaggableOn::Tag, as: 'Tag' do
 	  permit_params :name, :taggings_count
 	  
 	   index do
