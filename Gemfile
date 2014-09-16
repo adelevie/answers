@@ -5,7 +5,7 @@ gemspec
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'acts-as-taggable-on'
-gem "breadcrumbs_on_rails"
+gem 'breadcrumbs_on_rails'
 gem 'cancancan', github: 'andypike/cancancan', branch: 'rspec3'
 gem 'quiet_assets'
 gem 'reverse_markdown'
@@ -28,7 +28,7 @@ end
 
 if !ENV['TRAVIS'] || ENV['DB'] == 'postgresql'
   group :postgres, :postgresql do
-    gem 'activerecord-jdbcpostgresql-adapter', '>= 1.3.0.rc1', platform: :jruby
+    gem 'activerecord-jgbdbcpostgresql-adapter', '>= 1.3.0.rc1', platform: :jruby
     gem 'pg', platform: :ruby
   end
 end
@@ -40,4 +40,5 @@ group :test do
   gem 'generator_spec', '~> 0.9.1'
   gem 'launchy'
   gem 'coveralls', require: false
+  gem 'pry-nav'
 end
