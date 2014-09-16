@@ -43,4 +43,5 @@ group :test do
   gem 'generator_spec', '~> 0.9.1'
   gem 'launchy'
   gem 'pry-nav'
+  gem 'sqlite3'
 end
