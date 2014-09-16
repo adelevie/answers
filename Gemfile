@@ -37,8 +37,9 @@ group :test do
   gem 'answers-testing', path: 'testing'
   gem 'answers-core'
   gem 'brakeman', require: false
+  gem 'coveralls', require: false
+  gem 'database_cleaner'
   gem 'generator_spec', '~> 0.9.1'
   gem 'launchy'
-  gem 'coveralls', require: false
   gem 'pry-nav'
 end

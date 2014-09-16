@@ -7,6 +7,7 @@ describe Answers::User, :type => :model do
         :password => 'passwordsrsly',
         :password_confirmation => 'passwordsrsly'
       )
+
     expect(user).to be_valid
   end
 
@@ -35,9 +36,8 @@ describe Answers::User, :type => :model do
     user = Answers::User.new(
         :email => 'user@example.com'
       )
-
     expect(user.valid?).to be false
-    expect(user.errors[:password].size).to eq(1)
+    expect {user.save!}.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Password can't be blank")
   end
 
   it "has only one role" do
