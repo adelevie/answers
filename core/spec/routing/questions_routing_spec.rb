@@ -1,6 +1,6 @@
 require "spec_helper"
 
-RSpec.describe QuestionsController, :type => :routing do
+RSpec.describe Answers::QuestionsController, :type => :routing do
   describe "routing" do
 
     it "routes to #index" do

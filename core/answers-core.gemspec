@@ -2,7 +2,7 @@
 require File.expand_path('../../core/lib/answers/version', __FILE__)
 
 version = Answers::Version.to_s
-rails_version = '~> 4.1.4'
+rails_version = '~> 4.1.6'
 
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY

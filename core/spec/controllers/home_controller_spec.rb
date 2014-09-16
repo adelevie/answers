@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe HomeController, :type => :feature do
+RSpec.describe Answers::HomeController, :type => :feature do
 
   # This should return the minimal set of attributes required to create a valid
   # Answer. As you add validations to Answer, be sure to

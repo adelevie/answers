@@ -11,7 +11,6 @@ namespace :answers do
 
     task :setup_dummy_app do
       require 'answers-core'
-
       params = %w(--quiet)
       params << "--database=#{ENV['DB']}" if ENV['DB']
 
