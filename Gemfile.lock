@@ -35,24 +35,20 @@ GIT
 PATH
   remote: .
   specs:
-    answers (0.0.5)
+    answers (0.0.0)
       answers-core
       bundler (~> 1.6.2)
       devise (~> 3.2.0)
       rails (~> 4.1.6)
       rake
       rspec-rails (~> 3.1.0)
-    answers-core (0.0.5)
+    answers-core (0.0.0)
       actionpack (~> 4.1.6)
       activerecord (~> 4.1.6)
       devise (~> 3.2.0)
       rails (~> 4.1.6)
       railties (~> 4.1.6)
-
-PATH
-  remote: testing
-  specs:
-    answers-testing (0.0.5)
+    answers-testing (0.0.0)
       answers-core
       capybara (~> 2.4.1)
       capybara-webkit (~> 1.3.0)
@@ -324,7 +320,7 @@ DEPENDENCIES
   acts-as-taggable-on
   answers!
   answers-core
-  answers-testing!
+  answers-testing
   brakeman
   breadcrumbs_on_rails
   cancancan!

@@ -34,7 +34,7 @@ if !ENV['TRAVIS'] || ENV['DB'] == 'postgresql'
 end
 
 group :test do
-  gem 'answers-testing', path: 'testing'
+  gem 'answers-testing'
   gem 'answers-core'
   gem 'brakeman', require: false
   gem 'coveralls', require: false
