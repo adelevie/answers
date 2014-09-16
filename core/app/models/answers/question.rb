@@ -1,6 +1,5 @@
 module Answers
   class Question < ActiveRecord::Base
-    self.table_name = 'questions'
 
     acts_as_taggable_on :tags
     has_many :answers

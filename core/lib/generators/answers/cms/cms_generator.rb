@@ -29,6 +29,8 @@ module Answers
 
       append_gitignore!
 
+      append_seeds!
+
       append_asset_pipeline!
 
       forced_overwriting?
@@ -40,6 +42,8 @@ module Answers
       mount!
 
       run_additional_generators! if self.options[:fresh_installation]
+
+      generate_active_admin_install
 
       migrate_database!
 
@@ -81,6 +85,18 @@ end}  end
       append_file ".gitignore", our_ignore_rules
     end
 
+    def append_seeds!
+      append_file 'db/seeds.rb', %q{
+puts 'SETTING UP DEFAULT USER LOGIN'
+print "Enter admin email: "
+admin_email = 'admin@answers.gsa.io'
+
+user = Answers::User.create! :email => admin_email, :password => 'Mahalo43', :password_confirmation => 'Mahalo43', :is_admin => true, :is_editor => true, :is_writer => true
+puts 'New user created: ' << user.email
+puts "Admin password has been set to: Mahalo43"
+}
+    end
+
     def append_heroku_gems!
       append_file 'Gemfile', %q{
 # The Heroku gem allows you to interface with Heroku's API
@@ -100,6 +116,11 @@ gem 'pg'
 
     def bundle!
       run 'bundle install'
+    end
+
+    def generate_active_admin_install
+      run 'rails g active_admin:install --skip-users'
+      remove_file 'config/initializers/active_admin.rb', :verbose => true
     end
 
     def copy_files!
@@ -226,6 +247,7 @@ gem 'pg'
   #
   # We ask that you don't use the :as option here, as Answers relies on it being the default of "answers"
   mount Answers::Core::Engine, at: '/'
+  ActiveAdmin.routes(self)
 
 }
 

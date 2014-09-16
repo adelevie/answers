@@ -215,12 +215,14 @@ gem 'pg'
       if (routes_file = destination_path.join('config', 'routes.rb')).file? && (self.behavior == :revoke || (routes_file.read !~ %r{mount\ Answers::Core::Engine}))
         # Append routes
         mount = %Q{
+  # Answers Platform
   # This line mounts Answers's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Answers::PagesController#home.
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Answers relies on it being the default of "answers"
   mount Answers::Core::Engine, at: '/'
+  ActiveAdmin.routes(self)
 
 }
 

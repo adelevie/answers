@@ -16,7 +16,7 @@ end
 append_file 'Gemfile', <<-GEMFILE
 
 # Answers Dependencies
-gem 'activeadmin', github: 'gregbell/active_admin' 
+gem 'activeadmin', github: 'activeadmin'
 gem 'acts-as-taggable-on'
 gem "breadcrumbs_on_rails"
 gem 'dalli'
@@ -24,6 +24,8 @@ gem 'devise', '~> 3.2.4'
 gem 'meta-tags'
 gem 'searchkick'
 gem 'secure_headers'
+gem 'cancancan', github: 'andypike/cancancan', branch: 'rspec3'
+gem 'simple_token_authentication'
 
 gem 'answers', path: '../'
 
