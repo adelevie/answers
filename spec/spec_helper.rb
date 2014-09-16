@@ -27,6 +27,9 @@ Rails.backtrace_cleaner.remove_silencers!
 
 I18n.locale = :en
 
+FactoryGirl.definition_file_paths = %w(core/spec/factories)
+FactoryGirl.find_definitions
+
 RSpec.configure do |config|
   config.mock_with :rspec
   config.treat_symbols_as_metadata_keys_with_true_values = true
