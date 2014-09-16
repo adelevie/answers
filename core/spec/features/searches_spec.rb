@@ -12,7 +12,7 @@ describe'Searches', type: :feature do
     context '1 result found' do
       before do
         # allow(Article).to receive(:search) { [article] }
-        allow(Question).to receive(:search) { [question] }
+        allow(Answers::Question).to receive(:search) { [question] }
         visit root_path
         fill_in 'query', :with => query
         click_on 'SEARCH'
@@ -30,7 +30,7 @@ describe'Searches', type: :feature do
 
       before do
         # allow(Article).to receive(:search) { [] }
-        allow(Question).to receive(:search) { [] }
+        allow(Answers::Question).to receive(:search) { [] }
         visit root_path
         fill_in 'query', :with => reverse_query
         click_on 'SEARCH'
@@ -53,7 +53,7 @@ describe'Searches', type: :feature do
       before do
         # Article.reindex
         # allow(Article).to receive(:search) { [article_1, article_2] }
-        allow(Question).to receive(:search) { [question_1, question_2] }
+        allow(Answers::Question).to receive(:search) { [question_1, question_2] }
         visit root_path
         fill_in 'query', :with => query
         click_on 'SEARCH'
