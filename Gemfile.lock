@@ -37,7 +37,7 @@ PATH
   specs:
     answers (0.0.5)
       answers-core
-      bundler (~> 1.7.3)
+      bundler (~> 1.6.2)
       devise (~> 3.2.0)
       rails (~> 4.1.6)
       rake
