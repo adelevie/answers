@@ -42,4 +42,24 @@ module ApplicationHelper
 		name = name.nil? ? official_government_short_url : name
 		link_to(name, "#{official_government_long_url}/#{params}")
 	end
+	
+	def markdown_to_html(text)
+	  return "" unless text
+	  return raw Kramdown::Document.new(text).to_html
+  end
+  
+  def display_article(article)
+    if article.respond_to? :answers
+      question_text = article.text
+      answer_text = article.answers.first.try(&:display_text)
+    else
+      question_text = article.question.text
+      answer_text = article.try(&:display_text)
+    end
+    
+    result = link_to question_text, answer_path(article)
+	  result += content_tag(:h2, markdown_to_html(answer_text))
+		
+		return raw result
+	end
 end

@@ -48,11 +48,15 @@ describe'Searches', type: :feature do
       # let(:article_2) { create(:article) }
       let(:question_1) { create(:question) }
       let(:question_2) { create(:question) }
+      let(:answer_1) { create(:answer) }
+      let(:answer_2) { create(:answer) }
       let(:query)     { 'best nice' }
 
       before do
         # Article.reindex
         # allow(Article).to receive(:search) { [article_1, article_2] }
+        allow(question_1).to receive(:answers) { [answer_1] }
+        allow(question_2).to receive(:answers) { [answer_2] }
         allow(Question).to receive(:search) { [question_1, question_2] }
         visit root_path
         fill_in 'query', :with => query
@@ -64,10 +68,10 @@ describe'Searches', type: :feature do
       end
 
       it 'should contain the title and preview of both articles' do
-        # expect(page).to have_content article_1.title
-        # expect(page).to have_content article_1.preview
-        # expect(page).to have_content article_2.title
-        # expect(page).to have_content article_2.preview
+        expect(page).to have_content question_1.text
+        expect(page).to have_content answer_1.text
+        expect(page).to have_content question_2.text
+        expect(page).to have_content answer_2.text
       end
       
     end

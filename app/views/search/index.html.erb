@@ -14,9 +14,9 @@
             <p>Sorry, no results found for "<%= query %>".  Please try rephrasing your search terms.</p>
           <% else %>
             <ul>
-              <% results.each do |question| %>
+              <% results.each do |article| %>
                   <li class="article-listing">
-                    <%= content_tag( :h2, link_to( question.text, answer_path(question) ) ) %>
+					<%= display_article(article) %>
                   </li>
               <% end %>
             </ul>

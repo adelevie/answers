@@ -43,6 +43,27 @@ describe'Questions', type: :feature do
       it { should have_link("#{question_1.text}", href: answer_path(question_1.id)) }
       it { should have_link("#{question_2.text}", href: answer_path(question_2.id)) }
     end
+  end
 
+  describe 'convert markdown' do
+    let(:answer) { create(:answer) }
+    let(:question) { create(:question) }
+
+    context 'Markdown links converted' do
+
+      before do
+        allow(answer).to receive(:text).and_return("Visit the [Motorcycle License Checklist][1] page at the California Department of Motor Vehicles. [1]: http://www.dmv.ca.gov/dl/checklists/mc.htm")
+        allow(question).to receive(:answers).and_return([answer])
+        allow_any_instance_of(Question).to receive(:similar).and_return([question])
+        allow(Question).to receive(:search) {[question]}
+        visit search_path(q: 'job')
+      end
+
+      subject { page }
+
+      it { is_expected.to have_content "Search results for: \"job\""}
+      it { should have_link("#{question.text}", href: answer_path(question.id)) }
+      it { should have_link("Motorcycle License Checklist", href: "http://www.dmv.ca.gov/dl/checklists/mc.htm") }
+    end
   end
 end
