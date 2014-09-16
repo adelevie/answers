@@ -1,5 +1,5 @@
 <% set_meta_tags  description: "Search results for #{query}.",
-                  canonical: official_government_long_url + request.fullpath,
+                  canonical: ENV['official_government_long_url'].to_s + request.fullpath,
                   title: "Search results for #{query}." %>
 
 <div class="page-container search">
