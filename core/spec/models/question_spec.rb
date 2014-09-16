@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe Question, :type => :model do
+RSpec.describe Answers::Question, :type => :model do
   let(:question) { create(:question) }
   let(:answer) { create(:answer) }
 
@@ -9,7 +9,6 @@ RSpec.describe Question, :type => :model do
       question.answers << answer
 
       question.save
-
       expect(question.top_answer).to be_valid
     end
   end
@@ -39,11 +38,11 @@ RSpec.describe Question, :type => :model do
         5.times.map { |n| create(:tag) }
       end
       before(:each) do
-        allow(Question).to(receive(:tag_counts_on)).with(:tags).and_return(tags)
+        allow(Answers::Question).to(receive(:tag_counts_on)).with(:tags).and_return(tags)
       end
       
       it "should return an empty Array" do
-        my_tags = Question.tags
+        my_tags = Answers::Question.tags
         expect(my_tags).to(be_a(Array))
         expect(my_tags.length).to(eq(tags.length))
       end
@@ -52,11 +51,11 @@ RSpec.describe Question, :type => :model do
     context "when no tags are loaded" do
       let(:tags) { [] }
       before(:each) do
-        allow(Question).to(receive(:tag_counts_on)).with(:tags).and_return(tags)
+        allow(Answers::Question).to(receive(:tag_counts_on)).with(:tags).and_return(tags)
       end
       
       it "should return an empty Array" do
-        my_tags = Question.tags
+        my_tags = Answers::Question.tags
         expect(my_tags).to(be_a(Array))
         expect(my_tags.length).to(eq(0))
       end

@@ -1,17 +1,18 @@
 require 'spec_helper'
 
-describe User, :type => :model do
+describe Answers::User, :type => :model do
   it "is valid with an email, password and password confirmation" do
-    user = User.new(
+    user = Answers::User.new(
         :email => 'user@example.com',
         :password => 'passwordsrsly',
         :password_confirmation => 'passwordsrsly'
       )
+
     expect(user).to be_valid
   end
 
   it "is invalid without an email" do
-    user = User.new(
+    user = Answers::User.new(
         :password => 'passwordsrsly',
         :password_confirmation => 'passwordsrsly'
       )
@@ -21,7 +22,7 @@ describe User, :type => :model do
   end
 
   it "is invalid without a valid email" do
-    user = User.new(
+    user = Answers::User.new(
         :email => '+++ FREE PHARMACY ?ONLINE!! +++',
         :password => 'passwordsrsly',
         :password_confirmation => 'passwordsrsly'
@@ -32,16 +33,15 @@ describe User, :type => :model do
   end
 
   it "is invalid without a password and confirmation" do
-    user = User.new(
+    user = Answers::User.new(
         :email => 'user@example.com'
       )
-
     expect(user.valid?).to be false
-    expect(user.errors[:password].size).to eq(1)
+    expect {user.save!}.to raise_error(ActiveRecord::RecordInvalid, "Validation failed: Password can't be blank")
   end
 
   it "has only one role" do
-    user = User.new(
+    user = Answers::User.new(
         :email => 'user@example.com',
         :password => 'passwordsrsly',
         :password_confirmation => 'passwordsrsly',

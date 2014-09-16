@@ -3,10 +3,10 @@ module Answers
     # caches_page :index
     # caches_page :show 
     
-    add_breadcrumb "Home", :root_path
+    add_breadcrumb "Home", :answers_path
     
     def index
-      add_breadcrumb "Tags", tags_path
+      add_breadcrumb "Tags", answers.tags_path
       
       tags = ActsAsTaggableOn::Tag.all
       render locals: {tags: tags}
@@ -16,8 +16,8 @@ module Answers
       id  = params[:id].to_i
       tag = ActsAsTaggableOn::Tag.find(id)
       
-      add_breadcrumb "Tags", tags_path
-      add_breadcrumb tag.name.capitalize, tag_path(tag)
+      add_breadcrumb "Tags", answers.tags_path
+      add_breadcrumb tag.name.capitalize, answers.tag_path(tag)
       
       taggings = tag.taggings.select do |tagging| 
         tagging.taggable_type == "Question"

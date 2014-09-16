@@ -10,6 +10,6 @@ require 'spec_helper'
 #     end
 #   end
 # end
-RSpec.describe TagsHelper, :type => :helper do
+RSpec.describe Answers::TagsHelper, :type => :helper do
   pending "add some examples to (or delete) #{__FILE__}"
 end

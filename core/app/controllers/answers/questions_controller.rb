@@ -3,7 +3,7 @@ module Answers
   before_action :set_question, only: [:show]
   respond_to :html
 
-  add_breadcrumb "Home", :root_path
+  add_breadcrumb "Home", :answers_path
 
   def index
     add_breadcrumb "Answers", answers_path

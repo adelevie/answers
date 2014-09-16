@@ -22,13 +22,13 @@ gem 'answers', path: '../'
 
 # Answers Dependencies
 gem 'acts-as-taggable-on'
-gem "breadcrumbs_on_rails"
+gem 'breadcrumbs_on_rails'
+gem 'cancancan', github: 'andypike/cancancan', branch: 'rspec3'
 gem 'dalli'
-gem 'devise', '~> 3.2.4'
+gem 'devise', '~> 3.2.0'
 gem 'meta-tags'
 gem 'searchkick'
 gem 'secure_headers'
-gem 'cancancan', github: 'andypike/cancancan', branch: 'rspec3'
 gem 'simple_token_authentication'
 GEMFILE
 
