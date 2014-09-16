@@ -42,6 +42,8 @@ group :test do
   gem 'factory_girl_rails'
   gem 'generator_spec', '~> 0.9.1'
   gem 'launchy'
+  gem 'meta-tags'
   gem 'pry-nav'
   gem 'sqlite3'
+  gem 'turbolinks'
 end

@@ -2,7 +2,7 @@ module Answers
   class SearchController < Answers::ApplicationController
     def index
       query =  params[:q].strip
-      return redirect_to root_path if params[:q].blank?
+      return redirect_to answers_path if params[:q].blank?
       
       results = Question.search(query, index_name: [Question.searchkick_index.name, Answer.searchkick_index.name])
       

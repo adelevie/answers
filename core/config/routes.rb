@@ -17,6 +17,6 @@ Answers::Core::Engine.routes.draw do
   resources :questions, only: [:index, :show], :path => 'answers', :as => 'answers'
   resources :tags, only: [:index, :show]
   # root :to => "home#index"
-  match '/' => 'home#index', :via => :get
+  match '/' => 'home#index', :via => :get, as: 'home'
   devise_for :users, class_name: "Answers::User", module: :devise
 end

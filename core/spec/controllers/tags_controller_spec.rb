@@ -20,7 +20,7 @@ RSpec.describe Answers::TagsController, type: :feature do
       it "displays a list of links to tag pages" do
         allow(ActsAsTaggableOn::Tag).to(receive(:all)).and_return(tags)
         
-        visit tags_path
+        visit answers.tags_path
         expect(page).to(have_content("Listing of All Tags"))
         css = "ul#tags"
         expect(page).to(have_css(css))
@@ -32,7 +32,7 @@ RSpec.describe Answers::TagsController, type: :feature do
       it "returns http success" do
         allow(ActsAsTaggableOn::Tag).to(receive(:find).with(tag.id)).and_return(tag)
         
-        visit tag_path(tag)
+        visit answers.tag_path(tag)
         expect(page).to(have_content(tag_name))
       end
     end
