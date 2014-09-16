@@ -325,6 +325,7 @@ DEPENDENCIES
   breadcrumbs_on_rails
   cancancan!
   coveralls
+  database_cleaner
   generator_spec (~> 0.9.1)
   launchy
   mysql2

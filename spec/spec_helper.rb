@@ -21,7 +21,6 @@ end
 require File.expand_path("../dummy/config/environment", __FILE__)
 
 require 'rspec/rails'
-require 'rspec/autorun'
 require 'capybara/rspec'
 
 Rails.backtrace_cleaner.remove_silencers!
@@ -37,6 +36,29 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.order = "random"
   config.include ActionView::TestCase::Behavior, :example_group => { :file_path => %r{spec/presenters} }
+
+  config.include Capybara::DSL
+  config.include FactoryGirl::Syntax::Methods
+
+  config.order = 'random'
+  
+  config.infer_spec_type_from_file_location!
+  config.raise_errors_for_deprecations!
+
+  config.mock_with(:rspec) { |c| c.syntax = [:expect] }
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
 end
 
 # Requires supporting files with custom matchers and macros, etc,
