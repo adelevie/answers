@@ -9,7 +9,6 @@ RSpec.describe Answers::Question, :type => :model do
       question.answers << answer
 
       question.save
-
       expect(question.top_answer).to be_valid
     end
   end
@@ -39,7 +38,7 @@ RSpec.describe Answers::Question, :type => :model do
         5.times.map { |n| create(:tag) }
       end
       before(:each) do
-        allow(Question).to(receive(:tag_counts_on)).with(:tags).and_return(tags)
+        allow(Answers::Question).to(receive(:tag_counts_on)).with(:tags).and_return(tags)
       end
       
       it "should return an empty Array" do
@@ -52,7 +51,7 @@ RSpec.describe Answers::Question, :type => :model do
     context "when no tags are loaded" do
       let(:tags) { [] }
       before(:each) do
-        allow(Question).to(receive(:tag_counts_on)).with(:tags).and_return(tags)
+        allow(Answers::Question).to(receive(:tag_counts_on)).with(:tags).and_return(tags)
       end
       
       it "should return an empty Array" do
