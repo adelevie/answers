@@ -39,6 +39,7 @@ group :test do
   gem 'brakeman', require: false
   gem 'coveralls', require: false
   gem 'database_cleaner'
+  gem 'factory_girl_rails'
   gem 'generator_spec', '~> 0.9.1'
   gem 'launchy'
   gem 'pry-nav'

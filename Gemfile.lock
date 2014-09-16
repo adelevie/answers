@@ -326,6 +326,7 @@ DEPENDENCIES
   cancancan!
   coveralls
   database_cleaner
+  factory_girl_rails
   generator_spec (~> 0.9.1)
   launchy
   mysql2
