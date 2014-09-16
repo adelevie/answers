@@ -12,8 +12,8 @@ describe'Questions', type: :feature do
       before do
         allow(question).to receive(:answers).and_return([answer])
         allow(question).to receive(:tag_list).and_return([tag])
-        allow_any_instance_of(Question).to receive(:similar).and_return([question])
-        allow(Question).to receive(:find) {question}
+        allow_any_instance_of(Answers::Question).to receive(:similar).and_return([question])
+        allow(Answers::Question).to receive(:find) {question}
         visit answer_path(answer.id)
       end
 
@@ -32,7 +32,7 @@ describe'Questions', type: :feature do
 
     context 'Similar questions listed' do
       before do
-        allow_any_instance_of(Question).to receive(:similar).and_return([question_1, question_2])
+        allow_any_instance_of(Answers::Question).to receive(:similar).and_return([question_1, question_2])
         allow(Question).to receive(:find) {question_1}
         visit answer_path(answer.id)
       end

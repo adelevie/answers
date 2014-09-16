@@ -70,7 +70,7 @@ describe'Searches', type: :feature do
     context 'Question found for tag' do
       
       before do
-        allow(Question).to receive(:search) { results }
+        allow(Answers::Question).to receive(:search) { results }
         visit tag_search_path(:tag => tag)
       end
 
