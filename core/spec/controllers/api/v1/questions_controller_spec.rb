@@ -54,10 +54,10 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
 
   describe "POST create" do
     describe "with valid params" do
-      it "creates a new Question" do
+      it "creates a new Answers::Question" do
         expect {
           post :create, {:question => valid_attributes}, valid_session
-        }.to change(Question, :count).by(1)
+        }.to change(Answers::Question, :count).by(1)
       end
 
       it "assigns a newly created question as @question" do
@@ -131,7 +131,7 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
       question = Answers::Question.create! valid_attributes
       expect {
         delete :destroy, {:id => question.to_param}, valid_session
-      }.to change(Question, :count).by(-1)
+      }.to change(Answers::Question, :count).by(-1)
     end
 
     it "redirects to the questions list" do
