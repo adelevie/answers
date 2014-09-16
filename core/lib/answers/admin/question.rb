@@ -1,5 +1,5 @@
 module Answers
-  ActiveAdmin.register Question do
+  ActiveAdmin.register Question, as: 'Question' do
     permit_params :text, :in_language, :tags, :tag_list
     
     #override questions controller strong params until implemented.

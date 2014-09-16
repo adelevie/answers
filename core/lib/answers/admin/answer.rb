@@ -1,5 +1,5 @@
 module Answers
-  ActiveAdmin.register Answer do
+  ActiveAdmin.register Answer, as: 'Answer' do
     permit_params :question_id, :text, :in_language, :need_to_know
     
     form do |f|
