@@ -16,6 +16,8 @@ end
 append_file 'Gemfile', <<-GEMFILE
 gem 'activeadmin', github: 'activeadmin'
 gem 'answers'
+gem 'answers-core'
+
 # gem 'answers-admin', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
 # gem 'answers-guides', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
 # gem 'answers-choose-your-own-adventure', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
