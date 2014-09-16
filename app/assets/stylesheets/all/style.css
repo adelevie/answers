@@ -396,7 +396,7 @@ div.search-ribbon {}
 /* ---------- */
 
 input#query {
-  width: 70%;
+/*  width: 70%;
   height: 40px;
   padding: 3px 5px;
   border: 1px solid #454d60;
@@ -410,7 +410,7 @@ input#query {
   -moz-transition: all 0.25s ease-in-out;
   border-radius:          3px;
   -webkit-border-radius:  3px;
-  -moz-border-radius:     3px;
+  -moz-border-radius:     3px;*/
 }
 .header-search input#query {
   width: 65%;
@@ -913,4 +913,86 @@ ul.about-list li {
   width: 7.5em;
   margin-left: 50px;
 }
+
+/* custom styles for the typeahead */
+
+.tt-dropdown-menu {
+  text-align: left;
+}
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 396px;
+  height: 30px;
+  padding: 1px 12px;
+  font-size: 16px;
+  line-height: 30px;
+  border: 1px solid #454d60;
+  -webkit-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+  background: white;
+  outline: none;
+  font: 100%/1.5 "Helvetica Neue", Helvetica, Tahoma, Arial, sans-serif;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  border-radius:          3px;
+  -webkit-border-radius:  3px;
+  -moz-border-radius:     3px;
+}
+
+.typeahead {
+  background-color: #fff;
+}
+
+.typeahead:focus {
+  border: 2px solid #0097cf;
+}
+
+.tt-query {
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-dropdown-menu {
+  width: 422px;
+  margin-top: 12px;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tt-cursor{
+    color:#f1b218;
+    background-color: #3a9d2f;
+}
+
+.tt-is-under-cursor {
+  color: #f1b218;
+  background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+.tt-suggestion{
+  text-shadow: none;
+}
+
+.tt-highlight {
+  font-weight: bold;
+}
+
 
