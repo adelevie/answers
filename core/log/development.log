@@ -5989,7 +5989,7 @@ ActionView::Template::Error (undefined method `text' for 73:Fixnum):
     13:         <ul>
     14:           <% questions.each do |question| %>
     15:               <li class="article-listing">
-    16:                 <%= content_tag(:h2, link_to(question.text, answer_path(question)) ) %>
+    16:                 <%= content_tag(:h2, link_to(question.text,answers.answer_path(question)) ) %>
     17:               </li>
     18:           <% end %>
     19: 

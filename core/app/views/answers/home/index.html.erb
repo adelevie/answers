@@ -27,11 +27,11 @@
       <div class="pop-categories" id="tags">
         <% tags_with_questions.each do |tag| %>
           <div class="category">
-            <span class="left"><%= link_to(tag[:tag].name.capitalize, tag_path(tag[:tag])) %></span>
+            <span class="left"><%= link_to(tag[:tag].name.capitalize, answers.tag_path(tag[:tag])) %></span>
             <p class="right">
             <ul>
               <% tag[:questions].each do |question| %>
-                <p><%= link_to(question.text, answer_path(question)) %></p>
+                <p><%= link_to(question.text, answers.answer_path(question)) %></p>
               <% end %>
             </ul>
             </p>
@@ -42,3 +42,5 @@
 
   </div><!-- /main-modal -->
 </div><!-- /modal-container -->
+
+<!--<%= render partial: 'answers/shared/autocomplete' %>-->

@@ -9,7 +9,6 @@
 **.orig
 .bundle
 .coveralls.yml
-.databag_secret
 .env
 .idea
 .powrc
@@ -37,6 +36,7 @@ Vagrantfile
 /config/initializers/searchify.rb
 /coverage
 /db/*.sqlite3
+/deploy/.databag_secret
 /doc/search_stats.csv
 /fixtures
 /kitchen/nodes/*.json
@@ -48,4 +48,3 @@ Vagrantfile
 /test
 /tmp
 /vendor/bundle
-

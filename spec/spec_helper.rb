@@ -13,15 +13,17 @@ ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 # Configure Rails Environment
 ENV["RAILS_ENV"] ||= 'test'
 
-if ENV['TRAVIS']
-  require 'coveralls'
-  Coveralls.wear!
-end
+require 'simplecov'
+require 'coveralls'
+Coveralls.wear!('rails')
+SimpleCov.start('rails')
 
 require File.expand_path("../dummy/config/environment", __FILE__)
-
+require 'database_cleaner'
 require 'rspec/rails'
 require 'capybara/rspec'
+require 'vcr'
+require 'webmock/rspec'
 
 Rails.backtrace_cleaner.remove_silencers!
 
@@ -38,15 +40,13 @@ RSpec.configure do |config|
   config.filter_run :js => nil if ENV['JS'] == 'false'
   config.run_all_when_everything_filtered = true
   config.order = "random"
-  config.include ActionView::TestCase::Behavior, :example_group => { :file_path => %r{spec/presenters} }
-
-  config.include Capybara::DSL
-  config.include FactoryGirl::Syntax::Methods
-
-  config.order = 'random'
-  
   config.infer_spec_type_from_file_location!
   config.raise_errors_for_deprecations!
+
+  config.include ActionView::TestCase::Behavior, :example_group => { :file_path => %r{spec/presenters} }
+  config.include Capybara::DSL
+  config.include FactoryGirl::Syntax::Methods
+  
 
   config.mock_with(:rspec) { |c| c.syntax = [:expect] }
 
@@ -63,6 +63,21 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 end
+
+if ENV['CI']
+  SimpleCov.formatter = Coveralls::SimpleCov::Formatter
+else
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[ SimpleCov::Formatter::HTMLFormatter ]
+end
+
+VCR.configure do |c|
+  c.cassette_library_dir = 'core/spec/fixtures'
+  c.hook_into :webmock # or :fakeweb
+  c.default_cassette_options = { record: :new_episodes }
+  c.configure_rspec_metadata!
+end
+
+WebMock.disable_net_connect!(allow_localhost: true)
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories including factories.

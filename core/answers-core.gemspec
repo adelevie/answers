@@ -1,7 +1,7 @@
 # Encoding: UTF-8
 require File.expand_path('../../core/lib/answers/version', __FILE__)
 
-version = '0.0.0' #Answers::Version.to_s
+version = '0.0.0.2' #Answers::Version.to_s
 rails_version = '~> 4.1.6'
 
 Gem::Specification.new do |s|

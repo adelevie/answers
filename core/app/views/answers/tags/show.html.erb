@@ -1,4 +1,4 @@
-<div class="page-container">
+ <div class="page-container">
   <div class="breadcrumbs">
     <ol>
       <%= render_breadcrumbs :tag=> :li, :separator =>" > " %>
@@ -13,7 +13,7 @@
         <ul>
           <% questions.each do |question| %>
               <li class="article-listing">
-                <%= content_tag(:h2, link_to(question.text, answer_path(question)) ) %>
+                <%= content_tag(:h2, link_to(question.text, answers.answer_path(question)) ) %>
               </li>
           <% end %>
 

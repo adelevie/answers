@@ -9,3 +9,6 @@ rvm:
   - ruby-2.1.2
 services:
   - elasticsearch
+env:
+  - DB=postgresql
+  - DB=mysql

@@ -18,5 +18,25 @@ module Answers
         end
       end
     end
+
+  def tag_search
+
+    tag = params[:tag].strip if params[:tag].present?
+
+    return redirect_to root_path if params[:tag].blank?
+
+    results = Question.search(where: {tag_name: tag})
+
+    respond_to do |format|
+      format.json { render json: results }
+      format.html do 
+        render locals: {
+          results: results, 
+          tag: tag
+        } 
+      end
+    end
+  end
+
   end
 end

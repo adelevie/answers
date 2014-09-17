@@ -1,0 +1,15 @@
+{
+  "id": "vagrant",
+  "groups": {
+    "encrypted_data": "sbukH/tEaeamdr8Et2rLa15Tx2X2sJysroD7+qUyaYwmKFEqBJg7dgw0NnR/\nOeiD\n",
+    "iv": "v+U9qvSTnHjDEOHM6VLxVw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "shell": {
+    "encrypted_data": "qdINZrMtVPNTR3yOUWh3bfvLz47q5oB83Ucv3+vJr/g=\n",
+    "iv": "qrNeGqhMITdlvp/0NAAfkQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}

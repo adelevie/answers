@@ -4,7 +4,7 @@
     <div class="sidebar-content">
        <ul>
         <% results.each do |question| %>
-          <%= content_tag( :li, link_to(question.text, answer_path(question.id))) %>
+          <%= content_tag( :li, link_to(question.text, answers.answer_path(question.id))) %>
         <% end -%>
        </ul>
     </div>
