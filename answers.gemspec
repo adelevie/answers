@@ -5,8 +5,8 @@ require File.expand_path('../core/lib/answers/version', __FILE__)
 
 Gem::Specification.new do |spec|
   spec.name          = "answers"
-  spec.version       = Answers::Version.to_s
-  spec.authors       = ["Alan deLevie"]
+  spec.version       = '0.0.0.2' #Answers::Version.to_s
+  spec.authors       = ['Nick Bristow', 'Alan deLevie', 'Justin Grevich', 'Sasha Magee', 'John Stone', 'Ben Willman', 'John P. Yuda']
   spec.email         = ["justin.grevich@gsa.gov", "amos.stone@gsa.gov", "alan.delevie@gsa.gov"]
   spec.summary       = %q{The Answers gem}
   spec.description   = %q{Generator and Engines for the Answers Platform}
@@ -21,9 +21,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "bundler", "~> 1.6.2"
-  spec.add_dependency "rake"
-  spec.add_dependency "rails", "~> 4.1.6"
-  spec.add_dependency "answers-core"
-  spec.add_dependency "rspec-rails", "~> 3.1.0"
-  spec.add_dependency 'devise', '~> 3.2.0'
+  spec.add_dependency "answers-core", '0.0.0.2'
 end

@@ -1,18 +1,19 @@
 module Answers
   class AnswersController < Answers::ApplicationController
-  before_action :set_answer, only: [:show]
-  respond_to :html
+    before_action :set_answer, only: [:show]
+    respond_to :html
 
-  def index
-    @answers = Answer.all
-    respond_with(@answers)
-  end
+    def index
+      @answers = Answer.all
+      respond_with(@answers)
+    end
 
-  def show
-    respond_with(@answer)
-  end
+    def show
+      respond_with(@answer)
+    end
 
-  private
+    private
+
     def set_answer
       @answer = Answer.find(params[:id])
     end

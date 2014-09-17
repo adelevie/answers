@@ -1,7 +1,7 @@
 # Encoding: UTF-8
 require File.expand_path('../../core/lib/answers/version', __FILE__)
 
-version = Answers::Version.to_s
+version = '0.0.0.2' #Answers::Version.to_s
 rails_version = '~> 4.1.6'
 
 Gem::Specification.new do |s|
@@ -10,9 +10,9 @@ Gem::Specification.new do |s|
   s.version           = version
   s.summary           = %q{Core extension for Answers Platlform}
   s.description       = %q{The core of Answers Platform. This handles the common functionality and is required by most extensions}
-  s.email             = %q{info@domain.com}
+  s.email          = ["justin.grevich@gsa.gov", "amos.stone@gsa.gov", "alan.delevie@gsa.gov"]
   s.homepage          = %q{http://answers.domain.com}
-  s.authors           = ["Alan deLevie"]
+  s.authors           = ['Nick Bristow', 'Alan deLevie', 'Justin Grevich', 'Sasha Magee', 'John Stone', 'Ben Willman', 'John P. Yuda']
   s.license           = "Public Domain"
   s.require_paths     = %w(lib)
 

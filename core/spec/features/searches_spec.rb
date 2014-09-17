@@ -45,9 +45,9 @@ describe'Searches', type: :feature do
 
       before do
         allow(Answers::Question).to receive(:search) { [question_1, question_2] }
-        visit answers_path
+        visit answers.answers_path
         fill_in 'query', :with => query
-        click_on 'SEARCH'
+        click_on 'Search'
       end
 
       it 'show the query' do
@@ -70,8 +70,8 @@ describe'Searches', type: :feature do
     context 'Question found for tag' do
       
       before do
-        allow(Question).to receive(:search) { results }
-        visit tag_search_path(:tag => tag)
+        allow(Answers::Question).to receive(:search) { results }
+        visit answers.tag_search_path(:tag => tag)
       end
 
       subject { page }
@@ -86,16 +86,3 @@ describe'Searches', type: :feature do
     end
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-

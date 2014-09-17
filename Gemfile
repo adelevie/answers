@@ -3,15 +3,17 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in answers.gemspec
 gemspec
 
+gem 'actionpack-page_caching'
 gem 'activeadmin', github: 'activeadmin'
 gem 'acts-as-taggable-on'
 gem 'breadcrumbs_on_rails'
 gem 'cancancan', github: 'andypike/cancancan', branch: 'rspec3'
-gem 'quiet_assets'
+gem 'meta-tags'
 gem 'reverse_markdown'
 gem 'secure_headers'
 gem 'sass-rails', github: 'rails/sass-rails'
 gem 'searchkick'
+gem 'turbolinks'
 
 # Database Configuration
 unless ENV['TRAVIS']
@@ -33,17 +35,41 @@ if !ENV['TRAVIS'] || ENV['DB'] == 'postgresql'
   end
 end
 
-group :test do
-  gem 'answers-testing', path: 'testing'
-  gem 'answers-core'
+
+group :development do
+  gem 'better_errors'
+  gem 'berkshelf'
+  gem 'binding_of_caller'
+  gem 'capistrano'
+  gem 'guard-rspec', require: false
+  gem 'knife-ec2'
+  gem 'knife-solo', github: 'matschaffer/knife-solo', submodules: true
+  gem 'knife-solo_data_bag'
+  gem 'quiet_assets'
+  gem 'rb-fsevent'
+  gem 'rvm-capistrano'
+  gem 'spring-commands-rspec'
+  gem 'unf'
+end
+
+group :development, :test do
   gem 'brakeman', require: false
   gem 'coveralls', require: false
-  gem 'database_cleaner'
   gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'inch', require: false
+  gem 'memcached'
+  gem 'pry-nav'
+  gem 'rspec-collection_matchers'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'answers-testing'
+  gem 'capybara'
+  gem 'database_cleaner'
   gem 'generator_spec', '~> 0.9.1'
   gem 'launchy'
-  gem 'meta-tags'
-  gem 'pry-nav'
-  gem 'sqlite3'
-  gem 'turbolinks'
+  gem 'webmock'
+  gem 'vcr'
 end

@@ -1,5 +1,5 @@
-<% set_meta_tags description: @question.preview,
-                 canonical: ENV['official_government_long_url'].to_s + request.fullpath
+<% set_meta_tags description: @question.text,
+                 canonical: ENV['official_government_long_url'].to_s + request.fullpath,
                  title: [@question.text] %>
 
 <p id="notice"><%= notice %></p>
@@ -23,8 +23,8 @@
     </div><!-- /span9 -->
     
     <div class="span3">
-      <%= render :partial => 'shared/similar_questions', locals: { results: similar_questions } %>
-      <%= render :partial => 'shared/tags_sidebar', locals: { question: question }%>
+      <%= render :partial => 'answers/shared/similar_questions', locals: { results: similar_questions } %>
+      <%= render :partial => 'answers/shared/tags_sidebar', locals: { question: question }%>
     </div>
     
   </div>

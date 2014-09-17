@@ -40,9 +40,6 @@ end
 
 application_name = ARGV.shift
 
-require 'pry'
-require 'pry-nav'
-
 result = Rails::Generators::AppGenerator.start [application_name, '-m', template_path, '--skip-test-unit'] | ARGV
 
 if result && result.include?('Gemfile')

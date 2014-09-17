@@ -8,7 +8,7 @@
         <div class="header"><h1>All Answers</h1></div>
         <ul>
           <% @questions.map do |q| %>
-            <li class="category-listing"><%= link_to q.text, answer_path(q) %></li>
+            <li class="category-listing"><%= link_to q.text,answers.answer_path(q) %></li>
           <% end %>
 
         </ul>
