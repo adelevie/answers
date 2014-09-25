@@ -7,7 +7,7 @@ describe Answers::Ability, :type => :model do
 
   context 'when user is just a user' do
     let (:user) { create(:user_no_abilities) }
-    pending 'why'
+
     it { is_expected.to be_able_to(:read, Answers::Question.new) }
     it { is_expected.to be_able_to(:read, Answers::Answer.new) }
 
