@@ -1,6 +1,6 @@
-<% set_meta_tags description: @question.text,
+<% set_meta_tags description: question.text,
                  canonical: ENV['official_government_long_url'].to_s + request.fullpath,
-                 title: [@question.text] %>
+                 title: [question.text] %>
 
 <p id="notice"><%= notice %></p>
 
