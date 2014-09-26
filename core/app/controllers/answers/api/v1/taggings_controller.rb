@@ -20,8 +20,8 @@ module Answers
     end
 
     def update
-      tag = ActsAsTaggableOn::Tagging.find(params[:id])
-      tag.update(tag_params)
+      tagging = ActsAsTaggableOn::Tagging.find(params[:id])
+      tagging.update(tagging_params)
       render 'tagging/show', locals: {tagging: tagging}
     end
 
