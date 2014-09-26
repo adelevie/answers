@@ -36,13 +36,13 @@ RSpec.describe Answers::HomeController, :type => :feature do
 
   describe "GET index" do    
     it "displays a list of top Tags" do
-      pending 'Need to update for new engine layout.'
+      #pending 'Need to update for new engine layout.'
 
       visit "/"
       # check for basic text
       expect(page).to(have_content("Most Popular Tags"))
       # check for div
-      expect(page).to(have_tag("div#tags"))
+      expect(page).to(have_css("div#tags"))
       
       div_children = 4  # four tags listed
       p_children = 3    # three links per tag
