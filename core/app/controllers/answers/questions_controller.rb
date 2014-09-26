@@ -22,9 +22,8 @@ module Answers
     private
 
       def question_params
-        #params[:question]
-        #params.require(:question).permit(:text, :in_language)
         params[:question]
+        params.require(:question).permit(:text, :in_language)
       end
     end
 end
