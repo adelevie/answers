@@ -1,5 +1,5 @@
 require 'spec_helper'
 
 RSpec.describe "tags/show.html.erb", :type => :view do
-  pending "add some examples to (or delete) #{__FILE__}"
+  pending "Need to fix vagrant error to know what tags will look like"
 end
