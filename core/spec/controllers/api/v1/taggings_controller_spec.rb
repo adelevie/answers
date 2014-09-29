@@ -35,7 +35,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
   describe "GET index" do
     it "assigns all taggings as @taggings" do
       controller do
-        controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
         tagging = ActsAsTaggableOn::Tagging.create! valid_attributes
         get :index, {}, valid_session
         expect(assigns(:taggings)).to eq([tagging])
@@ -46,7 +45,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
   describe "GET show" do
     it "assigns the requested tagging as @tagging" do
       controller do
-        controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
         tagging = ActsAsTaggableOn::Tagging.create! valid_attributes
         get :show, {:id => tagging.to_param}, valid_session
         expect(assigns(:tagging)).to eq(tagging)
@@ -58,7 +56,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
     describe "with valid params" do
       it "creates a new ActsAsTaggableOn::Tag" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"        
           expect {
             post :create, {:tagging => valid_attributes}, valid_session
           }.to change(ActsAsTaggableOn::Tagging, :count).by(1)
@@ -67,7 +64,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
 
       it "assigns a newly created tagging as @tagging" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"        
           post :create, {:tagging => valid_attributes}, valid_session
           expect(assigns(:tagging)).to be_a(ActsAsTaggableOn::Tagging)
           expect(assigns(:tagging)).to be_persisted
@@ -76,7 +72,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
 
       it "redirects to the created tagging" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"        
           post :create, {:tagging => valid_attributes}, valid_session
           expect(response).to redirect_to(ActsAsTaggableOn::Tagging.last)
         end
@@ -86,7 +81,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
     describe "with invalid params" do
       it "assigns a newly created but unsaved tagging as @tagging" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
           post :create, {:tagging => invalid_attributes}, valid_session
           expect(assigns(:tagging)).to be_a_new(ActsAsTaggableOn::Tagging)
         end
@@ -94,7 +88,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
 
       it "re-renders the 'new' template" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"        
           post :create, {:tagging => invalid_attributes}, valid_session
           expect(response).to render_template("new")
         end
@@ -116,7 +109,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
 
       it "updates the requested tagging" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers" 
           tagging = ActsAsTaggableOn::Tagging.create! valid_attributes
           put :update, {:id => tagging.to_param, :tagging => new_attributes}, valid_session
           tagging.reload
@@ -126,7 +118,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
 
       it "assigns the requested tagging as @tagging" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers" 
           tagging = ActsAsTaggableOn::Tagging.create! valid_attributes
           put :update, {:id => tagging.to_param, :tagging => valid_attributes}, valid_session
           expect(assigns(:tagging)).to eq(tagging)
@@ -135,7 +126,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
 
       it "redirects to the tagging" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers" 
           tagging = ActsAsTaggableOn::Tagging.create! valid_attributes
           put :update, {:id => tagging.to_param, :tagging => valid_attributes}, valid_session
           expect(response).to redirect_to(tagging)
@@ -146,7 +136,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
     describe "with invalid params" do
       it "assigns the tagging as @tagging" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers" 
           tagging = ActsAsTaggableOn::Tagging.create! valid_attributes
           put :update, {:id => tagging.to_param, :tagging => invalid_attributes}, valid_session
           expect(assigns(:tagging)).to eq(tagging)
@@ -155,7 +144,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
 
       it "re-renders the 'edit' template" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers" 
           tagging = ActsAsTaggableOn::Tagging.create! valid_attributes
           put :update, {:id => tagging.to_param, :tagging => invalid_attributes}, valid_session
           expect(response).to render_template("edit")
@@ -167,7 +155,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
   describe "DELETE destroy" do
     it "destroys the requested tagging" do
       controller do
-        controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers" 
         tagging = ActsAsTaggableOn::Tagging.create! valid_attributes
         expect {
           delete :destroy, {:id => tagging.to_param}, valid_session
@@ -177,7 +164,6 @@ RSpec.describe Answers::Api::V1::TaggingsController, :type => :controller do
 
     it "redirects to the taggings list" do
       controller do
-        controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers" 
         tagging = ActsAsTaggableOn::Tagging.create! valid_attributes
         delete :destroy, {:id => tagging.to_param}, valid_session
         expect(response).to redirect_to(taggings_url)

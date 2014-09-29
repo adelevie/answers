@@ -30,8 +30,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
   describe "GET index" do
     it "assigns all tags as @tags" do
       controller do
-        controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
-
         tag = ActsAsTaggableOn::Tag.create! valid_attributes
         get :index, {}, valid_session
         expect(assigns(:tags)).to eq([tag])
@@ -42,7 +40,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
   describe "GET show" do
     it "assigns the requested tag as @tag" do
       controller do
-        controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
         tag = ActsAsTaggableOn::Tag.create! valid_attributes
         get :show, {:id => tag.to_param}, valid_session
         expect(assigns(:tag)).to eq(tag)
@@ -54,7 +51,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
     describe "with valid params" do
       it "creates a new ActsAsTaggableOn::Tag" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
           expect {
             post :create, {:tag => valid_attributes}, valid_session
           }.to change(ActsAsTaggableOn::Tag, :count).by(1)
@@ -63,7 +59,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
 
       it "assigns a newly created tag as @tag" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
           post :create, {:tag => valid_attributes}, valid_session
           expect(assigns(:tag)).to be_a(ActsAsTaggableOn::Tag)
           expect(assigns(:tag)).to be_persisted
@@ -72,7 +67,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
 
       it "redirects to the created tag" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
           post :create, {:tag => valid_attributes}, valid_session
           expect(response).to redirect_to(ActsAsTaggableOn::Tag.last)
         end
@@ -82,7 +76,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
     describe "with invalid params" do
       it "assigns a newly created but unsaved tag as @tag" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
           post :create, {:tag => invalid_attributes}, valid_session
           expect(assigns(:tag)).to be_a_new(ActsAsTaggableOn::Tag)
         end
@@ -90,7 +83,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
 
       it "re-renders the 'new' template" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
           post :create, {:tag => invalid_attributes}, valid_session
           expect(response).to render_template("new")
         end
@@ -106,7 +98,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
 
       it "updates the requested tag" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
           tag = ActsAsTaggableOn::Tag.create! valid_attributes
           put :update, {:id => tag.to_param, :tag => new_attributes}, valid_session
           tag.reload
@@ -116,7 +107,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
 
       it "assigns the requested tag as @tag" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
           tag = ActsAsTaggableOn::Tag.create! valid_attributes
           put :update, {:id => tag.to_param, :tag => valid_attributes}, valid_session
           expect(assigns(:tag)).to eq(tag)
@@ -125,7 +115,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
 
       it "redirects to the tag" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
           tag = ActsAsTaggableOn::Tag.create! valid_attributes
           put :update, {:id => tag.to_param, :tag => valid_attributes}, valid_session
           expect(response).to redirect_to(tag)
@@ -136,7 +125,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
     describe "with invalid params" do
       it "assigns the tag as @tag" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
           tag = ActsAsTaggableOn::Tag.create! valid_attributes
           put :update, {:id => tag.to_param, :tag => invalid_attributes}, valid_session
           expect(assigns(:tag)).to eq(tag)
@@ -145,7 +133,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
 
       it "re-renders the 'edit' template" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
           tag = ActsAsTaggableOn::Tag.create! valid_attributes
           put :update, {:id => tag.to_param, :tag => invalid_attributes}, valid_session
           expect(response).to render_template("edit")
@@ -157,7 +144,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
   describe "DELETE destroy" do
     it "destroys the requested tag" do
       controller do
-        controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
         tag = ActsAsTaggableOn::Tag.create! valid_attributes
         expect {
           delete :destroy, {:id => tag.to_param}, valid_session
@@ -167,7 +153,6 @@ RSpec.describe Answers::Api::V1::TagsController, :type => :controller do
 
     it "redirects to the tags list" do
       controller do
-        controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/tags"
         tag = ActsAsTaggableOn::Tag.create! valid_attributes
         delete :destroy, {:id => tag.to_param}, valid_session
         expect(response).to redirect_to(tags_url)

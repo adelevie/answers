@@ -47,7 +47,6 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
   describe "GET index" do
     it "assigns all questions as @questions" do
       controller do
-        controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
         question = Answers::Question.create! valid_attributes
         get :index, {}, valid_session
         expect(assigns(:questions)).to eq([question])
@@ -58,7 +57,6 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
   describe "GET show" do
     it "assigns the requested question as @question" do
       controller do
-        controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
         question = Answers::Question.create! valid_attributes
         get :show, {:id => question.to_param}, valid_session
         expect(assigns(:question)).to eq(question)
@@ -70,7 +68,6 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
     describe "with valid params" do
       it "creates a new Answers::Question" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
           expect {
             post :create, {:question => valid_attributes}, valid_session
           }.to change(Answers::Question, :count).by(1)
@@ -79,7 +76,6 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
 
       it "assigns a newly created question as @question" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
           post :create, {:question => valid_attributes}, valid_session
           expect(assigns(:question)).to be_a(Answers::Question)
           expect(assigns(:question)).to be_persisted
@@ -88,7 +84,6 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
 
       it "redirects to the created question" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
           post :create, {:question => valid_attributes}, valid_session
           expect(response).to redirect_to(Answers::Question.last)
         end
@@ -98,7 +93,6 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
     describe "with invalid params" do
       it "assigns a newly created but unsaved question as @question" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
           post :create, {:question => invalid_attributes}, valid_session
           expect(assigns(:question)).to be_a_new(Answers::Question)
         end
@@ -106,7 +100,6 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
 
       it "re-renders the 'new' template" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
           post :create, {:question => invalid_attributes}, valid_session
           expect(response).to render_template("new")
         end
@@ -126,18 +119,16 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
 
       it "updates the requested question" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
           question = Answers::Question.create! valid_attributes
           put :update, {:id => question.to_param, :question => new_attributes}, valid_session
           question.reload
-          
+
           expect(question.text).to(eq(new_question_text))
         end
       end
 
       it "assigns the requested question as @question" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
           question = Answers::Question.create! valid_attributes
           put :update, {:id => question.to_param, :question => valid_attributes}, valid_session
           expect(assigns(:question)).to eq(question)
@@ -146,7 +137,6 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
 
       it "redirects to the question" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
           question = Answers::Question.create! valid_attributes
           put :update, {:id => question.to_param, :question => valid_attributes}, valid_session
           expect(response).to redirect_to(question)
@@ -157,7 +147,6 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
     describe "with invalid params" do
       it "assigns the question as @question" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
           question = Answers::Question.create! valid_attributes
           put :update, {:id => question.to_param, :question => invalid_attributes}, valid_session
           expect(assigns(:question)).to eq(question)
@@ -166,7 +155,6 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
 
       it "re-renders the 'edit' template" do
         controller do
-          controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
           question = Answers::Question.create! valid_attributes
           put :update, {:id => question.to_param, :question => invalid_attributes}, valid_session
           expect(response).to render_template("edit")
@@ -178,7 +166,6 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
   describe "DELETE destroy" do
     it "destroys the requested question" do
       controller do
-        controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
         question = Answers::Question.create! valid_attributes
         expect {
           delete :destroy, {:id => question.to_param}, valid_session
@@ -188,7 +175,6 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
 
     it "redirects to the questions list" do
       controller do
-        controller.prepend_view_path "#{Rails.root}/answers/core/app/views/answers/api/v1/answers"
         question = Answers::Question.create! valid_attributes
         delete :destroy, {:id => question.to_param}, valid_session
         expect(response).to redirect_to(questions_url)
