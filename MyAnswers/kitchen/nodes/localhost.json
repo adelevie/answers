@@ -1,0 +1,62 @@
+{
+	"run_list":[ "role[bare_bones]", "role[postgre]", "role[answers]", "role[app_server]" ],
+	"answers": {
+		"rails": {
+			"bundle_path": "/opt/rbenv",
+			"deploy_to": "/var/www/MyAnswers",
+			"deploy_user": "vagrant",
+			"env": "development"
+		},
+		"ruby": {
+			"version": "2.1.2"
+		}
+	},
+	"authorization": {
+	    "sudo": {
+	      "groups": ["adm"],
+	      "users": ["vagrant"],
+	      "passwordless": true
+	    }
+	},
+  "build-essential": {
+  	"compile_time": false
+  },
+  "elasticsearch": {
+    "allocated_memory": "1024m",
+    "cluster": {
+      "name": "answers"
+    },
+    "custom_config": {
+    	"script.disable_dynamic": true
+    },
+    "version": "1.3.0"
+  },
+	"java": {
+    "install_flavor": "openjdk",
+    "jdk_version": "7"
+  },
+	"ntp": {
+		"apparmor_enabled": false
+	},
+	"postgresql": {
+		 "databases": [
+		    {
+		      "name": "answers_dev",
+		      "owner": "answers",
+		      "encoding": "UTF-8",
+		      "locale": "en_US.UTF-8"
+		    },
+		    {
+		      "name": "answers_test",
+		      "owner": "answers",
+		      "encoding": "UTF-8",
+		      "locale": "en_US.UTF-8"
+		    }
+		],
+		"version": "9.3"
+	},
+	"rbenv": {
+		"group_users": ["vagrant"]
+	},
+	"set_fqdn": "vagrant.localhost"
+}

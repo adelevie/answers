@@ -41,7 +41,6 @@ Vagrantfile
 /fixtures
 /kitchen/nodes/*.json
 /log/*
-/MyAnswers
 /public/system
 /spec/dummy
 /spec/tmp
