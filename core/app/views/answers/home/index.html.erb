@@ -27,7 +27,7 @@
       <div class="pop-categories" id="tags">
         <% tags_with_questions.each do |tag| %>
           <div class="category">
-            <span class="left"><%= link_to(tag[:tag].name.capitalize, answers.tag_path(tag[:tag])) %></span>
+            <span class="left"><%= link_to(tag[:tag].name.capitalize, answers.tag_path(tag[:tag])) %></span><br />
             <p class="right">
             <ul>
               <% tag[:questions].each do |question| %>
