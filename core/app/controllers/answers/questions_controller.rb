@@ -2,8 +2,8 @@ module Answers
   class QuestionsController < Answers::ApplicationController
     respond_to :html
 
-    add_breadcrumb "Home", :answers_path
-
+    add_breadcrumb "Home", "/"
+    
     def index
       add_breadcrumb "Answers", answers.answers_path
       
@@ -13,6 +13,7 @@ module Answers
 
     def show
       question = Question.find(params[:id])
+      
       add_breadcrumb "Answers", answers.answers_path
       add_breadcrumb question.text, answers.answer_path(question)
 
