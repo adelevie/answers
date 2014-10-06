@@ -233,6 +233,9 @@ gem 'pg'
     def migrate_database!
       unless self.options[:skip_migrations]
         rake 'railties:install:migrations'
+        # Additional migrations
+        run 'rails g friendly_id' # generator for Friendly_ID gem
+        run 'rails g migration AddSlugToTags slug:string' # generator for Friendly IDs with acts_as_taggable_on
         rake 'db:create db:migrate' unless self.options[:skip_db]
       end
     end

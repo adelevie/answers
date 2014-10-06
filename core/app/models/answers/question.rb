@@ -5,6 +5,9 @@ module Answers
     has_many :answers
     searchkick wordnet: true
 
+    extend FriendlyId
+    friendly_id :text, use: :slugged
+    
     attr_writer :tag_ids
     
     def top_answer

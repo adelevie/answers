@@ -10,9 +10,9 @@ Gem::Specification.new do |s|
   s.version           = version
   s.summary           = %q{Core extension for Answers Platlform}
   s.description       = %q{The core of Answers Platform. This handles the common functionality and is required by most extensions}
-  s.email          = ["justin.grevich@gsa.gov", "amos.stone@gsa.gov", "alan.delevie@gsa.gov"]
+  s.email             = ["justin.grevich@gsa.gov", "amos.stone@gsa.gov", "alan.delevie@gsa.gov"]
   s.homepage          = %q{http://answers.domain.com}
-  s.authors           = ['Nick Bristow', 'Alan deLevie', 'Justin Grevich', 'Sasha Magee', 'John Stone', 'Ben Willman', 'John P. Yuda']
+  s.authors           = ['Nick Bristow', 'Alan deLevie', 'Justin Grevich', 'Sasha Magee', 'Amos Stone', 'Ben Willman', 'John P. Yuda']
   s.license           = "Public Domain"
   s.require_paths     = %w(lib)
 
@@ -26,5 +26,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'activerecord',                rails_version
   s.add_dependency 'actionpack',                  rails_version
   s.add_dependency 'devise',                      '~>3.2.0'
-
 end

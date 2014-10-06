@@ -1,7 +1,7 @@
 module Answers
   class TagsController < Answers::ApplicationController
-    caches_page :index
-    caches_page :show 
+    # caches_page :index
+    # caches_page :show 
     
     add_breadcrumb "Home", :answers_path
     
@@ -13,24 +13,22 @@ module Answers
     end
 
     def show
-      id  = params[:id].to_i
-      tag = ActsAsTaggableOn::Tag.find(id)
-      
+      tag = ActsAsTaggableOn::Tag.friendly.find(tag_params[:id])
+
       add_breadcrumb "Tags", answers.tags_path
       add_breadcrumb tag.name.capitalize, answers.tag_path(tag)
       
-      taggings = tag.taggings.select do |tagging| 
-        tagging.taggable_type == "Question"
-      end
-      
-      questions = Question.find(
-                    taggings.map(&:taggable_id)
-                  )
+      questions = Question.tagged_with(tag.name)
       
       render locals: {
         tag: tag,
         questions: questions
       }
+    end
+
+    protected
+    def tag_params
+      params.permit(:id)
     end
   end
 end

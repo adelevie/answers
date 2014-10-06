@@ -19,10 +19,12 @@ class AnswersUp < ActiveRecord::Migration
       t.string :text
       t.string :url
       t.string :in_language
+      t.string :slug,           unique: true
 
       t.timestamps
     end
 
+    add_index :answers_questions, :slug
     add_index :answers_questions, :id
 
 

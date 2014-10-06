@@ -14,6 +14,7 @@ gem 'secure_headers'
 gem 'sass-rails', github: 'rails/sass-rails'
 gem 'searchkick'
 gem 'turbolinks'
+gem 'friendly_id',                 '~> 5.0.0'
 
 # Database Configuration
 unless ENV['TRAVIS']

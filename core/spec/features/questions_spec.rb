@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe'Questions', type: :feature do
+describe 'Questions', type: :feature do
 
   describe 'question tags' do
     let(:answer) { create(:answer) }
@@ -10,16 +10,15 @@ describe'Questions', type: :feature do
     context 'Tag found' do
 
       before do
-        allow(question).to receive(:answers).and_return([answer])
-        allow(question).to receive(:tag_list).and_return([tag])
+        question.tag_list = tag.name
+        question.save
         allow_any_instance_of(Answers::Question).to receive(:similar).and_return([question])
-        allow(Answers::Question).to receive(:find) {question}
-        visit answers.answer_path(answer.id)
+        visit answers.answer_path(question)
       end
 
       subject { page }
 
-      it { is_expected.to have_link("#{tag}", href: answers.tag_search_path(:tag => tag)) }
+      it { is_expected.to have_link("#{tag}", href: answers.tag_search_path(:tag => tag.name)) }
       it { is_expected.to have_content "More Questions on..."}
     end
   end
@@ -34,7 +33,7 @@ describe'Questions', type: :feature do
       before do
         allow_any_instance_of(Answers::Question).to receive(:similar).and_return([question_1, question_2])
         allow(Answers::Question).to receive(:find) {question_1}
-        visit answers.answer_path(answer.id)
+        visit answers.answer_path(question_1)
       end
 
       subject { page }

@@ -25,7 +25,7 @@ module Answers
 
     return redirect_to root_path if params[:tag].blank?
 
-    results = Question.search(where: {tag_name: tag})
+    results = Question.tagged_with(tag)
 
     respond_to do |format|
       format.json { render json: results }

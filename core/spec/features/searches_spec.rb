@@ -69,19 +69,19 @@ describe'Searches', type: :feature do
     
     context 'Question found for tag' do
       
-      before do
-        allow(Answers::Question).to receive(:search) { results }
-        visit answers.tag_search_path(:tag => tag)
-      end
-
-      subject { page }
-
       it 'question links are on page' do
-      is_expected.to have_content "Questions related to:"
-      
-      results.each { |result|
-        should have_link("#{result.text}")
-      }
+        allow(Answers::Question).to receive(:search) { results }
+        questions.each do |question|
+          question.tags << tag
+          question.save
+        end
+
+        visit answers.tag_search_path(:tag => tag)
+        expect(page).to have_content "Questions related to:"
+
+        results.each { |result|
+          expect(page).to have_link("#{result.text}")
+        }
       end
     end
   end

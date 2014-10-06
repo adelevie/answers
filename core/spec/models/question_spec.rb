@@ -61,10 +61,14 @@ RSpec.describe Answers::Question, :type => :model do
       end
     end
     
-    #context "when some tags are loaded" do
-    #  it "should return an Array of tag objects" do
-    #    
-    #  end
-    #end
   end
+
+  context "slug" do
+    let(:question) { create(:question, text: 'I can haz # ~ ! ____a slug?!??????' ) }
+
+    it 'returns a hyphenated URI string' do
+      expect(question.slug).to eq('i-can-haz-____a-slug')
+    end
+  end
+
 end

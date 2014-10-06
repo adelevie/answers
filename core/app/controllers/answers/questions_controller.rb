@@ -12,7 +12,7 @@ module Answers
     end
 
     def show
-      question = Question.find(params[:id])
+      question = Question.friendly.find(params[:id])
       add_breadcrumb "Answers", answers.answers_path
       add_breadcrumb question.text, answers.answer_path(question)
 

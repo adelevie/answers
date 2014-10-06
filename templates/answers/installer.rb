@@ -15,7 +15,7 @@ end
 
 append_file 'Gemfile', <<-GEMFILE
 gem 'activeadmin', github: 'activeadmin'
-gem 'answers'
+gem 'answers', github: '18F/answers', branch: 'feature/200-friendly_ids'
 
 # gem 'answers-admin', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
 # gem 'answers-guides', ['~> #{VERSION_BAND}', '>= #{MINOR_VERSION_BAND}']
@@ -31,6 +31,7 @@ gem 'meta-tags'
 gem 'searchkick'
 gem 'secure_headers'
 gem 'simple_token_authentication'
+gem 'friendly_id',                 '~> 5.0.0'
 GEMFILE
 
 begin
