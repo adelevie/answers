@@ -61,23 +61,15 @@
 <div class="footer">
   <div class="container">
     <ul class="footer-links">
-      <li><%=link_to("About", "#")%></li>
-      <li><%= mail_to ENV['official_contact_email'], "Contact" %></li>
+      <li><%=link_to("About", "/about")%></li>
+      <li><%= mail_to ENV['official_contact_email'] || 'alan.delevie@gsa.gov', "Contact" %></li>
       <li><a href="https://github.com/18F/answers">Code</a></li>
       <% if not ENV['official_style_guide'].nil? %>
         <li><a href=<%= ENV['official_style_guide'] %> target="_blank">Style Guide</a></li>
       <% end %>
 
-      <li><%= link_to("Sign In", '') %></li>
+      <li><%= link_to("Sign In", '/users/sign_in') %></li>
     </ul>
-    <div class="cfa-logos">
-      
-      <a href="http://codeforamerica.org/"><img src="/assets/cfa_logo_footer.png" class="right" alt="Code for America" /></a>
-      <span class="plus">&#43;</span>
-      <a href="http://openoakland.org/"><%= image_tag 'openoaklandlogo.png', class: 'right', alt: 'City of Oakland' %></a>
-      <span class="plus">&#43;</span>
-      <a href="http://www2.oaklandnet.com"><img src="/assets/OaklandCityTree.png" class="right" alt="City of Oakland" /></a>
-    </div>
   </div>
 </div><!-- /footer -->
 
