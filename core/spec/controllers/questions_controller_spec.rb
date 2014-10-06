@@ -19,16 +19,24 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 RSpec.describe Answers::QuestionsController, :type => :controller do
+  routes { Answers::Core::Engine.routes}
 
   # This should return the minimal set of attributes required to create a valid
   # Question. As you add validations to Question, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+      text: "Question text",
+      in_language: "english"
+    }
   }
-
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+  
+  let(:question) {
+    create(:question)
+  }
+  
+  let(:questions) {
+    [question]
   }
 
   # This should return the minimal set of values that should be in the session
@@ -38,17 +46,30 @@ RSpec.describe Answers::QuestionsController, :type => :controller do
 
   describe "GET index" do
     it "assigns all questions as @questions" do
+      get :index, {}, valid_session
+      expect(assigns(:questions)).to(eq(questions))
+    end
+    
+    it "renders the correct template" do
       question = Answers::Question.create! valid_attributes
       get :index, {}, valid_session
-      expect(assigns(:questions)).to eq([question])
+      expect(response).to(render_template('answers/questions/index'))
     end
   end
 
   describe "GET show" do
-    it "assigns the requested question as @question" do
-      question = Answers::Question.create! valid_attributes
-      get :show, {:id => question.to_param}, valid_session
-      expect(assigns(:question)).to eq(question)
+    # Normally this would be a good spot to test 'assigns'.
+    # However, since this action sets no instance variables,
+    # it's impossible to test. 
+    # Instead we rely on spec/features/questions_spec.rb to
+    # test the output from the QuestionsController and 
+    # corresponding templates.
+    
+    it "renders the correct template" do
+      allow(Answers::Question).to(receive(:find)).and_return(create(:question, id: 1))
+      allow_any_instance_of(Answers::Question).to(receive(:similar)).and_return([])
+      get :show, {id: 1}, valid_session
+      expect(response).to(render_template('answers/questions/show'))
     end
   end
 

@@ -19,16 +19,24 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
+  routes { Answers::Core::Engine.routes}
 
   # This should return the minimal set of attributes required to create a valid
   # Question. As you add validations to Question, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+      text: "Some question text",
+      in_language: "english"
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+      text: "Some question text",
+      in_language: "english",
+      invalid: "Invalid"
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -38,106 +46,139 @@ RSpec.describe Answers::Api::V1::QuestionsController, :type => :controller do
 
   describe "GET index" do
     it "assigns all questions as @questions" do
-      question = Answers::Question.create! valid_attributes
-      get :index, {}, valid_session
-      expect(assigns(:questions)).to eq([question])
+      controller do
+        question = Answers::Question.create! valid_attributes
+        get :index, {}, valid_session
+        expect(assigns(:questions)).to eq([question])
+      end
     end
   end
 
   describe "GET show" do
     it "assigns the requested question as @question" do
-      question = Answers::Question.create! valid_attributes
-      get :show, {:id => question.to_param}, valid_session
-      expect(assigns(:question)).to eq(question)
+      controller do
+        question = Answers::Question.create! valid_attributes
+        get :show, {:id => question.to_param}, valid_session
+        expect(assigns(:question)).to eq(question)
+      end
     end
   end
 
   describe "POST create" do
     describe "with valid params" do
       it "creates a new Answers::Question" do
-        expect {
-          post :create, {:question => valid_attributes}, valid_session
-        }.to change(Answers::Question, :count).by(1)
+        controller do
+          expect {
+            post :create, {:question => valid_attributes}, valid_session
+          }.to change(Answers::Question, :count).by(1)
+        end
       end
 
       it "assigns a newly created question as @question" do
-        post :create, {:question => valid_attributes}, valid_session
-        expect(assigns(:question)).to be_a(Answers::Question)
-        expect(assigns(:question)).to be_persisted
+        controller do
+          post :create, {:question => valid_attributes}, valid_session
+          expect(assigns(:question)).to be_a(Answers::Question)
+          expect(assigns(:question)).to be_persisted
+        end
       end
 
       it "redirects to the created question" do
-        post :create, {:question => valid_attributes}, valid_session
-        expect(response).to redirect_to(Answers::Question.last)
+        controller do
+          post :create, {:question => valid_attributes}, valid_session
+          expect(response).to redirect_to(Answers::Question.last)
+        end
       end
     end
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved question as @question" do
-        post :create, {:question => invalid_attributes}, valid_session
-        expect(assigns(:question)).to be_a_new(Answers::Question)
+        controller do
+          post :create, {:question => invalid_attributes}, valid_session
+          expect(assigns(:question)).to be_a_new(Answers::Question)
+        end
       end
 
       it "re-renders the 'new' template" do
-        post :create, {:question => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
+        controller do
+          post :create, {:question => invalid_attributes}, valid_session
+          expect(response).to render_template("new")
+        end
       end
     end
   end
 
   describe "PUT update" do
     describe "with valid params" do
+      let(:new_question_text) {"Some question text (updated)"}
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+          text: new_question_text,
+          in_language: "english"
+        }
       }
 
       it "updates the requested question" do
-        question = Answers::Question.create! valid_attributes
-        put :update, {:id => question.to_param, :question => new_attributes}, valid_session
-        question.reload
-        skip("Add assertions for updated state")
+        controller do
+          question = Answers::Question.create! valid_attributes
+          put :update, {:id => question.to_param, :question => new_attributes}, valid_session
+          question.reload
+
+          expect(question.text).to(eq(new_question_text))
+        end
       end
 
       it "assigns the requested question as @question" do
-        question = Answers::Question.create! valid_attributes
-        put :update, {:id => question.to_param, :question => valid_attributes}, valid_session
-        expect(assigns(:question)).to eq(question)
+        controller do
+          question = Answers::Question.create! valid_attributes
+          put :update, {:id => question.to_param, :question => valid_attributes}, valid_session
+          expect(assigns(:question)).to eq(question)
+        end
       end
 
       it "redirects to the question" do
-        question = Answers::Question.create! valid_attributes
-        put :update, {:id => question.to_param, :question => valid_attributes}, valid_session
-        expect(response).to redirect_to(question)
+        controller do
+          question = Answers::Question.create! valid_attributes
+          put :update, {:id => question.to_param, :question => valid_attributes}, valid_session
+          expect(response).to redirect_to(question)
+        end
       end
     end
 
     describe "with invalid params" do
       it "assigns the question as @question" do
-        question = Answers::Question.create! valid_attributes
-        put :update, {:id => question.to_param, :question => invalid_attributes}, valid_session
-        expect(assigns(:question)).to eq(question)
+        controller do
+          question = Answers::Question.create! valid_attributes
+          put :update, {:id => question.to_param, :question => invalid_attributes}, valid_session
+          expect(assigns(:question)).to eq(question)
+        end
       end
 
       it "re-renders the 'edit' template" do
-        question = Answers::Question.create! valid_attributes
-        put :update, {:id => question.to_param, :question => invalid_attributes}, valid_session
-        expect(response).to render_template("edit")
+        controller do
+          question = Answers::Question.create! valid_attributes
+          put :update, {:id => question.to_param, :question => invalid_attributes}, valid_session
+          expect(response).to render_template("edit")
+        end
       end
     end
   end
 
   describe "DELETE destroy" do
     it "destroys the requested question" do
-      question = Answers::Question.create! valid_attributes
-      expect {
-        delete :destroy, {:id => question.to_param}, valid_session
-      }.to change(Answers::Question, :count).by(-1)
+      controller do
+        question = Answers::Question.create! valid_attributes
+        expect {
+          delete :destroy, {:id => question.to_param}, valid_session
+        }.to change(Answers::Question, :count).by(-1)
+      end
     end
 
     it "redirects to the questions list" do
-      question = Answers::Question.create! valid_attributes
-      delete :destroy, {:id => question.to_param}, valid_session
-      expect(response).to redirect_to(questions_url)
+      controller do
+        question = Answers::Question.create! valid_attributes
+        delete :destroy, {:id => question.to_param}, valid_session
+        expect(response).to redirect_to(questions_url)
+      end
     end
   end
 

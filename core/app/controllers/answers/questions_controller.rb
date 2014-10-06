@@ -1,6 +1,5 @@
 module Answers
   class QuestionsController < Answers::ApplicationController
-    before_action :set_question, only: [:show]
     respond_to :html
 
     add_breadcrumb "Home", :answers_path
@@ -13,21 +12,18 @@ module Answers
     end
 
     def show
+      question = Question.find(params[:id])
       add_breadcrumb "Answers", answers.answers_path
-      add_breadcrumb @question.text, answers.answer_path(@question)
+      add_breadcrumb question.text, answers.answer_path(question)
 
-      render locals: { question: @question, similar_questions: @question.similar(limit:3) }
+      render locals: { question: question, similar_questions: question.similar(limit:3) }
     end
 
     private
-      def set_question
-        @question = Question.find(params[:id])
-      end
 
       def question_params
-        #params[:question]
-        #params.require(:question).permit(:text, :in_language)
         params[:question]
+        params.require(:question).permit(:text, :in_language)
       end
     end
 end
