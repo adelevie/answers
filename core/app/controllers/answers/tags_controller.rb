@@ -1,7 +1,7 @@
 module Answers
   class TagsController < Answers::ApplicationController
-    caches_page :index
-    caches_page :show 
+    #caches_page :index
+    #caches_page :show 
     
     add_breadcrumb "Home", :answers_path
     
