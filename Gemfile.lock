@@ -47,7 +47,7 @@ PATH
   specs:
     answers (0.0.0.2)
       answers-core (= 0.0.0.2)
-      bundler (~> 1.6.2)
+      bundler
     answers-core (0.0.0.2)
       actionpack (~> 4.1.6)
       activerecord (~> 4.1.6)
