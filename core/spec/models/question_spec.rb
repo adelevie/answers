@@ -60,6 +60,19 @@ RSpec.describe Answers::Question, :type => :model do
         expect(my_tags.length).to(eq(0))
       end
     end
+
+  context "it has a to_s method" do
+    question_text = 'to_s answer text'
+    question = Answers::Question.new(text: question_text)
+    
+    it "responds to to_s" do
+      expect(question).to(respond_to(:to_s))
+    end
+    
+    it "returns its text attribute when to_s is called" do
+      expect(question.to_s).to(eq(question.text))
+    end
+  end
     
     #context "when some tags are loaded" do
     #  it "should return an Array of tag objects" do

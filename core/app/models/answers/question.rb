@@ -34,5 +34,8 @@ module Answers
         tag_name: self.tags.map(&:name))
     end
 
+    def to_s
+      text
+    end
   end
 end
