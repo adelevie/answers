@@ -9,7 +9,6 @@
 **.orig
 .bundle
 .coveralls.yml
-.databag_secret
 .env
 .idea
 .powrc
@@ -28,8 +27,6 @@ latest.dump
 Guardfile
 rerun.txt
 Vagrantfile
-*tags
-tags
 
 # folders
 /config/*.yml
@@ -39,11 +36,15 @@ tags
 /config/initializers/searchify.rb
 /coverage
 /db/*.sqlite3
+/deploy/.databag_secret
 /doc/search_stats.csv
+/fixtures
 /kitchen/nodes/*.json
 /log/*
+/MyAnswers
 /public/system
+/spec/dummy
 /spec/tmp
+/test
 /tmp
 /vendor/bundle
-

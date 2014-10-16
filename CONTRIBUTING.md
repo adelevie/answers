@@ -8,9 +8,9 @@ This project follows the [git flow](http://nvie.com/posts/a-successful-git-branc
 
 ### Commit Messages
 
-- Avoid merge commits by using a rebase workflow.
+- Avoid merge commits by using a rebase workflow (see below for details).
 - Prefix feature branch names with `feature`.
-- Squash multiple trivial commits into a single commit.
+- Squash multiple trivial commits into a single commit (see below for details).
 - Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
 
 ## Submission Guidelines
@@ -44,10 +44,39 @@ Before you submit your pull request consider the following guidelines:
 
 * Run the full rspec test suite, with `rake spec` and ensure that all tests pass.
 * Commit your changes using a descriptive commit message.
+* Rebase your feature branch with the dev branch frequently to make integration easier:
+
+    ```
+    git fetch origin
+    git rebase origin/dev
+    ```
+
+  * If conflicts arise during the rebase, follow these steps until the rebase completes:
+    1. Resolve conflicts in your editor/IDE
+    2. `git add .`
+    3. `git rebase --continue`
+
+* When you have completed your feature development and are ready to submit a pull request, follow the following steps:
+  1. Rebase your feature branch interactively to squash commits:
+    
+    ```shell
+    git fetch origin
+    git rebase -i origin/dev
+    ```
+  2. After the rebase has completed, a text editor will open listing all of your commits.  For every commit you want to squash, replace "pick" with "squash" or "s".  Note that you must leave at least one "pick" starting with the first line.
+  3. Save and close the file.
+  4. Another text editor should open.  Remove the commit messages you don't want and write one general message describing your work.  See [writing a good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) 
+  5. Save and close the file.
+
 * Push your branch to GitHub:
 
     ```shell
     git push origin my-fix-branch
+    ```
+* If the above command does not work, force the push:
+
+    ```shell
+    git push -f origin my-fix-branch
     ```
 
 * In GitHub, send a pull request to `answers:dev`.
@@ -55,11 +84,6 @@ Before you submit your pull request consider the following guidelines:
   * Make the required updates.
   * Re-run the specs to ensure tests are still passing.
   * Rebase your branch and force push to your GitHub repository (this will update your Pull Request):
-
-    ```shell
-    git rebase dev -i
-    git push -f
-    ```
 
 That's it! Thank you for your contribution!
 

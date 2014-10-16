@@ -1,0 +1,33 @@
+<% set_meta_tags  description: "Search results for #{tag}.",
+                  canonical: ENV['OFFICIAL_GOVERNMENT_URL'] + request.fullpath,
+                  title: "Search results for #{tag}." %>
+
+<div class="page-container search">
+  <div class="row">
+    <div class="span9">
+      <div class="main-content">
+        <div class="header">
+          <h1>
+            Questions related to: "<strong><%= tag %></strong>"<br/> 
+          </h1>
+          <br/>
+
+          <% if results.empty? %>
+            <p>Sorry, no results found for "<%= tag %>".  Please try rephrasing your search terms.</p>
+          <% else %>
+            <ul>
+              <% results.each do |question| %>
+                  <li class="article-listing">
+                    <%= content_tag( :h2, link_to( question.text, answers.answer_path(question) ) ) %>
+                  </li>
+              <% end %>
+            </ul>
+          <% end -%>
+        </div>
+      </div>
+    </div>
+    <div class="span3">
+    </div><!-- /span3 -->
+  </div>
+</div>
+

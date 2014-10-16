@@ -1,6 +1,24 @@
-# Add your own tasks in files placed in lib/tasks ending in .rake,
-# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
+#!/usr/bin/env rake
+begin
+  require 'bundler/setup'
+rescue LoadError
+  puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
+end
 
-require File.expand_path('../config/application', __FILE__)
+APP_RAKEFILE = File.expand_path("../spec/dummy/Rakefile", __FILE__)
 
-Answers::Application.load_tasks
+if File.exists?(APP_RAKEFILE)
+  load 'rails/tasks/engine.rake'
+end
+
+Dir[File.expand_path('../tasks/**/*', __FILE__)].each do |task|
+  load task
+end
+
+require "answers-testing"
+Answers::Testing::Railtie.load_dummy_tasks File.dirname(__FILE__)
+
+desc "Build gem files for all projects"
+task :build => "all:build"
+
+task :default => :spec

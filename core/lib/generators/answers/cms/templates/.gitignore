@@ -1,0 +1,91 @@
+# Rails
+.bundle
+db/*.sqlite3
+db/*.sqlite3-journal
+*.log
+tmp
+tmp/**/*
+
+# Documentation
+doc/api
+doc/app
+.yardoc
+.yardopts
+coverage
+
+# Public Uploads
+public/system/*
+public/themes/*
+
+# Public Cache
+public/javascripts/cache
+public/stylesheets/cache
+public/answers/*
+
+# Vendor Cache
+vendor/cache
+
+# Acts as Indexed
+index/**/*
+
+# Answers Specific
+*.tmproj
+*.autobackupbyanswers.*
+answers-*.gem
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# NetBeans
+nbproject
+
+# Eclipse
+.project
+
+# Redcar
+.redcar
+
+# Rubinius
+*.rbc
+
+# Vim
+*.swp
+*.swo
+
+# RubyMine
+.idea
+
+# E-texteditor
+.eprj
+
+# Backup
+*~
+
+# Capybara Bug
+capybara-*html
+
+# sass
+.sass-cache
+.sass-cache/*
+
+#rvm
+.rvmrc
+.rvmrc.*
+
+# vendor/extensions dummy applications.
+vendor/extensions/**/spec/dummy
+
+# ANSWERS DEVELOPMENT ====================================================
+# Always keep this section at the bottom.
+
+config/database.yml
+config/rackspace_cloudfiles.yml
+your_*.*
+db/schema.rb
+public/answers
+config/ideal_load_path
+
+# END ANSWERS DEVELOPMENT =================================================

@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <div class="sidebar-unit">
+    <h4 class="side-head">Similar Questions</h4>
+    <div class="sidebar-content">
+       <ul>
+        <% results.each do |question| %>
+          <%= content_tag( :li, link_to(question.text, answers.answer_path(question.id))) %>
+        <% end -%>
+       </ul>
+    </div>
+  </div>
+</div>

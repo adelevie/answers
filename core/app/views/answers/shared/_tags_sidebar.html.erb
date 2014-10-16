@@ -1,0 +1,12 @@
+<div class="sidebar">
+  <div class="sidebar-unit">
+    <h4 class="side-head">More Questions on...</h4>
+    <div class="sidebar-content">
+       <ul>
+        <% question.tag_list.each do |tag| %>
+          <%= content_tag( :li, link_to(tag, answers.tag_search_path(:tag => tag))) %>
+        <% end -%>
+       </ul>
+    </div>
+  </div>
+</div>
