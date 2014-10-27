@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version           = '0.0.0.2'
   s.summary           = %q{Testing plugin for Answers}
   s.description       = %q{This plugin adds the ability to test against the Answers CMS gem while inside an Answers extension}
-  s.email          = ["justin.grevich@gsa.gov", "amos.stone@gsa.gov", "alan.delevie@gsa.gov"]
+  s.email             = ["answers-platform@gsa.gov"]
   s.homepage          = %q{https://answers.18f.us}
   s.rubyforge_project = %q{answers}
   s.authors           = ['Nick Bristow', 'Alan deLevie', 'Justin Grevich', 'Sasha Magee', 'John Stone', 'Ben Willman', 'John P. Yuda']
