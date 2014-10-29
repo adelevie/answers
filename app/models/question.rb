@@ -1,7 +1,7 @@
 class Question < ActiveRecord::Base
   acts_as_taggable_on :tags
   has_many :answers
-  searchkick wordnet: true
+  #searchkick wordnet: true
 
   attr_writer :tag_ids
   
