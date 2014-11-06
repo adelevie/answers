@@ -25,6 +25,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'railties',                    rails_version
   s.add_dependency 'activerecord',                rails_version
   s.add_dependency 'actionpack',                  rails_version
-  s.add_dependency 'devise',                      '~>3.2.0'
+  s.add_dependency 'devise',                      '~>3.3.0'
 
 end
