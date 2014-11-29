@@ -117,12 +117,17 @@ from the main ([upstream](https://help.github.com/articles/configuring-a-remote-
     ```
 
 
-## Public domain
+## MIT/Public Domain Joint Work
 
-This project is in the public domain within the United States, and
-copyright and related rights in the work worldwide are waived through
-the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
+The project is a "joint work" (see 17 USC § 101) of the United States and
+its original authors. It is partially copyrighted, partially public domain,
+and as a whole is protected by the MIT copyright. Segments written by 18F
+staff, and by contractors who are developing software on behalf of 18F are
+also in the public domain, and copyright and related rights for that work
+are waived through the [CC0 1.0 Universal public domain dedication][CC0].
 
-All contributions to this project will be released under the CC0
-dedication. By submitting a pull request, you are agreeing to comply
+All future contributions to this project will be released under the CC0
+dedication (see LICENSE.md). By submitting a pull request, you are agreeing to comply
 with this waiver of copyright interest.
+
+[CC0]: http://creativecommons.org/publicdomain/zero/1.0/
