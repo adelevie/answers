@@ -1,5 +1,6 @@
 require 'answers-core'
 require 'devise'
+require 'secure_headers'
 require 'rspec-rails'
 require 'factory_girl_rails'
 

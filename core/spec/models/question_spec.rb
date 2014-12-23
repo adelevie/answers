@@ -80,4 +80,13 @@ RSpec.describe Answers::Question, :type => :model do
     #  end
     #end
   end
+
+  context "it has searchkick information" do
+    question = Answers::Question.new(text: 'test question')
+
+    it "responds to searchkick_options" do
+      default_options = { wordnet: true }
+      expect(question.searchkick_options).to(eq(default_options))
+    end
+  end
 end
