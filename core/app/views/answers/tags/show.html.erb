@@ -1,0 +1,31 @@
+ <div class="page-container">
+  <div class="breadcrumbs">
+    <ol>
+      <%= render_breadcrumbs :tag=> :li, :separator =>" > " %>
+    </ol> 
+  </div>
+  <div class="row">
+    <div class="span9">
+      <div class="main-content">
+        <div class="header">
+          <h1><%= tag.name.capitalize %></h1>
+        </div>
+        <ul>
+          <% questions.each do |question| %>
+              <li class="article-listing">
+                <%= content_tag(:h2, link_to(question.text, answers.answer_path(question)) ) %>
+              </li>
+          <% end %>
+
+        </ul>
+      </div>
+    </div><!-- /span9 -->
+
+    <div class="span3">
+      <%
+      #= render :partial => 'shared/categories_sidebar', locals: {categories: categories} 
+      %>
+    </div><!-- /span3 -->
+
+  </div><!-- /row -->
+</div><!-- /page-container -->

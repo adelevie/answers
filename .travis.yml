@@ -1,10 +1,7 @@
 before_script:
-  - cp config/database.yml.example config/database.yml
-  - cp .env.example .env
   - cp .coveralls.yml.example .converalls.yml
   - psql -c 'create database "answers_test";' -U postgres
-  - bundle exec rake db:migrate --trace
-  - bundle exec rake db:test:prepare --trace
+  - rake answers:testing:dummy_app 
 bundler_args: --without development
 language: ruby
 rvm:
@@ -12,3 +9,6 @@ rvm:
   - ruby-2.1.2
 services:
   - elasticsearch
+env:
+  - DB=postgresql
+  - DB=mysql

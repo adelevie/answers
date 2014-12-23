@@ -1,0 +1,46 @@
+<% set_meta_tags description: "Find answers to your questions about #{ENV['official_site_title']} City Services." %>
+<div class="modal-container span8">
+  <div class="main-modal">
+    <div id="welcome-line-l"></div>
+    <div id="welcome-line-r"></div>
+    <h3 class="welcome">Welcome To</h3>
+    <h1 class="home-modal"><%= ENV['official_site_title'] %> </h1>
+    <p class="call">
+      <%= "Find answers to your questions about City of #{ENV['official_site_title']} services." %>
+    </p>
+
+    <div class="ribbon-front">
+      <div class="triangle-l"></div>
+      <div class="triangle-r"></div>
+      <div class="ribbon-wrapper">
+        <form id="search" action="search" name="search" method="get">
+          <input type="text" name="q" id="query" title='query' placeholder="Try parking, jobs, or permits..." autofocus="autofocus">
+          <input class="btn-search" id="home-search" type="submit" value="SEARCH" title="Search">
+        </form>
+      </div>
+    </div><!-- /ribbon-wrapper -->
+
+    <div class="popular">
+      <div class="pop-heading">
+        <h2>Most Popular Tags:</h2>
+      </div>
+      <div class="pop-categories" id="tags">
+        <% tags_with_questions.each do |tag| %>
+          <div class="category">
+            <span class="left"><%= link_to(tag[:tag].name.capitalize, answers.tag_path(tag[:tag])) %></span><br />
+            <p class="right">
+            <ul>
+              <% tag[:questions].each do |question| %>
+                <p><%= link_to(question.text, answers.answer_path(question)) %></p>
+              <% end %>
+            </ul>
+            </p>
+          </div>
+        <% end %>
+      </div>
+    </div><!-- /popular -->
+
+  </div><!-- /main-modal -->
+</div><!-- /modal-container -->
+
+<!--<%= render partial: 'answers/shared/autocomplete' %>-->
